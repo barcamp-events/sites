@@ -1,0 +1,155 @@
+.small_logo {
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  left: 17px;
+  top: 15px;
+  z-index: 1001;
+  background-image: url('../images/small_logo.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo.large {
+    z-index: 999;
+    width: 100%;
+    height: 605px;
+    top: 0;
+    left: 0;
+    margin: -116px 0 0 0px;
+}
+
+.logo {
+  position: absolute;
+  height: 60px;
+  width: 132px;
+  left: 2%;
+  top: 0%;
+  margin: 28px 0 0 0;
+  z-index: 1001;
+  background-image: url('../images/logo_header_mobile.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 300px;
+}
+
+nav {
+  padding: 30px 0 10px 0;
+  text-align: right;
+  text-decoration: none;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 2px rgba(100,100,100,.4)
+}
+
+nav li {
+  display: block;
+  letter-spacing: 2.5px;
+  font-size: 12px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+nav a {
+  padding: 11px 24px 11px 24px;
+  transition: 0.2s;
+  text-decoration: none;
+  color: #1847ed;
+}
+
+nav a:hover {
+  background: #1847ed;
+  color: #fff;
+}
+
+
+
+
+@media (min-width: 500px) {
+.logo {
+  background-size: 400px;
+}
+
+.logo.large {
+    top: 375px;
+    height: 510px;
+    margin-top: -265px;
+}
+}
+
+
+@media (min-width: 700px) {
+.logo {
+  background-size: 500px;
+  background-image: url('../images/logo_header_tablet.svg');
+}
+
+.logo.large {
+    top: 200px;
+    height: 590px;
+}
+}
+
+
+@media (min-width: 1px) and (max-width: 899px) {
+.tw { display: none;}
+.fb { display: none;}
+}
+
+@media (min-width: 900px) {
+.logo.large {
+  z-index: 1;
+  margin: -185px 0 0 20px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav ul {
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin: center center;
+  -moz-transform: rotate(-90deg);
+  -moz-transform-origin: center center;
+  min-width: 500px;
+  margin-top: 275px;
+  margin-left: -218px;
+}
+
+nav {
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 0 2px rgba(100,100,100,.4);
+  z-index: 1000;
+  left: 0px;
+  top: 0px;
+  width: 70px;
+  height: 100%;
+}
+
+body {
+  padding-left: 70px;
+}
+}
+
+
+@media (min-width: 1200px) {
+  .logo {
+    background-size: 700px;
+    background-image: url('../images/logo_header.svg');
+    left: 3.5%;
+  }
+
+  .logo.large {
+    top: 150px;
+    height: 700px;
+}
+}

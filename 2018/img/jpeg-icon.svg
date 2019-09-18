@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 0.5px;
+      }
+
+      .b {
+        font-size: 21px;
+        font-family: MADSansFill-BoldItalic, MAD Sans Fill;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .c {
+        fill: #10253e;
+      }
+    </style>
+  </defs>
+  <title>jpeg-icon</title>
+  <g>
+    <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+    <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+    <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+  </g>
+</svg>

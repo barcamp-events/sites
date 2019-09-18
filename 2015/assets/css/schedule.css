@@ -1,0 +1,55 @@
+.sLeftNumber {
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 1.5px;
+}
+
+.sLeftMeridian {
+  display: block;
+  font-size: 18px;
+  padding-top: 7px;
+}
+
+.schedule_list {
+  padding-top: 0px;
+}
+
+.schedule_list_into {
+  border-top: 1px solid #0303ca;
+  border-left: 1px solid #0303ca;
+}
+
+.schedule_list a {
+  color: #fff;
+}
+
+.schedule_list a:hover {
+  color: #0303ca;
+}
+
+.saturday {
+  padding-top: 100px;
+}
+
+.schedule_list h3, p {
+  text-align: left;
+}
+
+.schedule_list_intro h3 {
+  text-align: left;
+}
+
+@media (min-width: 700px) {
+  .schedule_list {
+  padding-top: 35px;
+  border-top: 1px solid #0303ca;
+  border-left: 1px solid #0303ca;
+}
+}
+
+@media (max-width: 700px) {
+  .rarr {
+    display: none;
+  }
+}

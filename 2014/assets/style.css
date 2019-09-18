@@ -1,0 +1,829 @@
+/* Grain & Mortar Standard Stylesheet Version 2.0 ~ April 2014  */
+
+/* ==========================================================================
+	Normalize and reset CSS
+========================================================================== */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{background:#fff;color:#000;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+html, body, button, input, select, textarea { font-size: 1em; line-height: 1.4; }
+img { vertical-align: middle; }		/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+textarea { resize: vertical; }			/* Allow only vertical resizing of textareas. */
+h1, h2, h3, h4, h5 { margin: 0; font-weight: 400; } /* Browsers default headings to font-weight: bold. This resets it to normal. http://css-tricks.com/watch-your-font-weight/ */
+strong { font-weight: 400; }
+em { font-style: normal; }
+img, embed, object, video { max-width: 100%; height: auto; }
+label { cursor: pointer; }
+h2 a, h3 a, h4 a { color: inherit; font-size: inherit; font-family: inherit; }
+
+/* ==========================================================================
+   Basic content structuring and text styling
+========================================================================== */
+html {
+	height: 100%;
+	background: #fff;
+	color: #6b797f;
+	font: 20px "Rokkitt", Helvetica, Arial, sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+h2, .h2 {
+	color: #394B63;
+	font: 36px/40px "Rokkitt", Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+}
+
+h3, .h3 {
+	color: #394B63;
+	font: 28px/36px "Rokkitt", Helvetica, Arial, sans-serif;
+}
+
+h4, .h4 {
+	color: #394B63;
+	font: 20px "Rokkitt", Helvetica, Arial, sans-serif;
+	text-transform:uppercase;
+}
+
+.bigger { font-size: 20px; }
+
+.big {
+	font-size: 80px;
+    padding-top: 20px;
+}
+
+.big sup { top: -20px; font-size: 50%; }
+
+p { margin: 0 0 20px; line-height: 28px; }
+ul { padding-left: 10px; margin: 5px; }
+li { padding: 0; }
+
+input, textarea {
+	border: none;
+	padding: 2.5%;
+	width: 95%;
+	-webkit-transition: background .25s ease;
+	transition: background .25s ease;
+}
+
+input:focus, textarea:focus { background: #dfdfdf; }
+a, a:link, a:visited { color: #604113; webkit-transition: opacity .25s ease; transition: opacity .25s ease; }
+a:hover { opacity: 0.75; text-decoration: none; }
+
+a img { -webkit-transition: opacity .25s ease; transition: opacity .25s ease; }
+a img:hover { cursor: pointer; opacity: 0.75; }
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #F0F0F0;
+	margin: 1em 0;
+	padding: 0;
+}
+
+hr.dark { border-top: 1px solid #3d555b; }
+
+/* Remove text-shadow in selection highlight: (h5bp.com/i).*/
+::-moz-selection { background: #dfe7e9; text-shadow: none; }
+::selection { background: #dfe7e9; text-shadow: none; }
+
+*:focus { outline: 0; }  /* correct for Chrome default behavior of putting the orange glow around elements when focused. */
+
+.textCentered { text-align: center; }
+.lAlign { text-align: left; }
+.rAlign { text-align: right; }
+.rfloat { float: right; }
+.lfloat { float: left; }
+.centered { text-align: center; }
+.centered img { display: inline-block; }
+
+.green { color: #6BA236 !important; }
+.red { color: #E12D1E !important; }
+.blue { color: #66B6C7 !important; }
+.white { color: #fff !important; }
+.blueish { color: #394B63 !important; }
+
+@media all and (max-width: 850px) {
+	.centeredT { text-align: center; }
+	.centeredT img { display: inline-block; }
+}
+
+@media all and (max-width: 480px) {
+	.centeredP { text-align: center; }
+	.centeredP img { display: inline-block; }
+}
+
+.cf:before,.content:before,.cf:after,.content:after{content:" ";display:table}.cf:after,.content:after{clear:both}.cf,.content{*zoom:1}
+.clear { clear: both; }
+
+.vertAlign { display: table; height: 100%; }
+.vertAlign h4 { display: table-cell; vertical-align: middle; }
+
+/* =========================================================================
+	Grid and layout classes (generally speaking, don't edit these)
+========================================================================= */
+
+/* creates a content container that is max-width and centered */
+.contentWrapper { width: 100%; max-width: 1400px;  margin: 0 auto; position: relative; overflow: hidden;}
+
+.full, .fiveSixths, .fiveSixthsCentered, .fourFifths, .fourFifthsCentered, .threeFourths, .threeFourthsCentered, .twoThirds, .twoThirdsCentered,
+.threeFifths, .threeFifthsCentered, .half, .halfCentered, .twoFifths, .twoFifthsCentered, .third, .thirdCentered, .fourth, .fourthCentered, .fifth,
+.fifthCentered, .sixth, .sixthCentered, .colFull, .colFiveSixths, .colFiveSixthsCentered, .colFourFifths, .colFourFifthsCentered, .colThreeFourths,
+.colThreeFourthsCentered, .colTwoThirds, .colTwoThirdsCentered, .colThreeFifths, .colThreeFifthsCentered, .colHalf, .colHalfCentered, .colTwoFifths,
+.colTwoFifthsCentered, .colThird, .colThirdCentered, .colFourth, .colFourthCentered, .colFifth, .colFifthCentered, .colSixth, .colSixthCentered,.fiveSixthsT,
+.fiveSixthsCenteredT, .fourFifthsT, .fourFifthsCenteredT, .threeFourthsT, .threeFourthsCenteredT, .twoThirdsT, .twoThirdsCenteredT,
+.threeFifthsT, .threeFifthsCenteredT, .halfT, .halfCenteredT, .twoFifthsT, .twoFifthsCenteredT, .thirdT, .thirdCenteredT, .fourthT, .fourthCenteredT, .fifthT,
+.fifthCenteredT, .sixthT, .sixthCenteredT, .colFullT, .colFiveSixthsT, .colFiveSixthsCenteredT, .colFourFifthsT, .colFourFifthsCenteredT, .colThreeFourthsT, .colThreeFourthsCenteredT,
+.colTwoThirdsT, .colTwoThirdsCenteredT, .colThreeFifthsT, .colThreeFifthsCenteredT, .colHalfT, .colHalfCenteredT, .colTwoFifthsT, .colTwoFifthsCenteredT, .colThirdT,
+.colThirdCenteredT, .colFourthT, .colFourthCenteredT, .colFifthT, .colFifthCenteredT, .colSixthT, .colSixthCenteredT, .twoThirdsP, .twoThirdsCenteredP, .threeFifthsP,
+.threeFifthsCenteredP, .halfP, .halfCenteredP, .twoFifthsP, .twoFifthsCenteredP, .thirdP, .thirdCenteredP, .colTwoThirdsP, .colTwoThirdsCenteredP, .colThreeFifthsP,
+.colThreeFifthsCenteredP, .colHalfP, .colHalfCenteredP, .colTwoFifthsP, .colTwoFifthsCenteredP, .colThirdP, .colThirdCenteredP, .fullT, .fullP { float: left; position: relative; }
+
+.fullP { width: 100%; margin: 0; }.twoThirdsP { width: 66.6%; }.twoThirdsCenteredP { width: 66.6%; margin: 0 16.7%; }.threeFifthsP { width: 60%; }.threeFifthsCenteredP { width: 60%; width: 0 20%; }.halfCenteredP { width: 50%; margin: 0 25%; }.halfP { width: 50%; }.twoFifthsP { width: 40%; }.twoFifthsCenteredP { width: 40%; margin: 0 30%; }.thirdP { width: 33.3%; }.thirdCentered { width: 33%;  margin: 0 33.3%; }.colTwoThirdsP { width: 61%; margin: 0 2.5%; }.colTwoThirdsCenteredP { width: 61%; margin: 0 19.5%; }.colThreeFifthsP { width: 55%; margin: 0 2.5%; }.colThreeFifthsCenteredP { width: 55%; width: 0 22.5%; }.colHalfP { width: 45%; margin: 0 2.5%; }.colHalfCenteredP { width: 45%; margin: 0 27.5%; }.colTwoFifthsP { width: 36%; margin: 0 2% }.colTwoFifthsCenteredP { width: 36%; margin: 0 32%; }.colThirdP { width: 29%; margin: 0 2%; }.colThirdCenteredP { width: 29%;  margin: 0 35.5%; }
+.fullT { width: 100%; margin: 0; } .colFullT { width: 95%; margin: 0 2.5%; }, .fiveSixthsT { width: 83.3%; }.fiveSixthsCenteredT { width: 83.3%; margin: 0 8.35%; }.fourFifthsT { width: 80%; }.fourFifthsCenteredT { width: 80%; margin: 0 10%; }.threeFourthsT { width: 75%; }.threeFourthsCenteredT { width: 75%; margin: 0 12.5%; }.twoThirdsT { width: 66.6%; }.twoThirdsCenteredT { width: 66.6%; margin: 0 16.7%; }.threeFifthsT { width: 60%; }.threeFifthsCenteredT { width: 60%; margin: 0 20%; }.halfCenteredT { width: 50%; margin: 0 25%; }.halfT { width: 50%; margin: 0; }.twoFifthsT { width: 40%; }.twoFifthsCenteredT { width: 40%; margin: 0 30%; }.thirdT { width: 33.333333%; }.thirdCentered { width: 33%;  margin: 0 33.3%; }.fourthT { width: 25%; }.fourthCenteredT { width: 25%; margin: 0 37.5%; }.fifthT { width: 20%; }.fifthCenteredT { width: 20%; margin: 0 40%; }.sixthT { width: 16.6%; }.sixthCenteredT { width: 16.6%; margin: 0 41.7%; }
+.colFiveSixthsT { width: 78.3%; margin: 0 2.5%; }.colFiveSixthsCenteredT { width: 78.3%; margin: 0 10.85%; }.colFourFifthsT { width: 75%; margin: 0 2.5%}.colFourFifthsCenteredT { width: 75%; margin: 0 12.5%; }.colThreeFourthsT { width: 70%; margin: 0 2.5%; }.colThreeFourthsCenteredT { width: 70%; margin: 0 15%; }.colTwoThirdsT { width: 61%; margin: 0 2.5%; }.colTwoThirdsCenteredT { width: 61%; margin: 0 19.5%; }.colThreeFifthsT { width: 55%; margin: 0 2.5%; }.colThreeFifthsCenteredT { width: 55%; width: 0 22.5%; }.colHalfT { width: 45%; margin: 0 2.5%; }.colHalfCenteredT { width: 45%; margin: 0 27.5%; }.colTwoFifthsT { width: 36%; margin: 0 2% }.colTwoFifthsCenteredT { width: 36%; margin: 0 32%; }.colThirdT { width: 29%; margin: 0 2%; }.colThirdCenteredT { width: 29%;  margin: 0 35.5%; }.colFourthT { width: 21%; margin: 0 2%; }.colFourthCenteredT { width: 21%; margin: 0 39.5%; }.colFifthT { width: 17%; margin: 0 1.5%;}.colFifthCenteredT { width: 17%; margin: 0 41.5%; }.colSixthT { width: 13.66%; margin: 0 1.5%; }.colSixthCenteredT { width: 13.66%; margin: 0 43.166%; }
+
+.full { width: 100%; margin: 0; }
+.fiveSixths { width: 83.3%; margin: 0; }
+.fiveSixthsCentered { width: 83.3%; margin: 0 8.35%; }
+.fourFifths { width: 80%; margin: 0; }
+.fourFifthsCentered { width: 80%; margin: 0 10%; }
+.threeFourths { width: 75%; margin: 0; }
+.threeFourthsCentered { width: 75%; margin: 0 12.5%; }
+.twoThirds { width: 66.6%; margin: 0; }
+.twoThirdsCentered { width: 66.6%; margin: 0 16.7%; }
+.threeFifths { width: 60%; margin: 0; }
+.threeFifthsCentered { width: 60%; width: 0 20%; }
+.half { width: 50%; margin: 0; }
+.halfCentered { width: 50%; margin: 0 25%; }
+.twoFifths { width: 40%; margin: 0; }
+.twoFifthsCentered { width: 40%; margin: 0 30%; }
+.third { width: 33.333333%; margin: 0; }
+.thirdCentered { width: 33%;  margin: 0 33.3%; }
+.fourth { width: 25%; margin: 0; }
+.fourthCentered { width: 25%; margin: 0 37.5%; }
+.fifth { width: 20%; margin: 0; }
+.fifthCentered { width: 20%; margin: 0 40%; }
+.sixth { width: 16.6%; margin: 0; }
+.sixthCentered { width: 16.6%; margin: 0 41.7%; }
+
+.colFull { width: 95%; margin: 0 2.5%; }
+.colFiveSixths { width: 78.3%; margin: 0 2.5%; }
+.colFiveSixthsCentered { width: 78.3%; margin: 0 10.85%; }
+.colFourFifths { width: 75%; margin: 0 2.5%}
+.colFourFifthsCentered { width: 75%; margin: 0 12.5%; }
+.colThreeFourths{ width: 70%; margin: 0 2.5%; }
+.colThreeFourthsCentered { width: 70%; margin: 0 15%; }
+.colTwoThirds { width: 61%; margin: 0 2.5%; }
+.colTwoThirdsCentered { width: 61%; margin: 0 19.5%; }
+.colThreeFifths { width: 55%; margin: 0 2.5%; }
+.colThreeFifthsCentered { width: 55%; margin: 0 22.5%; }
+.colHalf { width: 45%; margin: 0 2.5%; }
+.colHalfCentered { width: 45%; margin: 0 27.5%; }
+.colTwoFifths { width: 36%; margin: 0 2% }
+.colTwoFifthsCentered { width: 36%; margin: 0 32%; }
+.colThird { width: 29%; margin: 0 2%; }
+.colThirdCentered { width: 29%;  margin: 0 35.5%; }
+.colFourth { width: 21%; margin: 0 2%; }
+.colFourthCentered { width: 21%; margin: 0 39.5%; }
+.colFifth { width: 17%; margin: 0 1.5%;}
+.colFifthCentered { width: 17%; margin: 0 41.5%; }
+.colSixth { width: 13.66%; margin: 0 1.5%; }
+.colSixthCentered { width: 13.66%; margin: 0 43.166%; }
+
+@media all and (max-width: 850px) {
+	.fiveSixths, .fiveSixthsCentered, .fourFifths, .fourFifthsCentered, .threeFourths, .threeFourthsCentered, .twoThirds, .twoThirdsCentered,
+	.threeFifths, .threeFifthsCentered, .half, .halfCentered, .twoFifths, .twoFifthsCentered, .third, .thirdCentered, .fourth, .fourthCentered, .fifth,
+	.fifthCentered, .sixth, .sixthCentered { width: 100%; margin: 0; }
+
+	.colFull, .colFiveSixths, .colFiveSixthsCentered, .colFourFifths, .colFourFifthsCentered, .colThreeFourths,
+	.colThreeFourthsCentered, .colTwoThirds, .colTwoThirdsCentered, .colThreeFifths, .colThreeFifthsCentered, .colHalf, .colHalfCentered, .colTwoFifths,
+	.colTwoFifthsCentered, .colThird, .colThirdCentered, .colFourth, .colFourthCentered, .colFifth, .colFifthCentered, .colSixth, .colSixthCentered { width: 92%; margin: 0 4%; }
+
+	.fullP { width: 100%; margin: 0; } .twoThirdsP { width: 66.6%; }.twoThirdsCenteredP { width: 66.6%; margin: 0 16.7%; }.threeFifthsP { width: 60%; }.threeFifthsCenteredP { width: 60%; width: 0 20%; }.halfCenteredP { width: 50%; margin: 0 25%; }.halfP { width: 50%; }.twoFifthsP { width: 40%; }.twoFifthsCenteredP { width: 40%; margin: 0 30%; }.thirdP { width: 33.3%; }.thirdCentered { width: 33%;  margin: 0 33.3%; }.colTwoThirdsP { width: 61%; margin: 0 2.5%; }.colTwoThirdsCenteredP { width: 61%; margin: 0 19.5%; }.colThreeFifthsP { width: 55%; margin: 0 2.5%; }.colThreeFifthsCenteredP { width: 55%; width: 0 22.5%; }.colHalfP { width: 45%; margin: 0 2.5%; }.colHalfCenteredP { width: 45%; margin: 0 27.5%; }.colTwoFifthsP { width: 36%; margin: 0 2% }.colTwoFifthsCenteredP { width: 36%; margin: 0 32%; }.colThirdP { width: 29%; margin: 0 2%; }.colThirdCenteredP { width: 29%;  margin: 0 35.5%; }
+
+	.fullT { width: 100%; margin: 0; }
+	.fiveSixthsT { width: 83.3%; margin: 0; }
+	.fiveSixthsCenteredT { width: 83.3%; margin: 0 8.35%; }
+	.fourFifthsT { width: 80%; margin: 0; }
+	.fourFifthsCenteredT { width: 80%; margin: 0 10%; }
+	.threeFourthsT { width: 75%; margin: 0; }
+	.threeFourthsCenteredT { width: 75%; margin: 0 12.5%; }
+	.twoThirdsT { width: 66.6%; margin: 0; }
+	.twoThirdsCenteredT { width: 66.6%; margin: 0 16.7%; }
+	.threeFifthsT { width: 60%; margin: 0; }
+	.threeFifthsCenteredT { width: 60%; margin: 0 20%; }
+	.halfCenteredT { width: 50%; margin: 0 25%; }
+	.halfT { width: 50%; margin: 0; }
+	.twoFifthsT { width: 40%; margin: 0; }
+	.twoFifthsCenteredT { width: 40%; margin: 0 30%; }
+	.thirdT { width: 33.333333%; margin: 0; }
+	.thirdCentered { width: 33%;  margin: 0 33.3%; }
+	.fourthT { width: 25%; margin: 0; }
+	.fourthCenteredT { width: 25%; margin: 0 37.5%; }
+	.fifthT { width: 20%; margin: 0; }
+	.fifthCenteredT { width: 20%; margin: 0 40%; }
+	.sixthT { width: 16.6%; margin: 0; }
+	.sixthCenteredT { width: 16.6%; margin: 0 41.7%; }
+
+	.colFullT { width: 92%; margin: 0 4%; }
+	.colFiveSixthsT { width: 78.3%; margin: 0 2.5%; }
+	.colFiveSixthsCenteredT { width: 78.3%; margin: 0 10.85%; }
+	.colFourFifthsT { width: 75%; margin: 0 2.5%}
+	.colFourFifthsCenteredT { width: 75%; margin: 0 12.5%; }
+	.colThreeFourthsT { width: 70%; margin: 0 2.5%; }
+	.colThreeFourthsCenteredT { width: 70%; margin: 0 15%; }
+	.colTwoThirdsT { width: 61%; margin: 0 2.5%; }
+	.colTwoThirdsCenteredT { width: 61%; margin: 0 19.5%; }
+	.colThreeFifthsT { width: 55%; margin: 0 2.5%; }
+	.colThreeFifthsCenteredT { width: 55%; width: 0 22.5%; }
+	.colHalfT { width: 45%; margin: 0 2.5%; }
+	.colHalfCenteredT { width: 45%; margin: 0 27.5%; }
+	.colTwoFifthsT { width: 36%; margin: 0 2% }
+	.colTwoFifthsCenteredT { width: 36%; margin: 0 32%; }
+	.colThirdT { width: 29%; margin: 0 2%; }
+	.colThirdCenteredT { width: 29%;  margin: 0 35.5%; }
+	.colFourthT { width: 21%; margin: 0 2%; }
+	.colFourthCenteredT { width: 21%; margin: 0 39.5%; }
+	.colFifthT { width: 17%; margin: 0 1.5%;}
+	.colFifthCenteredT { width: 17%; margin: 0 41.5%; }
+	.colSixthT { width: 13.66%; margin: 0 1.5%; }
+	.colSixthCenteredT { width: 13.66%; margin: 0 43.166%; }
+}
+
+@media all and (max-width: 480px) {
+	.fiveSixths, .fiveSixthsCentered, .fourFifths, .fourFifthsCentered, .threeFourths, .threeFourthsCentered, .twoThirds, .twoThirdsCentered,
+	.threeFifths, .threeFifthsCentered, .half, .halfCentered, .twoFifths, .twoFifthsCentered, .third, .thirdCentered, .fourth, .fourthCentered, .fifth,
+	.fifthCentered, .sixth, .sixthCentered, .colFull, .colFiveSixths, .colFiveSixthsCentered, .colFourFifths, .colFourFifthsCentered, .colThreeFourths,
+	.colThreeFourthsCentered, .colTwoThirds, .colTwoThirdsCentered, .colThreeFifths, .colThreeFifthsCentered, .colHalf, .colHalfCentered, .colTwoFifths,
+	.colTwoFifthsCentered, .colThird, .colThirdCentered, .colFourth, .colFourthCentered, .colFifth, .colFifthCentered, .colSixth, .colSixthCentered,
+	.fiveSixthsT, .fiveSixthsCenteredT, .fourFifthsT, .fourFifthsCenteredT, .threeFourthsT, .threeFourthsCenteredT, .twoThirdsT, .twoThirdsCenteredT,
+	.threeFifthsT, .threeFifthsCenteredT, .halfT, .halfCenteredT, .twoFifthsT, .twoFifthsCenteredT, .thirdT, .thirdCenteredT, .fourthT, .fourthCenteredT, .fifthT,
+	.fifthCenteredT, .sixthT, .sixthCenteredT, .colFull, .colFiveSixths, .colFiveSixthsCentered, .colFourFifths, .colFourFifthsCentered, .colThreeFourths,
+	.colThreeFourthsCentered, .colTwoThirds, .colTwoThirdsCentered, .colThreeFifths, .colThreeFifthsCentered, .colHalf, .colHalfCentered, .colTwoFifths,
+	.colTwoFifthsCentered, .colThird, .colThirdCentered, .colFourth, .colFourthCentered, .colFifth, .colFifthCentered, .colSixth, .colSixthCentered,
+	.colFiveSixthsT, .colFiveSixthsCenteredT, .colFourFifthsT, .colFourFifthsCenteredT, .colThreeFourthsT, .colThreeFourthsCenteredT, .colTwoThirdsT,
+	.colTwoThirdsCenteredT, .colThreeFifthsT, .colThreeFifthsCenteredT, .colHalfT, .colHalfCenteredT, .colTwoFifthsT, .colTwoFifthsCenteredT, .colThirdT,
+	.colThirdCenteredT, .colFourthT, .colFourthCenteredT, .colFifthT, .colFifthCenteredT, .colSixthT, .colSixthCenteredT, .fullT { width: 92%; margin: 0 4%; }
+
+	.fullP { width: 100%; margin: 0; }
+	.twoThirdsP { width: 66.6%; }
+	.twoThirdsCenteredP { width: 66.6%; margin: 0 16.7%; }
+	.threeFifthsP { width: 60%; }
+	.threeFifthsCenteredP { width: 60%; width: 0 20%; }
+	.halfCenteredP { width: 50%; margin: 0 25%; }
+	.halfP { width: 50%; }
+	.twoFifthsP { width: 40%; }
+	.twoFifthsCenteredP { width: 40%; margin: 0 30%; }
+	.thirdP { width: 33.3%; }
+	.thirdCentered { width: 33%; margin: 0 33.3%; }
+
+	.colFullP { width: 92%; margin: 0 4%; }
+	.colTwoThirdsP { width: 61%; margin: 0 2.5%; }
+	.colTwoThirdsCenteredP { width: 61%; margin: 0 19.5%; }
+	.colThreeFifthsP { width: 55%; margin: 0 2.5%; }
+	.colThreeFifthsCenteredP { width: 55%; width: 0 22.5%; }
+	.colHalfP { width: 45%; margin: 0 2.5%; }
+	.colHalfCenteredP { width: 45%; margin: 0 27.5%; }
+	.colTwoFifthsP { width: 36%; margin: 0 2% }
+	.colTwoFifthsCenteredP { width: 36%; margin: 0 32%; }
+	.colThirdP { width: 29%; margin: 0 2%; }
+	.colThirdCenteredP { width: 29%;  margin: 0 35.5%; }
+}
+
+.m100 { margin-top: 100px; margin-bottom: 50px; }
+
+.m1 { margin-top: 50px; margin-bottom: 50px; }
+.m2 { margin-top: 25px; margin-bottom: 25px; }
+.m3 { margin-top: 10px; margin-bottom: 10px; }
+.m5 { margin-top: 5px; margin-bottom: 5px; }
+
+.p1 { padding-top: 50px; padding-bottom: 50px; }
+.p2 { padding-top: 25px; padding-bottom: 25px; }
+.p3 { padding-top: 10px; padding-bottom: 10px; }
+
+.showT { display: none !important; }
+.showP { display: none !important; }
+
+@media all and (max-width: 850px) {
+	.hideT { display: none !important; }
+	.showT { display: inherit !important; }
+
+	.m1T { margin-top: 0px !important; }
+}
+
+@media all and (max-width: 480px) {
+	.hideP { display: none !important; }
+	.showP { display: inherit !important; }
+}
+
+/*	CSS3 columns are supported in all major browsers except for IE9 and down	(because IE would rather gleefully skip through the meadow buck-naked like some washed-up hippie than render proper CSS3) */
+.twoColumn, .threeColumn, .fourColumn { -webkit-column-gap: 2em; -moz-column-gap: 2em; column-gap: 2em; }
+.twoColumn { -webkit-columns: 2; -moz-columns: 2; columns: 2; }
+.threeColumn { -webkit-columns: 3; -moz-columns: 3; columns: 3; }
+
+@media all and (max-width: 850px) {
+	.threeColumn { -webkit-columns: 2; -moz-columns: 2; columns: 2; }
+}
+
+@media all and (max-width: 480px) {
+	.twoColumn, .threeColumn { -webkit-columns: 1; -moz-columns: 1; columns: 1; }
+}
+
+/* =========================================================================
+========================================================================= */
+
+/* Basic button styling. Button element should be a div or an anchor*/
+a.button, .button {
+	display: inline-block;
+	text-align: center;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all .15s ease;
+	transition: all .15s ease;
+	padding: 17px 38px 15px;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 50px;
+	background: #000;
+	color: #fff;
+	font: 700 18px "proxima-nova", Arial, sans-serif;
+}
+
+a.bGreen { background: #6BA236; }
+a.button.bHeader { border-radius: 0; border: 1px solid #dddedd; color: #aaabaa; background: none; margin: 0 2px; font-size: 14px; text-transform: none; padding: 10px 40px 9px; }
+a.bRedline { border: 1px solid #E12D1E; color: #E12D1E; background: none; text-transform: none; padding: 10px 40px 9px;}
+.button:hover { text-decoration: none; opacity: 0.6; }
+.button:active { }
+
+/* =========================================================================
+	Basic Layout
+========================================================================= */
+
+/* wrapper that holds the header, content and footer */
+.page {
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.headerBG { background: rgba(20,40,40,0.9); }
+.content { padding-bottom: 100px; }
+
+.footer {
+	width: 100%;
+	clear: both;
+	position: relative;
+	min-height: 100px;
+	margin-top: -100px;
+	background: #2C4947;
+}
+
+/* ========================================================================= */
+
+.push1 { padding: 40% 0 15%; overflow: hidden;}
+.push2 { padding: 100px 0; }
+.push3 { padding: 300px 0 250px; }
+
+@media all and (max-width: 500px) {
+	.push3 { padding: 200px 0 150px; }
+}
+
+.faq { cursor: pointer; padding: 20px; position: relative; }
+
+.faq:after {
+	background: url("./plus.png") no-repeat scroll center center / 20px;
+    content: "";
+    height: 20px;
+    left: -10px;
+    position: absolute;
+    top: 26px;
+    width: 20px;
+	-webkit-transition: -webkit-transform 0.25s ease;
+	transition: transform 0.25s ease;
+}
+
+.viewing.faq:after {
+	background: url("./plus.png") no-repeat scroll center center / 20px;
+    content: "";
+    height: 20px;
+    left: -10px;
+    position: absolute;
+    top: 26px;
+    width: 20px;
+	-webkit-transform: rotateZ(135deg);
+	transform: rotateZ(135deg);
+}
+
+.faq div {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.q { color: #754C30; font-size: 24px; font-weight: bold; -webkit-transition: color 0.25s ease; transition: color 0.25s ease;}
+.a { display: none; font-size: 22px;}
+.q.viewing { color: #E12D1E; }
+
+.faqLeft { float: left; position: relative; width: 35%; margin: 100px 0 100px 5%; z-index: 2; min-height: 700px;}
+.towerImg { position: absolute; bottom: 0; right: 0; }
+.faqImg { width: 200px; }
+
+@media all and (max-width: 1150px) {
+	.towerImg { width: 675px}
+	.faqLeft { width: 45%; }
+}
+
+@media all and (max-width: 950px) {
+	.towerImg { right: -300px; }
+	.faqLeft { width: 55%; }
+}
+
+@media all and (max-width: 700px) {
+	.towerImg { right: 0; }
+	.faqLeft { width: 90%; margin: 50px 5% 575px; }
+	.faqImg { display: block; margin: 10px auto; }
+}
+
+@media all and (max-width: 550px) {
+	.faqLeft { margin: 40px 5% 375px; }
+}
+
+@media all and (max-width: 350px) {
+	.faqLeft { margin: 30px 5% 275px; }
+}
+
+.section0 { background: #2C4947; position: fixed; top: 0; left: 0; z-index: 99; height: 60px; }
+.section1 { margin-top: 50px;}
+.section2 {}
+.section3 { background: url("./sky.jpg") no-repeat top center; background-size: cover; }
+.section4 {}
+.section5 { background: url("./board.jpg") repeat top left; }
+.section6 { background: #CAECF8 url("./faqSky.png") no-repeat center top; }
+.section7 { background: #F0CA0E; }
+.section9 { background: url("./footer.png") repeat-x bottom center / 1700px 1472px; overflow:hidden}
+.headerPush { margin-top: 18px; }
+
+@media all and (max-width: 850px) {
+	.section6 { background: #CAECF8; }
+}
+
+@media all and (max-width: 850px) {
+	.section1 { width: 900px; margin-left: -450px; left: 50%;}
+}
+
+.hillBack, .hillFront {
+	bottom: 0;
+    left: 50%;
+    margin-left: -850px;
+    position: absolute;
+	max-width: 1700px;
+}
+
+.hillBack { margin-left: -910px; }
+.hillFront { z-index: 2;}
+.sign { z-index: 3; }
+
+.perchingBird { cursor: url("aim.png") 20 20, auto; }
+
+@media all and (max-width: 1024px) {
+	.perchingBird { width: 50px; }
+	.hillBack, .hillFront { width: 1000px; margin-left: -500px; }
+	.push3 { padding: 500px 0 50px; }
+	.sign { width: 200px; }
+}
+
+.footer1, .footer2, .footer3, .footer4, .footer5 {
+	padding: 10px 2%;
+	margin: 50px 0;
+	position: relative;
+	float: left;
+	height: 150px;
+}
+
+.footer1:after, .footer2:after, .footer3:after, .footer4:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 1px;
+	background: #fff;
+	opacity: 0.1;
+}
+
+.footer1 { width: 22%; }
+.footer2 { width: 11%; }
+.footer3 { width: 11%; }
+.footer4 { width: 15%; }
+.footer5 { width: 21%; }
+
+.footer1 a, .footer2 a { display: block; width: 50%; font: 600 13px "proxima-nova", Arial, sans-serif; float: left; padding: 7px 0; color: #637877; letter-spacing: 0.5px; text-decoration: none;}
+.footer2 a {width: 100%; }
+.footer3 img, .footer4 img { width: 90%; margin-top: 20px; }
+.footer5 img { width: 150px; }
+
+.footer h3 { font: 14px "proxima-nova", Arial, sans-serif; color: #637877; text-transform: uppercase; letter-spacing: 1px; padding-bottom: 20px;}
+.footer1 h3, .footer2 h3 { padding-bottom: 30px; }
+
+.footerSeparator, .footerSeparator2 { display: none; width: 90%; float: left; height: 1px; margin: 10px 5% 0; background: #fff; opacity: 0.1; }
+.footerSeparator2 { margin: 0 5%;  }
+
+@media all and (max-width: 1020px) {
+	.footer1 a, .footer2 a { width: 100%; }
+	.footer1, .footer2, .footer3, .footer4, .footer5 { padding-bottom: 50px; }
+}
+
+@media all and (max-width: 750px) {
+	.footer1, .footer2, .footer3, .footer4, .footer5 { text-align: center; margin: 30px 0; padding-bottom: 25px; height: 175px;}
+	.footer1 { width: 46%; }
+	.footer2 { width: 46%; }
+	.footer3 { width: 29%; }
+	.footer4 { width: 29%; }
+	.footer5 { width: 29%; }
+	.footerSeparator { display: block; }
+}
+
+@media all and (max-width: 400px) {
+	.footer1:after, .footer2:after, .footer3:after, .footer4:after { display: none; }
+	.footer1, .footer2, .footer3, .footer4, .footer5 { width: 96%; margin: 20px 0; height: auto; }
+	.footerSeparator2 { display: block; }
+}
+
+.hero_mountains, .hero_clouds, .hero_clouds2, .hero_lake, .hero_trees, .hero_logo { position: absolute; top: 0; left: 0;}
+
+.hero_mountains { background: url("./mountains.jpg") repeat-x center center / 1400px 780px; width: 100%; height: 100%;}
+.hero_clouds, .hero_clouds2 { background: url("./clouds.png") repeat-x top center / 1400px 195px; width: 1400px; height: 195px; -webkit-animation: slide 200s linear infinite; animation: slide 200s linear infinite; }
+.hero_lake { top: 25px; }
+.hero_trees {  }
+.hero_logo { width: 25%; left: 50%; margin: 70px 0 0 -12.5%; }
+.hero_clouds2 { left: 1400px; }
+
+@media all and (max-width: 1000px) {
+	.hero_mountains { background: url("./mountains.jpg") repeat-x center center / cover; }
+	.hero_logo { margin-top: 4%; }
+	.hero_clouds, .hero_clouds2 { background: url("./clouds.png") repeat-x top center / 700px 97px; width: 700px; height: 97px; }
+	.hero_clouds2 { left: 700px; }
+}
+
+@keyframes slide {
+	0% { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide {
+	0% { -webkit-transform: translateX(0%); }
+	100% { -webkit-transform: translateX(-100%); }
+}
+
+.section1_andThreeQuarters {
+	margin-top: -135px;
+	color: #314A5E !important;
+}
+
+.section1_andThreeQuarters h3 { text-transform: uppercase; }
+.section1_andThreeQuarters p { font-size: 22px; margin-bottom: 0;}
+.dateImg { width: 150px; }
+.section1_sneaky { position: absolute; right: 25px; bottom: 0; width: 250px;}
+
+@media all and (max-width: 730px) {
+	.section1_sneaky {
+		background: rgba(27, 49, 47, 0.75);
+		display: block;
+		position: relative;
+		right: 0;
+		top: 18px;
+		width: 100%;
+	}
+	.section1_sneaky img { width: 40%; margin: 5px 0 7px;}
+}
+
+.headerLogo, .headerLogoLink { width: 170px; position: absolute; left: 0; top: 3px;}
+.headerLogoLink { display: block; }
+.logoSection { margin-bottom: 50px; }
+.logoSection img { width: 24%; margin-bottom: 4px;}
+
+@media all and (max-width: 900px) {
+	.logoSection img { width: 30%; }
+
+}
+
+@media all and (max-width: 700px) {
+	.logoSection img { width: 48%; }
+}
+
+@media all and (max-width: 500px) {
+	.logoSection img { width: 68%; margin: 0 15% 4px;}
+	.section1_sneaky img { width: 70%; margin: 5px 0 7px;}
+}
+
+a.headerLink { display: block; float: right; padding: 15px; color: #F1CB32; font: 16px "proxima-nova", Arial, sans-serif; text-decoration: none;}
+.menuButton { display: none; position: absolute; right: 0; top: 5px; cursor: pointer; }
+
+@media all and (max-width: 725px) {
+	a.headerLink { display: none; }
+	.menuButton { display: block; }
+	.headerLogo {
+		display: block;
+		position: relative;
+		float: left;
+	}
+}
+
+.menu {
+	position: fixed;
+	top: -800px;
+	left: 50%;
+	width: 300px;
+	text-align: center;
+	margin-left: -150px;
+	-webkit-transition: -webkit-transform 0.25s ease;
+	transition: transform 0.25s ease;
+	z-index: 5;
+	background: #2c4947;
+	border-radius: 0 0 3px 3px;
+	padding-top: 25px;
+	box-shadow: 0 4px 5px #000;
+	z-index: 100;
+}
+
+.menu.down {
+	-webkit-transform: translateY(800px);
+	transform: translateY(800px);
+}
+
+.menu a {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	color: #fff !important;
+	text-decoration: none;
+}
+
+.sLeft a, .sLeft a:link, .sLeft a:visited,
+.sRight a, .sRight a:link, .sRight a:visited { color: #D1582B !important; }
+
+.sLeft {
+	width: 70px;
+	height: 70px;
+	border: 3px solid #D1582B;
+	border-radius: 100%;
+	float: left;
+	text-align: center;
+	margin: 3px 30px 20px 0;
+	color: #fff;
+}
+
+@media all and (max-width: 480px) {
+	.sLeft {
+		display: inline-block;
+		margin: 0 0 20px;
+		float: none;
+	}
+
+	.sRight {
+		clear: both;
+		display: block;
+		width: 100%;
+	}
+}
+
+.sLeftNumber {
+	display: block;
+	font-size: 48px;
+	line-height: 32px;
+	padding-top: 12px;
+}
+
+.sLeftMeridian { display: block; font-size: 18px; }
+.sRight p { color: #fff; font: 14px/24px "proxima-nova", Arial, sans-serif; }
+.sRight h3 { color: #fff; font: 22px/28px "proxima-nova", Arial, sans-serif; padding-bottom: 5px; }
+.scheduleH2 { color: #EDC542; font-size: 48px; line-height: 50px; }
+.sectionLine {
+	background: -webkit-linear-gradient(left, #DBD2CB 0%,rgba(255, 255, 255, 0) 100%) repeat-x center bottom / 31px 3px;
+	background: linear-gradient(to right, #DBD2CB 50%, rgba(255, 255, 255, 0) 0%) repeat-x center bottom / 31px 3px;
+    height: 3px;
+}
+.talkCat {
+	color: #6BA236;
+	font: 700 20px/28px "proxima-nova", Arial, sans-serif;
+}
+.talkList p { color: #6C5029; font: 16px "proxima-nova", Arial, sans-serif; line-height: 2;}
+.talkList img { width: 60%; }
+
+.headerLink img { margin-top: -7px; }
+a.hlalt { padding: 12px 7px; }
+
+a.button.bGreen { position: relative; }
+
+a.button.bGreen:before {
+	content: "";
+    height: 120px;
+    left: 0;
+    margin-left: -125px;
+    position: absolute;
+    top: -30px;
+    width: 440px;
+	background: url("./buttonLines.png") no-repeat center center;
+}
+
+.sign a:link { opacity: 1 !important; }
+.sign a:link img:hover { opacity: 1 !important; }
+.talkList p { width: 90%; padding: 0 5%; }
+
+/* ==================== */
+
+@media all and (max-width: 900px) {
+	.section2 .half.colFullT{ text-align: center; }
+
+	.talkList .fourth {
+		width: 50%;
+		min-height: 550px;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		min-height: 550px;
+	}
+
+	.talkList .entrepreneur{
+		border-bottom: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+	}
+
+	.talkList .technology{
+		border-right: 1px solid #ddd;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+	}
+
+	.talkList .creative{
+		border-bottom: 1px solid #ddd;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.talkList .fourth { width: 100%; }
+	.talkList .technology{ border-bottom: 1px solid #ddd; border-right: none;}
+	.talkList .entrepreneur{ border-right: none;}
+	.specialCase1 { margin-bottom: 50px !important; }
+	.push3 { padding: 300px 0 150px; }
+}
+
+.sectionSponsor { width: 100%; position: relative; background: #CAEAF6; }
+.sponsorRight { width: 50%; margin-right: 5%; float: right; text-align: center; height: 850px; padding-top: 200px; }
+.sponsorRight p, .sponsorRight h2, .sponsorRight img { position: relative; }
+.noBG:before{ display: none; }
+.borders1, .borders2, .borders3 { border-bottom: 2px solid #caeaf6; padding: 5%; width: 90%;}
+.borders3 { border-bottom: 1px solid #caeaf6;}
+.borders1 { height: 45px; }
+.borders2 { min-height: 500px }
+
+.compareColumn {
+	width: 24.75%;
+	float: left;
+	position: relative;
+	border: 1px solid #caeaf6;
+}
+
+.firstOne .borders1, .firstOne .borders2, .firstOne .borders3 { border-left: 1px solid #caeaf6 }
+.lastOne .borders1, .lastOne .borders2, .lastOne .borders3 { border-right: 2px solid #caeaf6 }
+
+.seeOverflow { margin-bottom: 50px; margin-left: 1%; overflow: auto; width: 98%; }
+.noSpill { overflow: hidden; }
+.spillAllTheThings { overflow: visible; }
+.yetAnotherImage { position: absolute; left: 0; bottom: 0; }
+
+@media all and (max-width: 1150px) {
+	.borders2 { min-height: 560px; }
+}
+
+@media all and (max-width: 1050px) {
+	.borders2 { min-height: 625px; }
+}
+
+@media all and (max-width: 900px) {
+	.borders2 { min-height: 100% }
+	.borders1, .borders2, .borders3 { padding: 1% 5%; border-left: none !important; border-right: none !important; border-bottom: 1px solid #caeaf6; }
+	.compareColumn { width: 90%; margin: 0 5%; margin-bottom: 60px;}
+	.sponsorRight { width: 90%; margin: 0 5%;}
+	.firstOne { margin-top: 50px; }
+	.borders3 { border-left: none; }
+}
+
+@media all and (max-width: 575px) {
+	.borders2 { min-height: 100% }
+}

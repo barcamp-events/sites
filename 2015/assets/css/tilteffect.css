@@ -1,0 +1,100 @@
+/* Grid */
+.grid {
+	position: relative;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	list-style: none;
+	margin: 0 auto;
+}
+
+.grid__item {
+	width: 100%;
+}
+
+.grid__img img {
+	max-width: 100%;
+	display: block;
+}
+
+.grid__img--border .tilt {
+	overflow: visible;
+}
+
+/* Examples custom styles */
+.grid--examples {
+	list-style: none;
+}
+
+.grid--examples .grid__img {
+	position: relative;
+	height: 0;
+	padding-bottom: 830px;
+	overflow: hidden;
+}
+
+.grid--examples .grid__img2 {
+	position: relative;
+	height: 0;
+	padding-bottom: 400px;
+	overflow: hidden;
+}
+
+.grid--examples .tilt {
+	position: absolute;
+	top: 0;
+}
+
+@media (min-width: 500px) {
+	.grid--examples .grid__img {
+		padding-bottom: 1000px;
+}
+}
+
+@media (min-width: 700px) {
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1200px) {
+	.grid--examples .grid__img {
+		padding-bottom: 1150px;
+}
+}
+
+.tilt {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tilt__back {
+	position: relative;
+}
+
+.tilt__front {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://barcampomaha.local/birdhunt/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Bird Hunt | Barcamp</title>
+	<meta name="Description" content="Ssshhhhh.... we&#39;re hunting birds.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:image" content="./assets/birdhuntlogo.png">
+	<meta property="og:title" content="BirdHunt | BarCamp Omaha 2014">
+	<meta property="og:description" content="Ssshhhhh.... we&#39;re hunting birds.">
+	<meta property="og:site_name" content="BirdHunt">
+	<meta property="og:url" content="https://www.barcampomaha.org/birdhunt">
+	<link rel="shortcut icon" href="./assets/favicon.ico" type="image/png">
+	<style>
+
+		html, body, .flightArea {
+			overflow: hidden;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			width: 100%;
+			height: 100%;
+		}
+
+		html, body {
+			background: #DFFCFF;
+			margin: 0;
+			padding: 0;
+			cursor: move;
+			cursor: url(./assets/aim.png) 20 20, auto;
+		}
+
+		.birdWrapper {
+			margin: 50px;
+			width: 200px;
+			height: 100px;
+			position: fixed;
+			top: -100px;
+			right: 0;
+			z-index: 6;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+		}
+
+		.speed1 {
+			-webkit-transition: -webkit-transform 2s linear;
+			transition: transform 2s linear;
+		}
+		.speed2 {
+			-webkit-transition: -webkit-transform 3s linear;
+			transition: transform 3s linear;
+		}
+		.speed3 {
+			-webkit-transition: -webkit-transform 4s linear;
+			transition: transform 4s linear;
+		}
+		.speed4 {
+			-webkit-transition: -webkit-transform 5s linear;
+			transition: transform 5s linear;
+		}
+		.speed5 {
+			-webkit-transition: -webkit-transform 6s linear;
+			transition: transform 6s linear;
+		}
+
+		@media all and (max-width: 500px) {
+			.speed1 {
+				-webkit-transition: -webkit-transform 1.5s linear;
+				transition: transform 1.5s linear;
+			}
+			.speed2 {
+				-webkit-transition: -webkit-transform 2s linear;
+				transition: transform 2s linear;
+			}
+			.speed3 {
+				-webkit-transition: -webkit-transform 2.5s linear;
+				transition: transform 2.5s linear;
+			}
+			.speed4 {
+				-webkit-transition: -webkit-transform 3s linear;
+				transition: transform 3s linear;
+			}
+			.speed5 {
+				-webkit-transition: -webkit-transform 3.5s linear;
+				transition: transform 3.5s linear;
+			}
+		}
+
+		.flying1 {
+			-webkit-transform: translate(500px,50px) !important;
+			transform: translate(500px, 50px) !important;
+		}
+
+		.flying2 {
+			-webkit-transform: translate(500px,400px) !important;
+			transform: translate(500px, 400px) !important;
+		}
+
+		.flying3 {
+			-webkit-transform: translate(500px,300px) !important;
+			transform: translate(500px, 300px) !important;
+		}
+
+		.flying4 {
+			-webkit-transform: translate(500px,200px) !important;
+			transform: translate(500px, 200px) !important;
+		}
+
+		.flying5 {
+			-webkit-transform: translate(500px,100px) !important;
+			transform: translate(500px, 100px) !important;
+		}
+
+		.bird {
+			width: 106px;
+			height: 80px;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+
+		.wing {
+			-webkit-animation: flapping 0.25s steps(1) infinite;
+			animation: flapping 0.25s steps(1) infinite;
+			background: url(./assets/wing.png) no-repeat;
+			width: 106px;
+			height: 80px;
+			position: absolute;
+			top: 58px;
+			left: 60px;
+			z-index: 7;
+		}
+
+		@-webkit-keyframes flapping {
+			0% { background-position: 0 0; }
+			25% { background-position: -106px 0; }
+			50% { background-position: -212px 0; }
+			75% { background-position: -106px 0; }
+			100% { background-position: 0 0; }
+		}
+
+		@keyframes flapping {
+			0% { background-position: 0 0; }
+			25% { background-position: -106px 0; }
+			50% { background-position: -212px 0; }
+			75% { background-position: -106px 0; }
+			100% { background-position: 0 0; }
+		}
+
+		.powWrapper {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			z-index: 3;
+		}
+
+		.powWrapper img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.feathers {
+			-webkit-animation: puff 0.75s linear;
+			animation: puff 0.75s linear;
+			z-index: 8;
+			opacity: 0;
+		}
+
+		.feathers2 {
+			-webkit-animation: puff2 0.75s linear;
+			animation: puff2 0.75s linear;
+			z-index: 8;
+			opacity: 0;
+		}
+
+		@keyframes puff {
+			0% { opacity: 1; transform: scale(0,0) rotateZ(0); }
+			50% { opacity: 1; }
+			100% { opacity: 0; transform: scale(1,1) rotateZ(80deg); }
+		}
+
+		@keyframes puff2 {
+			0% { opacity: 1; transform: scale(0,0) rotateZ(0); }
+			50% { opacity: 1; }
+			100% { opacity: 0; transform: scale(1,1) rotateZ(-90deg); }
+		}
+
+		@-webkit-keyframes puff {
+			0% { opacity: 1; -webkit-transform: scale(0,0) rotateZ(0); }
+			50% { opacity: 1; }
+			100% { opacity: 0; -webkit-transform: scale(1,1) rotateZ(80deg); }
+		}
+
+		@-webkit-keyframes puff2 {
+			0% { opacity: 1; -webkit-transform: scale(0,0) rotateZ(0); }
+			50% { opacity: 1; }
+			100% { opacity: 0; -webkit-transform: scale(1,1) rotateZ(-90deg); }
+		}
+
+		.pow {
+			-webkit-animation: pow 0.4s linear forwards;
+			animation: pow 0.4s linear forwards;
+		}
+
+		.boom {
+			width: 400px;
+			height: 400px;
+			margin: -125px 0 0 -125px;
+		}
+
+		@keyframes pow {
+			0% { transform: scale(0,0); }
+			20% { transform: scale(1,1); }
+			60% { transform: scale(1,1); }
+			100% { transform: scale(0,0); }
+		}
+
+		@-webkit-keyframes pow {
+			0% { -webkit-transform: scale(0,0); }
+			20% { -webkit-transform: scale(1,1); }
+			60% { -webkit-transform: scale(1,1); }
+			100% { -webkit-transform: scale(0,0); }
+		}
+
+		div.scoreCounter, .missCounter {
+			position: fixed;
+			top: 20px;
+			font: 60px Arial, sans-serif;
+			z-index: 3;
+		}
+
+		div.scoreCounter {
+			left: 20px;
+			color: #333;
+		}
+
+		.missCounter {
+			right: 20px;
+			color: #f00;
+		}
+
+		.missCounter img, .scoreCounter img {
+			margin: 0 3px;
+			float: left;
+			display: block;
+			height: 53px;
+		}
+
+		#youLost {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			text-align: center;
+			z-index: 9;
+			display: none;
+			background: rgba(0,0,0,0.5);
+		}
+
+		#youLost.show { display: table; }
+
+		#youLost p {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		#youLost span { display: inline-block; }
+		#youLost p img { height: 53px; }
+		.scoreWord { margin-right: 10px; }
+
+		.newGame, .gameOverTitle {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			margin-left: -508px;
+		}
+
+		.newGame{ bottom: 20px; }
+		.gameOverTitle { top: 10px; }
+
+		@media all and (max-width: 1100px) {
+			.newGame, .gameOverTitle {
+				width: 90%;
+				left: 5%;
+				margin-left: 0;
+			}
+		}
+
+		.sky, .ground, .flightArea {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.sky {
+			background: url("./assets/sky.png") repeat-x top left;
+			background-size: cover;
+			z-index: 2;
+			width: 100%;
+			left: 0;
+		}
+
+		.ground {
+			background: url("./assets/ground.png") repeat-x bottom left;
+			background-size: cover;
+			z-index: 3;
+		}
+
+		.flightArea {z-index: 4;}
+		.preLoadSection { display: none; }
+
+		.jugWrapper {
+			position: absolute;
+			bottom: 0;
+			display: block;
+			z-index: 8;
+		}
+
+		@media all and (max-width: 500px) {
+			.jugWrapper img { width: 60px; }
+		}
+
+		.jugWrapper img {
+			-webkit-animation: bottleSpin 2s infinite linear;
+			animation: bottleSpin 2s infinite linear;
+		}
+
+		@keyframes bottleSpin {
+			0% { transform: rotateZ(0); }
+			100% { transform: rotateZ(720deg); }
+		}
+
+		@-webkit-keyframes bottleSpin {
+			0% { -webkit-transform: rotateZ(0); }
+			100% { -webkit-transform: rotateZ(720deg); }
+		}
+
+		#jug0 {
+			-webkit-animation: toss2 20s infinite ease-out;
+			animation: toss2 20s infinite ease-out;
+		}
+
+		#jug1 {
+			-webkit-animation: toss3 14s infinite ease-out;
+			animation: toss3 14s infinite ease-out;
+		}
+
+		#jug2 {
+			-webkit-animation: toss1 15s infinite ease-out ;
+			animation: toss1 15s infinite ease-out;
+		}
+
+		#jug3 {
+			-webkit-animation: toss2 13s infinite ease-out;
+			animation: toss2 13s infinite ease-out;
+		}
+
+		@keyframes toss1 {
+			0% { transform: translateY(200px); }
+			80% { transform: translateY(200px); animation-timing-function: ease-out; }
+			90% { transform: translateY(-600px); animation-timing-function: ease-in; }
+			100% { transform: translateY(200px); animation-timing-function: ease-out; }
+		}
+
+		@-webkit-keyframes toss1 {
+			0% { -webkit-transform: translateY(200px); }
+			80% { -webkit-transform: translateY(200px); -webkit-animation-timing-function: ease-out; }
+			90% { -webkit-transform: translateY(-600px); -webkit-animation-timing-function: ease-in; }
+			100% { -webkit-transform: translateY(200px); -webkit-animation-timing-function: ease-out; }
+		}
+
+		@keyframes toss2 {
+			0% { transform: translateY(200px); animation-timing-function: ease-out; }
+			10% { transform: translateY(-500px); animation-timing-function: ease-in; }
+			20% { transform: translateY(200px); animation-timing-function: ease-out; }
+			100% { transform: translateY(200px); }
+		}
+
+		@-webkit-keyframes toss2 {
+			0% { -webkit-transform: translateY(200px); -webkit-animation-timing-function: ease-out; }
+			10% { -webkit-transform: translateY(-500px); -webkit-animation-timing-function: ease-in; }
+			20% { -webkit-transform: translateY(200px); -webkit-animation-timing-function: ease-out; }
+			100% { -webkit-transform: translateY(200px); }
+		}
+
+		@keyframes toss3 {
+			0% { transform: translateY(200px); }
+			60% { transform: translateY(200px); animation-timing-function: ease-out; }
+			65% { transform: translateY(-525px); animation-timing-function: ease-in; }
+			70% { transform: translateY(200px); animation-timing-function: ease-out; }
+			100% { transform: translateY(200px); }
+		}
+
+		@-webkit-keyframes toss3 {
+			0% { -webkit-transform: translateY(200px); }
+			60% { -webkit-transform: translateY(200px); -webkit-animation-timing-function: ease-out; }
+			65% { -webkit-transform: translateY(-525px); -webkit-animation-timing-function: ease-in; }
+			70% { -webkit-transform: translateY(200px); -webkit-animation-timing-function: ease-out; }
+			100% { -webkit-transform: translateY(200px); }
+		}
+
+		.alien {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 75px;
+			height: 130px;
+			z-index: 3;
+			background: url("./assets/alien.png") no-repeat top left;
+			background-size: 150px 120px;
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+			-webkit-transform-origin: bottom center;
+			transform-origin: bottom center;
+			background-position: -75px 0;
+		}
+
+		.alien.animate {
+			-webkit-animation: jeer 2.75s forwards;
+			animation: jeer 2.75s forwards;
+		}
+
+		@keyframes jeer {
+			0% { transform: translateY(0); }
+			20% { transform: translateY(-150px); }
+			30% { transform: translateY(-150px); animation-timing-function: ease-out; }
+			33% { transform: translateY(-156px); animation-timing-function: ease-in;}
+			36% { transform: translateY(-147px); animation-timing-function: ease-in-out;}
+			39% { transform: translateY(-156px); animation-timing-function: ease-in;}
+			42% { transform: translateY(-147px); animation-timing-function: ease-in-out;}
+			45% { transform: translateY(-150px); animation-timing-function: ease-out;}
+			65% { transform: translateY(-150px); animation-timing-function: ease-out; }
+			85% { transform: translateY(0); }
+			100% { transform: translateY(0); }
+		}
+
+		@-webkit-keyframes jeer {
+			0% { -webkit-transform: translateY(0); }
+			20% { -webkit-transform: translateY(-150px); }
+			30% { -webkit-transform: translateY(-150px); -webkit-animation-timing-function: ease-out; }
+			33% { -webkit-transform: translateY(-156px); -webkit-animation-timing-function: ease-in;}
+			36% { -webkit-transform: translateY(-147px); -webkit-animation-timing-function: ease-in-out;}
+			39% { -webkit-transform: translateY(-156px); -webkit-animation-timing-function: ease-in;}
+			42% { -webkit-transform: translateY(-147px); -webkit-animation-timing-function: ease-in-out;}
+			45% { -webkit-transform: translateY(-150px); -webkit-animation-timing-function: ease-out;}
+			65% { -webkit-transform: translateY(-150px); -webkit-animation-timing-function: ease-out; }
+			85% { -webkit-transform: translateY(0); }
+			100% { -webkit-transform: translateY(0); }
+		}
+
+		@media all and (min-width: 1500px) {
+			@keyframes jeer {
+				0% { transform: translateY(0); }
+				20% { transform: translateY(-250px); }
+				30% { transform: translateY(-250px); animation-timing-function: ease-out; }
+				33% { transform: translateY(-256px); animation-timing-function: ease-in;}
+				36% { transform: translateY(-247px); animation-timing-function: ease-in-out;}
+				39% { transform: translateY(-256px); animation-timing-function: ease-in;}
+				42% { transform: translateY(-247px); animation-timing-function: ease-in-out;}
+				45% { transform: translateY(-250px); animation-timing-function: ease-out;}
+				65% { transform: translateY(-250px); animation-timing-function: ease-out; }
+				85% { transform: translateY(0); }
+				100% { transform: translateY(0); }
+			}
+
+			@-webkit-keyframes jeer {
+				0% { -webkit-transform: translateY(0); }
+				20% { -webkit-transform: translateY(-250px); }
+				30% { -webkit-transform: translateY(-250px); -webkit-animation-timing-function: ease-out; }
+				33% { -webkit-transform: translateY(-256px); -webkit-animation-timing-function: ease-in;}
+				36% { -webkit-transform: translateY(-247px); -webkit-animation-timing-function: ease-in-out;}
+				39% { -webkit-transform: translateY(-256px); -webkit-animation-timing-function: ease-in;}
+				42% { -webkit-transform: translateY(-247px); -webkit-animation-timing-function: ease-in-out;}
+				45% { -webkit-transform: translateY(-250px); -webkit-animation-timing-function: ease-out;}
+				65% { -webkit-transform: translateY(-250px); -webkit-animation-timing-function: ease-out; }
+				85% { -webkit-transform: translateY(0); }
+				100% { -webkit-transform: translateY(0); }
+			}
+		}
+
+		@media all and (min-width: 1800px) {
+			@keyframes jeer {
+				0% { transform: translateY(0); }
+				20% { transform: translateY(-350px); }
+				30% { transform: translateY(-350px); animation-timing-function: ease-out; }
+				33% { transform: translateY(-356px); animation-timing-function: ease-in;}
+				36% { transform: translateY(-347px); animation-timing-function: ease-in-out;}
+				39% { transform: translateY(-356px); animation-timing-function: ease-in;}
+				42% { transform: translateY(-347px); animation-timing-function: ease-in-out;}
+				45% { transform: translateY(-350px); animation-timing-function: ease-out;}
+				65% { transform: translateY(-350px); animation-timing-function: ease-out; }
+				85% { transform: translateY(0); }
+				100% { transform: translateY(0); }
+			}
+
+			@-webkit-keyframes jeer {
+				0% { -webkit-transform: translateY(0); }
+				20% { -webkit-transform: translateY(-350px); }
+				30% { -webkit-transform: translateY(-350px); -webkit-animation-timing-function: ease-out; }
+				33% { -webkit-transform: translateY(-356px); -webkit-animation-timing-function: ease-in;}
+				36% { -webkit-transform: translateY(-347px); -webkit-animation-timing-function: ease-in-out;}
+				39% { -webkit-transform: translateY(-356px); -webkit-animation-timing-function: ease-in;}
+				42% { -webkit-transform: translateY(-347px); -webkit-animation-timing-function: ease-in-out;}
+				45% { -webkit-transform: translateY(-350px); -webkit-animation-timing-function: ease-out;}
+				65% { -webkit-transform: translateY(-350px); -webkit-animation-timing-function: ease-out; }
+				85% { -webkit-transform: translateY(0); }
+				100% { -webkit-transform: translateY(0); }
+			}
+		}
+
+		.splashScreen {
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.5);
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: table;
+			z-index: 99;
+		}
+
+		.playNow {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		.playNow img {
+			height: 250px;
+			display: inline-block;
+		}
+
+		@media all and (min-width: 800px) {
+			.playNow img { height: 350px; }
+		}
+
+		@media all and (min-width: 1200px) {
+			.playNow img { height: 550px; }
+		}
+
+		.warning {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 80%;
+			height: 100%;
+			padding: 0 10%;
+			display: table;
+			background: #DFFCFF;
+			z-index: 999;
+		}
+
+		.wInner {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			font: 20px/30px Arial, sans-serif;
+		}
+
+		.tweet { display: inline-block; }
+
+	</style>
+</head>
+<body>
+
+<!--[if lte IE 9]>
+	<div class="warning"><div class="wInner">Hey there citizen! Unfortunately, this game isn't supported on IE9 and lower. Please go fire up a modern browser like IE11, Chrome, Safari or Firefox to play.</div></div>
+<![endif]-->
+
+<div class="splashScreen">
+	<div class="playNow">
+		<img src="./assets/logo.png" alt="Play Game">
+	</div>
+</div>
+
+<div class="preLoadSection">
+	<img src="./assets/hit1.png" alt="">
+	<img src="./assets/hit2.png" alt="">
+	<img src="./assets/hit3.png" alt="">
+	<img src="./assets/hit4.png" alt="">
+	<img src="./assets/hit5.png" alt="">
+	<img src="./assets/shards.png" alt="">
+	<img src="./assets/boom.png" alt="">
+	<img src="./assets/1.png" alt="">
+	<img src="./assets/2.png" alt="">
+	<img src="./assets/3.png" alt="">
+	<img src="./assets/4.png" alt="">
+	<img src="./assets/5.png" alt="">
+	<img src="./assets/6.png" alt="">
+	<img src="./assets/7.png" alt="">
+	<img src="./assets/8.png" alt="">
+	<img src="./assets/9.png" alt="">
+	<img src="./assets/1_red.png" alt="">
+	<img src="./assets/2_red.png" alt="">
+	<img src="./assets/3_red.png" alt="">
+	<img src="./assets/4_red.png" alt="">
+	<img src="./assets/5_red.png" alt="">
+	<img src="./assets/6_red.png" alt="">
+	<img src="./assets/7_red.png" alt="">
+	<img src="./assets/8_red.png" alt="">
+	<img src="./assets/9_red.png" alt="">
+</div>
+<div class="scoreCounter"><img src="./assets/0.png" alt="0"></div>
+<div class="missCounter"><img src="./assets/0_red.png" alt="0"></div>
+<div id="youLost">
+	<img src="./assets/board1.png" alt="Game Over" class="gameOverTitle">
+	<p>
+		<img src="./assets/score.png" alt="score:" class="scoreWord"><span class="scoreCounter"><img src="./assets/0.png" alt="0"></span>
+		<a target="_blank" href="https://barcampomaha.local/birdhunt/#" class="tweet"><img src="./assets/tweet_score.png" alt="Tweet Score"></a>
+	</p>
+	<img src="./assets/board2.png" alt="" class="newGame">
+</div>
+
+<div class="sky"></div>
+<div class="alien"></div>
+<div class="ground"></div>
+<div class="flightArea"></div>
+<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script>
+
+	jQuery(document).ready(function($){
+
+		$(".playNow").on("click",function(){
+			$(".splashScreen").hide();
+			initializeGame();
+		});
+
+		function initializeGame(){
+			var windowWidth = parseInt($(window).width())+ 75,
+				windowHeight = parseInt($(document).height() - 200)-100,
+				scoreCounter = $(".scoreCounter"),
+				missCounter = $(".missCounter"),
+				hits = 0, misses = 0, spawner, jugSpawner1, jugSpawner2, jugSpawner3, jugSpawner4, spawnRate = 1400, countdownTDI = 5, i=0, disablePopup = false;
+
+			// prevent scrolling around the screen on mobile
+			$(document).bind('touchmove', false);
+
+			$(".flightArea").on("mousedown touchstart",".hitObject",function(){
+				var thisBird = $(this),
+					type = thisBird.data("type"),
+					randVal = thisBird.data("rand");
+
+				var birdOffset = thisBird.offset(),
+					top = birdOffset.top,
+					left = birdOffset.left,
+					rand = new Date().getTime();
+
+				thisBird.remove();
+
+				if (type=="jug") {
+					var pow = "<div class='powWrapper' id='pow" + rand + "' style='top:" + (top) + "px; left:" + (left) + "px;'><img src='./assets/boom.png' alt='hit!' class='pow boom' draggable='false'><img src='./assets/shards.png' alt='' class='feathers' draggable='false'><img src='./assets/shards.png' alt='' class='feathers2' draggable='false'></div>";
+				} else {
+					var pow = "<div class='powWrapper' id='pow" + rand + "' style='top:" + (top) + "px; left:" + (left) + "px;'><img src='./assets/hit" + randVal + ".png' alt='hit!' class='pow' draggable='false'><img src='./assets/puff.png' alt='' class='feathers' draggable='false'><img src='./assets/puff.png' alt='' class='feathers2' draggable='false'></div>";
+				}
+
+				$(".flightArea").append(pow);
+
+				if (type=="jug") {
+					window.setTimeout(function(){ gameOver();},250);
+				} else {
+					window.setTimeout(function(){ $("#pow" + rand ).remove();},900);
+					scoreCounter.html(generateDisplayScore(++hits,"hit"));
+					countdownTDI--;
+					if (countdownTDI == 0) { increaseDifficulty(); countdownTDI = 5;}
+				}
+			// prevent dragging images when you click on them
+			}).on("dragstart",function(){
+				return false;
+			});
+
+			function countMiss(){
+				missCounter.html(generateDisplayScore(++misses,"miss"));
+				if (misses > 9) { gameOver(); }
+				if (!disablePopup){
+					disablePopup = true;
+					$(".alien").addClass("animate");
+					window.setTimeout(function(){$(".alien").removeClass("animate"); disablePopup = false;},2800);
+				}
+			}
+
+			function gameOver(){
+				$("#youLost").addClass("show");
+				$(".tweet").attr("href","https://twitter.com/intent/tweet?text=I+just+got+a+score+of+" + hits + "+on+@barcampomaha+Bird+Hunt!&hashtags=bco14,bcobirdhunt&url=www.barcampomaha.org/birdhunt");
+				window.clearInterval(spawner);
+				window.clearTimeout(jugSpawner1);
+				window.clearTimeout(jugSpawner2);
+				window.clearTimeout(jugSpawner3);
+				window.clearTimeout(jugSpawner4);
+				$(".birdWrapper, .powWrapper, .jugWrapper").remove();
+			}
+
+			function generateDisplayScore(number,type){
+				var numberArray = (number.toString()).split(''),
+					numString = "", numType = "";
+
+				if (type == "miss") { numType = "_red"; }
+				numberArray.forEach(function(element){
+					numString += "<img src='./assets/"+element+numType+".png' alt='"+element+"'>";
+				});
+				return numString;
+			}
+
+			function gameReset(){
+				scoreCounter.html('<img src="./assets/0.png" alt="0">');
+				missCounter.html('<img src="./assets/0_red.png" alt="0">');
+				windowWidth = parseInt($(window).width())+ 75;
+				windowHeight = parseInt($(document).height() - 100)-100;
+				hits = 0;
+				misses = 0;
+				spawnRate = 1400;
+				countdownTDI = 5;
+				i=0;
+				jugSpawner1 = window.setTimeout(spawnJug, 7000);
+				jugSpawner2 = window.setTimeout(spawnJug, 15000);
+				jugSpawner3 = window.setTimeout(spawnJug, 22000);
+				jugSpawner4 = window.setTimeout(spawnJug, 26000);
+				spawner = window.setInterval(spawnBird,spawnRate);
+				$("#youLost").removeClass("show");
+			}
+
+			function increaseDifficulty(){
+				window.clearInterval(spawner);
+				spawnRate = spawnRate*0.93;
+				spawner = window.setInterval(spawnBird,spawnRate);
+			}
+
+			$(".newGame").on("click", function(){
+				gameReset();
+			});
+
+			function spawnBird(){
+				var datValue = Math.random(),
+					random = Math.floor(datValue*(5)) + 1,
+					positionY =  Math.floor(datValue* (windowHeight)),
+					position = Math.floor(datValue*10000);
+
+				$(".flightArea").prepend("<div id='bird" + random + position + "' class='birdWrapper hitObject speed" + random + "' data-rand='" + random + "' data-type='bird' style='-webkit-transform: translate(-" + windowWidth  + "px," + positionY +"px); transform: translate(-" + windowWidth  + "px," + positionY +"px);'><img class='bird' src='./assets/bird.png'><div class='wing'></div></div>");
+
+				window.setTimeout(function(){ $("#bird" + random + position).addClass("flying" + random); },75);
+
+				var timeoutVal = (windowWidth > 575) ? ((random+1)*910) : ((random*0.5)+1)*1000;
+				window.setTimeout(function(){ if ($("#bird" + random + position).length) {$("#bird" + random + position).remove(); countMiss();} },timeoutVal);
+			}
+
+			function spawnJug(){
+				$(".flightArea").prepend("<div id='jug" + i + "' class='jugWrapper hitObject' data-type='jug' style='left: " + Math.floor(Math.random()*windowWidth) + "px'><img class='jug' src='./assets/jug.png' draggable='false' alt='JUG'></div>");
+				i++;
+			}
+
+			jugSpawner1 = window.setTimeout(spawnJug, 7000);
+			jugSpawner2 = window.setTimeout(spawnJug, 15000);
+			jugSpawner3 = window.setTimeout(spawnJug, 22000);
+			jugSpawner4 = window.setTimeout(spawnJug, 26000);
+			spawner = window.setInterval(spawnBird,spawnRate);
+		}
+
+		console.info("Hello, curious adventurer! You've found the credits section. All illustration work was done by the amazing Matt Carlson (dribbble.com/matt-carlson). Concept, programming and animation was done by Caleb Nachtigall (twitter.com/forjdaddy).");
+		console.info("This started out as a bit of flying animation for the Barcamp website, and slowly evolved into what you see here. We're not responsible for you wasting an hour playing this, either.");
+		console.info("All PNG crushing was done with tinypng.org. Seriously, go check it out.");
+		console.info("BirdHunt (c) 2014 Grain and Mortar");
+	});
+</script>
+
+<script> // It is incorrectly noted that Thomas Edison invented push-ups in 1878. -Nikola Tesla had in fact patented the activity three years earlier, under the name Tesla-cise  -Fact Core </script>
+
+</body></html>

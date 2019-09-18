@@ -1,0 +1,31 @@
+.sponsors {
+  padding: 40px 0;
+}
+
+.sponsors a:hover {
+  opacity: 0.65;
+  text-decoration: none;
+}
+
+.sponsors img {
+  width: 100%;
+  margin-bottom: 6px;
+  display: inline-block;
+  border: 1px solid #0303ca;
+}
+
+.sponsors img:hover {
+  border: 1px solid #fff;
+}
+
+@media (min-width: 500px) {
+.sponsors img {
+  width: 48.85%;
+}
+}
+
+@media (min-width: 1000px) {
+.sponsors img {
+  width: 32.3%;
+}
+}

@@ -1,0 +1,18 @@
+@import url(./css/normalize.css);
+@import url(./css/skeleton.css);
+@import url(./css/test.css);
+@import url(./css/nav.css);
+@import url(./css/outlined.css);
+@import url(./css/title.css);
+@import url(./css/typography.css);
+@import url(./css/welcome.css);
+@import url(./css/sponsors.css);
+@import url(./css/schedule.css);
+@import url(./css/tilteffect.css);
+@import url(./css/faq.css);
+/* @import url(./css/demo.css); */
+@import url(./css/footer.css);
+
+:root {
+    --font: "Raleway"
+}

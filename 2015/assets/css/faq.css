@@ -1,0 +1,16 @@
+.faq {
+	margin-bottom: 40px;
+}
+
+.seven.columns.faq ul li {
+	margin-left: 5%;
+	line-height: 2;	
+}
+.frequent {
+  	background-image: url('../images/frequent.png');
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	min-height: 800px;
+}

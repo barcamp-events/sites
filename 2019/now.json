@@ -1,0 +1,9 @@
+{
+    "name": "BarCamp Omaha 2019",
+    "version": 2,
+    "builds": [
+        { "src": "*.html", "use": "@now/static" },
+        { "src": "assets/**", "use": "@now/static" }
+    ],
+    "public": true
+}

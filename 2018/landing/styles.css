@@ -1,0 +1,195 @@
+@import('reset.css');
+
+html {
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+  font-size: 16px;
+  color: #001718;
+
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+a {
+  font-weight: normal;
+  color: #001718;
+}
+sup {
+  font-size: 50%;
+}
+p {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body > div {
+  display: inline-block;
+  border-radius: 5px;
+  background: rgba(0,234,244,0.8);
+  line-height: 1.25rem;
+}
+body > div > img {
+  height: 1em;
+}
+.handle {
+  display: block;
+  border-bottom: 1px solid #001718;
+  cursor: move;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+}
+.handle > img {
+  display: inline-block;
+  height: 15px;
+  vertical-align: middle;
+}
+
+
+.bc18_tagline > img {
+  padding: 19px 33px;
+  height: 27px;
+}
+.aiganebraska > img {
+  padding: 28px 33px;
+  height: 115px;
+}
+.bc18_logo {
+  z-index: 1;
+}
+.bc18_logo > img {
+  height: 183px;
+  padding: 25px 63px;
+}
+.bc18_lettermark_b {
+  background: url('img/18_bg.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+.bc18_lettermark_b > img {
+  padding: 104px 95.5px;
+  height: 178px;
+}
+.bc18_lettermark_a {
+  background: url('img/bc_bg.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+.bc18_lettermark_a > img {
+  padding: 105px 74px;
+  height: 177px;
+}
+.bc18_date {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: .1em;
+}
+.bc18_date > p {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 29.5px;
+  padding-left: 29.5px;
+}
+.bc18_date > img {
+  height: 30px;
+  padding-bottom: 20px;
+  padding-right: 29.5px;
+  padding-left: 29.5px;
+}
+.note, .past_websites {
+  letter-spacing: .15rem;
+}
+.note p:nth-of-type(2) {
+  padding: 1rem 0;
+}
+.note > div {
+  padding: 23px;
+}
+.past_websites p {
+  padding: 17px 13px 1rem 13px;
+}
+.past_websites ul {
+  padding: 0 13px 13px 13px;
+}
+.moved {
+  right: auto !important;
+}
+.egg {
+  transition: all 500ms linear;
+  transform: scale(0);
+  transform-origin: top left;
+}
+.egg.expand {
+  transform: scale(1);
+}
+.egg > img {
+  height: 100px;
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+@media all and (max-width: 768px) {
+  .mobile-only {
+    display: inherit;
+  }
+  .row {
+    flex-direction: row;
+    background: none;
+  }
+  .row > div {
+    flex-grow: 1;
+    margin: 0 2.5px;
+    border-radius: 5px;
+    background: rgba(0,234,244,0.8);
+  }
+  html {
+    overflow: auto;
+  }
+  .handle {
+    cursor: default;
+    height: 18px;
+    line-height: 18px;
+  }
+  .handle > img {
+    height: 12px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  body > div {
+    position: static;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  .bc18_lettermark_a,
+  .bc18_lettermark_b,
+  .egg,
+  br,
+  body > .aiganebraska {
+    display: none;
+  }
+  .bc18_logo {
+    text-align: center;
+  }
+  .bc18_logo > img {
+    padding: 5% 0;
+    width: 90%;
+  }
+  .aiganebraska {
+    text-align: center;
+  }
+  .bc18_tagline {
+    text-align: center;
+  }
+  .bc18_tagline > img {
+    padding: 19px 0;
+  }
+}

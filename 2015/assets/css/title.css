@@ -1,0 +1,151 @@
+.title-bordered {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  padding-bottom: 19px;
+  margin-bottom: 45px;
+}
+
+.title-bordered:before {
+  margin: auto;
+  content: "";
+  width: 60px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0303ca;
+}
+
+.block-inner {
+  padding: 45px 35px 80px;
+  background: #fff;
+  text-align: center;
+  background: #1847ed;
+  margin-top: -335px;
+}
+
+@media (min-width: 700px) {
+  .block-inner {
+    margin-top: -405px;
+  }
+}
+
+@media (min-width: 900px) {
+  .block-inner {
+  margin-top: -335px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .block-inner {
+    margin-top: -405px;
+  }
+}
+
+.party-inner {
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+  color: #1847ed;
+  border: 20px solid blue;
+}
+
+.center {
+  text-align: center;
+}
+
+.block-catcher {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: blue;
+  transition: background 0.1s ease;
+  font: 21px/80px var(--font);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+
+.block-catcher.first {
+  max-width: 81.375%;
+  bottom: -100px;
+  left: calc(8.875% + 24px);
+}
+
+@media (max-width: 1200px) {
+  .block-catcher.first {
+    max-width: calc(86.25% - 70px);
+    bottom: -100px;
+    left: calc(8.875% + 28px);}
+}
+
+@media (max-width: 900px) {
+  .block-catcher.first {
+    max-width: 85%;
+    bottom: -100px;
+    left: 7.5%;}
+}
+
+@media (max-width: 700px) {
+  .block-catcher.first {
+    max-width: 100%;
+    bottom: -75px;
+    left: 0;}
+}
+
+.sponsblock {
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: blue;
+  transition: background 0.1s ease;
+  font: 21px/80px var(--font);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.block-catcher:hover, .sponsblock:hover {
+  background: #0303ca;
+  color: #fff;
+}
+
+.block_white {
+  background-color: white;
+}
+
+
+@media (min-width: 0px) and (max-width: 700px) {
+  .party-inner h3 {
+  padding-top: 40px;
+}
+}
+
+@media (min-width: 600px) {
+  .block-inner {
+  padding: 65px 65px 100px;
+}
+}
+
+
+@media (min-width: 1200px) {
+  .party-inner h3 {
+  padding-top: 20px;
+}
+}

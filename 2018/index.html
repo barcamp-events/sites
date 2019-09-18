@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BarCamp Omaha 2018</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/2.2.0/draggabilly.pkgd.min.js"></script>
+    <script src="script.js"></script>
+    <meta name="description" content="Join us on August 4, 2018 for BarCamp, Omaha's favorite creative un-conference brought to you by AIGA Nebraska. This year, we invite you to share your messy, extraordinary, unfinished creations — because we're all a work in process.">
+    <meta property="og:image" content="img/social.jpg">
+  </head>
+  <body>
+    <div class="sleep" onclick="unsleepMe()">
+      <div>
+        <img src="img/sleep-logo.svg" alt="BarCamp Omaha">
+        Click anywhere to turn off sleep mode
+      </div>
+    </div>
+
+    <img src="img/about-logo.svg" alt="BarCamp Omaha" class="mobile-only logo">
+    <a href="https://www.eventbrite.com/e/barcamp-omaha-2018-tickets-46763428674" class="register mobile-only" target="_blank">Register Now</a>
+
+    <div class="notes drag" style="left:50%;transform:translate(-50%, 0);">
+      <span class="handle">
+        <span class="dot">&bull;</span>
+        <span>note</span>
+      </span>
+      <ul>
+        <li class="active" onclick="switchNote('about', this)">About</li>
+        <li>--------------------</li>
+        <li onclick="switchNote('agenda', this)">Agenda</li>
+        <li>--------------------</li>
+        <li onclick="switchNote('faqs', this)">FAQs</li>
+        <li>--------------------</li>
+        <li onclick="switchNote('partners', this)">Partners</li>
+        <li>--------------------</li>
+      </ul>
+      <img src="img/notes-divider.svg">
+      <div class="all">
+        <div class="note about">
+          <h2 class="mobile-only" onclick="openNoteMobile('about')">About</h2>
+          <h3>Sat, Aug 4, 2018<br>KANEKO | 8 AM - 4 PM</h3>
+          <h3>A WORK IN PROCESS</h3>
+          <p>At BarCamp, we've ditched the predetermined speaker list. We're a user-generated, creative unconference that provides a space for everyday humans to share their passions. Talks aren’t scheduled until just before the conference starts, and anyone can speak — though it's just as rewarding to sit back and listen. There's no bar (except for drinks at the opening party) and no camp (unless you bring your own tent). But there's a whole lot to discover.</p>
+          <p>This year, we celebrate process. How do we get from A to B, and where do our creative worlds collide? BarCamp 2018 invites you to share your messy, extraordinary, perhaps unfinished creations — because we're all a work in process.</p>
+        </div>
+        <div class="note agenda hidden">
+          <h2 class="mobile-only" onclick="openNoteMobile('agenda')">Agenda</h2>
+          <h3>Friday, Aug 3</h3>
+          <h4><span>7pm</span> | Opening Party sponsored by Adobe<br>&gt; Hi-Fi House</h4>
+          <p>Get pumped for the opening party, brought to you by Adobe! Each BarCamp ticket purchase gets you one free drink ticket. This party and its cash bar is open to the public, so bring your friends — you can always purchase BarCamp tickets at the door. We’ll have photos, choice tunes, and great company.</p>
+          <h4><span>8pm</span> | Adobe Workshop featuring <a href="https://www.instagram.com/hungryboynyc/" target="_blank">Aaron Bernstein</a></h4>
+          <p>Join us for a free interactive workshop hosted by Adobe creative resident <a href="https://www.instagram.com/hungryboynyc/" target="_blank">Aaron Bernstein</a>, an NYC-based photographer. We'll use hands-on activities to explore alternative conceptual techniques, pushing the boundaries of context in artwork to redefine meaning and highlight the importance of intent with which the work was created.</p>
+          <h4><span>9pm</span> | Prize Giveaways</h4>
+          <p>All partygoers are entered for a chance to win prizes from our partners.</p>
+          <h3>Saturday, Aug 4</h3>
+          <h4><span>8am</span> | Breakfast + Sign Up<br>&gt; KANEKO</h4>
+          <p>Grab a bagel and coffee, sign up for a talk, and get to know your fellow BarCampers.</p>
+          <h4><span>8:45am</span> | BarCamp 2018 Kickoff</h4>
+          <p>Our emcee duo, Flame Schoeder and William M. Riley, will lay some ground rules for the day. We’ve got a lot in store this year, so get there early!</p>
+          <h4><span>9am</span> | Morning Talks Begin</h4>
+          <p>We’ll start the first round of talks promptly at 9am — get ready to learn and to share. Hosts from FireBelly Rep will be at each track to help speakers with audio/video needs and emotional support. And thanks to Tech Omaha, we’re able to film talks at every track.</p>
+          <h4><span>12pm</span> | Lunch</h4>
+          <p>Grab a sack lunch and catch up with old and new friends. We’ve got a special lunch activity in the works this year, where you’ll have the chance to impact the future of BarCamp. More details coming soon.</p>
+          <h4><span>1pm</span> | *NEW* Special Round: Lightning Talks</h4>
+          <p>Want to share, but don’t have enough content for a half hour? No worries! We’re hosting a special round of 7-minute lightning talks at each track.</p>
+          <h4><span>1:30pm</span> | Half-Hour Talks Resume</h4>
+          <p>Round out the last few hours of BarCamp and pop into a track you haven’t been to, or sign up for a talk of your own!</p>
+          <h4><span>4pm</span> | Closing Ceremony</h4>
+          <p>Say goodbye to another year of BarCamp. But stay tuned — we’re planning extended programming in 2019.</p>
+        </div>
+        <div class="note faqs hidden">
+          <h2 class="mobile-only" onclick="openNoteMobile('faqs')">FAQs</span></h2>
+          <h3>What does my BarCamp ticket include?</h3>
+          <ul>
+            <li>Opening party and drink ticket</li>
+            <li>Grab-n-go breakfast and individual lunch from <a href="https://www.panerabread.com/en-us/home.html" target="_blank">Panera</a></li>
+            <li>Coffee, soda and snacks</li>
+            <li>BarCamp 2018 t-shirt sponsored by <a href="https://agapered.com/" target="_blank">Agape Red</a></li>
+            <li>Instruction manual and goodie bag</li>
+            <li>The chance to speak about your process, projects and passions</li>
+            <li>The chance to hear your favorite creatives speak</li>
+            <li>Opportunities to make new, possibly lifelong friends</li>
+            <li>An immersive experience in one of Omaha’s most curious, creative events</li>
+          </ul>
+          <h3>How much is it to attend?</h3>
+          <ul>
+            <li>$30 non-AIGA member</li>
+            <li>$25 AIGA member</li>
+            <li>$20 student (non-AIGA member)</li>
+            <li>$15 student (AIGA member)</li>
+          </ul>
+          <h3>Are there scholarship opportunities?</h3>
+          <p>Yes! Thanks to <a href="http://emspacegroup.com/" target="_blank">Emspace + Lovgren</a>, we’re able to provide 10 scholarships to our BarCamp community. Apply by July 14, and we’ll notify scholarship recipients by July 17. [<a href="https://goo.gl/forms/hgGzKCDS598L5i8l1" target="_blank">link to scholarship form here</a>]</p>
+          <h3>What’s the ticket cost breakdown?</h3>
+          <p>Thanks to our generous partners, a portion of BarCamp costs are already covered! Here’s where your ticket costs go.</p>
+          <ul>
+            <li>20%: event venue</li>
+            <li>20%: opening party venue and drink</li>
+            <li>20%: breakfast, lunch and snacks</li>
+            <li>20%: t-shirt</li>
+            <li>20%: ongoing AIGA Nebraska programming</li>
+          </ul>
+          <h3>Do I have to give a talk?</h3>
+          <p>Absolutely not! Many BarCampers just want to meet new people and listen to talks. We encourage you to participate however you’re most comfortable. That’s the beauty of the unconference — you can pretty much do whatever you want, and it’ll be rewarding.</p>
+          <h3>If I do give a talk, will I have any help?</h3>
+          <p>This year, we’re providing each track with two speaker aides from&nbsp;<a href="http://firebellyrep.com" target="_blank">FireBelly Rep</a>, who will help calm your nerves and troubleshoot your tech. <a href="http://techomaha.com/" target="_blank">Tech Omaha</a> will provide a video recording of your talk and an extra special BarCamp 2018 souvenir.</p>
+          <h3>How long are the talks?</h3>
+          <p>Each talk runs for 23 minutes. Speakers are allowed to use that time however they wish — you can even share a time slot with multiple people or set up a panel discussion, allowing time for Q&amp;A at the end. The last 7 minutes of every half-hour slot is reserved for transition time between talks.</p>
+          <h3>Can I give a sales presentation?</h3>
+          <p>Nope! To be respectful of our BarCamp community, sales presentations or pitches are not allowed. Don’t even try it, folks.</p>
+          <h3>What should I bring?</h3>
+          <p>Feel free to bring your notebook, a stylus and your business cards. (We’ll also provide you with a BarCamp instruction manual where you’ll have ample room to take notes and exchange contact info.) If you’ve planned a talk with presentation slides, bring your laptop or an external drive with your files — we encourage you to use Google Slides to make everything a little easier. And maybe bring a clean pair of underwear, because you know the creative process gets messy.</p>
+          <h3>When do I get my BarCamp t-shirt?</h3>
+          <p>Tees are sponsored by <a href="https://agapered.com/" target="_blank">Agape Red</a> and will be available on the day of BarCamp at the merch table. Though we try to purchase enough of each t-shirt size, we recommend picking your shirt up early in the morning just in case.</p>
+          <h3>Is my ticket transferrable?</h3>
+          <p>If you’re unable to attend BarCamp, please contact Molly Misek at&nbsp;<a href="mailto:barcampchair@nebraska.aiga.org" target="_blank">barcampchair&#64;nebraska.aiga.org</a> to transfer or refund your ticket. Ability to do so expires after July 31, 2018.</p>
+          <h3>What if I have a food allergy?</h3>
+          <p>No sweat! We make sure everyone is included. If you have specific food allergies or restrictions, email <a href="mailto:barcampchair@nebraska.aiga.org" target="_blank">barcampchair&#64;nebraska.aiga.org</a> and we’ll take care of you. Each year we work with our caterer to provide vegetarian, vegan and gluten free options.</p>
+          <h3>What is AIGA Nebraska?</h3>
+          <p>AIGA Nebraska advances design as a professional craft and connects creative fields of work to generate action, provide inspiration, and foster diversity &amp; inclusion in our community. To learn more and become a member, <a href="https://nebraska.aiga.org/" target="_blank">visit our website</a>. Check out our <a href="https://nebraska.aiga.org/code-of-conduct/" target="_blank">code of conduct</a>.</p>
+        </div>
+        <div class="note partners hidden">
+          <h2 class="mobile-only" onclick="openNoteMobile('partners')">Partners</h2>
+          <h3>PARTNERS</h3>
+          <p>
+            Event Venue: <a href="https://thekaneko.org/" target="_blank">KANEKO</a><br>
+            T-Shirts: <a href="https://agapered.com/" target="_blank">Agape Red</a><br>
+            Opening Party: <a href="https://adobe.com/" target="_blank">Adobe</a><br>
+            Track Aides: <a href="https://firebellyrep.com/" target="_blank">FireBelly Rep</a><br>
+            Track Recordings + Tech Track: <a href="http://techomaha.com/" target="_blank">Tech Omaha</a><br>
+            Emcees: <a href="https://twitter.com/splitinfinities" target="_blank">William M. Riley</a> and <a href="http://coachflame.com/" target="_blank">Flame Schoeder</a><br>
+            Opening Party Venue: <a href="https://www.hifi.house/" target="_blank">Hi-Fi House</a><br>
+            T-Shirt Production: <a href="https://screenink.com/" target="_blank">Screen Ink</a><br>
+            Wifi: <a href="https://getflywheel.com/" target="_blank">Flywheel</a><br>
+            Scholarships: <a href="http://emspacegroup.com/" target="_blank">Emspace + Lovgren</a><br>
+            Twitter Feed: <a href="https://lyconic.com/" target="_blank">Lyconic</a><br>
+            Swag Bags: <a href="http://gabekangas.com/" target="_blank">Gabe Kangas</a><br>
+            Typeface: <a href="https://www.colophon-foundry.org/" target="_blank">Colophon Type Foundry</a><br>
+            Hosted by: <a href="https://nebraska.aiga.org/" target="_blank">AIGA Nebraska</a><br>
+            Entrepreneur Track: <a href="https://www.omahachamber.org/omahayp/yp-council/" target="_blank">Greater Omaha YP Council</a><br>
+          </p>
+          <h3>CREATIVE TEAM</h3>
+          <p>
+            Director: <a href="http://www.mollymisek.com/" target="_blank">Molly Misek</a><br>
+            Designer &amp; Co-Director: <a href="https://www.matthewbaileycreative.com/" target="_blank">Studio of Matthew Bailey</a><br>
+            Web Developer: <a href="https://twitter.com/pbadeer" target="_blank">Preston Badeer</a><br>
+            Artist: <a href="https://www.instagram.com/skysimps/" target="_blank">Skyler Simpson</a><br>
+            Track Animator: <a href="http://www.bryanfindell.com/" target="_blank">Bryan Findell</a><br>
+            Content Consultant: <a href="https://www.linkedin.com/in/angieschendt" target="_blank">Angie Hempel</a><br>
+            Photographers: <a href="https://www.instagram.com/bridget_joan/" target="_blank">Bridget McQuillan</a>, <a href="https://www.instagram.com/kaydenmannino/" target="_blank">Kayden Mannino</a>, and <a href="https://www.instagram.com/carleyscottfields/" target="_blank">Carly Scott Fields</a><br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="mobile-only">SPEAKER TRACKS</h2>
+
+    <div class="track drag closed technology">
+      <span class="handle">
+        <span class="dot">&bull;</span>
+        technology.jpeg
+      </span>
+      <img src="img/technology.png">
+      <h3>Technology <span>&#x25BE;</span></h3>
+      <p>Are you agile, traditional, waterfall or adaptive? Are you researching, designing, programming or testing? Or you about to blow our minds with something so new, we have to see it to believe it?</p>
+    </div>
+
+    <div class="track drag closed entrepreneur">
+      <span class="handle">
+        <span class="dot">&bull;</span>
+          entrepreneur.jpeg
+      </span>
+      <img src="img/entrepreneur.png">
+      <h3>Entrepreneur <span>&#x25BE;</span></h3>
+      <p>You're not working for the man, you ARE the man (or #bossbabe, obvi). Tell us about your journey to owning your own work (even if it's a side hustle) and living the dream.</p>
+    </div>
+
+    <div class="track drag closed creative">
+      <span class="handle">
+        <span class="dot">&bull;</span>
+          creative.jpeg
+      </span>
+      <img src="img/creative.png">
+      <h3>Creative <span>&#x25BE;</span></h3>
+      <p>When you're in your zone, when your art seems to create itself, when you amaze yourself with what you've done - what gets you there? Tell us what you do when you're at your most creative.</p>
+    </div>
+
+    <div class="track drag closed kitchensink">
+      <span class="handle">
+        <span class="dot">&bull;</span>
+          kitchensink.jpeg
+      </span>
+      <img src="img/kitchensink.png">
+      <h3>Kitchen Sink <span>&#x25BE;</span></h3>
+      <p>Maybe you're a plumber. Maybe you're a chef. Maybe you're Matt Damon and super into water. We want to hear your kitchen sink story (literal or not) and the how behind your gushing achievements.</p>
+    </div>
+
+    <div class="tray">
+      <img src="img/about-logo.svg" alt="BarCamp Omaha" class="logo">
+
+      <a href="https://www.eventbrite.com/e/barcamp-omaha-2018-tickets-46763428674" class="register" target="_blank">Register Now</a>
+      
+      <div class="top">
+        <div class="left">
+          <span class="clock"></span>
+          <a onclick="location.reload()">restart</a>
+          <a onclick="sleepMe()">sleep</a>
+        </div>
+        <div class="right">
+          AIGA Nebraska<br>
+          <a href="https://instagram.com/aiganebraska" target="_blank">instagram</a>
+          <a href="https://facebook.com/aiga.nebraska" target="_blank">facebook</a>
+          <a href="https://twitter.com/aiga_nebraska" target="_blank">twitter</a>
+        </div>
+      </div>
+
+      <h3>Speaker Tracks</h3>
+      <ul class="folders">
+        <li class="technology">
+          <a onclick="openTrack('technology')">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+                <g>
+                  <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+                  <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+                  <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+                </g>
+              </svg>
+            </div>
+            Technology
+          </a>
+        </li>
+        <li class="entrepreneur">
+          <a onclick="openTrack('entrepreneur')">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+                <g>
+                  <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+                  <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+                  <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+                </g>
+              </svg>
+            </div>
+            Entrepreneur
+          </a>
+        </li>
+        <li class="creative">
+          <a onclick="openTrack('creative')">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+                <g>
+                  <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+                  <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+                  <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+                </g>
+              </svg>
+            </div>
+            Creative
+          </a>
+        </li>
+        <li class="kitchensink">
+          <a onclick="openTrack('kitchensink')">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.13 74.15">
+                <g>
+                  <path class="a" d="M.25.25H83.42A22.45,22.45,0,0,1,105.88,22.7V73.9a0,0,0,0,1,0,0H.25a0,0,0,0,1,0,0V.25A0,0,0,0,1,.25.25Z"/>
+                  <text class="b" transform="translate(52.76 64.5)">JPEG</text>
+                  <rect class="c" x="0.17" y="69.83" width="105.71" height="4.05"/>
+                </g>
+              </svg>
+            </div>
+            Kitchen Sink
+          </a>
+        </li>
+      </ul>
+      
+      <ul class="apps">
+        <li><a href="mailto:barcampchair@nebraska.aiga.org" target="_blank">Contact</a></li>
+        <!-- <li><a href="http://schedule.barcampomaha.org/" target="_blank">2018 Talk Signup</a></li> -->
+        <li><a href="https://goo.gl/forms/asE3y9uZLRnByNuG2" target="_blank">Scholarships</a></li>
+        <li><a href="https://goo.gl/forms/0x1jqmtwPAgPh8L12" target="_blank">Nominate</a></li>
+        <!-- <li><a href="https://medium.com/@barcampomaha" target="_blank">Medium Blog</a></li> -->
+      </ul>
+
+      <ul class="links">
+        <li><a href="http://2017.barcampomaha.org" target="_blank">2017 Website</a></li>
+        <!-- <li><a href="http://2016.barcampomaha.org" target="_blank">2016</a></li> -->
+        <!-- <li><a href="http://2015.barcampomaha.org" target="_blank">2015</a></li> -->
+      </ul>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.grid-inner {
+  height: 100%;
+  padding: 20px 20px 30px;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #01ff70;
+}
+
+.grid_outer {
+  background-color: #fff;
+  padding: 10px
+}

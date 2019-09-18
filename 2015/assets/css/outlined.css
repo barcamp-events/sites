@@ -1,0 +1,106 @@
+.spacer {
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.piece {
+	width: 160px;
+}
+
+.talks {
+	position: relative;
+  	border: 20px solid #1847ed;
+	padding: 20px;
+  	color: #1847ed;
+}
+
+.pad_right {
+	padding-right: 60px;
+}
+
+.pad_left {
+	padding-left: 50px;
+}
+
+.entrep {
+	position: relative;
+	width: 50px;
+	padding-bottom: 20px;
+}
+
+.creative {
+	position: relative;
+	width: 50px;
+	padding-bottom: 20px;
+}
+
+.tech {
+	position: relative;
+	width: 50px;
+	padding-bottom: 20px;
+}
+
+.sink {
+	position: relative;
+	width: 50px;
+	padding-bottom: 20px;
+}
+
+
+@media (min-width: 700px) {
+.talks {
+	padding: 30px;
+}
+
+.spacer {
+	padding-bottom: 150px;
+}
+
+.entrep {
+	position: absolute;
+	top: -150px;
+	right: -135px;
+	width: 250px;
+	padding-bottom: 0;
+}
+
+.creative {
+	position: absolute;
+	top: -150px;
+	right: -130px;
+	width: 250px;
+}
+
+.tech {
+	position: absolute;
+	top: -100px;
+	left: -185px;
+	width: 250px;
+}
+
+.sink {
+	position: absolute;
+	top: -150px;
+	left: -165px;
+	width: 250px;
+}
+
+.left {
+	padding-left: 40px;
+}
+
+.right {
+	padding-right: 40px;
+}
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+.piece {
+	display: none;}
+}
+
+@media (min-width: 900px) {
+.spacer {
+	padding-bottom: 225px;
+}
+}

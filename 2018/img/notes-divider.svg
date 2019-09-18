@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.92 166.86">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #00243e;
+        stroke-miterlimit: 10;
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <title>note_bg</title>
+  <path class="a" d="M6.67,166.86V133.64c0-5-6.42-5-6.42-9.92s6.42-5,6.42-9.91-6.42-5-6.42-9.9S6.67,99,6.67,94s-6.42-5-6.42-9.9,6.42-5,6.42-9.9S.25,69.26.25,64.31s6.42-5,6.42-9.9S.25,49.47.25,44.52s6.42-5,6.42-9.89L6.59,0"/>
+</svg>
