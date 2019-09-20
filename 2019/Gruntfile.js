@@ -9,7 +9,8 @@ module.exports = function(grunt) {
         map: true,
         processors: [
           require('autoprefixer')(),
-          require('cssnano')()
+          require('cssnano')(),
+          require('postcss-custom-media')()
         ]
       },
       dist: {

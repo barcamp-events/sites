@@ -38,3 +38,7 @@
   --light-tan: #FBF7F3;
 
 }
+
+@custom-media --breakpoint-not-small (min-width: 30em);
+@custom-media --breakpoint-medium (min-width: 48em);
+@custom-media --breakpoint-large (min-width: 64em);
