@@ -75,13 +75,6 @@ module.exports = function(eleventyConfig) {
     }
   });
 
-  eleventyConfig.addLiquidTag("scheduletime", function(liquidEngine) {
-    return { render: () => '<h3 class="mt4 mb2 f3 windsor ttu">' }
-  });
-  eleventyConfig.addLiquidTag("endscheduletime", function(liquidEngine) {
-    return { render: () => '</h3>' }
-  });
-
   eleventyConfig.addLiquidTag("largeh2", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
@@ -108,6 +101,20 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.addLiquidTag("endh2", function(liquidEngine) {
     return { render: () => '</h2>' }
+  });
+
+  eleventyConfig.addLiquidTag("h3", function(liquidEngine) {
+    return {
+      parse: function(tagToken, remainingTokens) {
+        this.str = (tagToken.args ? JSON.parse(tagToken.args) : '');
+      },
+      render: function(scope, hash) {
+        return (`<h3 class="mt4 mb2 f3 windsor ${this.str}">`);
+      }
+    }
+  });
+  eleventyConfig.addLiquidTag("endh3", function(liquidEngine) {
+    return { render: () => '</h3>' }
   });
 
   eleventyConfig.addLiquidTag("paragraph", function(liquidEngine) {

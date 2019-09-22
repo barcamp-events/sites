@@ -22,6 +22,14 @@
        url("../fonts/windsor_regular.woff2") format("woff2");
 }
 
+a {
+  color: var(--b-teal);
+
+  &:hover, &:focus {
+    color: var(--orange);
+  }
+}
+
 .ano {
   font-family: "Ano", sans-serif;
 }
