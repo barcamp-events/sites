@@ -1,0 +1,171 @@
+/*----------*/
+/* Bracelet */
+/*----------*/
+
+:root {
+  --b-red: #EE2144;
+  --b-yellow: #FBAA19;
+  --b-magenta: #EE358B;
+  --b-teal: var(--teal);
+}
+
+$height: 32px;
+$thread-width: 10px;
+
+// We need to match the thread edges with the horizontal length of the thread once
+// it has been rotated 45deg, so we need to do some trigonomety. It doesn't look
+// right unless it's precise. Sorry ¯\_(ツ)_/¯
+//
+//        90°
+//        / \
+//       /   \
+//   10 /     \ 10
+//     /       \
+//    /_________\
+// 45°  ≈14.142  45°
+//
+$hypotenuse: 14.142px;
+
+$colors: (
+  var(--b-red),
+  var(--b-yellow),
+  var(--b-magenta),
+  var(--b-teal)
+);
+
+// Loop through each color and make a stripe.
+// This will form the thread.
+@function stripes($degrees) {
+  $gradient: "#{$degrees}";
+
+  @each $color in $colors {
+    $gradient: $gradient + ", #{$color} #{($thread-width * (index($colors, $color) - 1))}";
+    $gradient: $gradient + ", #{$color} #{($thread-width * index($colors, $color))}";
+  }
+
+  @return repeating-linear-gradient(unquote($gradient));
+}
+
+// Loop through each color and make a half circle.
+// This will form the edges of the bracelet.
+@function half-circles($y) {
+  $gradients: ();
+
+  @each $color in $colors {
+    $gradient: "";
+    $gradient: $gradient + "radial-gradient(";
+    $gradient: $gradient + "circle at #{($hypotenuse / 2)} #{$y}";
+    $gradient: $gradient + ", #{$color}";
+    $gradient: $gradient + ", #{$color} #{($hypotenuse / 2)}";
+    $gradient: $gradient + ", transparent #{($hypotenuse / 2)})";
+
+    $gradients: append($gradients, unquote($gradient), $separator: comma);
+  }
+
+  @return $gradients;
+}
+
+// Does the positioning, sizing, and angling of the edges of the bracelet
+@mixin edges($top_or_bottom, $direction) {
+  $circle-y: 0;
+  $skew: -45deg;
+
+  @if $top_or_bottom == top {
+    $circle-y: ($hypotenuse / 2);
+  }
+
+  @if ($top_or_bottom == top and $direction == right) or
+      ($top_or_bottom == bottom and $direction == left) {
+    $skew: 45deg;
+  }
+
+  position: absolute;
+
+  @if $top_or_bottom == top {
+    bottom: calc(100% - 1px);
+  } @else {
+    top: 100%;
+  }
+
+  @if $direction == right {
+    left: -5px;
+  } @else {
+    right: -4px;
+  }
+
+  width: 100%;
+  height: ($hypotenuse / 2);
+  background: half-circles($circle-y);
+  
+  @if $direction == right {
+    background-position: ($hypotenuse * 3) 0,
+      ($hypotenuse * 4) 0,
+      ($hypotenuse * 5) 0,
+      ($hypotenuse * 6) 0;
+  } @else {
+    background-position: ($hypotenuse * 4) 0,
+      ($hypotenuse * 5) 0,
+      ($hypotenuse * 6) 0,
+      ($hypotenuse * 7) 0;
+  }
+
+  background-repeat: repeat-x;
+  background-size: ($hypotenuse * 4) 7px;
+  content: '';
+  transform: skew($skew);
+}
+
+// Common bracelet styles
+@mixin bracelet {
+  position: relative;
+  left: (-$height / 2);
+  width: calc(100% + #{$height});
+  height: $height;
+  margin: (-$height / 2) 0;
+  border: 0;
+  background: stripes(45deg), stripes(135deg);
+  background-position: 0 1px, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 50%, 100% 50%;
+  transform: scale(1, 0.5) translateZ(1px) rotate(2deg);
+}
+
+// Bracelet with chevrons pointing right
+.bracelet-right {
+  @include bracelet;
+  background-image: stripes(45deg), stripes(135deg);
+  transform: scale(1, 0.5) translateZ(1px) rotate(2deg);
+
+  &::after {
+    @include edges(top, right);
+  }
+
+  &::before {
+    @include edges(bottom, right);
+  }
+}
+
+// Bracelet with chevrons pointing left
+.bracelet-left {
+  @include bracelet;
+  background-image: stripes(135deg), stripes(45deg);
+  transform: scale(1, 0.5) translateZ(1px) rotate(-2deg);
+
+  &::after {
+    @include edges(top, left);
+  }
+
+  &::before {
+    @include edges(bottom, left);
+  }
+}
+
+@media (--breakpoint-medium) {
+  .bracelet-right {
+    transform: translateZ(1px) rotate(2deg);
+  }
+
+  .bracelet-left {
+    transform: translateZ(1px) rotate(-2deg);
+  }
+}

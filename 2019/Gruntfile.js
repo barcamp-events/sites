@@ -9,7 +9,8 @@ module.exports = function(grunt) {
         map: true,
         processors: [
           require('autoprefixer')(),
-          require('cssnano')()
+          require('cssnano')(),
+          require('postcss-custom-media')()
         ]
       },
       dist: {
@@ -32,11 +33,36 @@ module.exports = function(grunt) {
         command: 'npx eleventy'
       }
     },
+    svg_sprite: {
+      dist: {
+cwd: '<%= pkg.base_dir %>/assets/images/svg-sprite',
+        src: ['*.svg'],
+        dest: '<%= pkg.base_dir %>/_site/assets/images',
+        options: {
+          mode: {
+            symbol: {
+              dest: '',
+              sprite: 'sprite.svg'
+            }
+          },
+          shape: {
+            meta: '<%= pkg.base_dir %>/assets/images/svg-sprite/meta.yaml',
+          },
+          svg: {
+            namespaceIDs: false
+          }
+        }
+      }
+    },
     watch: {
       css: {
         files: ['<%= pkg.base_dir %>/assets/scss/**/*.scss'],
         tasks: ['sass', 'postcss']
       },
+      svg_sprite: {
+        files: ['<%= pkg.base_dir %>/assets/images/svg-sprite/**'],
+        tasks: ['svg_sprite']
+      }
     },
   });
 
@@ -44,10 +70,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-svg-sprite');
 
   grunt.registerTask('default', [
     'sass',
     'postcss',
+    'svg_sprite',
     'shell'
   ]);
 };
