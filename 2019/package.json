@@ -1,20 +1,35 @@
 {
-  "name": "omaha-marketing-2019",
+  "name": "barcamp-omaha-2019",
   "version": "1.0.0",
-  "description": "",
+  "description": "The marketing website for BarCamp Omaha 2019",
   "main": "index.js",
   "scripts": {
-    "start": "now dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/barcamp-events/omaha-marketing-2019.git"
+    "url": "git+ssh://git@github.com/barcamp-events/sites.git"
   },
-  "author": "",
+  "author": "BarCamp Events",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/barcamp-events/omaha-marketing-2019/issues"
+    "url": "https://github.com/barcamp-events/sites/issues"
   },
-  "homepage": "https://github.com/barcamp-events/omaha-marketing-2019#readme"
+  "homepage": "https://github.com/barcamp-events/sites#readme",
+  "base_dir": ".",
+  "browserslist": "last 2 versions",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "grunt": "^1.0.4",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-shell": "^3.0.1",
+    "node-sass": "^4.12.0",
+    "tachyons": "^4.10.0"
+  },
+  "dependencies": {}
 }

@@ -1,0 +1,40 @@
+//-----------//
+// Variables //
+//-----------//
+
+:root {
+  // Override Tachyon colors with BarCamp Omaha 2019 brand colors.
+  // Commented out colors are available to override but currently unused.
+  --dark-red: #E73127;
+  --red: #EF3F24;
+//  --light-red: #ff725c;
+  --orange: #F15C22;
+  --gold: #F58220;
+  --yellow: #F8981D;
+//  --light-yellow: #fbf1a9;
+  --purple: #5C467F;;
+//  --light-purple: #a463f2;
+  --dark-pink: #DE508A;
+//  --hot-pink: #ff41b4;
+//  --pink: #ff80cc;
+//  --light-pink: #ffa3d7;
+  --dark-green: #0E783D;
+  --green: #3F8E42;
+  --light-green: #94B53D;
+//  --navy: #001b44;
+  --dark-blue: #444E8A;
+  --blue: #1A90D0;
+//  --light-blue: #96ccff;
+//  --lightest-blue: #cdecff;
+//  --washed-blue: #f6fffe;
+//  --washed-green: #e8fdf5;
+//  --washed-yellow: #fffceb;
+//  --washed-red: #ffdfdf;
+
+  // Additional BarCamp Omaha 2019 colors
+  --brown: #6E6255;
+  --dark-tan: #EFDFCE;
+  --tan: #F7F0E7;
+  --light-tan: #FBF7F3;
+
+}
