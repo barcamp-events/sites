@@ -7,16 +7,28 @@ title: BarCamp Omaha 2019
   <h1 class="ma0 dark-tan f1 f-subheadline-ns f-headline-l ttu">BarCamp</h1>
 </header>
 
-<section class="flex justify-center bg-light-tan pv4 pv5-l">
-  <div class="w-100 mw7 ph3 ph5-l">
-    <h2 class="windsor mt0 mb4 f2 f1-m f-subheadline-l lh-solid">BarCamp is an Unconference</h2>
-    <p class="brown lh-copy">BarCamp Omaha is a user generated conference where the speakers are everyday folks talking about what interests them. Talks aren&rsquo;t scheduled or planned until just before the conference starts, and anyone can give a talk. Curious, but don&rsquo;t want to take the stage? That’s okay too.</p>
-    <p class="mb0 brown lh-copy">At BarCamp, you won&rsquo;t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and share what awakens your curiosity. Come one, come all.</p>
-  </div>
-</section>
+{% section "bg-light-tan" %}
+  {% smallcontainer %}
 
-<section class="flex justify-center bg-tan pv4 pv5-l">
-  <div class="flex flex-wrap flex-nowrap-ns w-100 mw7 ph3 ph5-l">
+    {% largeh2 %}
+      BarCamp is an Unconference
+    {% endlargeh2 %}
+
+    {% paragraph %}
+      BarCamp Omaha is a user generated conference where the speakers are everyday folks talking about what interests them. Talks aren&rsquo;t scheduled or planned until just before the conference starts, and anyone can give a talk. Curious, but don&rsquo;t want to take the stage? That’s okay too.
+    {% endparagraph %}
+
+    {% paragraph %}
+      At BarCamp, you won&rsquo;t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and share what awakens your curiosity. Come one, come all.
+    {% endparagraph %}
+
+  {% endsmallcontainer %}
+{% endsection %}
+
+<div class="bracelet-right"></div>
+
+{% section "bg-tan" %}
+  {% smallcontainer "flex flex-wrap flex-nowrap-ns" %}
     <div class="flex flex-grow-1 items-center justify-center w-100 pa4">
       <div>
         <h3 class="mt0 mb2 windsor f2 f1-m">Kaneko</h3>
@@ -30,82 +42,147 @@ title: BarCamp Omaha 2019
       <h3 class="tan windsor f2 f1-m">Map</h3>
     </div>
   </div>
-</section>
+{% endsection %}
 
-<section class="flex flex-wrap justify-center bg-light-tan pv4 pv5-l">
-  <div class="w-100 mw7 ph3 ph5-l">
-    <h2 class="mt0 mb3 windsor f2 f1-m">The Tracks</h2>
-    <p class="ma0 brown lh-copy">Pick from the tracks below to give your talk. All topics and folk are welcome, but please follow our Code of Conduct.</p>
-  </div>
+<div class="bracelet-left"></div>
+
+{% section "bg-light-tan" %}
+  {% smallcontainer %}
+    {% h2 %}
+      The Tracks
+    {% endh2 %}
+
+    {% paragraph %}
+      Pick from the tracks below to give your talk. All topics and folk are welcome, but please follow our Code of Conduct.
+    {% endparagraph %}
+  {% endsmallcontainer %}
+
   <div class="w-100 mw9 flex flex-wrap pt4 pt4-l ph1 ph3-l">
-    <div class="w-100 w-50-ns w-25-l pa2 pa3-l pb0-l">
+
+    {% track %}
       <h3 class="ma0 pa2 pt6 bg-yellow windsor f3 f2-l">Maker</h3>
-      <p class="mb0 brown lh-copy">Churn, MRR, fundraising, or even the lemonade stand you ran when you were a kid are all fair game. This is a great place to talk about ways to build epic things and/or getting dat paper.</p>
-    </div>
-    <div class="w-100 w-50-ns w-25-l pa2 pa3-l pb0-l">
+      {% paragraph %}
+        Churn, MRR, fundraising, or even the lemonade stand you ran when you were a kid are all fair game. This is a great place to talk about ways to build epic things and/or getting dat paper.
+      {% endparagraph %}
+    {% endtrack %}
+
+    {% track %}
       <h3 class="ma0 pa2 pt6 bg-yellow windsor f3 f2-l">Creative</h3>
-      <p class="mb0 brown lh-copy">Designing letterpress invitations, photo blogging your world travels or rebranding a product? This is the track for you to share your creative accomplishments and valuable lessons.</p>
-    </div>
-    <div class="w-100 w-50-ns w-25-l pa2 pa3-l pb0-l">
+      {% paragraph %}
+        Designing letterpress invitations, photo blogging your world travels or rebranding a product? This is the track for you to share your creative accomplishments and valuable lessons.
+      {% endparagraph %}
+    {% endtrack %}
+
+    {% track %}
       <h3 class="ma0 pa2 pt6 bg-yellow windsor f3 f2-l">Technology</h3>
-      <p class="mb0 brown lh-copy">Building React apps in your free time? Designed an ETL pipeline? Hacked together a Raspberry Pi temperature sensor? Come talk about the hardware and software that you get excited about.</p>
-    </div>
-    <div class="w-100 w-50-ns w-25-l pa2 pa3-l pb0-l">
+      {% paragraph %}
+        Building React apps in your free time? Designed an ETL pipeline? Hacked together a Raspberry Pi temperature sensor? Come talk about the hardware and software that you get excited about.
+      {% endparagraph %}
+    {% endtrack %}
+
+    {% track %}
       <h3 class="ma0 pa2 pt6 bg-yellow windsor f3 f2-l">Kitchen Sink</h3>
-      <p class="mb0 brown lh-copy">Psst. I hear you made some moonshine. This track is for all those passions that don&rsquo;t quite fit the mold. Mastering juggling, urban planning in your free time and organizing your closet are all welcome topics here!</p>
-    </div>
-  </div>
-</section>
+      {% paragraph %}
+        Psst. I hear you made some moonshine. This track is for all those passions that don&rsquo;t quite fit the mold. Mastering juggling, urban planning in your free time and organizing your closet are all welcome topics here!
+      {% endparagraph %}
+    {% endtrack %}
 
-<section class="flex flex-wrap justify-center bg-tan pv4 pv5-l">
+  </div>
+{% endsection %}
+
+<div class="bracelet-right"></div>
+
+{% section "bg-tan" %}
+  {% smallcontainer %}
+    {% h2 %}
+      The Agenda
+    {% endh2 %}
+
+    {% paragraph %}
+      Acme automates your subscription revenue and customer reporting. Just connect your data and Acme will calculate and visualize your most important metrics.
+    {% endparagraph %}
+
+    {% schedule %}
+      {% scheduleday 1 %}
+
+      {% scheduledetails %}
+        {% scheduledate "Friday, August 25th" %}
+
+        {% scheduletime %}
+          7PM | Opening Party <span class="ttn">at Alamo Drafthouse!</span>
+        {% endscheduletime %}
+
+        {% paragraph %}
+          Get excited about BarCamp the night before at our opening party! Buying a BarCamp ticket also entitles you to a free drink ticket. Not to mention, the fantastic Justin Limoges is bringing his sweet photo booth!
+        {% endparagraph %}
+      {% endscheduledetails %}
+    {% endschedule %}
+
+    {% schedule %}
+      {% scheduleday 2 %}
+
+      {% scheduledetails %}
+        {% scheduledate "Saturday, August 26th" %}
+
+        {% scheduletime %}
+          8AM | Coffee / Sign Up
+        {% endscheduletime %}
+        {% paragraph %}
+          Grab some snacks and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers.
+        {% endparagraph %}
+
+        {% scheduletime %}
+          9AM | Morning Talks Begin
+        {% endscheduletime %}
+        {% paragraph %}
+          We&rsquo;ll start out the first round of talks promptly at 9am, so make sure you&rsquo;re all settled in and ready to learn!
+        {% endparagraph %}
+
+        {% scheduletime %}
+          12PM | Lunch & Networking
+        {% endscheduletime %}
+        {% paragraph %}
+          Hang out with your new BarCamp friends and enjoy a delicious lunch.
+        {% endparagraph %}
+
+        {% scheduletime %}
+          1PM | Afternoon Talks Begin
+        {% endscheduletime %}
+        {% paragraph %}
+          At 1 PM, we&rsquo;ll reconvene for our afternoon session of talks!
+        {% endparagraph %}
+
+        {% scheduletime %}
+          5PM | Closing
+        {% endscheduletime %}
+        {% paragraph %}
+          Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your free t-shirt (sponsored by Agape Red) and other BarCamp memorabilia from the merch table!
+        {% endparagraph %}
+      {% endscheduledetails %}
+    {% endschedule %}
+  {% endsmallcontainer %}
+{% endsection %}
+
+<div class="bracelet-left"></div>
+
+{% section "bg-light-tan" %}
   <div class="w-100 mw7 ph3 ph5-l">
-    <h2 class="mt0 mb3 windsor f2 f1-m">The Agenda</h2>
-    <p class="ma0 brown lh-copy">Acme automates your subscription revenue and customer reporting. Just connect your data and Acme will calculate and visualize your most important metrics.</p>
-    <div class="flex flex-wrap flex-nowrap-ns mt4">
-      <div class="flex justify-center w-100 w-auto-ns mb4 mb0-ns">
-        <div class="flex items-center justify-center w2 h2 ba br-100 windsor f3">1</div>
-      </div>
-      <div class="pt1 pl3-ns w-100">
-        <h4 class="ma0 f4">Friday, August 25th</h4>
-        <h3 class="mt4 mb2 f3 windsor">7PM | <span class="ttu">Opening Party</span> at Alamo Drafthouse!</h3>
-        <p class="mt2 mb0 brown lh-copy">Get excited about BarCamp the night before at our opening party! Buying a BarCamp ticket also entitles you to a free drink ticket. Not to mention, the fantastic Justin Limoges is bringing his sweet photo booth!</p>
-      </div>
-    </div>
-    <div class="flex flex-wrap flex-nowrap-ns mt4">
-      <div class="flex justify-center w-100 w-auto-ns mb4 mb0-ns">
-        <div class="flex items-center justify-center w2 h2 ba br-100 windsor f3">2</div>
-      </div>
-      <div class="pt1 pl3-ns">
-        <h4 class="ma0 f4">Saturday, August 26th</h4>
+    {% h2 %}
+      FAQ&rsquo;s
+    {% endh2 %}
 
-        <h3 class="mt4 mb2 f3 windsor ttu">8AM | Coffee / Sign Up</h3>
-        <p class="ma0 brown lh-copy">Grab some snacks and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers.</p>
-
-        <h3 class="mt4 mb2 f3 windsor ttu">9AM | Morning Talks Begin</h3>
-        <p class="ma0 brown lh-copy">We&rsquo;ll start out the first round of talks promptly at 9am, so make sure you&rsquo;re all settled in and ready to learn!</p>
-
-        <h3 class="mt4 mb2 f3 windsor ttu">12PM | Lunch & Networking</h3>
-        <p class="ma0 brown lh-copy">Hang out with your new BarCamp friends and enjoy a delicious lunch.</p>
-
-        <h3 class="mt4 mb2 f3 windsor ttu">1PM | Afternoon Talks Begin</h3>
-        <p class="ma0 brown lh-copy">At 1 PM, we&rsquo;ll reconvene for our afternoon session of talks!</p>
-
-        <h3 class="mt4 mb2 f3 windsor ttu">5PM | Closing</h3>
-        <p class="ma0 brown lh-copy">Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your free t-shirt (sponsored by Agape Red) and other BarCamp memorabilia from the merch table!</p>
-      </div>
-    </div>
+    {% paragraph %}
+      This website is operated by the Design Files. Throughout the site, the terms “we”, “us” and “our” refer to the Design Files. The Design Files offers this website, including all information, tools, and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.
+    {% endparagraph %}
   </div>
-</section>
+{% endsection %}
 
-<section class="flex flex-wrap justify-center bg-light-tan pv4 pv5-l">
-  <div class="w-100 mw7 ph3 ph5-l">
-    <h2 class="mt0 mb3 windsor f2 f1-m">FAQ&rsquo;s</h2>
-    <p class="ma0 brown lh-copy">This website is operated by the Design Files. Throughout the site, the terms “we”, “us” and “our” refer to the Design Files. The Design Files offers this website, including all information, tools, and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.</p>
-  </div>
-</section>
+<div class="bracelet-right"></div>
 
-<section class="flex flex-wrap justify-center bg-tan pv4 pv5-l">
+{% section "bg-tan" %}
   <div class="w-100 mw9 ph3 ph5-l">
-    <h2 class="mt0 mb3 windsor f2 f1-m tc">Our Sponsors</h2>
+    {% h2 "tc" %}
+      Our Sponsors
+    {% endh2 %}
   </div>
-</div>
+{% endsection %}

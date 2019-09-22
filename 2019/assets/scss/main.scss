@@ -1,6 +1,12 @@
 @import "../../node_modules/tachyons/src/tachyons";
 
 @import "_abstractions/_variables";
+@import "_abstractions/_mixins";
+
 @import "_utilities/_colors";
+
+@import "_global/_base";
 @import "_global/_typography";
+
+@import "_components/_bracelet";
 @import "_components/_header";
