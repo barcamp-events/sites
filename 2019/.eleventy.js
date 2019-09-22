@@ -58,7 +58,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addLiquidTag("scheduledetails", function(liquidEngine) {
-    return { render: () => '<div class="pt1 pl3-ns w-100">' }
+    return { render: () => '<div class="pt2 pl3-ns w-100">' }
   });
   eleventyConfig.addLiquidTag("endscheduledetails", function(liquidEngine) {
     return { render: () => '</div>' }
@@ -129,6 +129,22 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.addLiquidTag("endparagraph", function(liquidEngine) {
     return { render: () => '</p>' }
+  });
+
+  eleventyConfig.addLiquidTag("ctabutton", function(liquidEngine) {
+    return {
+      parse: function(tagToken, remainingTokens) {
+        this.args = JSON.parse(`{${tagToken.args}}`);
+      },
+      render: function(scope, hash) {
+        return (
+          '<a class="dib mt4 ph5 pv3 br3 bg-teal hover-bg-orange white hover-white f4 tracked lh-solid no-underline ttu"' +
+          `href="${this.args.href}"${this.args.newtab ? ' target="_blank"' : ''}>` +
+            this.args.text +
+          '</a>'
+        );
+      }
+    }
   });
   
   // Layouts
