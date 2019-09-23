@@ -1,4 +1,15 @@
 module.exports = function(eleventyConfig) {
+  // Custom Collections
+  eleventyConfig.addCollection("sponsors", function(collection) {
+    return collection.getFilteredByTag("sponsors").map(function(sponsor) {
+      // Don't create individual pages
+      // This isn't working as of Eleventy 0.9.0 but it used to work
+      sponsor.data.permalink = false;
+
+      return sponsor;
+    });
+  });
+
   // Custom Tags
   eleventyConfig.addLiquidTag("section", function(liquidEngine) {
     return {
