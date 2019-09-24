@@ -1,3 +1,9 @@
 # Title attributes for SVGs, for accessibility
+flywheel:
+  title: Flywheel
 logo:
   title: BarCamp
+lyconic:
+  title: Lyconic
+water-bear-games:
+  title: Water Bear Games

@@ -170,7 +170,7 @@ title: BarCamp Omaha 2019
           5PM | Closing
         {% endh3 %}
         {% paragraph %}
-          Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your free t-shirt and other BarCamp memorabilia from the merch table!
+          Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your free t-shirt (sponsored TBD), friendship bracelet (sponsored by Bergman Incentives), and other BarCamp memorabilia from the merch table!
         {% endparagraph %}
       {% endscheduledetails %}
     {% endschedule %}
@@ -193,7 +193,7 @@ title: BarCamp Omaha 2019
       What am I paying $20 for?
     {% endh3 %}
     {% paragraph %}
-      Opening party / drink ticket, breakfast, soda & snacks, lunch, BarCamp t-shirt, good times / new friends (which is sorta priceless&hellip;)
+      Opening party / drink ticket, breakfast, soda & snacks, lunch, BarCamp t-shirt, friendship bracelet, good times / new friends (which is sorta priceless&hellip;)
     {% endparagraph %}
 
     {% h3 %}
@@ -236,14 +236,50 @@ title: BarCamp Omaha 2019
 <div class="bracelet-right"></div>
 
 {% section "bg-tan" %}
-  <div class="w-100 mw9 ph3 ph5-l tc">
+  <div class="w-100 mw8 ph3 ph4-l tc">
     {% h2 %}
       Our Sponsors
     {% endh2 %}
 
-    {% paragraph "f4-m" %}
-      Coming soon!
-    {% endparagraph %}
+    <div class="flex flex-wrap justify-center items-center f2 f-subheadline-m brown windsor lh-solid">
+      {% for sponsor in collections.platinum %}
+        {% assign level = "platinum" %}
+        {% assign spacing = "mv2 ph2 ph4-l" %}
+        {% include sponsor.liquid %}
+      {% endfor %}
+    </div>
+
+    <div class="flex flex-wrap justify-center items-center f3 f1-m brown windsor lh-solid">
+      {% for sponsor in collections.gold %}
+        {% assign level = "gold" %}
+        {% assign spacing = "mv2 ph2 ph4-l" %}
+        {% include sponsor.liquid %}
+      {% endfor %}
+    </div>
+
+    <div class="flex flex-wrap justify-center items-center f4 f2-m brown windsor lh-solid">
+      {% for sponsor in collections.silver %}
+        {% assign level = "silver" %}
+        {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
+        {% include sponsor.liquid %}
+      {% endfor %}
+    </div>
+
+    <div class="flex flex-wrap justify-center items-center f5 f3-m brown windsor lh-solid">
+      {% for sponsor in collections.bronze %}
+        {% assign level = "bronze" %}
+        {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
+        {% include sponsor.liquid %}
+      {% endfor %}
+    </div>
+
+    <div class="flex flex-wrap justify-center items-center mv2 f6 f5-m brown windsor lh-solid">
+      {% for sponsor in collections.carbon %}
+        {% assign level = "carbon" %}
+        {% assign spacing = "mv2 ph2" %}
+        {% include sponsor.liquid %}
+      {% endfor %}
+    </div>
 
     {% ctabutton "text": "Sponsor the Event", "href": "https://opencollective.com/barcamp-events/contribute", "newtab": "true" %}
   </div>

@@ -1,0 +1,73 @@
+/*---------*/
+/* Sponsor */
+/*---------*/
+
+.sponsor {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  filter:
+    /* make gray */
+    grayscale(1)
+    /* make pure black and white */
+    contrast(1000%)
+    /* black to white */
+    invert(100%)
+    /* white to off-white */
+    sepia(100%)
+    /* off-white to yellow */
+    saturate(906%)
+    /* do whatever you want with yellow */
+    hue-rotate(302deg)
+    brightness(44.5%);
+
+  &--flywheel {
+    height: 100px;
+  }
+
+  &--nebraskajs {
+    width: 300px;
+    max-width: 80%;
+  }
+
+  &--bergman-incentives {
+    width: 300px;
+  }
+
+  &--lyconic {
+    height: 50px;
+  }
+
+  &--water-bear-games {
+    height: 60px;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .sponsor {
+    &--flywheel {
+      width: 500px;
+      height: 150px;
+    }
+
+    &--bergman-incentives {
+      width: 470px;
+    }
+
+    &--lyconic {
+      height: 70px;
+    }
+
+    &--water-bear-games {
+      height: 90px;
+    }
+  }
+}
+
+@media (--breakpoint-large) {
+  .sponsor {
+    &--nebraskajs {
+      width: 400px;
+    }
+  }
+}
