@@ -1,4 +1,6 @@
 module.exports = function(eleventyConfig) {
+  const parseArgs = (args) => { return (args ? JSON.parse(args) : '') };
+
   // Custom Collections
   eleventyConfig.addCollection("sponsors", function(collection) {
     return collection.getFilteredByTag("sponsors").map(function(sponsor) {
@@ -14,7 +16,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidTag("section", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
-        this.str = (tagToken.args ? JSON.parse(tagToken.args) : '');
+        this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
         return (`<section class="flex flex-wrap justify-center pv5 pv6-l ${this.str}">`);
@@ -28,7 +30,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidTag("smallcontainer", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
-        this.str = (tagToken.args ? JSON.parse(tagToken.args) : '');
+        this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
         return (`<div class="w-100 mw7 ph3 ph5-l ${this.str}">`);
@@ -78,7 +80,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidTag("scheduledate", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
-        this.str = JSON.parse(tagToken.args);
+        this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
         return (`<h4 class="ma0 f4">${this.str}</h4>`);
@@ -89,7 +91,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidTag("largeh2", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
-        this.str = (tagToken.args ? JSON.parse(tagToken.args) : '');
+        this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
         return (`<h2 class="windsor mt0 mb4 f2 f1-m f-subheadline-l lh-solid ${this.str}">`);
@@ -103,7 +105,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidTag("h2", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
-        this.str = (tagToken.args ? JSON.parse(tagToken.args) : '');
+        this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
         return (`<h2 class="mt0 mb3 windsor f2 f1-m ${this.str}">`);
@@ -117,7 +119,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidTag("h3", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
-        this.str = (tagToken.args ? JSON.parse(tagToken.args) : '');
+        this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
         return (`<h3 class="mt4 mb2 f3 windsor ${this.str}">`);
@@ -131,7 +133,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidTag("paragraph", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
-        this.str = (tagToken.args ? JSON.parse(tagToken.args) : '');
+        this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
         return (`<p class="mb0 brown lh-copy ${this.str}">`);
@@ -145,11 +147,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidTag("ctabutton", function(liquidEngine) {
     return {
       parse: function(tagToken, remainingTokens) {
-        this.args = JSON.parse(`{${tagToken.args}}`);
+        this.args = parseArgs(`{${tagToken.args}}`);
       },
       render: function(scope, hash) {
         return (
-          '<a class="dib mt4 ph5 pv3 br3 bg-teal hover-bg-orange white hover-white f4 tracked lh-solid no-underline ttu"' +
+          '<a class="dib mt4 ph4 pv3 br3 bg-teal hover-bg-orange ' +
+          'white hover-white f4 tracked lh-solid no-underline ttu shadow-4" ' +
           `href="${this.args.href}"${this.args.newtab ? ' target="_blank"' : ''}>` +
             this.args.text +
           '</a>'
@@ -164,6 +167,7 @@ module.exports = function(eleventyConfig) {
   // Passthrough copy
   // Just copy this content into the _site directory
   eleventyConfig.addPassthroughCopy("assets/fonts");
+  eleventyConfig.addPassthroughCopy("assets/images/**/*.png");
 
   return {
     passthroughFileCopy: true,

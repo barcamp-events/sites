@@ -1,0 +1,10 @@
+{% if sponsor.data.logo == "svg" %}
+  <svg class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }} {{ spacing }}">
+    <title>{{ sponsor.data.name }}</title>
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#sponsor-logos--{{ sponsor.fileSlug }}"></use>
+  </svg>
+{% elsif sponsor.data.logo == "png" %}
+  <img class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }} {{ spacing }}" src="/assets/images/sponsor-logos/{{ sponsor.fileSlug }}.png" alt="{{ sponsor.data.name }}">
+{% else %}
+  <div class="{{ spacing }}">{{ sponsor.data.name }}</div>
+{% endif %}

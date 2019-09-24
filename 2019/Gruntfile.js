@@ -35,8 +35,8 @@ module.exports = function(grunt) {
     },
     svg_sprite: {
       dist: {
-cwd: '<%= pkg.base_dir %>/assets/images/svg-sprite',
-        src: ['*.svg'],
+        cwd: '<%= pkg.base_dir %>/assets/images',
+        src: ['**/*.svg'],
         dest: '<%= pkg.base_dir %>/_site/assets/images',
         options: {
           mode: {
@@ -60,7 +60,7 @@ cwd: '<%= pkg.base_dir %>/assets/images/svg-sprite',
         tasks: ['sass', 'postcss']
       },
       svg_sprite: {
-        files: ['<%= pkg.base_dir %>/assets/images/svg-sprite/**'],
+        files: ['<%= pkg.base_dir %>/assets/images/**/*.svg'],
         tasks: ['svg_sprite']
       }
     },

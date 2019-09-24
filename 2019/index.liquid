@@ -241,33 +241,43 @@ title: BarCamp Omaha 2019
       Our Sponsors
     {% endh2 %}
 
-    <div class="flex flex-wrap justify-center f2 f-subheadline-m brown windsor">
+    <div class="flex flex-wrap justify-center items-center f2 f-subheadline-m brown windsor lh-solid">
       {% for sponsor in collections.platinum %}
-        <div class="ph4 pv2">{{ sponsor.data.name }}</div>
+        {% assign level = "platinum" %}
+        {% assign spacing = "mv2 ph2 ph4-l" %}
+        {% include sponsor.liquid %}
       {% endfor %}
     </div>
 
-    <div class="flex flex-wrap justify-center f3 f1-m brown windsor">
+    <div class="flex flex-wrap justify-center items-center f3 f1-m brown windsor lh-solid">
       {% for sponsor in collections.gold %}
-        <div class="ph4 pv2">{{ sponsor.data.name }}</div>
+        {% assign level = "gold" %}
+        {% assign spacing = "mv2 ph2 ph4-l" %}
+        {% include sponsor.liquid %}
       {% endfor %}
     </div>
 
-    <div class="flex flex-wrap justify-center f4 f2-m brown windsor">
+    <div class="flex flex-wrap justify-center items-center f4 f2-m brown windsor lh-solid">
       {% for sponsor in collections.silver %}
-        <div class="ph3 pv2">{{ sponsor.data.name }}</div>
+        {% assign level = "silver" %}
+        {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
+        {% include sponsor.liquid %}
       {% endfor %}
     </div>
 
-    <div class="flex flex-wrap justify-center f5 f3-m brown windsor">
+    <div class="flex flex-wrap justify-center items-center f5 f3-m brown windsor lh-solid">
       {% for sponsor in collections.bronze %}
-        <div class="ph3 pv2">{{ sponsor.data.name }}</div>
+        {% assign level = "bronze" %}
+        {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
+        {% include sponsor.liquid %}
       {% endfor %}
     </div>
 
-    <div class="flex flex-wrap justify-center f6 f5-m brown windsor">
+    <div class="flex flex-wrap justify-center items-center mv2 f6 f5-m brown windsor lh-solid">
       {% for sponsor in collections.carbon %}
-        <div class="pa2">{{ sponsor.data.name }}</div>
+        {% assign level = "carbon" %}
+        {% assign spacing = "mv2 ph2" %}
+        {% include sponsor.liquid %}
       {% endfor %}
     </div>
 
