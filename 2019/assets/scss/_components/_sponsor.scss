@@ -6,6 +6,7 @@
   display: block;
   box-sizing: border-box;
   max-width: 100%;
+  height: auto;
 
   // Assumes we have one-color black logos
   filter:
@@ -44,12 +45,12 @@
 @media (--breakpoint-medium) {
   .sponsor {
     &--flywheel {
-      width: 500px;
-      height: 150px;
+      width: 400px;
+      height: 125px;
     }
 
     &--bergman-incentives {
-      width: 470px;
+      width: 425px;
     }
 
     &--lyconic {
@@ -65,7 +66,7 @@
 @media (--breakpoint-large) {
   .sponsor {
     &--nebraskajs {
-      width: 400px;
+      width: 350px;
     }
   }
 }
