@@ -169,3 +169,13 @@ $colors: (
     transform: translateZ(1px) rotate(-2deg);
   }
 }
+
+@include breakpoint(75em) {
+  .bracelet-right {
+    transform: translateZ(1px) rotate(1deg);
+  }
+
+  .bracelet-left {
+    transform: translateZ(1px) rotate(-1deg);
+  }
+}

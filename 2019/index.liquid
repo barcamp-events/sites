@@ -52,7 +52,7 @@ title: BarCamp Omaha 2019
         </address>
       </div>
     </div>
-    <div class="flex items-center justify-center w-50-l bg-yellow">
+    <div class="flex items-center justify-center w-50-l bg-gold">
       <iframe class="map" width="320" height="320" id="gmap_canvas" src="https://maps.google.com/maps?q=kaneko&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </div>
   </div>
@@ -236,7 +236,7 @@ title: BarCamp Omaha 2019
 <div class="bracelet-right"></div>
 
 {% section "bg-tan" %}
-  <div class="w-100 mw8 ph3 ph4-l tc">
+  <div class="flex flex-column items-center w-100 mw8 ph3 ph4-l tc">
     {% h2 %}
       Our Sponsors
     {% endh2 %}
@@ -265,7 +265,7 @@ title: BarCamp Omaha 2019
       {% endfor %}
     </div>
 
-    <div class="flex flex-wrap justify-center items-center f5 f3-m brown windsor lh-solid">
+    <div class="flex flex-wrap justify-center items-center mw7 f5 f3-m brown windsor lh-solid">
       {% for sponsor in collections.bronze %}
         {% assign level = "bronze" %}
         {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
@@ -273,7 +273,7 @@ title: BarCamp Omaha 2019
       {% endfor %}
     </div>
 
-    <div class="flex flex-wrap justify-center items-center mv2 f6 f5-m brown windsor lh-solid">
+    <div class="flex flex-wrap justify-center items-center mw7 mv2 f6 f5-m brown windsor lh-solid">
       {% for sponsor in collections.carbon %}
         {% assign level = "carbon" %}
         {% assign spacing = "mv2 ph2" %}
