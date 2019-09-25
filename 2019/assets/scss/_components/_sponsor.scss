@@ -6,18 +6,16 @@
   display: block;
   box-sizing: border-box;
   max-width: 100%;
+
+  // Assumes we have one-color black logos
   filter:
-    /* make gray */
-    grayscale(1)
-    /* make pure black and white */
-    contrast(1000%)
-    /* black to white */
+    // black to white
     invert(100%)
-    /* white to off-white */
+    // white to off-white
     sepia(100%)
-    /* off-white to yellow */
+    // off-white to yellow
     saturate(906%)
-    /* do whatever you want with yellow */
+    // adjust to brand brown, or at least pretty damn close
     hue-rotate(302deg)
     brightness(44.5%);
 
