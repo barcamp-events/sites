@@ -1,0 +1,44 @@
+import { EventEmitter } from '../../../stencil.core';
+export declare class Video {
+    element: HTMLElement;
+    width: number;
+    height: number;
+    trackInView: boolean;
+    preload: string;
+    autoplay: boolean;
+    muted: boolean;
+    playsinline: boolean;
+    poster: string;
+    controls: boolean;
+    overlay: boolean;
+    video_tag: HTMLVideoElement;
+    playing: boolean;
+    duration: number;
+    startTime: number;
+    pausedTime: number;
+    currentTime: number;
+    interval: any;
+    update: EventEmitter;
+    played: EventEmitter;
+    paused: EventEmitter;
+    loaded: EventEmitter;
+    componentDidLoad(): void;
+    readonly eventData: {
+        playing: boolean;
+        currentTime: number;
+        pausedTime: number;
+        startTime: number;
+        duration: number;
+    };
+    startInterval(): void;
+    setDimensions(): void;
+    in(): void;
+    out(): void;
+    getDuration(): Promise<number>;
+    play(): Promise<void>;
+    pause(): Promise<void>;
+    toggle(): Promise<void>;
+    stop(): Promise<void>;
+    skipTo(time: any): Promise<void>;
+    render(): any;
+}

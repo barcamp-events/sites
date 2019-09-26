@@ -1,0 +1,16 @@
+{
+    "name": "2019 BarCamp Omaha",
+    "version": 2,
+    "builds": [
+      {
+        "use": "@now/static",
+        "config": {
+          "distDir": "_site"
+        }
+      }
+    ],
+    "alias": ["2019.barcampomaha.org"],
+    "routes": [
+      { "src": "^/(.*)", "dest": "_site/$1" }
+    ]
+  }

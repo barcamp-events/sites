@@ -3,120 +3,113 @@ layout: default
 title: BarCamp Omaha 2019
 ---
 
-<header class="main-header flex flex-wrap items-center justify-center vh-50 vh-75-ns vh-100-l">
+<header class="main-header flex flex-column items-center justify-center vh-50 vh-75-ns vh-100-l">
   <div class="w-100 ph3 tc">
-    <svg class="w-100 mw7">
-      <title>BarCamp</title>
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#logo"></use>
-    </svg>
-    <h2 class="mt4 mb0 f3 f2-ns f1-l windsor dark-tan">
-      KANEKO
+    <h1 class="fs-massive vacation dark-tan ttu ma0 relative z-1">
+      <stellar-animate-text method="retro" phrase duration="700">BarCamp</stellar-animate-text>
+    </h1>
+    <h2 class="center mt4 mb0 f3 f2-ns f1-l windsor dark-tan relative z-2">
+      <stellar-animate-text delay="2200" phrase>KANEKO</stellar-animate-text>
     </h2>
-    <h3 class="ma0 f4 f3-ns f2-l windsor dark-tan">
-      Saturday, November 9th, 2019<br>
-      9AM &ndash; 5PM
+    <h3 class="center ma0 f4 f3-ns f2-l windsor dark-tan relative z-2">
+      <stellar-animate-text delay="2600" phrase>Saturday, November 9th, 2019</stellar-animate-text>
+      <br>
+      <stellar-animate-text delay="3000" phrase>9AM &ndash; 5PM</stellar-animate-text>
     </h3>
   </div>
 </header>
 
-<section class="flex justify-center pt4 pb5 pt5-l pb6-l bg-light-tan">
-  {% smallcontainer %}
+<stellar-layout class="bg-light-tan" id="about" size="small" padding="large">
+  <copy-wrap class="clearfix">
+    <h2 class="windsor">BarCamp is an Unconference</h2>
+    <p class="mw-100 brown">BarCamp Omaha is a user generated conference where the speakers are everyday folks talking about what interests them. Talks aren&rsquo;t scheduled or planned until just before the conference starts, and anyone can give a talk. Curious, but don&rsquo;t want to take the stage? That&rsquo;s okay, too.</p>
+    <p class="mw-100 mb4 brown">At BarCamp, you won&rsquo;t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and share what awakens your curiosity. Come one, come all.</p>
+    <stellar-button href="https://www.eventbrite.com/e/barcamp-omaha-2019-tickets-66366823957" target="_blank" padding="large" class="s-right-arrow fr" style="--padding: 1rem 2rem 1rem 1rem">Buy Tickets</stellar-button>
+  </copy-wrap>
+</stellar-layout>
 
-    {% largeh2 %}
-      BarCamp is an Unconference
-    {% endlargeh2 %}
+<div class="bracelet-right z-2"></div>
 
-    {% paragraph "f4-m" %}
-      BarCamp Omaha is a user generated conference where the speakers are everyday folks talking about what interests them. Talks aren&rsquo;t scheduled or planned until just before the conference starts, and anyone can give a talk. Curious, but don&rsquo;t want to take the stage? That&rsquo;s okay, too.
-    {% endparagraph %}
+<stellar-layout class="bg-tan" id="venue" size="large" padding="large">
+  <stellar-grid class="items-center" style="--grid-gap: 4rem;--grid-width: 300px;">
+    <copy-wrap>
+      <h4 class="windsor brown">The Venue</h4>
+      <h3 class="mt0 mb2 windsor f2 f1-m">KANEKO</h3>
+      <address class="brown fs-normal lh-tight-copy mb4">
+        1111 Jones St<br>
+        Omaha, NE 68102
+      </address>
 
-    {% paragraph "f4-m" %}
-      At BarCamp, you won&rsquo;t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and share what awakens your curiosity. Come one, come all.
-    {% endparagraph %}
+      <p class="brown">We&rsquo;ve hosted BarCamp at Kaneko since 2014. Why? Kaneko is everything BarCamp intends to be - full of local art, activity, community, and good conversation. Kaneko are a Platinum sponsor of BarCamp Omaha. Thank you to the Kaneko crew for helping make the Omaha community strong!</p>
+    </copy-wrap>
 
-    {% ctabutton "text": "Buy Tickets", "href": "https://www.eventbrite.com/e/barcamp-omaha-2019-tickets-66366823957", "newtab": "true" %}
-
-  {% endsmallcontainer %}
-{% endsection %}
-
-<div class="bracelet-right"></div>
-
-{% section "bg-tan" %}
-  {% smallcontainer "flex flex-wrap flex-nowrap-m justify-center" %}
-    <div class="flex items-center justify-center w-100 w-50-l pb4 ph4 pt4-ns">
-      <div>
-        <h3 class="mt0 mb2 windsor f2 f1-m">KANEKO</h3>
-        <address class="brown fs-normal lh-tight-copy">
-          1111 Jones St<br>
-          Omaha, NE 68102
-        </address>
-      </div>
+    <div class="flex items-center justify-center bg-gold">
+      <iframe class="map" width="640" height="640" id="gmap_canvas" src="https://maps.google.com/maps?q=kaneko&t=&z=16&ie=UTF8&iwloc=&output=embed&maptype=satellite" allowfullscreen frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </div>
-    <div class="flex items-center justify-center w-50-l bg-gold">
-      <iframe class="map" width="320" height="320" id="gmap_canvas" src="https://maps.google.com/maps?q=kaneko&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-    </div>
-  </div>
-{% endsection %}
+  </stellar-grid>
+</stellar-layout>
 
-<div class="bracelet-left"></div>
+<div class="bracelet-left z-2"></div>
 
-{% section "bg-light-tan" %}
-  {% smallcontainer %}
-    {% h2 %}
-      The Tracks
-    {% endh2 %}
+<stellar-layout class="bg-light-tan" id="tracks" size="small" padding="large">
+  <copy-wrap align="center">
+    <h3 class="mt0 mb2 windsor f2 f1-m">The Tracks</h3>
+    <p class="brown">Pick from the tracks below to give your talk. All topics and folk are welcome, but please follow our <a href="https://github.com/barcamp-events/documents/blob/master/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.</p>
+  </copy-wrap>
+</stellar-layout>
+<stellar-layout class="bg-light-tan pb4 pb5-l" id="about" size="full" padding="none">
+  <stellar-grid style="--grid-gap: 1rem;--grid-width: 250px;">
+    <stellar-card padding="none">
+      <header class="pa0 relative overflow-hidden">
+        <img src="https://placehold.it/600x300/ddd" class="db" />
+        <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1 z-4"><stellar-animate-text method="jump">Maker</stellar-animate-text></h3>
+      </header>
+      <section class="pa3">
+        <p>Churn, MRR, fundraising, or even the lemonade stand you ran when you were a kid are all fair game. This is a great place to talk about ways to build epic things and/or getting dat paper.</p>
+      </section>
+    </stellar-card>
 
-    {% paragraph "f4-m" %}
-      Pick from the tracks below to give your talk. All topics and folk are welcome, but please follow our <a href="https://github.com/barcamp-events/documents/blob/master/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.
-    {% endparagraph %}
-  {% endsmallcontainer %}
+    <stellar-card padding="none">
+      <header class="pa0 relative">
+        <img src="https://placehold.it/600x300" class="db" />
+        <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Creative</stellar-animate-text></h3>
+      </header>
+      <section class="pa3">
+        <p>Designing letterpress invitations, photo blogging your world travels or rebranding a product? This is the track for you to share your creative accomplishments and valuable lessons.</p>
+      </section>
+    </stellar-card>
 
-  <div class="w-100 mw9 flex flex-wrap pt4 pt4-l ph1 ph3-l">
+    <stellar-card padding="none">
+      <header class="pa0 relative">
+        <img src="https://placehold.it/600x300" class="db" />
+        <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Technology</stellar-animate-text></h3>
+      </header>
+      <section class="pa3">
+        <p>Building React apps in your free time? Designed an ETL pipeline? Hacked together a Raspberry Pi temperature sensor? Come talk about the hardware and software that you get excited about.</p>
+      </section>
+    </stellar-card>
 
-    {% track %}
-      <h3 class="ma0 pa2 pt6 bg-yellow windsor f3 f2-l">Maker</h3>
-      {% paragraph %}
-        Churn, MRR, fundraising, or even the lemonade stand you ran when you were a kid are all fair game. This is a great place to talk about ways to build epic things and/or getting dat paper.
-      {% endparagraph %}
-    {% endtrack %}
+    <stellar-card padding="none">
+      <header class="pa0 relative">
+        <img src="https://placehold.it/600x300" class="db" />
+        <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Kitchen Sink</stellar-animate-text></h3>
+      </header>
+      <section class="pa3">
+        <p>Psst. I hear you made some moonshine. This track is for all those passions that don&rsquo;t quite fit the mold. Mastering juggling, urban planning in your free time and organizing your closet are all welcome topics here!</p>
+      </section>
+    </stellar-card>
+  </stellar-grid>
+</stellar-layout>
 
-    {% track %}
-      <h3 class="ma0 pa2 pt6 bg-yellow windsor f3 f2-l">Creative</h3>
-      {% paragraph %}
-        Designing letterpress invitations, photo blogging your world travels or rebranding a product? This is the track for you to share your creative accomplishments and valuable lessons.
-      {% endparagraph %}
-    {% endtrack %}
+<div class="bracelet-right z-2"></div>
 
-    {% track %}
-      <h3 class="ma0 pa2 pt6 bg-yellow windsor f3 f2-l">Technology</h3>
-      {% paragraph %}
-        Building React apps in your free time? Designed an ETL pipeline? Hacked together a Raspberry Pi temperature sensor? Come talk about the hardware and software that you get excited about.
-      {% endparagraph %}
-    {% endtrack %}
+<stellar-layout class="bg-tan" id="agenda" size="small">
+  <copy-wrap align="center">
+    <h2 class="windsor mt0 mb2 f2 f1-m">The Agenda</h2>
+    <p class="brown">We may not know what the talks will be yet, but we do have a general schedule of events!</p>
+  </copy-wrap>
 
-    {% track %}
-      <h3 class="ma0 pa2 pt6 bg-yellow windsor f3 f2-l">Kitchen Sink</h3>
-      {% paragraph %}
-        Psst. I hear you made some moonshine. This track is for all those passions that don&rsquo;t quite fit the mold. Mastering juggling, urban planning in your free time and organizing your closet are all welcome topics here!
-      {% endparagraph %}
-    {% endtrack %}
-
-  </div>
-{% endsection %}
-
-<div class="bracelet-right"></div>
-
-{% section "bg-tan" %}
-  {% smallcontainer %}
-    {% h2 %}
-      The Agenda
-    {% endh2 %}
-
-    {% paragraph "f4-m" %}
-      We may not know what the talks will be yet, but we do have a general schedule of events!
-    {% endparagraph %}
-
-    {% schedule %}
+  {% schedule %}
       {% scheduleday 1 %}
 
       {% scheduledetails %}
@@ -145,28 +138,28 @@ title: BarCamp Omaha 2019
           Grab some snacks and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers.
         {% endparagraph %}
 
-        {% h3 "ttu" %}
+        {% h3 "ttu mt4" %}
           9AM | Morning Talks Begin
         {% endh3 %}
         {% paragraph %}
           We&rsquo;ll start out the first round of talks promptly at 9am, so make sure you&rsquo;re all settled in and ready to learn!
         {% endparagraph %}
 
-        {% h3 "ttu" %}
+        {% h3 "ttu mt4" %}
           12PM | Lunch & Networking
         {% endh3 %}
         {% paragraph %}
           Hang out with your new BarCamp friends and enjoy a delicious lunch.
         {% endparagraph %}
 
-        {% h3 "ttu" %}
+        {% h3 "ttu mt4" %}
           1PM | Afternoon Talks Begin
         {% endh3 %}
         {% paragraph %}
           At 1 PM, we&rsquo;ll reconvene for our afternoon session of talks!
         {% endparagraph %}
 
-        {% h3 "ttu" %}
+        {% h3 "ttu mt4" %}
           5PM | Closing
         {% endh3 %}
         {% paragraph %}
@@ -174,13 +167,12 @@ title: BarCamp Omaha 2019
         {% endparagraph %}
       {% endscheduledetails %}
     {% endschedule %}
-  {% endsmallcontainer %}
-{% endsection %}
+</stellar-layout>
 
-<div class="bracelet-left"></div>
+<div class="bracelet-left z-2"></div>
 
-{% section "bg-light-tan" %}
-  <div class="w-100 mw7 ph3 ph5-l">
+<stellar-layout class="bg-light-tan" id="faqs" size="small" padding="large">
+  <copy-wrap>
     {% h2 %}
       FAQ&rsquo;s
     {% endh2 %}
@@ -189,98 +181,114 @@ title: BarCamp Omaha 2019
       Got questions? We&rsquo;ve got answers!
     {% endparagraph %}
 
-    {% h3 %}
-      What am I paying $20 for?
-    {% endh3 %}
-    {% paragraph %}
-      Opening party / drink ticket, breakfast, soda & snacks, lunch, BarCamp t-shirt, friendship bracelet, good times / new friends (which is sorta priceless&hellip;)
-    {% endparagraph %}
+    <stellar-accordion>
+      <h6 class="windsor black pa0 ma0 fs7" slot="label">What am I paying $20 for?</h6>
+      {% paragraph %}
+        Opening party / drink ticket, breakfast, soda & snacks, lunch, BarCamp t-shirt, friendship bracelet, good times / new friends (which is sorta priceless&hellip;)
+      {% endparagraph %}
+    </stellar-accordion>
 
-    {% h3 %}
-      How long are the talks?
-    {% endh3 %}
-    {% paragraph %}
+    <stellar-accordion>
+      <h6 class="windsor black pa0 ma0 fs7" slot="label">How long are the talks?</h6>
+      {% paragraph %}
       Each talk runs for 23 minutes. Speakers are allowed to use that time however they wish&mdash;you can even share a time slot with multiple people or set up a panel discussion, allowing time for Q&amp;A at the end. The last 7 minutes of every half-hour slot is reserved for transition time between talks.
     {% endparagraph %}
+    </stellar-accordion>
 
-    {% h3 %}
-      Can I give a sales presentation?
-    {% endh3 %}
-    {% paragraph %}
-      Nope! To be respectful of our BarCamp community, sales presentations or pitches are not allowed. Don’t even try it, folks.
-    {% endparagraph %}
+    <stellar-accordion>
+      <h6 class="windsor black pa0 ma0 fs7" slot="label">Can I give a sales presentation?</h6>
+      {% paragraph %}
+        Nope! To be respectful of our BarCamp community, sales presentations or pitches are not allowed. Don’t even try it, folks.
+      {% endparagraph %}
+    </stellar-accordion>
 
-    {% h3 %}
-      When do I get my BarCamp t-shirt?
-    {% endh3 %}
-    {% paragraph %}
-      Tees and friendship bracelets will be available on the day of BarCamp at the merch table. Though we try to purchase enough of each t-shirt size, we recommend picking your shirt up early in the morning just in case.
-    {% endparagraph %}
+    <stellar-accordion>
+      <h6 class="windsor black pa0 ma0 fs7" slot="label">When do I get my BarCamp t-shirt?</h6>
+      {% paragraph %}
+        Tees and friendship bracelets will be available on the day of BarCamp at the merch table. Though we try to purchase enough of each t-shirt size, we recommend picking your shirt up early in the morning just in case.
+      {% endparagraph %}
+    </stellar-accordion>
 
-    {% h3 %}
-      What should I bring?
-    {% endh3 %}
-    {% paragraph %}
-      Something to share with all of your new friends&hellip;a business card perhaps? We encourage you to bring a notebook for notes. If you&rsquo;ve planned a talk with presentation slides, bring your laptop or an external drive with your files. And bring all your friends, because BarCamp is all about friendship this year!
-    {% endparagraph %}
+    <stellar-accordion>
+      <h6 class="windsor black pa0 ma0 fs7" slot="label">What should I bring?</h6>
+      {% paragraph %}
+        Something to share with all of your new friends&hellip;a business card perhaps? We encourage you to bring a notebook for notes. If you&rsquo;ve planned a talk with presentation slides, bring your laptop or an external drive with your files. And bring all your friends, because BarCamp is all about friendship this year!
+      {% endparagraph %}
+    </stellar-accordion>
 
-    {% h3 %}
-      What if I have a food allergy?
-    {% endh3 %}
-    {% paragraph %}
-      No sweat! We make sure everyone is included. If you have specific food allergies or restrictions, contact Will at <a href="mailto:will@splitinfinities.com">will@splitinfinities.com</a> and we&rsquo;ll take care of you. Each year we work with our caterer to provide vegetarian, vegan and gluten free options.
-    {% endparagraph %}
-  </div>
-{% endsection %}
+    <stellar-accordion>
+      <h6 class="windsor black pa0 ma0 fs7" slot="label">What if I have a food allergy?</h6>
+      {% paragraph %}
+        No sweat! We make sure everyone is included. If you have specific food allergies or restrictions, contact Will at <a href="mailto:will@splitinfinities.com">will@splitinfinities.com</a> and we&rsquo;ll take care of you. Each year we work with our caterer to provide vegetarian, vegan and gluten free options.
+      {% endparagraph %}
+    </stellar-accordion>
 
-<div class="bracelet-right"></div>
+  </copy-wrap>
+</stellar-layout>
 
-{% section "bg-tan" %}
-  <div class="flex flex-column items-center w-100 mw8 ph3 ph4-l tc">
-    {% h2 %}
-      Our Sponsors
-    {% endh2 %}
+<div class="bracelet-right z-2"></div>
 
-    <div class="flex flex-wrap justify-center items-center f2 f-subheadline-m brown windsor lh-solid">
+<stellar-layout class="bg-tan" id="sponsors" size="large">
+    <copy-wrap align="center">
+      <h2 class="windsor mt0 mb2 f2 f1-m">Our Sponsors</h2>
+      <p class="brown">There's no way an event like BarCamp Omaha could happen every year at the quality it deserves to be for our commiunity. The following folks helped put BarCamp Omaha 2019 on. Please thank them!</p>
+    </copy-wrap>
+
+  <div class="relative clearfix">
+    <h6 class="windsor ma0 pa0 tc center mt5 mt6-l mb3">Platinum</h4>
+    <stellar-grid class="items-center" style="--grid-width: 350px;">
       {% for sponsor in collections.platinum %}
         {% assign level = "platinum" %}
         {% assign spacing = "mv2 ph2 ph4-l" %}
         {% include sponsor.liquid %}
       {% endfor %}
-    </div>
+    </stellar-grid>
 
-    <div class="flex flex-wrap justify-center items-center f3 f1-m brown windsor lh-solid">
+    <hr />
+
+    <h6 class="windsor ma0 pa0 tc center mb3">Gold</h4>
+    <stellar-grid class="items-center">
       {% for sponsor in collections.gold %}
         {% assign level = "gold" %}
         {% assign spacing = "mv2 ph2 ph4-l" %}
         {% include sponsor.liquid %}
       {% endfor %}
-    </div>
+    </stellar-grid>
 
-    <div class="flex flex-wrap justify-center items-center f4 f2-m brown windsor lh-solid">
+    <hr />
+
+    <h6 class="windsor ma0 pa0 tc center mb3">Silver</h4>
+    <stellar-grid class="items-center">
       {% for sponsor in collections.silver %}
         {% assign level = "silver" %}
         {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
         {% include sponsor.liquid %}
       {% endfor %}
-    </div>
+    </stellar-grid>
 
-    <div class="flex flex-wrap justify-center items-center mw7 f5 f3-m brown windsor lh-solid">
+    <hr />
+
+    <h6 class="windsor ma0 pa0 tc center mb3">Bronze</h4>
+    <stellar-grid class="items-center">
       {% for sponsor in collections.bronze %}
         {% assign level = "bronze" %}
         {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
         {% include sponsor.liquid %}
       {% endfor %}
-    </div>
+    </stellar-grid>
 
-    <div class="flex flex-wrap justify-center items-center mw7 mv2 f6 f5-m brown windsor lh-solid">
+    <hr />
+
+    <h6 class="windsor ma0 pa0 tc center mb3">Carbon</h6>
+    <stellar-grid class="items-center">
       {% for sponsor in collections.carbon %}
         {% assign level = "carbon" %}
         {% assign spacing = "mv2 ph2" %}
         {% include sponsor.liquid %}
       {% endfor %}
-    </div>
+    </stellar-grid>
 
-    {% ctabutton "text": "Sponsor the Event", "href": "https://opencollective.com/barcamp-events/contribute", "newtab": "true" %}
+
+    <stellar-button href="https://opencollective.com/barcamp-events/contribute" target="_blank" class="s-right-arrow fr mt4" style="--padding: 1rem 2rem 1rem 1rem;">Sponsor</stellar-button>
   </div>
-{% endsection %}
+</stellar-layout>

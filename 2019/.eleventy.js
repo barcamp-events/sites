@@ -49,7 +49,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addLiquidTag("schedule", function(liquidEngine) {
-    return { render: () => '<div class="flex flex-wrap flex-nowrap-ns mt4">' }
+    return { render: () => '<div class="flex flex-wrap flex-nowrap-ns">' }
   });
   eleventyConfig.addLiquidTag("endschedule", function(liquidEngine) {
     return { render: () => '</div>' }
@@ -63,7 +63,7 @@ module.exports = function(eleventyConfig) {
       render: function(scope, hash) {
         return (
           '<div class="flex justify-center w-100 w-auto-ns mb4 mb0-ns">' +
-            `<div class="flex items-center justify-center w2 h2 ba br-100 windsor f3">${this.str}</div>` +
+            `<div class="flex items-center justify-center w2 h2 ba br-100 windsor f3 brown">${this.str}</div>` +
           '</div>'
         );
       }
@@ -83,7 +83,7 @@ module.exports = function(eleventyConfig) {
         this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
-        return (`<h4 class="ma0 f4">${this.str}</h4>`);
+        return (`<h4 class="pa0 ma0 f5 brown windsor ttu">${this.str}</h4>`);
       }
     }
   });
@@ -122,7 +122,7 @@ module.exports = function(eleventyConfig) {
         this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
-        return (`<h3 class="mt4 mb2 f3 windsor ${this.str}">`);
+        return (`<h3 class="mt2 mb1 f3 windsor pa0 ${this.str}">`);
       }
     }
   });
@@ -160,13 +160,14 @@ module.exports = function(eleventyConfig) {
       }
     }
   });
-  
+
   // Layouts
   eleventyConfig.addLayoutAlias('default', 'layouts/default.liquid');
 
   // Passthrough copy
   // Just copy this content into the _site directory
   eleventyConfig.addPassthroughCopy("assets/fonts");
+  eleventyConfig.addPassthroughCopy("assets/js");
   eleventyConfig.addPassthroughCopy("assets/images/**/*.png");
 
   return {

@@ -22,6 +22,31 @@
        url("../fonts/windsor_regular.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: 'Vacation Deep';
+  src: url('../fonts/Vacation-Deep.woff2') format('woff2'),
+      url('../fonts/Vacation-Deep.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vacation';
+  src: url('../fonts/Vacation-Heavy.woff2') format('woff2'),
+      url('../fonts/Vacation-Heavy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vacation Slanted';
+  src: url('../fonts/Vacation-Slanted.woff2') format('woff2'),
+      url('../fonts/Vacation-Slanted.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 a {
   color: var(--b-teal);
 
@@ -30,8 +55,70 @@ a {
   }
 }
 
+:root {
+  --ms-ratio: var(--major-second);
+  --ms-base: 18px;
+}
+
+@media (min-width: 550px) {
+  :root {
+    --ms-base: 19px;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --ms-base: 20px;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    --ms-base: 21px;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --ms-base: 22px;
+  }
+}
+@media (min-width: 1000px) {
+  :root {
+    --ms-base: 23px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --ms-base: 24px;
+  }
+}
+
+hr {
+  height: 1px;
+  background: var(--black-10);
+}
+
 .ano {
   font-family: "Ano", sans-serif;
+}
+
+.vacation {
+  font-family: "Vacation", sans-serif;
+}
+
+.vacation-deep {
+  font-family: "Vacation Deep", sans-serif;
+}
+
+.vacation-slanted {
+  font-family: "Vacation Slanted", sans-serif;
+}
+
+p {
+  font-family: "Ano", sans-serif;
+  line-height: 1.4;
 }
 
 .windsor {

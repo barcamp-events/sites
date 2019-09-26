@@ -96,17 +96,25 @@ $colors: (
   width: 100%;
   height: ($hypotenuse / 2);
   background: half-circles($circle-y);
-  
+
   @if $direction == right {
     background-position: ($hypotenuse * 3) 0,
       ($hypotenuse * 4) 0,
       ($hypotenuse * 5) 0,
       ($hypotenuse * 6) 0;
+      --background-one: #{($hypotenuse * 3)};
+      --background-two: #{($hypotenuse * 4)};
+      --background-three: #{($hypotenuse * 5)};
+      --background-four: #{($hypotenuse * 6)};
   } @else {
     background-position: ($hypotenuse * 4) 0,
       ($hypotenuse * 5) 0,
       ($hypotenuse * 6) 0,
       ($hypotenuse * 7) 0;
+      --background-one: #{($hypotenuse * 4)};
+      --background-two: #{($hypotenuse * 5)};
+      --background-three: #{($hypotenuse * 6)};
+      --background-four: #{($hypotenuse * 7)};
   }
 
   background-repeat: repeat-x;
@@ -118,8 +126,8 @@ $colors: (
 // Common bracelet styles
 @mixin bracelet {
   position: relative;
-  left: (-$height / 2);
-  width: calc(100% + #{$height});
+  left: (-$height);
+  width: calc(100% + #{$height * 2});
   height: $height;
   margin: (-$height / 2) 0;
   border: 0;
@@ -134,29 +142,64 @@ $colors: (
 .bracelet-right {
   @include bracelet;
   background-image: stripes(45deg), stripes(135deg);
-  transform: scale(1, 0.5) translateZ(1px) rotate(2deg);
+  transform: scale(1.1, 0.5) translateZ(1px) rotate(2deg);
+  animation: move-left-middle 10s linear infinite;
 
   &::after {
     @include edges(top, right);
+    animation: move-left-top 10s linear infinite;
   }
 
   &::before {
     @include edges(bottom, right);
+    animation: move-left-bottom 10s linear infinite;
   }
 }
+
+@keyframes move-left-middle {
+  0% {
+    background-position: -28px 1px, -28px 100%;
+  }
+  100% {
+    background-position: 28px 1px, 28px 100%;
+  }
+}
+
+@keyframes move-left-bottom {
+  0% {
+    background-position: calc(var(--background-one) - 28px) 0, calc(var(--background-two) - 28px) 0, calc(var(--background-three) - 28px) 0, calc(var(--background-four) - 28px) 0;
+  }
+  100% {
+    background-position: calc(var(--background-one) + 28px) 0, calc(var(--background-two) + 28px) 0, calc(var(--background-three) + 28px) 0, calc(var(--background-four) + 28px) 0;
+  }
+}
+@keyframes move-left-top {
+  0% {
+    background-position: calc(var(--background-one) - 28px) 0, calc(var(--background-two) - 28px) 0, calc(var(--background-three) - 28px) 0, calc(var(--background-four) - 28px) 0;
+  }
+  100% {
+    background-position: calc(var(--background-one) + 28px) 0, calc(var(--background-two) + 28px) 0, calc(var(--background-three) + 28px) 0, calc(var(--background-four) + 28px) 0;
+  }
+}
+
 
 // Bracelet with chevrons pointing left
 .bracelet-left {
   @include bracelet;
   background-image: stripes(135deg), stripes(45deg);
-  transform: scale(1, 0.5) translateZ(1px) rotate(-2deg);
+  transform: scale(1.1, 0.5) translateZ(1px) rotate(-2deg);
+  animation: move-left-middle 10s linear infinite reverse;
 
   &::after {
     @include edges(top, left);
+    animation: move-left-bottom 10s linear infinite reverse;
+
   }
 
   &::before {
     @include edges(bottom, left);
+    animation: move-left-top 10s linear infinite reverse;
+
   }
 }
 
