@@ -7,6 +7,6 @@
   {% elsif sponsor.data.logo == "png" %}
     <img class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }}" src="/assets/images/sponsor-logos/{{ sponsor.fileSlug }}.png" alt="{{ sponsor.data.name }}">
   {% else %}
-    {{ sponsor.data.name }}
+    <h5 class="windsor f4 brown tc">{{ sponsor.data.name }}</h5>
   {% endif %}
 </div>
