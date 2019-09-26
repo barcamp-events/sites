@@ -136,7 +136,7 @@ module.exports = function(eleventyConfig) {
         this.str = parseArgs(tagToken.args);
       },
       render: function(scope, hash) {
-        return (`<p class="mb0 brown lh-copy ${this.str}">`);
+        return (`<p class="mv0 brown lh-copy ${this.str}">`);
       }
     }
   });
