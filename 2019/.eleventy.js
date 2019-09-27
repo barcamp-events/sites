@@ -167,9 +167,9 @@ module.exports = function(eleventyConfig) {
   // Passthrough copy
   // Just copy this content into the _site directory
   eleventyConfig.addPassthroughCopy("assets/fonts");
-  eleventyConfig.addPassthroughCopy("assets/js");
   eleventyConfig.addPassthroughCopy("assets/images/favicons/*");
-  eleventyConfig.addPassthroughCopy("assets/images/**/*.png");
+  eleventyConfig.addPassthroughCopy("assets/images/**/*.{png,jpg}");
+  eleventyConfig.addPassthroughCopy("assets/js");
 
   return {
     passthroughFileCopy: true,
