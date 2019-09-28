@@ -369,7 +369,6 @@ var MMCQ = (function() {
                 if (ntot) {
                     vbox._avg = [~~(rsum/ntot), ~~(gsum/ntot), ~~(bsum/ntot)];
                 } else {
-//                    console.log('empty box');
                     vbox._avg = [
                         ~~(mult * (vbox.r1 + vbox.r2 + 1) / 2),
                         ~~(mult * (vbox.g1 + vbox.g2 + 1) / 2),
@@ -569,7 +568,6 @@ var MMCQ = (function() {
                     // set dimensions
                     vbox1[dim2] = d2;
                     vbox2[dim1] = vbox1[dim2] + 1;
-//                    console.log('vbox counts:', vbox.count(), vbox1.count(), vbox2.count());
                     return [vbox1, vbox2];
                 }
             }
@@ -584,7 +582,6 @@ var MMCQ = (function() {
     function quantize(pixels, maxcolors) {
         // short-circuit
         if (!pixels.length || maxcolors < 2 || maxcolors > 256) {
-//            console.log('wrong number of maxcolors');
             return false;
         }
 
@@ -616,7 +613,6 @@ var MMCQ = (function() {
                     vbox2 = vboxes[1];
 
                 if (!vbox1) {
-//                    console.log("vbox1 not defined; shouldn't happen!");
                     return;
                 }
                 lh.push(vbox1);
@@ -626,7 +622,6 @@ var MMCQ = (function() {
                 }
                 if (ncolors >= target) return;
                 if (niters++ > maxIterations) {
-//                    console.log("infinite loop; perhaps too few pixels!");
                     return;
                 }
             }

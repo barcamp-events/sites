@@ -1,4 +1,4 @@
-import { r as registerInstance } from './core-8f5ef0c7.js';
+import { r as registerInstance } from './core-36452501.js';
 import { m as moment } from './moment-b6827264.js';
 
 const Time = class {

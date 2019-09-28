@@ -1,4 +1,4 @@
-import { r as registerInstance } from './core-8f5ef0c7.js';
+import { r as registerInstance } from './core-36452501.js';
 import { c as createCommonjsModule, u as unwrapExports } from './_commonjsHelpers-ae1b5db5.js';
 import { r as raf_1 } from './index-ef1c2b01.js';
 var lib = createCommonjsModule(function (module, exports) {

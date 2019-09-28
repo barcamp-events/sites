@@ -1,6 +1,6 @@
-import { r as registerInstance, g as getElement } from './core-8f5ef0c7.js';
+import { r as registerInstance, g as getElement } from './core-36452501.js';
 import './index-9ff8bd5c.js';
-import { A as ActiveRouter } from './active-router-3462ec78.js';
+import { A as ActiveRouter } from './active-router-7be22857.js';
 var StencilRouterPrompt = /** @class */ (function () {
     function StencilRouterPrompt(hostRef) {
         registerInstance(this, hostRef);

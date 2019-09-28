@@ -1,4 +1,4 @@
-import { r as registerInstance, h } from './core-8f5ef0c7.js';
+import { r as registerInstance, h } from './core-36452501.js';
 var DocsPage = /** @class */ (function () {
     function DocsPage(hostRef) {
         registerInstance(this, hostRef);

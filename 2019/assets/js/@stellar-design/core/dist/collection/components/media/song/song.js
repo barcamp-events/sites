@@ -67,7 +67,7 @@ export class Song {
                     this.updateDetails(itemToSave);
                 },
                 onError: (error) => {
-                    console.log(error);
+                    console.error(error);
                     this.error = error;
                 }
             });

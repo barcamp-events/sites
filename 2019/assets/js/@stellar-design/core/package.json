@@ -1,28 +1,28 @@
 {
-  "_from": "@stellar-design/core@^1.3.4",
-  "_id": "@stellar-design/core@1.3.5",
+  "_from": "@stellar-design/core@^1.3.5",
+  "_id": "@stellar-design/core@1.3.6",
   "_inBundle": false,
-  "_integrity": "sha512-iM1rvJz/nwcYMdc95LwbFCjSbWhTVlkMhi7x+r9pAncSdtU54vNXD4A0+reT5L8RU6U/TcfrKrawdY1IMuer6Q==",
+  "_integrity": "sha512-viYlhR5Xy3dRZ7JSwjiqKirOlOc3oV/lF78/vjVVv2lAdHRBslCxrtpLBuQFhCVrDBbCwGluQjF8zwAU5Ohdlg==",
   "_location": "/@stellar-design/core",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@stellar-design/core@^1.3.4",
+    "raw": "@stellar-design/core@^1.3.5",
     "name": "@stellar-design/core",
     "escapedName": "@stellar-design%2fcore",
     "scope": "@stellar-design",
-    "rawSpec": "^1.3.4",
+    "rawSpec": "^1.3.5",
     "saveSpec": null,
-    "fetchSpec": "^1.3.4"
+    "fetchSpec": "^1.3.5"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@stellar-design/core/-/core-1.3.5.tgz",
-  "_shasum": "588a5253160529de49177594b689877b46a8bde2",
-  "_spec": "@stellar-design/core@^1.3.4",
+  "_resolved": "https://registry.npmjs.org/@stellar-design/core/-/core-1.3.6.tgz",
+  "_shasum": "a18cf9371cbf6d018d50837e59fb1dc51e72bafe",
+  "_spec": "@stellar-design/core@^1.3.5",
   "_where": "/Users/williammriley/Sites/BarCamp/sites/2019",
   "bundleDependencies": false,
   "collection": "dist/collection/collection-manifest.json",
@@ -100,5 +100,5 @@
   },
   "types": "dist/types/components.d.ts",
   "unpkg": "dist/stellar-core.js",
-  "version": "1.3.5"
+  "version": "1.3.6"
 }

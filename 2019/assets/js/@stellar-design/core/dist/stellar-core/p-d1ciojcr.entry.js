@@ -1,1 +1,0 @@
-import{r as s,h as t}from"./p-ca3a3989.js";const r=class{constructor(t){s(this,t)}render(){return t("div",{class:"app-profile"},t("h1",null,"404"))}static get style(){return""}};export{r as stellar_docs_not_found};

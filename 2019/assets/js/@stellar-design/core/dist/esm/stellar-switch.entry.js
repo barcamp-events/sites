@@ -1,6 +1,6 @@
-import { r as registerInstance, c as createEvent, h, g as getElement } from './core-8f5ef0c7.js';
+import { r as registerInstance, e as createEvent, h, g as getElement } from './core-36452501.js';
 import './index-9ff8bd5c.js';
-import { T as Tunnel } from './theme-c32519f3.js';
+import { T as Tunnel } from './theme-e9450bee.js';
 
 const Switch = class {
     constructor(hostRef) {

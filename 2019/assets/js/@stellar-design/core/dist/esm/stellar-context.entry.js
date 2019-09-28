@@ -1,4 +1,4 @@
-import { r as registerInstance, c as createEvent, g as getElement } from './core-8f5ef0c7.js';
+import { r as registerInstance, e as createEvent, g as getElement } from './core-36452501.js';
 
 const Chart = class {
     constructor(hostRef) {

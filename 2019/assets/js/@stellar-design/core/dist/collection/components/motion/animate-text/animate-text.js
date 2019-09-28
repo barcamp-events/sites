@@ -11,7 +11,6 @@ export class AnimateText {
         this.onlyIn = false;
     }
     componentWillLoad() {
-        console.log(this.onlyIn);
         this.originalText = this.element.textContent;
         if (this.words) {
             this.incomingHTML = this.originalText.replace(/[^, ]+/g, "<span class='letter' aria-hidden='true'>$&</span>");
@@ -37,7 +36,6 @@ export class AnimateText {
         animations[this.method].in(this.letters, this.delay, this.duration);
     }
     async out() {
-        console.log(this.onlyIn);
         if (!this.onlyIn) {
             animations[this.method].out(this.letters, this.delay, this.duration);
         }

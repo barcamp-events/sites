@@ -28,7 +28,6 @@ const WebAudioSequencer = class {
         var currentTime = (await this.context()).currentTime;
         // The sequence starts at startTime, so normalize currentTime so that it's 0 at the start of the sequence.
         currentTime -= this.startTime;
-        console.log(this.totalPlayTime, this.iterations, this.currentTap);
         while (this.noteTime < currentTime + 0.005) {
             try {
                 await this.custom();

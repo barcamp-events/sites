@@ -1,8 +1,8 @@
-import { r as registerInstance, h, g as getElement, f as getContext } from './core-8f5ef0c7.js';
+import { r as registerInstance, h, g as getElement, f as getContext } from './core-36452501.js';
 import './index-9ff8bd5c.js';
+import { A as ActiveRouter } from './active-router-7be22857.js';
 import { m as matchPath, a as matchesAreEqual, s as stripTrailingSlash, b as addLeadingSlash, c as createLocation, d as createKey, h as hasBasename, e as stripBasename, f as createPath, g as stripLeadingSlash, l as locationsAreEqual } from './match-path-fd602b4d.js';
-import { s as storageAvailable, a as supportsHistory, b as supportsPopStateOnHashChange, g as getConfirmation, c as isExtraneousPopstateEvent, d as supportsGoWithoutReloadUsingHash } from './dom-utils-c19d19f4.js';
-import { A as ActiveRouter } from './active-router-3462ec78.js';
+import { s as storageAvailable, a as supportsHistory, b as supportsPopStateOnHashChange, g as getConfirmation, i as isExtraneousPopstateEvent, c as supportsGoWithoutReloadUsingHash } from './dom-utils-780e0208.js';
 
 const Route = class {
     constructor(hostRef) {

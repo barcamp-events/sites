@@ -1,4 +1,4 @@
-import { r as registerInstance, h, g as getElement } from './core-8f5ef0c7.js';
+import { r as registerInstance, h, g as getElement } from './core-36452501.js';
 import { v as video } from './kaleidoscope.es-5946172c.js';
 
 const Video360 = class {

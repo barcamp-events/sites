@@ -1,6 +1,6 @@
-import { r as registerInstance, h } from './core-8f5ef0c7.js';
+import { r as registerInstance, h } from './core-36452501.js';
 import './index-9ff8bd5c.js';
-import { T as Tunnel } from './dependencies-7c159378.js';
+import { T as Tunnel } from './dependencies-3d33bc09.js';
 
 const DocsComponent = class {
     constructor(hostRef) {

@@ -4,9 +4,9 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
 require('./index-9d31ce96.js');
+const activeRouter = require('./active-router-bd575787.js');
 const matchPath = require('./match-path-1773ac12.js');
 const domUtils = require('./dom-utils-fb324327.js');
-const activeRouter = require('./active-router-bd575787.js');
 
 const Route = class {
     constructor(hostRef) {

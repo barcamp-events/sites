@@ -1,4 +1,4 @@
-import { r as registerInstance, h, g as getElement } from './core-8f5ef0c7.js';
+import { r as registerInstance, h, g as getElement } from './core-36452501.js';
 import { I as Image } from './kaleidoscope.es-5946172c.js';
 var Image360 = /** @class */ (function () {
     function Image360(hostRef) {

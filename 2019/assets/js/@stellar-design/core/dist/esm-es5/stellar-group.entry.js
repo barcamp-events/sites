@@ -1,4 +1,4 @@
-import { r as registerInstance, h, g as getElement } from './core-8f5ef0c7.js';
+import { r as registerInstance, h, g as getElement } from './core-36452501.js';
 var Group = /** @class */ (function () {
     function Group(hostRef) {
         registerInstance(this, hostRef);

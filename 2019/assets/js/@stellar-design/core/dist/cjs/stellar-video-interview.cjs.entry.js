@@ -44,7 +44,6 @@ const VideoInterview = class {
         this.video = this.element.shadowRoot.querySelector('stellar-video');
     }
     handleUpdate(event) {
-        console.log(event);
         this.playing = event.detail.playing;
         this.current = Math.abs(Math.round(event.detail.currentTime * 1000));
         this.duration = Math.round(event.detail.duration * 1000);

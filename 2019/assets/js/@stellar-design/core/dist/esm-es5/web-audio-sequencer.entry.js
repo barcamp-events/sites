@@ -34,7 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import { r as registerInstance, h } from './core-8f5ef0c7.js';
+import { r as registerInstance, h } from './core-36452501.js';
 var WebAudioSequencer = /** @class */ (function () {
     function class_1(hostRef) {
         var _this = this;
@@ -75,7 +75,6 @@ var WebAudioSequencer = /** @class */ (function () {
                         currentTime = (_a.sent()).currentTime;
                         // The sequence starts at startTime, so normalize currentTime so that it's 0 at the start of the sequence.
                         currentTime -= this.startTime;
-                        console.log(this.totalPlayTime, this.iterations, this.currentTap);
                         _a.label = 2;
                     case 2:
                         if (!(this.noteTime < currentTime + 0.005)) return [3 /*break*/, 7];
