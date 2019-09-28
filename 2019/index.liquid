@@ -9,25 +9,27 @@ title: BarCamp Omaha 2019
       <stellar-animate-text method="retro" phrase duration="700" only-in>BarCamp</stellar-animate-text>
     </h1>
     <h2 class="center mv4 f3 f2-ns f1-l windsor dark-tan relative z-2">
-      <stellar-animate-text delay="2200" phrase>Hosted at KANEKO</stellar-animate-text>
+      <stellar-animate-text delay="2400" phrase>Hosted at KANEKO</stellar-animate-text>
     </h2>
     <h3 class="center ma0 f5 f4-ns f3-l windsor dark-tan relative z-2">
-      <stellar-animate-text delay="2600" phrase>Saturday, November 9th, 2019</stellar-animate-text>
-      <br>
-      <stellar-animate-text delay="3000" phrase>9AM &ndash; 5PM</stellar-animate-text>
+      <stellar-animate-text delay="2800" phrase>Saturday, November 9th, 2019</stellar-animate-text>
+      <br />
+      <br />
+      <stellar-animate-text delay="3200" phrase>9AM &ndash; 5PM</stellar-animate-text>
     </h3>
   </div>
   <web-audio-visualizer for="numbers" type="bars" size="32" class="absolute bottom-0 left-0 right-0 w-100 h-100" style="mix-blend-mode: multiply; width: 97%;clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);" ></web-audio-visualizer>
 </header>
 
-<stellar-layout class="bg-light-tan" id="about" size="small" padding="large">
+<stellar-button class="vacation fs1 fixed bottom-1 right-1 dark-tan" size="large" ghost onclick="play()" style="mix-blend-mode: difference;z-index: 9999;--font-size: 2rem;">11</stellar-button>
+
+<stellar-layout class="bg-light-tan relative" id="about" size="small" padding="large">
   <copy-wrap class="clearfix">
     <h2 class="windsor">BarCamp is an Unconference</h2>
     <p class="mw-100 brown lh-copy">BarCamp Omaha is a user generated conference where the speakers are everyday folks talking about what interests them. Talks aren&rsquo;t scheduled or planned until just before the conference starts, and anyone can give a talk. Curious, but don&rsquo;t want to take the stage? That&rsquo;s okay, too.</p>
     <p class="mw-100 mb4 brown lh-copy">At BarCamp, you won&rsquo;t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and share what awakens your curiosity. Come one, come all.</p>
     <stellar-button href="https://www.eventbrite.com/e/barcamp-omaha-2019-tickets-66366823957" target="_blank" padding="large" class="s-right-arrow fr" style="--padding: 1rem 2rem 1rem 1rem">Buy Tickets</stellar-button>
   </copy-wrap>
-
 </stellar-layout>
 
 <div class="bracelet-right z-2"></div>
@@ -232,13 +234,13 @@ title: BarCamp Omaha 2019
 
 <div class="bracelet-right z-2"></div>
 
-<stellar-layout class="bg-tan" id="sponsors" size="large" padding="large">
+<stellar-layout class="bg-tan relative" id="sponsors" size="large" padding="large">
     <copy-wrap align="center">
       <h2 class="windsor mt0 mb2 f2 f1-m">Our Sponsors</h2>
       <p class="brown lh-copy">There's no way an event like BarCamp Omaha could happen every year at the quality it deserves to be for our commiunity. The following folks helped put BarCamp Omaha 2019 on. Please thank them!</p>
     </copy-wrap>
 
-  <div class="relative clearfix">
+  <div class="relative clearfix z-1">
     <h6 class="windsor ma0 pa0 tc center mb3">Platinum</h4>
     <stellar-grid class="items-center" style="--grid-width: 350px;">
       {% for sponsor in collections.platinum %}
@@ -295,18 +297,71 @@ title: BarCamp Omaha 2019
 
     <stellar-button href="https://opencollective.com/barcamp-events/contribute" target="_blank" class="s-right-arrow fr mt4" style="--padding: 1rem 2rem 1rem 1rem;">Sponsor</stellar-button>
   </div>
+
+  <web-audio-visualizer for="numbers" type="wave" size="128" smoothing="1" class="absolute bottom-0 z-0 left-0 right-0" style="mix-blend-mode: overlay; width: 97%;clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);filter: invert(1);" ></web-audio-visualizer>
 </stellar-layout>
 
 <web-audio name="numbers">
   <web-audio-source src="./assets/audio/number-count.mp3" name="numbers-song"></web-audio-source>
 </web-audio>
 
+<web-audio-sequencer name="sequence" tempo="155" taps="300"></web-audio-sequencer>
+
 <script>
   const play = async () => {
+    const body = await document.querySelector('body');
     const webAudio = await document.querySelector('web-audio');
-    song = await webAudio.source('numbers-song')
-    await song.play();
+    const sequencer = await document.querySelector('web-audio-sequencer');
+    const song = await webAudio.source('numbers-song');
+
+    sequencer.custom = async function (a,b,c) {
+      if (this.currentTap === 0) {
+        await song.play();
+      }
+
+      if (this.currentTap >= 36 && this.currentTap <= 280) {
+        if (this.currentTap % 16 === 0) {
+          body.classList.add('kick')
+        }
+
+        if (this.currentTap % 8 === 0 && this.currentTap % 16 !== 0) {
+          body.classList.add('snare')
+        }
+
+        if (this.currentTap % 8 === 4) {
+          body.classList.remove('kick')
+          body.classList.remove('snare')
+        }
+      }
+    }
+
+    await sequencer.play();
   }
 
   var easter_egg = new Konami(function() { play(); });
 </script>
+
+<style>
+h1, h2, h3, h4 {
+  transition: transform 50ms ease-in-out 0s;
+}
+  .kick h1, .kick h3 {
+    transform: scale(1.01) rotate(-1deg);
+    transform-origin: 50% 0%;
+  }
+
+  .snare h1, .snare h3 {
+    transform: scale(0.99) rotate(1deg);
+    transform-origin: 50% 100%;
+  }
+
+  .kick h2, .kick h4 {
+    transform: scale(0.98) rotate(1deg);
+    transform-origin: 50% 100%;
+  }
+
+  .snare h2, .snare h4 {
+    transform: scale(1.02) rotate(-1deg);
+    transform-origin: 50% 0%;
+  }
+</style>
