@@ -34,9 +34,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import { r as registerInstance, e as createEvent, h, g as getElement } from './core-36452501.js';
+import { r as registerInstance, c as createEvent, h, g as getElement } from './core-8f5ef0c7.js';
 import './index-9ff8bd5c.js';
-import { T as Tunnel } from './theme-e9450bee.js';
+import { T as Tunnel } from './theme-c32519f3.js';
 var Toggle = /** @class */ (function () {
     function class_1(hostRef) {
         registerInstance(this, hostRef);

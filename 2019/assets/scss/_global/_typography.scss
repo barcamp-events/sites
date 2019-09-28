@@ -162,3 +162,9 @@ p {
     line-height: 2;
   }
 }
+
+@media (min-width: 960px) {
+  .fs-massive {
+    font-size: calc(8rem + 5vw);
+  }
+}

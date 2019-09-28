@@ -1,6 +1,6 @@
-import { r as registerInstance, h, g as getElement } from './core-36452501.js';
+import { r as registerInstance, h, g as getElement } from './core-8f5ef0c7.js';
 import './index-9ff8bd5c.js';
-import { T as Tunnel } from './theme-e9450bee.js';
+import { T as Tunnel } from './theme-c32519f3.js';
 var Comment = /** @class */ (function () {
     function Comment(hostRef) {
         registerInstance(this, hostRef);

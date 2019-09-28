@@ -1,4 +1,4 @@
-import { r as registerInstance, g as getElement, e as createEvent } from './core-36452501.js';
+import { r as registerInstance, g as getElement, c as createEvent } from './core-8f5ef0c7.js';
 import { e as asyncForEach } from './index-9d3b27e3.js';
 import { c as createCommonjsModule, a as commonjsGlobal } from './_commonjsHelpers-ae1b5db5.js';
 import './css-custom-properties.min-dfcc36c1.js';

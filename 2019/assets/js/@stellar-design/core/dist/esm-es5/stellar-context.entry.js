@@ -34,7 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import { r as registerInstance, e as createEvent, g as getElement } from './core-36452501.js';
+import { r as registerInstance, c as createEvent, g as getElement } from './core-8f5ef0c7.js';
 var Chart = /** @class */ (function () {
     function class_1(hostRef) {
         registerInstance(this, hostRef);

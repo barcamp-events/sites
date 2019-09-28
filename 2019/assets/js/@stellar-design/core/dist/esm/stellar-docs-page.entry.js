@@ -1,4 +1,4 @@
-import { r as registerInstance, h } from './core-36452501.js';
+import { r as registerInstance, h } from './core-8f5ef0c7.js';
 
 const DocsPage = class {
     constructor(hostRef) {

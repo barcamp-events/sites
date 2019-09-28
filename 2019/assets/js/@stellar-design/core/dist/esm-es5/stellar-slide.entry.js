@@ -1,4 +1,4 @@
-import { r as registerInstance, h, H as Host } from './core-36452501.js';
+import { r as registerInstance, h, H as Host } from './core-8f5ef0c7.js';
 var Slide = /** @class */ (function () {
     function Slide(hostRef) {
         registerInstance(this, hostRef);

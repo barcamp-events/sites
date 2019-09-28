@@ -8,6 +8,7 @@ export declare class AnimateText {
     method: string;
     words: boolean;
     phrase: boolean;
+    onlyIn: boolean;
     componentWillLoad(): void;
     in(): Promise<void>;
     out(): Promise<void>;

@@ -1,4 +1,4 @@
-import { r as registerInstance, h, g as getElement } from './core-36452501.js';
+import { r as registerInstance, h, g as getElement } from './core-8f5ef0c7.js';
 var Reveal = /** @class */ (function () {
     function Reveal(hostRef) {
         registerInstance(this, hostRef);

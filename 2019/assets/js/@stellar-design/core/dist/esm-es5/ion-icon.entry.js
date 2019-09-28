@@ -1,4 +1,4 @@
-import { r as registerInstance, f as getContext, h, g as getElement, H as Host } from './core-36452501.js';
+import { r as registerInstance, f as getContext, h, g as getElement, H as Host } from './core-8f5ef0c7.js';
 var CACHED_MAP;
 function getIconMap() {
     if (!CACHED_MAP) {

@@ -1,4 +1,4 @@
-import { r as registerInstance } from './core-36452501.js';
+import { r as registerInstance } from './core-8f5ef0c7.js';
 var WebAudioVisualizerShader = /** @class */ (function () {
     function WebAudioVisualizerShader(hostRef) {
         registerInstance(this, hostRef);

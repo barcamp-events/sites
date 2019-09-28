@@ -41,7 +41,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
-import { r as registerInstance, h } from './core-36452501.js';
+import { r as registerInstance, h } from './core-8f5ef0c7.js';
 var WebAudioDebugger = /** @class */ (function () {
     function class_1(hostRef) {
         registerInstance(this, hostRef);

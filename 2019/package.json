@@ -35,6 +35,6 @@
     "tachyons": "^4.10.0"
   },
   "dependencies": {
-    "@stellar-design/core": "^1.3.4"
+    "@stellar-design/core": "^1.3.5"
   }
 }

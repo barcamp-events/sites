@@ -8,8 +8,10 @@ export class AnimateText {
         this.method = "lettering";
         this.words = false;
         this.phrase = false;
+        this.onlyIn = false;
     }
     componentWillLoad() {
+        console.log(this.onlyIn);
         this.originalText = this.element.textContent;
         if (this.words) {
             this.incomingHTML = this.originalText.replace(/[^, ]+/g, "<span class='letter' aria-hidden='true'>$&</span>");
@@ -32,11 +34,13 @@ export class AnimateText {
         });
     }
     async in() {
-        console.log(this.letters, this.delay, this.duration);
         animations[this.method].in(this.letters, this.delay, this.duration);
     }
     async out() {
-        animations[this.method].out(this.letters, this.delay, this.duration);
+        console.log(this.onlyIn);
+        if (!this.onlyIn) {
+            animations[this.method].out(this.letters, this.delay, this.duration);
+        }
     }
     render() {
         return h(Host, { role: "text", ariaLabel: this.originalText },
@@ -138,6 +142,24 @@ export class AnimateText {
                 "text": ""
             },
             "attribute": "phrase",
+            "reflect": false,
+            "defaultValue": "false"
+        },
+        "onlyIn": {
+            "type": "boolean",
+            "mutable": false,
+            "complexType": {
+                "original": "boolean",
+                "resolved": "boolean",
+                "references": {}
+            },
+            "required": false,
+            "optional": false,
+            "docs": {
+                "tags": [],
+                "text": ""
+            },
+            "attribute": "only-in",
             "reflect": false,
             "defaultValue": "false"
         }
