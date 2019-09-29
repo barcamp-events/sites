@@ -1,4 +1,4 @@
-<div class="sponsor-wrap flex justify-center {{ spacing }}">
+<div class="relative sponsor-wrap flex justify-center {{ spacing }}">
   {% if sponsor.data.logo == "svg" %}
     <svg class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }}">
       <title>{{ sponsor.data.name }}</title>
@@ -8,5 +8,8 @@
     <img class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }}" src="/assets/images/sponsor-logos/{{ sponsor.fileSlug }}.png" alt="{{ sponsor.data.name }}">
   {% else %}
     <h5 class="windsor f4 brown tc">{{ sponsor.data.name }}</h5>
+  {% endif %}
+  {% if sponsor.data.contribution %}
+    <stellar-tooltip><p class="w-100 white tc f7" style="white-space: normal;">{{ sponsor.data.contribution }}</p></stellar-tooltip>
   {% endif %}
 </div>

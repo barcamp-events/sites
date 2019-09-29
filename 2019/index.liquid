@@ -37,9 +37,13 @@ title: BarCamp Omaha 2019
 <stellar-layout class="bg-tan" id="venue" size="large" padding="large">
   <stellar-grid class="items-center" style="--grid-gap: 4rem;--grid-width: 300px;">
     <copy-wrap>
+      <svg class="smile w3 h3 mb3">
+        <title>Smile</title>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#smile"></use>
+      </svg>
       <h4 class="windsor brown">The Venue</h4>
-      <h3 class="mt0 mb2 windsor f2 f1-m">KANEKO</h3>
-      <address class="brown fs-normal lh-style="--padding-underneath: 4rem;"-copy mb4">
+      <h3 class="mt0 mb3 windsor f2 f1-m">KANEKO</h3>
+      <address class="brown fs-normal lh-copy mb3">
         1111 Jones St<br>
         Omaha, NE 68102
       </address>
@@ -58,15 +62,15 @@ title: BarCamp Omaha 2019
 <stellar-layout class="bg-light-tan" id="tracks" size="full" padding="large">
   <stellar-layout size="small" padding="none">
     <copy-wrap align="center">
-      <h3 class="mt0 mb2 windsor f2 f1-m">The Tracks</h3>
-      <p class="brown lh-copy">Pick from the tracks below to give your talk. All topics and folk are welcome, but please follow our <a href="https://github.com/barcamp-events/documents/blob/master/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.</p>
+      <h3 class="mt0 windsor f2 f1-m">The Tracks</h3>
+      <p class="brown lh-copy mt0">Pick from the tracks below to give your talk. All topics and folk are welcome, but please follow our <a href="https://github.com/barcamp-events/documents/blob/master/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.</p>
     </copy-wrap>
   </stellar-layout>
   <stellar-layout size="full" padding="none">
     <stellar-grid style="--grid-gap: 1rem;--grid-width: 320px;">
       <stellar-card padding="none">
         <header class="pa0 relative overflow-hidden">
-          <img src="https://placehold.it/1600x800/f7f0e7/323232" class="db" />
+          <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db" />
           <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1 z-4"><stellar-animate-text method="jump">Maker</stellar-animate-text></h3>
         </header>
         <section class="pa3">
@@ -76,7 +80,7 @@ title: BarCamp Omaha 2019
 
       <stellar-card padding="none">
         <header class="pa0 relative">
-          <img src="https://placehold.it/1600x800/f7f0e7/323232" class="db" />
+          <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db" />
           <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Creative</stellar-animate-text></h3>
         </header>
         <section class="pa3">
@@ -86,7 +90,7 @@ title: BarCamp Omaha 2019
 
       <stellar-card padding="none">
         <header class="pa0 relative">
-          <img src="https://placehold.it/1600x800/f7f0e7/323232" class="db" />
+          <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db" />
           <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Technology</stellar-animate-text></h3>
         </header>
         <section class="pa3">
@@ -96,7 +100,7 @@ title: BarCamp Omaha 2019
 
       <stellar-card padding="none">
         <header class="pa0 relative">
-          <img src="https://placehold.it/1600x800/f7f0e7/323232" class="db" />
+          <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db" />
           <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Kitchen Sink</stellar-animate-text></h3>
         </header>
         <section class="pa3">
@@ -111,8 +115,12 @@ title: BarCamp Omaha 2019
 
 <stellar-layout class="bg-tan pv4 pv5-l" id="agenda" size="small">
   <copy-wrap align="center">
+    <svg class="smile w3 h3 mb3 hand">
+        <title>Hand</title>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#hand"></use>
+      </svg>
     <h2 class="windsor mt0 mb2 f2 f1-m">The Agenda</h2>
-    <p class="brown lh-copy">We may not know what the talks will be yet, but we do have a general schedule of events!</p>
+    <p class="brown lh-copy mt0">We may not know what the talks will be yet, but we do have a general schedule of events!</p>
   </copy-wrap>
 
   {% schedule %}
@@ -126,7 +134,7 @@ title: BarCamp Omaha 2019
         {% endh3 %}
 
         <p class="brown lh-copy f6 mt0">
-          Get excited about BarCamp the night before at our opening party! Buying a BarCamp ticket also entitles you to a free drink ticket.
+          We're planning a pre-party - more details to come!
         </p>
       {% endscheduledetails %}
     {% endschedule %}
@@ -140,36 +148,36 @@ title: BarCamp Omaha 2019
         {% h3 "ttu" %}
           8AM | Coffee / Sign Up
         {% endh3 %}
-        <p class="brown lh-copy f6 mt0">
+        <p class="brown lh-copy f6 mt0 mw-100">
           Grab some snacks and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers.
         </p>
 
         {% h3 "ttu mt4" %}
           9AM | Morning Talks Begin
         {% endh3 %}
-        <p class="brown lh-copy f6 mt0">
+        <p class="brown lh-copy f6 mt0 mw-100">
           We&rsquo;ll start out the first round of talks promptly at 9am, so make sure you&rsquo;re all settled in and ready to learn!
         </p>
 
         {% h3 "ttu mt4" %}
           12PM | Lunch & Networking
         {% endh3 %}
-        <p class="brown lh-copy f6 mt0">
+        <p class="brown lh-copy f6 mt0 mw-100">
           Hang out with your new BarCamp friends and enjoy a delicious lunch.
         </p>
 
         {% h3 "ttu mt4" %}
           1PM | Afternoon Talks Begin
         {% endh3 %}
-        <p class="brown lh-copy f6 mt0">
+        <p class="brown lh-copy f6 mt0 mw-100">
           At 1 PM, we&rsquo;ll reconvene for our afternoon session of talks!
         </p>
 
         {% h3 "ttu mt4" %}
           5PM | Closing
         {% endh3 %}
-        <p class="brown lh-copy f6 mt0">
-          Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your free t-shirt (sponsored TBD), friendship bracelet (sponsored by Bergman Incentives), and other BarCamp memorabilia from the merch table!
+        <p class="brown lh-copy f6 mt0 mw-100">
+          Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your friendship bracelet (sponsored by Bergman Incentives), and other BarCamp memorabilia from the merch table!
         </p>
       {% endscheduledetails %}
     {% endschedule %}
@@ -236,6 +244,10 @@ title: BarCamp Omaha 2019
 
 <stellar-layout class="bg-tan relative" id="sponsors" size="large" padding="large">
     <copy-wrap align="center">
+      <svg class="smile w3 h3 mb3 peace">
+        <title>Peace</title>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#peace"></use>
+      </svg>
       <h2 class="windsor mt0 mb2 f2 f1-m">Our Sponsors</h2>
       <p class="brown lh-copy">There's no way an event like BarCamp Omaha could happen every year at the quality it deserves to be for our commiunity. The following folks helped put BarCamp Omaha 2019 on. Please thank them!</p>
     </copy-wrap>
@@ -353,13 +365,98 @@ title: BarCamp Omaha 2019
     }
   }
 
-  var easter_egg = new Konami(function() { play(); });
+  let options = {
+    threshold: 0.5
+  }
+
+  let callback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in')
+    } else {
+      entry.target.classList.remove('in')
+    }
+  });
+};
+
+  let observer = new IntersectionObserver(callback, options);
+
+  let targets = Array.from(document.querySelectorAll('.bracelet-right, .bracelet-left'));
+
+  setTimeout(() => {
+    targets.forEach((target) => {
+      observer.observe(target);
+    })
+  }, 500)
 </script>
 
 <style>
-  h1, h2, h3, h4, .sponsor-wrap {
+  h1, h2, h3, h4, .sponsor-wrap, .smile {
     transform-origin: 50% 50%;
-    transition: transform 50ms ease-in-out 0s;
+    transition: transform 50ms ease-in-out 0s, color 175ms ease-in-out 0s;
+  }
+
+  .bracelet-right,
+  .bracelet-left {
+    opacity: 0;
+  }
+
+  .bracelet-right,
+  .bracelet-left {
+    transition: clip-path 150ms ease 150ms, opacity 300ms ease 150ms;
+    opacity: 0;
+    clip-path: polygon(0 30%, 90% 30%, 100% 50%, 90% 70%, 0 70%);
+  }
+
+  .bracelet-left {
+    clip-path: polygon(0 30%, 90% 30%, 100% 50%, 90% 70%, 0 70%);
+  }
+
+
+  .bracelet-right.in,
+  .bracelet-left.in {
+    clip-path: polygon(0% -20%, 100% -20%, 120% 50%, 120% 120%, 0 120%);
+    opacity: 1;
+  }
+
+
+  .smile {
+    color: var(--yellow);
+  }
+
+  .smile.peace {
+    color: var(--blue);
+  }
+
+  .smile.hand {
+    color: var(--green);
+  }
+
+  .kick .smile {
+    transform: scale(0.98) rotate(4deg);
+    color: var(--red);
+  }
+
+  .kick .smile.hand {
+    color: var(--purple);
+  }
+
+  .snare .smile {
+    transform: scale(0.98) rotate(-4deg);
+    color: var(--b-magenta);
+  }
+
+  .snare .smile.peace {
+    color: var(--yellow);
+  }
+
+  .offbeat .smile {
+    transform: scale(1.1) rotate(0deg);
+    color: var(--teal);
+  }
+
+  .offbeat .smile.hand {
+    color: var(--blue);
   }
 
   .kick h1, .kick h3, .kick .sponsor-wrap:nth-of-type(3n+1) {
