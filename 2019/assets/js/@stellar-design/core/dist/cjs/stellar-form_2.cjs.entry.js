@@ -3,13 +3,13 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
+require('./index-9d31ce96.js');
+const theme = require('./theme-6129a8c3.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
-require('./index-9d31ce96.js');
-const theme = require('./theme-f448164e.js');
 
 const Form = class {
     constructor(hostRef) {
@@ -43,7 +43,7 @@ const Form = class {
         var results = [];
         var valid = true;
         const els = Array.from(this.element.querySelectorAll(this.selectors.join(",")));
-        await index.asyncForEach(els, async (element) => {
+        await index$1.asyncForEach(els, async (element) => {
             try {
                 let result = await element.validate();
                 results.push(result);
@@ -67,7 +67,7 @@ const Form = class {
                 }
             }
         });
-        const json = index.form2js(results.filter(i => i && i.name));
+        const json = index$1.form2js(results.filter(i => i && i.name));
         return {
             els,
             json,
@@ -115,7 +115,7 @@ const Theme = class {
         this.observeColors();
     }
     observeColors() {
-        const options = Object.keys(index.colors);
+        const options = Object.keys(index$1.colors);
         if (this.body) {
             options.forEach((color) => {
                 this.htmlEl.classList.remove(`theme-${color}`);

@@ -21,6 +21,7 @@ export declare class WebAudio {
     source(name: any): Promise<HTMLWebAudioSourceElement>;
     get_context(): Promise<AudioContext>;
     is_prepared(): Promise<Boolean>;
+    stop(): Promise<void>;
     /******************
      * Private behavior
      **/

@@ -42,13 +42,13 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 import { r as registerInstance, e as createEvent, h, g as getElement, H as Host } from './core-36452501.js';
-import { e as asyncForEach, g as form2js, c as colors } from './index-9d3b27e3.js';
+import './index-9ff8bd5c.js';
+import { T as Tunnel } from './theme-e9450bee.js';
 import './_commonjsHelpers-ae1b5db5.js';
+import { a as asyncForEach, g as form2js, c as colors } from './index-5afdd7fa.js';
 import './css-custom-properties.min-dfcc36c1.js';
 import './main-07539eea.js';
 import './moment-b6827264.js';
-import './index-9ff8bd5c.js';
-import { T as Tunnel } from './theme-e9450bee.js';
 var Form = /** @class */ (function () {
     function class_1(hostRef) {
         registerInstance(this, hostRef);

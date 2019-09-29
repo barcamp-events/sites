@@ -1,6 +1,6 @@
 import { r as registerInstance, h, g as getElement } from './core-36452501.js';
-import { c as createCommonjsModule, a as commonjsGlobal } from './_commonjsHelpers-ae1b5db5.js';
 import './index-9ff8bd5c.js';
+import { c as createCommonjsModule, a as commonjsGlobal } from './_commonjsHelpers-ae1b5db5.js';
 import { T as Tunnel } from './dependencies-3d33bc09.js';
 
 const DocsHeader = class {

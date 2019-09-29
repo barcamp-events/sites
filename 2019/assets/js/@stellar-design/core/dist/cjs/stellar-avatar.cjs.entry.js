@@ -3,13 +3,13 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
+require('./index-9d31ce96.js');
+const theme = require('./theme-6129a8c3.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
-require('./index-9d31ce96.js');
-const theme = require('./theme-f448164e.js');
 
 const Avatar = class {
     constructor(hostRef) {
@@ -24,7 +24,7 @@ const Avatar = class {
         this.colorAuto = false;
     }
     componentWillLoad() {
-        this.colors = Object.keys(index.colors).filter((color) => {
+        this.colors = Object.keys(index$1.colors).filter((color) => {
             // @ts-ignore
             return !["base", "white", "black"].includes(color);
         });
@@ -46,7 +46,7 @@ const Avatar = class {
             this.initials = "ST";
         }
         else {
-            var the_name = index.titleCase(this.name);
+            var the_name = index$1.titleCase(this.name);
             if (this.size === "large" || this.size === "medium") {
                 this.initials = the_name.replace(/[^A-Z]/g, '').substring(0, 2);
             }

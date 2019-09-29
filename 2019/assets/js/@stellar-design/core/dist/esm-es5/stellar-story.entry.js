@@ -1,6 +1,6 @@
 import { r as registerInstance } from './core-36452501.js';
 import { c as createCommonjsModule, u as unwrapExports } from './_commonjsHelpers-ae1b5db5.js';
-import { r as raf_1 } from './index-ef1c2b01.js';
+import { a as raf_1 } from './index-4577fd7b.js';
 var lib = createCommonjsModule(function (module, exports) {
     Object.defineProperty(exports, "__esModule", {
         value: true

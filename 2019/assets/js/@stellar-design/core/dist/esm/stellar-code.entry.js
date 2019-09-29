@@ -1,7 +1,7 @@
 import { r as registerInstance, h, g as getElement } from './core-36452501.js';
-import { c as createCommonjsModule, a as commonjsGlobal } from './_commonjsHelpers-ae1b5db5.js';
 import './index-9ff8bd5c.js';
 import { T as Tunnel } from './theme-e9450bee.js';
+import { c as createCommonjsModule, a as commonjsGlobal } from './_commonjsHelpers-ae1b5db5.js';
 import { e as ezClipboard } from './index-306bff69.js';
 
 var prism = createCommonjsModule(function (module) {

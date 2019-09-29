@@ -3,8 +3,8 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
@@ -169,7 +169,7 @@ const Song = class {
             return this.src;
         }
         else if (this.src.startsWith('.')) {
-            return window.location.origin + index.relPathAsAbs(this.src);
+            return window.location.origin + index$1.relPathAsAbs(this.src);
         }
         else {
             return window.location.origin + this.src;
@@ -271,7 +271,7 @@ const Song = class {
         this._index = value;
     }
     render() {
-        return (core.h("button", { onClick: () => this.play() }, core.h("span", { class: "index" }, !this.playing && index.leadingZeroIndex(this._index), this.playing && core.h("stellar-asset", { name: "play" })), core.h("div", { class: "tracklisting" }, this.artwork && core.h("img", { src: this.picture, class: "preview-image" }), core.h("h2", null, core.h("span", null, this.title || "Loading..."), " / ", this.artist || "Loading...")), core.h("img", { src: this.picture, class: "backdrop" })));
+        return (core.h("button", { onClick: () => this.play() }, core.h("span", { class: "index" }, !this.playing && index$1.leadingZeroIndex(this._index), this.playing && core.h("stellar-asset", { name: "play" })), core.h("div", { class: "tracklisting" }, this.artwork && core.h("img", { src: this.picture, class: "preview-image" }), core.h("h2", null, core.h("span", null, this.title || "Loading..."), " / ", this.artist || "Loading...")), core.h("img", { src: this.picture, class: "backdrop" })));
     }
     static get assetsDirs() { return ["./vendor"]; }
     get element() { return core.getElement(this); }

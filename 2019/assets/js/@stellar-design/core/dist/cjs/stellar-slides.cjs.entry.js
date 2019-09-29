@@ -3,8 +3,8 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
@@ -9676,7 +9676,7 @@ const Slides = class {
         this.spaceBetween = 20;
         this.blur = 0;
         this.ease = () => {
-            const ease = index.blurringEase({
+            const ease = index$1.blurringEase({
                 end: 60,
                 start: -1,
                 duration: (this.speed / 2),

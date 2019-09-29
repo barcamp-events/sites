@@ -21,7 +21,7 @@ title: BarCamp Omaha 2019
   <web-audio-visualizer for="numbers" type="bars" size="32" class="absolute bottom-0 left-0 right-0 w-100 h-100" style="mix-blend-mode: multiply; width: 97%;clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);" ></web-audio-visualizer>
 </header>
 
-<stellar-button tag="button" class="vacation fs1 fixed bottom-1 right-1 dark-tan" size="large" ghost onclick="play()" style="mix-blend-mode: difference;z-index: 9999;--font-size: 4rem;">11</stellar-button>
+<stellar-button tag="button" class="vacation fs1 fixed bottom-1 right-1 dark-tan" size="large" ghost onclick="toggleMusic()" style="mix-blend-mode: difference;z-index: 9999;--font-size: 4rem;">11</stellar-button>
 
 <stellar-layout class="bg-light-tan relative" id="about" size="small" padding="large">
   <copy-wrap class="clearfix">
@@ -308,7 +308,9 @@ title: BarCamp Omaha 2019
 <web-audio-sequencer name="sequence" tempo="155" taps="300"></web-audio-sequencer>
 
 <script>
-  const play = async () => {
+  let playing = false;
+
+  const toggleMusic = async () => {
     const body = await document.querySelector('body');
     const webAudio = await document.querySelector('web-audio');
     const sequencer = await document.querySelector('web-audio-sequencer');
@@ -340,7 +342,15 @@ title: BarCamp Omaha 2019
       }
     }
 
-    await sequencer.play();
+    if (playing) {
+      await sequencer.stop();
+      await webAudio.stop();
+      await song.stop();
+      playing = false;
+    } else {
+      await sequencer.play();
+      playing = true;
+    }
   }
 
   var easter_egg = new Konami(function() { play(); });

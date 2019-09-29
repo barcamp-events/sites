@@ -8,6 +8,7 @@ export class WebAudioSource {
         this.status = "paused";
         this.effectsvolume = 100;
         this.effects = [];
+        this.instances = [];
         this.duration = 0.0;
         this.startTime = 0.0;
         this.pausedTime = 0.0;
@@ -98,16 +99,16 @@ export class WebAudioSource {
     }
     async toggle() {
         if (this.playing) {
-            this.pause();
+            await this.pause();
         }
         else {
-            this.play();
+            await this.play();
         }
     }
     async stop() {
         if (this.source) {
-            this.source.disconnect();
-            this.source.stop();
+            await this.source.disconnect();
+            await this.source.stop();
         }
         this.source = null;
         this.pausedTime = 0;
@@ -315,6 +316,7 @@ export class WebAudioSource {
         "dryGain": {},
         "channelGain": {},
         "effects": {},
+        "instances": {},
         "source": {},
         "buffer": {},
         "entry": {},

@@ -1,8 +1,8 @@
 import { r as registerInstance, h, g as getElement } from './core-36452501.js';
-import './_commonjsHelpers-ae1b5db5.js';
-import { p as properties } from './css-custom-properties.min-dfcc36c1.js';
 import './index-9ff8bd5c.js';
 import { T as Tunnel } from './theme-e9450bee.js';
+import './_commonjsHelpers-ae1b5db5.js';
+import { p as properties } from './css-custom-properties.min-dfcc36c1.js';
 
 const Tag = class {
     constructor(hostRef) {

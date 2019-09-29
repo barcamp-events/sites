@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
 const _commonjsHelpers = require('./_commonjsHelpers-3fc1f64e.js');
-const index = require('./index-1978083c.js');
+const index$2 = require('./index-1978083c.js');
 
 var lib = _commonjsHelpers.createCommonjsModule(function (module, exports) {
 
@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", {
 
 
 
-var _raf2 = _interopRequireDefault(index.raf_1);
+var _raf2 = _interopRequireDefault(index$2.raf_1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

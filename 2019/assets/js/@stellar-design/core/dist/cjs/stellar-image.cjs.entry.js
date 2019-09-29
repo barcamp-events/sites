@@ -3,8 +3,8 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 const cssCustomProperties_min = require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
@@ -675,7 +675,7 @@ const Picture = class {
     }
     mountZoom() {
         let zoomable = this.element.shadowRoot.querySelector('img');
-        this.zoom = index.mediumZoom(zoomable, {
+        this.zoom = index$1.mediumZoom(zoomable, {
             background: `${this.bg}`,
             scrollOffset: 1,
             margin: 30
@@ -693,7 +693,7 @@ const Picture = class {
     async in() {
         this.active = true;
         if (!this.nozoom) {
-            await index.delay(200);
+            await index$1.delay(200);
             this.mountZoom();
         }
     }

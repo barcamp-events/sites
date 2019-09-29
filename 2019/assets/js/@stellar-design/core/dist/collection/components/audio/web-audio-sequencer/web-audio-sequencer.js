@@ -1,4 +1,3 @@
-import { h } from "@stencil/core";
 export class WebAudioSequencer {
     constructor() {
         this.name = "web_audio_sequencer";
@@ -63,14 +62,8 @@ export class WebAudioSequencer {
         this.totalPlayTime = 0;
         this.startTime = null;
         this.currentTap = 0;
-        (await this.context()).stop();
+        this.noteTime = 0;
         clearTimeout(this.timer);
-    }
-    render() {
-        return [
-            h("button", { class: "play", onClick: () => { this.play(); } }, "Play"),
-            h("button", { class: "stop", onClick: () => { this.stop(); } }, "Stop")
-        ];
     }
     static get is() { return "web-audio-sequencer"; }
     static get encapsulation() { return "shadow"; }

@@ -16,6 +16,7 @@ export declare class WebAudioSource {
     dryGain: GainNode;
     channelGain: GainNode;
     effects: Array<object>;
+    instances: Array<object>;
     source: AudioBufferSourceNode;
     buffer: AudioBuffer;
     entry: string;

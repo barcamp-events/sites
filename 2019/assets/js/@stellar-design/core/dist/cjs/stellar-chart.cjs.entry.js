@@ -3,13 +3,13 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
+require('./index-9d31ce96.js');
+const theme$1 = require('./theme-6129a8c3.js');
 const _commonjsHelpers = require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
-require('./index-9d31ce96.js');
-const theme$1 = require('./theme-f448164e.js');
 
 var highcharts = _commonjsHelpers.createCommonjsModule(function (module) {
 /*
@@ -563,7 +563,7 @@ const theme = {
         }
     },
     // @ts-ignore
-    colors: index.shuffle([index.colors.base, ...index.colors.red.filter((i, key) => key >= 5), ...index.colors.orange.filter((i, key) => key >= 5), ...index.colors.yellow.filter((i, key) => key >= 5), ...index.colors.green.filter((i, key) => key >= 5), ...index.colors.blue.filter((i, key) => key >= 5), ...index.colors.violet.filter((i, key) => key >= 5), ...index.colors.cyan.filter((i, key) => key >= 5), ...index.colors.fuschia.filter((i, key) => key >= 5), ...index.colors.gray.filter((i, key) => key >= 5), ...index.colors.indigo.filter((i, key) => key >= 5), ...index.colors.lime.filter((i, key) => key >= 5), ...index.colors.pink.filter((i, key) => key >= 5), ...index.colors.teal.filter((i, key) => key >= 5)]),
+    colors: index$1.shuffle([index$1.colors.base, ...index$1.colors.red.filter((i, key) => key >= 5), ...index$1.colors.orange.filter((i, key) => key >= 5), ...index$1.colors.yellow.filter((i, key) => key >= 5), ...index$1.colors.green.filter((i, key) => key >= 5), ...index$1.colors.blue.filter((i, key) => key >= 5), ...index$1.colors.violet.filter((i, key) => key >= 5), ...index$1.colors.cyan.filter((i, key) => key >= 5), ...index$1.colors.fuschia.filter((i, key) => key >= 5), ...index$1.colors.gray.filter((i, key) => key >= 5), ...index$1.colors.indigo.filter((i, key) => key >= 5), ...index$1.colors.lime.filter((i, key) => key >= 5), ...index$1.colors.pink.filter((i, key) => key >= 5), ...index$1.colors.teal.filter((i, key) => key >= 5)]),
 };
 class HighchartsModel {
     serialize() {
@@ -596,7 +596,7 @@ const Chart = class {
             }, data: {
                 table: this.for
             }, series: [] }), { xAxis: { categories: [] } }), { yAxis: { categories: [] } });
-        this.__options = index.merge.all([this.__options, newOptions, theme]);
+        this.__options = index$1.merge.all([this.__options, newOptions, theme]);
         highcharts.setOptions({
             lang: {
                 thousandsSep: ','

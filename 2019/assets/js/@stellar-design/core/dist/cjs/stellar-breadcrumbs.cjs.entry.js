@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
 require('./index-9d31ce96.js');
-const theme = require('./theme-f448164e.js');
+const theme = require('./theme-6129a8c3.js');
 
 const Breadcrumbs = class {
     constructor(hostRef) {

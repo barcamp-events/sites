@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
 require('./index-9d31ce96.js');
-const activeRouter = require('./active-router-bd575787.js');
+const activeRouter = require('./active-router-01ecb4e6.js');
 
 const StencilRouterPrompt = class {
     constructor(hostRef) {

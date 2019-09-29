@@ -3,10 +3,10 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
+require('./index-9d31ce96.js');
+const theme$1 = require('./theme-6129a8c3.js');
 require('./_commonjsHelpers-3fc1f64e.js');
 const cssCustomProperties_min = require('./css-custom-properties.min-d46e7f9d.js');
-require('./index-9d31ce96.js');
-const theme$1 = require('./theme-f448164e.js');
 
 const Tag = class {
     constructor(hostRef) {

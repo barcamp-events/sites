@@ -23,6 +23,11 @@ export class WebAudio {
     async is_prepared() {
         return this.prepared;
     }
+    async stop() {
+        return await asyncForEach(this.sources, async (source) => {
+            await source.stop();
+        });
+    }
     /******************
      * Private behavior
      **/
@@ -273,6 +278,22 @@ export class WebAudio {
                     }
                 },
                 "return": "Promise<Boolean>"
+            },
+            "docs": {
+                "text": "",
+                "tags": []
+            }
+        },
+        "stop": {
+            "complexType": {
+                "signature": "() => Promise<void>",
+                "parameters": [],
+                "references": {
+                    "Promise": {
+                        "location": "global"
+                    }
+                },
+                "return": "Promise<void>"
             },
             "docs": {
                 "text": "",

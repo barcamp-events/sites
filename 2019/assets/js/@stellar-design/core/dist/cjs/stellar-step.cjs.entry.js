@@ -3,8 +3,8 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
@@ -18,7 +18,7 @@ const Step = class {
         this.contentChange = core.createEvent(this, "contentChange", 7);
     }
     componentWillLoad() {
-        this.parent = index.parentNodeSelector(this.element, 'stellar-steps');
+        this.parent = index$1.parentNodeSelector(this.element, 'stellar-steps');
     }
     handleClick() {
         this.parent.steps().forEach((element) => {

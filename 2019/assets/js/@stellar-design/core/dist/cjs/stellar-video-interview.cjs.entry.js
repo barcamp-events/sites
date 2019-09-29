@@ -3,12 +3,12 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 const cssCustomProperties_min = require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
-const index$1 = require('./index-82f55a74.js');
+const index = require('./index-82f55a74.js');
 const helpers = require('./helpers-6bfd5a03.js');
 
 const VideoInterview = class {
@@ -66,9 +66,9 @@ const VideoInterview = class {
         }
     }
     async in() {
-        await index.delay(1000);
+        await index$1.delay(1000);
         this.visible = true;
-        await index.delay(100);
+        await index$1.delay(100);
         this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
         this.video = this.element.shadowRoot.querySelector('stellar-video');
         this.video.addEventListener('canplaythrough', () => {
@@ -106,7 +106,7 @@ const VideoInterview = class {
         }
     }
     handleCurrentClick() {
-        index$1.ezClipboard.copyPlain(this.current);
+        index.ezClipboard.copyPlain(this.current);
     }
     render() {
         return (core.h("div", { class: "card", onDblClick: () => { this.handleClick(); } }, core.h("skeleton-img", { width: this.width, height: this.height, loading: true }), this.visible && core.h("section", null, core.h("stellar-video", { controls: false, playsinline: true, trackInView: false, onUpdate: (e) => { this.handleUpdate(e); } }, core.h("source", { src: this.src })), core.h("div", { class: "transcript" }, core.h("slot", null)), this.video && core.h("web-audio-visualizer", { for: `interview-${this.randomId}`, type: this.visualization, width: 2048, height: 1024, color: this.color }), core.h("button", { class: this.loading ? "loading button" : (this.playing ? "playing button" : "button"), onClick: () => { this.handleClick(); } }, core.h("stellar-asset", { name: this.loading ? "sync" : (this.playing ? "pause" : "play"), class: this.loading ? "animation-spin" : "" })), core.h("h3", null, core.h("stellar-unit", { class: "current", value: this.current, from: "ms", to: "s", onClick: () => { this.handleCurrentClick(); } })), core.h("h3", null, core.h("stellar-unit", { class: "duration", value: this.duration, from: "ms", to: "s" })), this.seekable && core.h("stellar-progress", { value: this.current, max: this.duration, noease: true, blurable: false, slender: true, editable: true, onUpdate: (e) => { this.skipTo(e.detail.value); } })), core.h("stellar-intersection", { element: this.element, multiple: true, in: this.in.bind(this), out: this.out.bind(this) })));

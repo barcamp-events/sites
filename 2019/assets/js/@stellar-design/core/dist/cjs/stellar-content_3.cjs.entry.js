@@ -3,19 +3,19 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
+require('./index-9d31ce96.js');
+const theme = require('./theme-6129a8c3.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 const cssCustomProperties_min = require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
-require('./index-9d31ce96.js');
-const theme = require('./theme-f448164e.js');
 
 const Content = class {
     constructor(hostRef) {
         core.registerInstance(this, hostRef);
         this.open = false;
-        this.ease = index.blurringEase({
+        this.ease = index$1.blurringEase({
             end: 6,
             start: -1,
             duration: 200,
@@ -92,7 +92,7 @@ const Tab = class {
                 });
             }
             else if (this.tag === "link") {
-                await index.delay(350);
+                await index$1.delay(350);
                 window.location.href = this.href;
             }
         }
@@ -144,7 +144,7 @@ const Tabs = class {
         this.block = false;
         this.vertical = false;
         this.dark = false;
-        this.ease = index.blurringEase({
+        this.ease = index$1.blurringEase({
             end: 10,
             start: -1,
             duration: 125,

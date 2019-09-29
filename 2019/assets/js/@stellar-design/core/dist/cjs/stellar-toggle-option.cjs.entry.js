@@ -3,13 +3,13 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const index = require('./index-5a80c644.js');
+require('./index-9d31ce96.js');
+const theme = require('./theme-6129a8c3.js');
 require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-5a80c644.js');
 require('./css-custom-properties.min-d46e7f9d.js');
 require('./main-6214461c.js');
 require('./moment-fd045425.js');
-require('./index-9d31ce96.js');
-const theme = require('./theme-f448164e.js');
 
 const ToggleOption = class {
     constructor(hostRef) {
@@ -27,7 +27,7 @@ const ToggleOption = class {
         this._type = "checkbox";
         this.focused = false;
         this.blur = 0;
-        this.ease = index.blurringEase({
+        this.ease = index$1.blurringEase({
             end: 10,
             start: -1,
             duration: 250,

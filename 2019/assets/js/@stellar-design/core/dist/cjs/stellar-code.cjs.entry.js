@@ -3,10 +3,10 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const _commonjsHelpers = require('./_commonjsHelpers-3fc1f64e.js');
 require('./index-9d31ce96.js');
-const theme$1 = require('./theme-f448164e.js');
-const index$1$1 = require('./index-82f55a74.js');
+const theme$1 = require('./theme-6129a8c3.js');
+const _commonjsHelpers = require('./_commonjsHelpers-3fc1f64e.js');
+const index$1 = require('./index-82f55a74.js');
 
 var prism = _commonjsHelpers.createCommonjsModule(function (module) {
 /* **********************************************
@@ -1598,7 +1598,7 @@ const Code = class {
     }
     async clipboard() {
         const copyText = await this.result();
-        index$1$1.ezClipboard.copyPlain(copyText);
+        index$1.ezClipboard.copyPlain(copyText);
     }
     async setCode(code) {
         this.code = code;

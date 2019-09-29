@@ -3,9 +3,9 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const core = require('./core-1d4780c4.js');
-const _commonjsHelpers = require('./_commonjsHelpers-3fc1f64e.js');
 require('./index-9d31ce96.js');
-const dependencies = require('./dependencies-ee24c770.js');
+const _commonjsHelpers = require('./_commonjsHelpers-3fc1f64e.js');
+const dependencies = require('./dependencies-b5fcec98.js');
 
 const DocsHeader = class {
     constructor(hostRef) {

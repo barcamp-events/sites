@@ -16,5 +16,4 @@ export declare class WebAudioSequencer {
     advance(): void;
     play(): Promise<void>;
     stop(): Promise<void>;
-    render(): any[];
 }
