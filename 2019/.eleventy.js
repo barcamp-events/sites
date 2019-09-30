@@ -2,13 +2,9 @@ module.exports = function(eleventyConfig) {
   const parseArgs = (args) => { return (args ? JSON.parse(args) : '') };
 
   // Custom Collections
-  eleventyConfig.addCollection("sponsors", function(collection) {
-    return collection.getFilteredByTag("sponsors").map(function(sponsor) {
-      // Don't create individual pages
-      // This isn't working as of Eleventy 0.9.0 but it used to work
-      sponsor.data.permalink = false;
-
-      return sponsor;
+  eleventyConfig.addCollection("tracks", function(collection) {
+    return collection.getFilteredByTag("tracks").sort(function(a, b) {
+      return a.data.order - b.data.order;
     });
   });
 
@@ -166,11 +162,11 @@ module.exports = function(eleventyConfig) {
 
   // Passthrough copy
   // Just copy this content into the _site directory
+  eleventyConfig.addPassthroughCopy("assets/audio");
   eleventyConfig.addPassthroughCopy("assets/fonts");
   eleventyConfig.addPassthroughCopy("assets/images/favicons/*");
   eleventyConfig.addPassthroughCopy("assets/images/**/*.{png,jpg}");
   eleventyConfig.addPassthroughCopy("assets/js");
-  eleventyConfig.addPassthroughCopy("assets/audio");
 
   return {
     passthroughFileCopy: true,

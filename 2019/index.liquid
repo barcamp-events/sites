@@ -4,17 +4,17 @@ title: BarCamp Omaha 2019
 ---
 
 <header class="main-header flex flex-column items-center justify-center vh-50 vh-75-ns vh-100-l overflow-hidden">
-  <div class="w-100 ph3 tc nt6-l">
+  <div class="w-100 ph3 tc">
     <h1 class="fs-massive vacation dark-tan ttu ma0 relative z-1">
       <stellar-animate-text method="retro" phrase duration="700" only-in>BarCamp</stellar-animate-text>
     </h1>
-    <h2 class="center mv4 f3 f2-ns f1-l windsor dark-tan relative z-2">
+    <h2 class="center mt4 mb2 f3 f2-ns f1-l windsor dark-tan relative z-2">
       <stellar-animate-text delay="2400" phrase>Hosted at KANEKO</stellar-animate-text>
     </h2>
-    <h3 class="center ma0 f5 f4-ns f3-l windsor dark-tan relative z-2">
+    <h3 class="center mv2 f5 f4-ns f3-l windsor dark-tan relative z-2">
       <stellar-animate-text delay="2800" phrase>Saturday, November 9th, 2019</stellar-animate-text>
-      <br />
-      <br />
+    </h3>
+    <h3 class="center ma0 f5 f4-ns f3-l windsor dark-tan relative z-2">
       <stellar-animate-text delay="3200" phrase>9AM &ndash; 5PM</stellar-animate-text>
     </h3>
   </div>
@@ -67,46 +67,10 @@ title: BarCamp Omaha 2019
     </copy-wrap>
   </stellar-layout>
   <stellar-layout size="full" padding="none">
-    <stellar-grid style="--grid-gap: 1rem;--grid-width: 320px;">
-      <stellar-card padding="none">
-        <header class="pa0 relative overflow-hidden">
-          <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db" />
-          <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1 z-4"><stellar-animate-text method="jump">Maker</stellar-animate-text></h3>
-        </header>
-        <section class="pa3">
-          <p class="f6 lh-copy mw-100">Churn, MRR, fundraising, or even the lemonade stand you ran when you were a kid are all fair game. This is a great place to talk about ways to build epic things and/or getting dat paper.</p>
-        </section>
-      </stellar-card>
-
-      <stellar-card padding="none">
-        <header class="pa0 relative">
-          <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db" />
-          <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Creative</stellar-animate-text></h3>
-        </header>
-        <section class="pa3">
-          <p class="f6 lh-copy mw-100">Designing letterpress invitations, photo blogging your world travels or rebranding a product? This is the track for you to share your creative accomplishments and valuable lessons.</p>
-        </section>
-      </stellar-card>
-
-      <stellar-card padding="none">
-        <header class="pa0 relative">
-          <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db" />
-          <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Technology</stellar-animate-text></h3>
-        </header>
-        <section class="pa3">
-          <p class="f6 lh-copy mw-100">Building React apps in your free time? Designed an ETL pipeline? Hacked together a Raspberry Pi temperature sensor? Come talk about the hardware and software that you get excited about.</p>
-        </section>
-      </stellar-card>
-
-      <stellar-card padding="none">
-        <header class="pa0 relative">
-          <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db" />
-          <h3 class="ma0 pa0 windsor f4 f3-l absolute bottom-1 left-1"><stellar-animate-text method="jump">Kitchen Sink</stellar-animate-text></h3>
-        </header>
-        <section class="pa3">
-          <p class="f6 lh-copy mw-100">Psst. I hear you made some moonshine. This track is for all those passions that don&rsquo;t quite fit the mold. Mastering juggling, urban planning in your free time and organizing your closet are all welcome topics here!</p>
-        </section>
-      </stellar-card>
+    <stellar-grid style="--grid-gap: 0.5rem;--grid-width: 300px;">
+      {% for track in collections.tracks %}
+        {% include track.liquid %}
+      {% endfor %}
     </stellar-grid>
   </stellar-layout>
 </stellar-layout>
@@ -124,63 +88,63 @@ title: BarCamp Omaha 2019
   </copy-wrap>
 
   {% schedule %}
-      {% scheduleday 1 %}
+    {% scheduleday 1 %}
 
-      {% scheduledetails %}
-        {% scheduledate "Friday, November 8th" %}
+    {% scheduledetails %}
+      {% scheduledate "Friday, November 8th" %}
 
-        {% h3 "ttu" %}
-          7PM | Opening Party <span class="ttn">at TBD!</span>
-        {% endh3 %}
+      {% h3 "ttu" %}
+        7PM | Opening Party <span class="ttn">at TBD!</span>
+      {% endh3 %}
 
-        <p class="brown lh-copy f6 mt0">
-          We're planning a pre-party - more details to come!
-        </p>
-      {% endscheduledetails %}
-    {% endschedule %}
+      <p class="brown lh-copy f6 mt0">
+        We're planning a pre-party &mdash; more details to come!
+      </p>
+    {% endscheduledetails %}
+  {% endschedule %}
 
-    {% schedule %}
-      {% scheduleday 2 %}
+  {% schedule %}
+    {% scheduleday 2 %}
 
-      {% scheduledetails %}
-        {% scheduledate "Saturday, November 9th" %}
+    {% scheduledetails %}
+      {% scheduledate "Saturday, November 9th" %}
 
-        {% h3 "ttu" %}
-          8AM | Coffee / Sign Up
-        {% endh3 %}
-        <p class="brown lh-copy f6 mt0 mw-100">
-          Grab some snacks and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers.
-        </p>
+      {% h3 "ttu" %}
+        8AM | Coffee / Sign Up
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        Grab some snacks and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers.
+      </p>
 
-        {% h3 "ttu mt4" %}
-          9AM | Morning Talks Begin
-        {% endh3 %}
-        <p class="brown lh-copy f6 mt0 mw-100">
-          We&rsquo;ll start out the first round of talks promptly at 9am, so make sure you&rsquo;re all settled in and ready to learn!
-        </p>
+      {% h3 "ttu mt4" %}
+        9AM | Morning Talks Begin
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        We&rsquo;ll start out the first round of talks promptly at 9am, so make sure you&rsquo;re all settled in and ready to learn!
+      </p>
 
-        {% h3 "ttu mt4" %}
-          12PM | Lunch & Networking
-        {% endh3 %}
-        <p class="brown lh-copy f6 mt0 mw-100">
-          Hang out with your new BarCamp friends and enjoy a delicious lunch.
-        </p>
+      {% h3 "ttu mt4" %}
+        12PM | Lunch & Networking
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        Hang out with your new BarCamp friends and enjoy a delicious lunch.
+      </p>
 
-        {% h3 "ttu mt4" %}
-          1PM | Afternoon Talks Begin
-        {% endh3 %}
-        <p class="brown lh-copy f6 mt0 mw-100">
-          At 1 PM, we&rsquo;ll reconvene for our afternoon session of talks!
-        </p>
+      {% h3 "ttu mt4" %}
+        1PM | Afternoon Talks Begin
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        At 1 PM, we&rsquo;ll reconvene for our afternoon session of talks!
+      </p>
 
-        {% h3 "ttu mt4" %}
-          5PM | Closing
-        {% endh3 %}
-        <p class="brown lh-copy f6 mt0 mw-100">
-          Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your friendship bracelet (sponsored by Bergman Incentives), and other BarCamp memorabilia from the merch table!
-        </p>
-      {% endscheduledetails %}
-    {% endschedule %}
+      {% h3 "ttu mt4" %}
+        5PM | Closing
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your friendship bracelet (sponsored by Bergman Incentives), and other BarCamp memorabilia from the merch table!
+      </p>
+    {% endscheduledetails %}
+  {% endschedule %}
 </stellar-layout>
 
 <div class="bracelet-left z-2"></div>
