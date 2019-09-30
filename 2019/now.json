@@ -9,7 +9,7 @@
         }
       }
     ],
-    "alias": ["2019.barcampomaha.org"],
+    "alias": ["2019.barcampomaha.org", "barcampomaha.org"],
     "routes": [
       { "src": "^/(.*)", "dest": "_site/$1" }
     ]

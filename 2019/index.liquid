@@ -15,13 +15,15 @@ title: BarCamp Omaha 2019
       <stellar-animate-text delay="2800" phrase>Saturday, November 9th, 2019</stellar-animate-text>
     </h3>
     <h3 class="center ma0 f5 f4-ns f3-l windsor dark-tan relative z-2">
-      <stellar-animate-text delay="3200" phrase>9AM &ndash; 5PM</stellar-animate-text>
+      <stellar-animate-text delay="3200" phrase>8AM &ndash; 5PM</stellar-animate-text>
     </h3>
   </div>
   <web-audio-visualizer for="numbers" type="bars" size="32" class="absolute bottom-0 left-0 right-0 w-100 h-100" style="mix-blend-mode: multiply; width: 97%;clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);" ></web-audio-visualizer>
 </header>
 
-<stellar-button tag="button" class="vacation fs1 fixed bottom-1 right-1 dark-tan" size="large" ghost onclick="toggleMusic()" style="mix-blend-mode: difference;z-index: 9999;--font-size: 4rem;">11</stellar-button>
+<stellar-button tag="button" class="vacation fs1 fixed bottom-1 right-1 dark-tan" size="large" ghost onclick="toggleMusic()" style="mix-blend-mode: difference;z-index: 9999;--font-size: 4rem;">11
+<stellar-tooltip align="top-right"><p class="fs8 lh-copy">Toggle Music</p></stellar-tooltip>
+</stellar-button>
 
 <stellar-layout class="bg-light-tan relative" id="about" size="small" padding="large">
   <copy-wrap class="clearfix">
@@ -276,6 +278,8 @@ title: BarCamp Omaha 2019
 
   <web-audio-visualizer for="numbers" type="wave" size="128" smoothing="1" class="absolute bottom-0 z-0 left-0 right-0" style="mix-blend-mode: overlay; width: 97%;clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);filter: invert(1);" ></web-audio-visualizer>
 </stellar-layout>
+
+<p class="tc center brown mw-100 pa4">"Numbers" by Sesame Street, sourced from <a href="https://www.youtube.com/watch?v=VOaZbaPzdsk&feature=youtu.be&t=572" target="_blank">YouTube</a></p>
 
 <web-audio name="numbers">
   <web-audio-source src="./assets/audio/number-count.mp3?2" name="numbers-song" effectsvolume="20"></web-audio-source>
