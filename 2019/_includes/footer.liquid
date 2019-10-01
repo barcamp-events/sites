@@ -1,0 +1,172 @@
+<p class="tc center brown mw-100 pa4">"Numbers" by Sesame Street, sourced from <a href="https://www.youtube.com/watch?v=VOaZbaPzdsk&feature=youtu.be&t=572" target="_blank">YouTube</a></p>
+
+<web-audio name="numbers">
+  <web-audio-source src="./assets/audio/number-count.mp3?2" name="numbers-song" effectsvolume="20"></web-audio-source>
+</web-audio>
+
+<web-audio-sequencer name="sequence" tempo="155" taps="300"></web-audio-sequencer>
+
+<script>
+  let playing = false;
+
+  const toggleMusic = async () => {
+    const body = await document.querySelector('body');
+    const webAudio = await document.querySelector('web-audio');
+    const sequencer = await document.querySelector('web-audio-sequencer');
+    const song = await webAudio.source('numbers-song');
+
+    sequencer.custom = async function (a,b,c) {
+      if (this.currentTap === 0) {
+        await song.play();
+      }
+
+      if (this.currentTap >= 36 && this.currentTap <= 280) {
+        if (this.currentTap % 16 === 0) {
+          body.classList.add('kick')
+        }
+
+        if (this.currentTap % 8 === 0 && this.currentTap % 16 !== 0) {
+          body.classList.add('snare')
+        }
+
+        if (this.currentTap % 12 === 0) {
+          body.classList.add('offbeat')
+        }
+
+        if (this.currentTap % 4 === 3) {
+          body.classList.remove('kick')
+          body.classList.remove('snare')
+          body.classList.remove('offbeat')
+        }
+      }
+    }
+
+    if (playing) {
+      await sequencer.stop();
+      await webAudio.stop();
+      await song.stop();
+      playing = false;
+    } else {
+      await sequencer.play();
+      playing = true;
+    }
+  }
+
+  let options = {
+    threshold: 0.5
+  }
+
+  let callback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in')
+    } else {
+      entry.target.classList.remove('in')
+    }
+  });
+};
+
+  let observer = new IntersectionObserver(callback, options);
+
+  let targets = Array.from(document.querySelectorAll('.bracelet-right, .bracelet-left'));
+
+  setTimeout(() => {
+    targets.forEach((target) => {
+      observer.observe(target);
+    })
+  }, 1000)
+</script>
+
+<style>
+  h1, h2, h3, h4, .sponsor-wrap, .smile {
+    transform-origin: 50% 50%;
+    transition: transform 50ms ease-in-out 0s, color 175ms ease-in-out 0s;
+  }
+
+  .bracelet-right,
+  .bracelet-left {
+    opacity: 0;
+  }
+
+  .bracelet-right,
+  .bracelet-left {
+    transition: clip-path 150ms ease 150ms, opacity 300ms ease 150ms;
+    opacity: 0;
+    clip-path: polygon(0 30%, 90% 30%, 100% 50%, 90% 70%, 0 70%);
+  }
+
+  .bracelet-left {
+    clip-path: polygon(0 30%, 90% 30%, 100% 50%, 90% 70%, 0 70%);
+  }
+
+
+  .bracelet-right.in,
+  .bracelet-left.in {
+    clip-path: polygon(0% -20%, 100% -20%, 120% 50%, 120% 120%, 0 120%);
+    opacity: 1;
+  }
+
+
+  .smile {
+    color: var(--yellow);
+  }
+
+  .smile.peace {
+    color: var(--blue);
+  }
+
+  .smile.hand {
+    color: var(--green);
+  }
+
+  .kick .smile {
+    transform: scale(0.98) rotate(4deg);
+    color: var(--red);
+  }
+
+  .kick .smile.hand {
+    color: var(--purple);
+  }
+
+  .snare .smile {
+    transform: scale(0.98) rotate(-4deg);
+    color: var(--b-magenta);
+  }
+
+  .snare .smile.peace {
+    color: var(--yellow);
+  }
+
+  .offbeat .smile {
+    transform: scale(1.1) rotate(0deg);
+    color: var(--teal);
+  }
+
+  .offbeat .smile.hand {
+    color: var(--blue);
+  }
+
+  .kick h1, .kick h3, .kick .sponsor-wrap:nth-of-type(3n+1) {
+    transform: scale(1.01) rotate(-1deg);
+  }
+
+  .snare h1, .snare h3, .snare .sponsor-wrap:nth-of-type(3n+2) {
+    transform: scale(0.99) rotate(1deg);
+  }
+
+  .sponsor-wrap:nth-of-type(3n+3) {
+    transform: scale(1.01);
+  }
+
+  .offbeat .sponsor-wrap:nth-of-type(3n+3) {
+    transform: scale(0.98);
+  }
+
+  .kick h2, .kick h4, .kick .sponsor-wrap:nth-of-type(3n+1) {
+    transform: scale(0.98) rotate(1deg);
+  }
+
+  .snare h2, .snare h4, .snare .sponsor-wrap:nth-of-type(3n+2) {
+    transform: scale(1.02) rotate(-1deg);
+  }
+</style>
