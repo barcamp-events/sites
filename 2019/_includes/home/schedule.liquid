@@ -1,0 +1,69 @@
+<stellar-layout class="bg-tan pv4 pv5-l" id="agenda" size="small">
+  <copy-wrap align="center">
+    <svg class="smile w3 h3 mb3 hand">
+        <title>Hand</title>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#hand"></use>
+      </svg>
+    <h2 class="windsor mt0 mb2 f2 f1-m">The Agenda</h2>
+    <p class="brown lh-copy mt0">We may not know what the talks will be yet, but we do have a general schedule of events!</p>
+  </copy-wrap>
+
+  {% schedule %}
+    {% scheduleday 1 %}
+
+    {% scheduledetails %}
+      {% scheduledate "Friday, November 8th" %}
+
+      {% h3 "ttu" %}
+        7PM | Opening Party <span class="ttn">at TBD!</span>
+      {% endh3 %}
+
+      <p class="brown lh-copy f6 mt0">
+        We're planning a pre-party &mdash; more details to come!
+      </p>
+    {% endscheduledetails %}
+  {% endschedule %}
+
+  {% schedule %}
+    {% scheduleday 2 %}
+
+    {% scheduledetails %}
+      {% scheduledate "Saturday, November 9th" %}
+
+      {% h3 "ttu" %}
+        8AM | Coffee / Sign Up
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        Grab some snacks and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers.
+      </p>
+
+      {% h3 "ttu mt4" %}
+        9AM | Morning Talks Begin
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        We&rsquo;ll start out the first round of talks promptly at 9am, so make sure you&rsquo;re all settled in and ready to learn!
+      </p>
+
+      {% h3 "ttu mt4" %}
+        12PM | Lunch & Networking
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        Hang out with your new BarCamp friends and enjoy a delicious lunch.
+      </p>
+
+      {% h3 "ttu mt4" %}
+        1PM | Afternoon Talks Begin
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        At 1 PM, we&rsquo;ll reconvene for our afternoon session of talks!
+      </p>
+
+      {% h3 "ttu mt4" %}
+        5PM | Closing
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year. Don&rsquo;t forget to pick up your friendship bracelet (sponsored by Bergman Incentives), and other BarCamp memorabilia from the merch table!
+      </p>
+    {% endscheduledetails %}
+  {% endschedule %}
+</stellar-layout>
