@@ -1,8 +1,7 @@
 <stellar-card padding="none">
-  <header class="pa0 relative overflow-hidden track--{{ track.fileSlug }}">
-    <img src="https://placehold.it/1600x800/f7f0e7/323232?text=+" class="db o-0" />
-    <svg class="absolute top-0 bottom-0 left-0 right-0 smile peace w-80 center z-1 maa">
-      <title>Maker</title>
+  <header class="flex items-center justify-center h4 pa0 track--{{ track.fileSlug }}">
+    <svg class="smile peace w-80 h-75 z-1">
+      <title>{{ track.data.name }}</title>
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#{{ track.fileSlug }}"></use>
     </svg>
   </header>
