@@ -1,15 +1,26 @@
-<div class="relative sponsor-wrap flex justify-center {{ spacing }}">
-  {% if sponsor.data.logo == "svg" %}
-    <svg class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }}">
-      <title>{{ sponsor.data.name }}</title>
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#sponsor-logos--{{ sponsor.fileSlug }}"></use>
-    </svg>
-  {% elsif sponsor.data.logo == "png" %}
-    <img class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }}" src="/assets/images/sponsor-logos/{{ sponsor.fileSlug }}.png" alt="{{ sponsor.data.name }}">
-  {% else %}
-    <h5 class="windsor f4 brown tc">{{ sponsor.data.name }}</h5>
-  {% endif %}
-  {% if sponsor.data.contribution %}
-    <stellar-tooltip><p class="w-100 white tc f7" style="white-space: normal;">{{ sponsor.data.contribution }}</p></stellar-tooltip>
-  {% endif %}
-</div>
+{% if sponsor.data.link %}
+  <a class="relative sponsor-wrap flex justify-center {{ spacing }}" href="{{ sponsor.data.link}}" target="_blank">
+{% else %}
+  <div class="relative sponsor-wrap flex justify-center {{ spacing }}">
+{% endif %}
+
+{% if sponsor.data.logo == "svg" %}
+  <svg class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }}">
+    <title>{{ sponsor.data.name }}</title>
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#sponsor-logos--{{ sponsor.fileSlug }}"></use>
+  </svg>
+{% elsif sponsor.data.logo == "png" %}
+  <img class="sponsor sponsor--{{ level }} sponsor--{{ sponsor.fileSlug }}" src="/assets/images/sponsor-logos/{{ sponsor.fileSlug }}.png" alt="{{ sponsor.data.name }}" width="{{ sponsor.data.logo_width }}" height="{{ sponsor.data.logo_height }}">
+{% else %}
+  <h5 class="windsor f4 brown tc">{{ sponsor.data.name }}</h5>
+{% endif %}
+
+{% if sponsor.data.contribution %}
+  <stellar-tooltip><p class="w-100 white tc f7" style="white-space: normal;">{{ sponsor.data.contribution }}</p></stellar-tooltip>
+{% endif %}
+
+{% if sponsor.data.link %}
+  </a>
+{% else %}
+  </div>
+{% endif %}

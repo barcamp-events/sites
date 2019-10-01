@@ -31,6 +31,10 @@
     name: [Full name of sponsor]
     tags: sponsor, [level: either platinum, gold, silver, bronze, or carbon]
     logo: [type of logo: svg or png. Or if this sponsor doesn't have a logo, delete this line.]
+    logo_width: [required for png logos]
+    logo_height: [required for png logos]
+    link: [optional link to the sponsor's website]
+    contribution: [optional details about how the sponsor helped out]
     permalink: false
     ---
     ```

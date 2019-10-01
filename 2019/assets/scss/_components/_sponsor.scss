@@ -7,8 +7,8 @@
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
+  transition: transform 0.2s ease;
 
-  // Assumes we have one-color black logos
   filter:
     // black to white
     invert(100%)
@@ -33,6 +33,10 @@
     width: 300px;
   }
 
+  &--bones-co {
+    width: 300px;
+  }
+
   &--lyconic {
     height: 50px;
   }
@@ -40,17 +44,28 @@
   &--water-bear-games {
     height: 60px;
   }
+  
+  a:hover &, a:focus & {
+    // brand dark red, or pretty damn close
+    filter: invert(40%) sepia(30%) saturate(10000%) hue-rotate(-20deg) brightness(0.9);
+    transform: scale(1.1);
+  }
 }
 
 @media (--breakpoint-medium) {
   .sponsor {
     &--flywheel {
-      width: 400px;
-      height: 125px;
+      width: 500px;
+      height: 150px;
     }
 
     &--bergman-incentives {
-      width: 400px;
+      width: 380px;
+    }
+
+    &--bones-co {
+      width: 100%;
+      height: 50px;
     }
 
     &--lyconic {
