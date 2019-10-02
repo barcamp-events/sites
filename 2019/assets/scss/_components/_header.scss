@@ -41,3 +41,9 @@
   background-repeat: no-repeat;
   background-size: 50% 100%;
 }
+
+.main-header web-audio-visualizer {
+  mix-blend-mode: multiply;
+  width: 97%;
+  clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);
+}

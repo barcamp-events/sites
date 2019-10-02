@@ -5,3 +5,23 @@
 body {
   overflow-x: hidden;
 }
+
+.sponsor-wrap stellar-tooltip p {
+  white-space: normal !important;
+  min-width: 300px;
+}
+
+stellar-accordion {
+  --padding-underneath: 4rem;
+}
+
+stellar-button {
+  --padding: 1rem 2rem 1rem 1rem
+}
+
+stellar-button.musicToggle {
+  mix-blend-mode: difference;
+  z-index: 9999;
+  --font-size: 4rem;
+  --padding: 0;
+}
