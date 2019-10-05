@@ -8,41 +8,18 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Make sure sponsors are in alphabetical order
+  const levels = ["platinum", "gold", "silver", "bronze", "carbon"];
+
+  levels.forEach(function(level) {
+    eleventyConfig.addCollection(level, function(collection) {
+      return collection.getFilteredByTag(level).sort(function(a, b) {
+        return (a.data.name < b.data.name ? -1 : 1);
+      });
+    });
+  });
+
   // Custom Tags
-  eleventyConfig.addLiquidTag("section", function(liquidEngine) {
-    return {
-      parse: function(tagToken, remainingTokens) {
-        this.str = parseArgs(tagToken.args);
-      },
-      render: function(scope, hash) {
-        return (`<section class="flex flex-wrap justify-center pv5 pv6-l ${this.str}">`);
-      }
-    }
-  });
-  eleventyConfig.addLiquidTag("endsection", function(liquidEngine) {
-    return { render: () => '</section>' }
-  });
-
-  eleventyConfig.addLiquidTag("smallcontainer", function(liquidEngine) {
-    return {
-      parse: function(tagToken, remainingTokens) {
-        this.str = parseArgs(tagToken.args);
-      },
-      render: function(scope, hash) {
-        return (`<div class="w-100 mw7 ph3 ph5-l ${this.str}">`);
-      }
-    }
-  });
-  eleventyConfig.addLiquidTag("endsmallcontainer", function(liquidEngine) {
-    return { render: () => '</div>' }
-  });
-
-  eleventyConfig.addLiquidTag("track", function(liquidEngine) {
-    return { render: () => '<div class="w-100 w-50-ns w-25-l pa2 pa3-l pb0-l">' }
-  });
-  eleventyConfig.addLiquidTag("endtrack", function(liquidEngine) {
-    return { render: () => '</div>' }
-  });
 
   eleventyConfig.addLiquidTag("schedule", function(liquidEngine) {
     return { render: () => '<div class="flex flex-wrap flex-nowrap-ns">' }
@@ -82,20 +59,6 @@ module.exports = function(eleventyConfig) {
         return (`<h4 class="pa0 ma0 f5 brown windsor ttu">${this.str}</h4>`);
       }
     }
-  });
-
-  eleventyConfig.addLiquidTag("largeh2", function(liquidEngine) {
-    return {
-      parse: function(tagToken, remainingTokens) {
-        this.str = parseArgs(tagToken.args);
-      },
-      render: function(scope, hash) {
-        return (`<h2 class="windsor mt0 mb4 f2 f1-m f-subheadline-l lh-solid ${this.str}">`);
-      }
-    }
-  });
-  eleventyConfig.addLiquidTag("endlargeh2", function(liquidEngine) {
-    return { render: () => '</h2>' }
   });
 
   eleventyConfig.addLiquidTag("h2", function(liquidEngine) {
@@ -138,23 +101,6 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.addLiquidTag("endparagraph", function(liquidEngine) {
     return { render: () => '</p>' }
-  });
-
-  eleventyConfig.addLiquidTag("ctabutton", function(liquidEngine) {
-    return {
-      parse: function(tagToken, remainingTokens) {
-        this.args = parseArgs(`{${tagToken.args}}`);
-      },
-      render: function(scope, hash) {
-        return (
-          '<a class="dib mt4 ph4 pv3 br3 bg-teal hover-bg-orange ' +
-          'white hover-white f4 tracked lh-solid no-underline ttu shadow-4" ' +
-          `href="${this.args.href}"${this.args.newtab ? ' target="_blank"' : ''}>` +
-            this.args.text +
-          '</a>'
-        );
-      }
-    }
   });
 
   // Layouts
