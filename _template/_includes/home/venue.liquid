@@ -2,7 +2,10 @@
     <stellar-grid class="self-center" style="--grid-gap: 0;">
         <copy-wrap class="br b--theme-base2 dm-b--theme-base8 pa3">
             <h6 class="theme-base5 dm-theme-base5 ttu fs7 fw7 tracked">{{en.event.venue.title}}</h6>
-            <h3 class="black dm-white fs fw8">{{en.event.venue.name}}</h3>
+            <div class="flex items-center">
+                <img class="mb0 db w2 h-auto mr2" src="/assets/images/pins/pin-event.png" width="40"/>
+                <h3 class="black dm-white fw8">{{en.event.venue.name}}</h3>
+            </div>
             <h6 class="theme-base7 dm-theme-base2 fs7 b">
                 <address>
                     {{en.event.venue.address}}
@@ -13,7 +16,10 @@
         </copy-wrap>
         <copy-wrap class="ma0 pa3">
             <h6 class="theme-base5 dm-theme-base5 ttu fs7 fw7 tracked">{{en.event.opening_party.title}}</h6>
-            <h3 class="black dm-white fw8">{{en.event.opening_party.name}}</h3>
+            <div class="flex items-center">
+                <img class="mb0 db w2 h-auto mr2" src="/assets/images/pins/pin-party.png" width="40"/>
+                <h3 class="black dm-white fw8">{{en.event.opening_party.name}}</h3>
+            </div>
             <h6 class="theme-base7 dm-theme-base2 fs7 b">
                 <address>
                     {{en.event.opening_party.address}}

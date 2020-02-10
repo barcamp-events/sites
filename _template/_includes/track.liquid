@@ -1,6 +1,6 @@
 <stellar-card class="bg-white {{ track[1].color }}" padding="none">
     <header class="bg-theme-base7 flex items-center justify-center relative pa0 track--{{ track[0] }}">
-        <stellar-image bg="var(--theme-base7)" height="900" style="mix-blend-mode: hard-light;" width="1600">
+        <stellar-image bg="var(--theme-base7)" height="900" style="mix-blend-mode: hard-light;" width="1600" nozoom>
             <source srcset="/assets/images/tracks/{{ track[1].name | downcase }}.jpg"/>
         </stellar-image>
         {% if track[1].includeName %}

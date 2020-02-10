@@ -48,6 +48,9 @@ stellar-layout {
 	--tiny: 40rem !important;
 }
 
+* {
+	contain: initial !important;
+}
 
 copy-wrap[full] * {
 	max-width: 100%;
@@ -66,7 +69,7 @@ stellar-card[dark] {
 html {
 	scroll-behavior: smooth;
 	scroll-snap-type: y proximity;
-	scroll-padding: 5rem;
+	scroll-padding: 3.75rem;
 	line-height: 1.4;
 }
 
