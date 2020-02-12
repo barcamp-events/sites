@@ -1,14 +1,14 @@
 {
 	"meta": {
 		"url": "https://barcamplincoln.org",
-		"author": "BarCamp Events team",
-		"description": "BarCamp is a user generated conference where the speakers are everyday folks, talking about what makes them excited."
+		"author": "Equipo de eventos de BarCamp",
+		"description": "BarCamp es una conferencia generada por el usuario en la que los oradores son personas comunes y corrientes, que hablan sobre lo que los entusiasma."
 	},
 	"title": "BarCamp Something",
 	"date": "2009-08-07T13:52:12.000Z",
 	"time": "8am to 3pm",
-	"tickets_cta": "Buy Tickets",
-	"sponsor_cta": "Sponsor the event",
+	"tickets_cta": "Comprar boletos",
+	"sponsor_cta": "Patrocina el evento",
 	"venue": {
 		"title": "The Venue",
 		"hosted": "Hosted at",

@@ -41,6 +41,30 @@
 	
 }
 
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--theme-base5);
+	font-weight: 900;
+}
+
+a:hover,
+a:focus {
+	color: var(--theme-base8);
+}
+
+.dark-mode a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-weight: 900;
+}
+
+.dark-mode a:hover,
+.dark-mode a:focus {
+	color: var(--theme-base2);
+}
+
 stellar-layout {
 	--large: 80rem !important;
 	--medium: 70rem !important;

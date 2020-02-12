@@ -8,7 +8,21 @@
     <stellar-layout padding="none" size="full">
         <stellar-grid>
             {% for track in en.tracks %}
-                {% include track %}
+                <stellar-card class="bg-white {{ track[1].color }}" padding="none">
+                    <header class="bg-theme-base7 flex items-center justify-center relative pa0 track--{{ track[0] }}">
+                        <stellar-image bg="var(--theme-base7)" height="900" nozoom style="mix-blend-mode: hard-light;" width="1600">
+                            <source srcset="/assets/images/tracks/{{track[1].name | downcase | remove: " "}}.jpg"/>
+                        </stellar-image>
+                        {% if track[1].includeName %}
+                            <h6 class="white absolute z-1 bottom-1 left-1 fs7 fw9 tracked ma0 pa0 ttu">{{ track[1].name }}</h6>
+                        {% endif %}
+                    </header>
+                    <section class="pa3 bg-white">
+                        {% for sentence in track[1].content %}
+                            <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">{{sentence}}</p>
+                        {% endfor %}
+                    </section>
+                </stellar-card>
             {% endfor %}
         </stellar-grid>
     </stellar-layout>

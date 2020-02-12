@@ -1,19 +1,9 @@
 module.exports = function (eleventyConfig) {
-	const parseArgs = (args) => { return (args ? JSON.parse(args) : ''); };
-
-	eleventyConfig.addCollection("sections", function (collection) {
-		return collection.getFilteredByGlob("./data/en/**/*.md");
-	});
-
-	eleventyConfig.addCollection("data_es", function (collection) {
-		return collection.getFilteredByGlob("./data/es/**/*");
-	});
-
 	// Custom Tags
-
 	eleventyConfig.addLiquidTag("agenda", function (liquidEngine) {
 		return { render: () => '<div class="flex flex-wrap flex-nowrap-ns">' };
 	});
+
 	eleventyConfig.addLiquidTag("endagenda", function (liquidEngine) {
 		return { render: () => '</div>' };
 	});
@@ -41,7 +31,8 @@ module.exports = function (eleventyConfig) {
 	});
 
 	// Layouts
-	eleventyConfig.addLayoutAlias('default', 'layout.liquid');
+	eleventyConfig.addLayoutAlias('en', 'en.liquid');
+	eleventyConfig.addLayoutAlias('es', 'es.liquid');
 
 	// Passthrough copy
 	// Just copy this content into the _site directory
