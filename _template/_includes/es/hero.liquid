@@ -1,0 +1,21 @@
+<header class="bg-theme-base1 dm-bg-theme-base9">
+    <stellar-layout class="layer-children" padding="none" size="flush" style="--grid-gap: 0;">
+        <copy-wrap align="center" class="pv6 ma0 pa0 order-0 relative z-2 h-100 invert" style="backdrop-filter: blur(10px);mix-blend-mode: screen;">
+            <h1 class="white ttu fw9 tracked">
+                {{es.event.title}}
+            </h1>
+            <h4 class="theme-base7 dm-theme-base2 fw5 mt3">
+                {{es.event.venue.hosted}}
+                {{es.event.venue.name}}
+            </h4>
+            <h6 class="theme-base5 dm-theme-base5">
+                {{es.event.date | date: "%B %e"}}
+                -
+                {{es.event.time}}
+            </h6>
+        </copy-wrap>
+        <stellar-video autoplay class="order-1 h-100 ma0 pa0" controls="false" height="600" loop overlay playsinline width="1800">
+            <source src="/assets/video/hero.mp4"/>
+        </stellar-video>
+    </stellar-layout>
+</header>

@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
 	});
 
 	// Layouts
-	eleventyConfig.addLayoutAlias('default', 'layouts/default.liquid');
+	eleventyConfig.addLayoutAlias('default', 'layout.liquid');
 
 	// Passthrough copy
 	// Just copy this content into the _site directory

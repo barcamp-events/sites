@@ -20,7 +20,6 @@
   "base_dir": ".",
   "browserslist": "last 2 versions",
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0",
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
     "grunt": "^1.0.4",

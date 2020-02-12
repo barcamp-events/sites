@@ -1,0 +1,17 @@
+{% assign s = sponsor[1] %}
+{% assign slug = sponsor[0] %}
+
+<stellar-card {% if s.link %} tag="a" href="{{s.link}}" target="_blank" {%endif%} padding="tiny" class="sponsor">
+    <header>
+        <h5 class="tc dm-white ma0 pa0 mw-100 fw7">{{ s.name }}</h5>
+    </header>
+    <section>
+        <svg class="sponsor sponsor--{{ level }} sponsor--{{ slug }}">
+            <title>{{ s.name }}</title>
+            <use xlink:href="/assets/images/sprite.svg#sponsor-logos--{{ slug }}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+    </section>
+    <footer>
+        <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">{{ s.contribution }}</p>
+    </footer>
+</stellar-card>
