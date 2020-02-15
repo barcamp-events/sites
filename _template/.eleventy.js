@@ -36,13 +36,8 @@ module.exports = function (eleventyConfig) {
 
 	// Passthrough copy
 	// Just copy this content into the _site directory
-	eleventyConfig.addPassthroughCopy("assets/audio");
-	eleventyConfig.addPassthroughCopy("assets/video");
-	eleventyConfig.addPassthroughCopy("assets/css");
-	eleventyConfig.addPassthroughCopy("assets/fonts");
-	eleventyConfig.addPassthroughCopy("assets/images/favicons/*");
-	eleventyConfig.addPassthroughCopy("assets/images/**/*.{png,jpg}");
-	eleventyConfig.addPassthroughCopy("assets/js");
+	eleventyConfig.addPassthroughCopy({ "node_modules/@stellar-design/core/dist/stellar-core": "assets/js/stellar-core" });
+	eleventyConfig.addPassthroughCopy("assets/**/*");
 
 
 	return {
