@@ -46,6 +46,23 @@ html, html * {
 	}
 }
 
+footer.sticky {
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+stellar-layout[class*="bg-"] {
+    background-image: url('/assets/images/texture.png');
+    background-size: 852px 497.25px;
+    background-repeat: repeat;
+    background-blend-mode: luminosity;
+}
+
+.dark-mode stellar-layout[class*="bg-"] {
+    background-image: url('/assets/images/texture-dark.png');
+    background-blend-mode: color-dodge;
+}
+
 a {
 	text-decoration: none;
 	text-transform: uppercase;

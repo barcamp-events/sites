@@ -1,7 +1,7 @@
 {
 	"name": "Kitchen Sink",
-	"color": "theme-magenta",
-	"includeName": true,
+	"color": "theme-yellow",
+	"includeName": false,
 	"order": "4",
 	"content": [
 		"Squirrel Trapping and More",

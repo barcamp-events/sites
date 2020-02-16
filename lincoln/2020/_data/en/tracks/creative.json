@@ -1,7 +1,7 @@
 {
 	"name": "Creative",
-	"color": "theme-red",
-	"includeName": true,
+	"color": "theme-cyan",
+	"includeName": false,
 	"order": "2",
 	"content": [
 		"Creative Problem Solving",

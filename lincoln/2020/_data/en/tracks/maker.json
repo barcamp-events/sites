@@ -1,7 +1,7 @@
 {
 	"name": "Maker",
-	"color": "theme-indigo",
-	"includeName": true,
+	"color": "theme-orange",
+	"includeName": false,
 	"order": "1",
 	"content": [
 		"Marketing Your iOS App",

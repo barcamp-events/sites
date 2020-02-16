@@ -3,22 +3,11 @@
         <p class="absolute top-2 right-2 z-5">
             <a href="/en/index.html" lang="en" title="Inglés">English</a>
         </p>
-        <copy-wrap align="center" class="pv6 ma0 pa0 order-0 relative z-2 h-100 invert" style="backdrop-filter: blur(10px) grayscale(100%) brightness(60%);mix-blend-mode: screen;">
-            <h1 class="white ttu fw7">
-                {{es.event.title}}
-            </h1>
-            <h4 class="theme-base7 dm-theme-base2 fw5 mt3">
-                {{es.event.venue.hosted}}
-                {{es.event.venue.name}}
-            </h4>
-            <h6 class="theme-base5 dm-theme-base5">
-                {{es.event.date | date: "%B %e"}}
-                -
-                {{es.event.time}}
-            </h6>
+        <copy-wrap align="center" class="ma0 pa0 order-0 relative z-2 h-100 invert" style="backdrop-filter: blur(10px) grayscale(100%) brightness(60%);mix-blend-mode: screen;">
+            <img src="/assets/images/hero.png" class="mw7 w-100" alt="{{es.event.title}} {{es.event.venue.hosted}} {{es.event.venue.name}} {{es.event.date | date: "%B %e"}} {{es.event.time}}" />
         </copy-wrap>
         <stellar-video autoplay mute class="order-1 h-100 ma0 pa0" controls="false" loop overlay playsinline width="1920" height="1080" style="--object-fit: cover;">
-            <source src="/assets/video/hero.mp4"/>
+            <source src="/assets/video/hero.mp4" />
         </stellar-video>
     </stellar-layout>
 </header>

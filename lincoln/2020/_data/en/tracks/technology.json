@@ -1,7 +1,7 @@
 {
 	"name": "Technology",
-	"color": "theme-orange",
-	"includeName": true,
+	"color": "theme-indigo",
+	"includeName": false,
 	"order": "3",
 	"content": [
 		"CSS4 and the Future of Design",
