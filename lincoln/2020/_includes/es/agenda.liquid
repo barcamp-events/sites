@@ -1,0 +1,32 @@
+<stellar-layout class="bg-theme-base1 dm-bg-theme-base7" id="agenda" size="tiny">
+    <copy-wrap align="center">
+        <h2 class="fw7">{{es.event.agenda.title}}</h2>
+        <p class="theme-base5 dm-theme-base2 lh-copy mt0">{{es.event.agenda.leadin}}</p>
+    </copy-wrap>
+
+    {% agenda %}
+    {% agendaday 1 %}
+
+    {% agendadetails %}
+    <h4 class="pa0 ma0 fs7 fw7 theme-base6 dm-theme-base4 ttu tracked">{{es.event.agenda.day.one.timeframe}}</h4>
+
+    {% for thing in es.event.agenda.day.one.things %}
+        <h3 class="fw7">{{thing.title}}</h3>
+        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100 bb b--theme-base3 dm-b--theme-base9 pb4">{{thing.description}}</p>
+    {% endfor %}
+
+    {% endagendadetails %}
+    {% endagenda %}
+
+    {% agenda %}
+    {% agendaday 2 %}
+
+    {% agendadetails %}
+    <h4 class="pa0 ma0 fs7 fw7 theme-base6 dm-theme-base4 ttu tracked">{{es.event.agenda.day.two.timeframe}}</h4>
+    {% for thing in es.event.agenda.day.two.things %}
+        <h3 class="fw7">{{thing.title}}</h3>
+        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100 bb b--theme-base3 dm-b--theme-base9 pb4">{{thing.description}}</p>
+    {% endfor %}
+    {% endagendadetails %}
+    {% endagenda %}
+</stellar-layout>

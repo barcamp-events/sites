@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "use": "@now/static",
+      "config": {
+        "distDir": "_site"
+      }
+    }
+  ],
+  "alias": [
+    "barcamplincoln.org",
+    "2020.barcamplincoln.org"
+  ],
+  "routes": [
+    {
+      "src": "^/(.*)",
+      "dest": "_site/$1"
+    }
+  ]
+}

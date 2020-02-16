@@ -1,0 +1,33 @@
+{% assign s = sponsor[1] %}
+{% assign slug = {{s.name | downcase | remove: " "}} %}
+
+<stellar-card {% if s.link %} tag="a" href="{{s.link}}" target="_blank" {%endif%} padding="tiny" class="sponsor h-auto self-start">
+    {% unless s.image or s.representative["include"] %}
+        <header>
+            <h5 class="tc dm-white ma0 pa0 mw-100 fw7">{{ s.name }}</h5>
+        </header>
+    {% endunless %}
+    {% if s.representative %}
+        <section flush class="z-0 aspect-ratio aspect-ratio--1x1">
+            <div class="aspect-ratio aspect-ratio--1x1">
+                <div class="aspect-ratio--object cover" style="background-image: url('/assets/images/representatives/{{slug}}.jpg')"></div>
+            </div>
+            {% if s.image %}
+                <ion-icon src="/assets/images/sponsors/{{slug}}.svg" class="absolute top-1 z-999 h-auto right-1 db fs-large theme-base5 dm-theme-base0 bg-white dm-bg-theme-base8 pa2"></ion-icon>
+            {% else %}
+                <h5 class="absolute top-1 z-999 h-auto right-1 db fs7 fw9 lh-solid pa0 theme-base5 dm-theme-base0 bg-white dm-bg-theme-base8 pa2">{{ s.name }}</h5>
+            {% endif %}
+        </section>
+        <footer>
+            <p class="w-100 theme-base9 dm-theme-base2 tc f7 fw7 mw-100">{{s.name}} {{ s.contribution }}</p>
+            <p class="w-100 theme-base7 dm-theme-base0 tc f7 mw-100">{{en.event.sponsors.representative_format | replace: "{0}", s.representative.name}}</p>
+        </footer>
+    {% else %}
+        <section class="pa4">
+            <ion-icon src="/assets/images/sponsors/{{slug}}.svg" class="db fs6 w-100"></ion-icon>
+        </section>
+        <footer>
+            <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">{{s.name}} {{ s.contribution }}</p>
+        </footer>
+    {% endif %}
+</stellar-card>

@@ -1,0 +1,13 @@
+<stellar-layout class="bg-theme-base0 dm-bg-theme-base5" id="faqs" size="small">
+    <copy-wrap>
+        <h2 class="lh-title fw7 mb0 tc center">{{es.event.faqs.title}}</h2>
+        <p class="mt0 mb4 theme-base5 dm-theme-base2 tc center">{{es.event.faqs.leadin}}</p>
+
+        {% for faq in es.faqs %}
+            <stellar-accordion class="b--theme-base2 dm-b--theme-base7">
+                <h6 class="theme-base9 dm-white pa0 ma0 fw7" slot="label">{{faq[1].question}}</h6>
+                <p class="theme-base5 dm-theme-base2 w-100 mw-100">{{faq[1].answer}}</p>
+            </stellar-accordion>
+        {% endfor %}
+    </copy-wrap>
+</stellar-layout>

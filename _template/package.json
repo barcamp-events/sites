@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx eleventy --serve --watch",
-    "build": "grunt"
+    "build": "npx eleventy"
   },
   "repository": {
     "type": "git",

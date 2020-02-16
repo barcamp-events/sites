@@ -1,0 +1,26 @@
+{
+  "name": "barcamp-omaha-2019",
+  "version": "1.0.0",
+  "description": "The marketing website for BarCamp Omaha 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx eleventy --serve --watch",
+    "build": "npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/barcamp-events/sites.git"
+  },
+  "author": "BarCamp Events",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barcamp-events/sites/issues"
+  },
+  "homepage": "https://github.com/barcamp-events/sites#readme",
+  "base_dir": ".",
+  "browserslist": "last 2 versions",
+  "dependencies": {
+    "@stellar-design/core": "latest"
+  }
+}

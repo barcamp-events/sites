@@ -1,0 +1,10 @@
+{
+	"name": "Notist",
+	"link": "https://getnotist.com",
+	"image": true,
+	"representative": {
+		"include": true,
+		"name": "Anthony Banks"
+	},
+	"contribution": "is doing the design this year!"
+}
