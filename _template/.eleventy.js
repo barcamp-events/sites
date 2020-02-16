@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
 			render: function (scope, hash) {
 				return (
 					'<div class="flex justify-center w-100 w-auto-ns mb4 mb0-ns">' +
-					`<div class="b--theme-base7 b--solid black dm-white br-100 flex fs5 fw7 h3 items-center justify-center pa3 w3">${this.str}</div>` +
+					`<div class="b--theme-base7 b--solid dm-b--theme-base9 black dm-white br-100 flex fs5 fw7 h3 items-center justify-center pa3 w3">${this.str}</div>` +
 					'</div>'
 				);
 			}

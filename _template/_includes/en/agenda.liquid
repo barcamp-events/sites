@@ -12,7 +12,7 @@
 
     {% for thing in en.event.agenda.day.one.things %}
         <h3 class="fw7">{{thing.title}}</h3>
-        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100">{{thing.description}}</p>
+        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100 bb b--theme-base3 dm-b--theme-base9 pb4">{{thing.description}}</p>
     {% endfor %}
 
     {% endagendadetails %}
@@ -25,7 +25,7 @@
     <h4 class="pa0 ma0 fs7 fw7 theme-base6 dm-theme-base4 ttu tracked">{{en.event.agenda.day.two.timeframe}}</h4>
     {% for thing in en.event.agenda.day.two.things %}
         <h3 class="fw7">{{thing.title}}</h3>
-        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100">{{thing.description}}</p>
+        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100 bb b--theme-base3 dm-b--theme-base9 pb4">{{thing.description}}</p>
     {% endfor %}
     {% endagendadetails %}
     {% endagenda %}

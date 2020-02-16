@@ -1,9 +1,12 @@
 {
-	"name": "Name",
+	"name": "Notist",
+	"link": "https://getnotist.com",
 	"image": {
-		"name": "split-infinities.png",
-		"width": "500",
-		"height": "500"
+		"include": true
 	},
-	"contribution": "Sponsoring a thing or not"
+	"representative": {
+		"include": true,
+		"name": "Anthony Banks"
+	},
+	"contribution": "Notist (Anthony Banks) is doing the design this year!"
 }

@@ -1,36 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap');
+
+html, html * {
+	font-family: "Work Sans", var(--font-system);
+}
+
 :root {
 	--ms-ratio: var(--major-second);
-	--ms-base: 10px
+	--ms-base: 14px
 }
 
 @media (min-width: 550px) {
 	:root {
-		--ms-base: 11px
+		--ms-base: 15px
 	}
 }
 
 @media (min-width: 700px) {
 	:root{
-		--ms-base: 12px
+		--ms-base: 16px
 	}
 }
 
 @media (min-width: 800px) {
 	:root{
-		--ms-base: 14px
+		--ms-base: 17px
 	}
 }
 
 @media (min-width: 900px) {
 	:root{
-		--ms-base: 16px
+		--ms-base: 18px
 	}
 	
 }
 
 @media (min-width: 1000px) {
 	:root{
-		--ms-base: 18px
+		--ms-base: 19px
 	}
 }
 
@@ -38,7 +44,6 @@
 	:root{
 		--ms-base: 20px
 	}
-	
 }
 
 a {

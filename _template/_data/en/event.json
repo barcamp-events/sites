@@ -4,11 +4,16 @@
 		"author": "BarCamp Events team",
 		"description": "BarCamp is a user generated conference where the speakers are everyday folks, talking about what makes them excited."
 	},
-	"title": "BarCamp Something",
+	"title": "BarCamp Lincoln",
 	"date": "2009-08-07T13:52:12.000Z",
 	"time": "8am to 3pm",
-	"tickets_cta": "Buy Tickets",
+	"tickets_cta": "Buy Tickets", 
+	"tickets_link":"https://opencollective.com/barcamp-events/events/barcamp-lincoln-2020-ffe4c560/order/12474",
 	"sponsor_cta": "Sponsor the event",
+	"sponsor_link": "https://opencollective.com/barcamp-events/events/barcamp-lincoln-2020-ffe4c560/#section-contribute",
+	"about": {
+		"title": "About"
+	},
 	"venue": {
 		"title": "The Venue",
 		"hosted": "Hosted at",
@@ -39,8 +44,7 @@
 		]
 	},
 	"faqs": {
-		"title": "The FAQ's",
-		"leadin": "FAQ's Lead In"
+		"title": "The FAQ's"
 	},
 	"tracks": {
 		"title": "The Tracks",
@@ -48,12 +52,19 @@
 	},
 	"sponsors": {
 		"title": "The Sponsors",
-		"leadin": "A Huge Thanks to All Our Amazing Barcamp Sponsors! ",
+		"leadin": "A Huge Thanks to All Our Amazing Barcamp Sponsors!",
+		"representative_format": "Say thank you to {0} if you see them!",
+		"fallback_copy": "We don't have any {0} sponsors. <br />Can you help?",
 		"platinum": "Platinum",
+		"platinum_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/platinum-sponsor-12563",
 		"gold": "Gold",
+		"gold_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/gold-sponsor-12561",
 		"silver": "Silver",
+		"silver_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/silver-sponsor-12562",
 		"bronze": "Bronze",
-		"carbon": "Carbon"
+		"bronze_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/bronze-sponsor-12560",
+		"carbon": "Recurring",
+		"carbon_link": "https://opencollective.com/barcamp-events/contribute/recurring-monthly-sponsor-10617"
 	},
 	"agenda": {
 		"title": "The Agenda",
