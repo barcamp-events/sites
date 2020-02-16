@@ -46,6 +46,11 @@ html, html * {
 	}
 }
 
+footer.sticky {
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
 a {
 	text-decoration: none;
 	text-transform: uppercase;
