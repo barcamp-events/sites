@@ -1,5 +1,5 @@
 <stellar-layout align="top" class="bg-white dm-bg-black" id="venue" size="large" type="half">
-    <stellar-grid class="self-center" style="--grid-gap: 0;">
+    <stellar-grid class="self-center" style="--grid-gap: 0; --grid-width: 350px;">
         <copy-wrap class="br b--theme-base2 dm-b--theme-base8 pa3">
             <h6 class="theme-base5 dm-theme-base5 ttu fs7 fw7 tracked">{{es.event.venue.title}}</h6>
             <div class="flex items-center">
@@ -30,8 +30,8 @@
         </copy-wrap>
     </stellar-grid>
 
-    <div class="flex items-center justify-center bg-gold">
-        <stellar-google-maps apikey="{{google.apikey}}" lat="{{es.event.venue.lat}}" lng="{{es.event.venue.lng}}" zoom="{{es.event.venue.zoom}}" block theme="dark-minimal" no-ui>
+    <div class="flex items-center justify-center bg-gold h-100">
+        <stellar-google-maps apikey="{{google.apikey}}" lat="{{es.event.venue.lat}}" lng="{{es.event.venue.lng}}" zoom="{{es.event.venue.zoom}}" block theme="dark-minimal" no-ui class="h-100">
             <stellar-google-maps-marker lat="{{es.event.venue.lat}}" lng="{{es.event.venue.lng}}" marker-title="{{es.event.venue.name}}" icon="/assets/images/pins/pin-event.png" icon-width="37" icon-height="57.5">
                 <h6 class="theme-base5 dm-theme-base5 ttu fs8 fw7 tracked">{{es.event.venue.title}}</h6>
                 <h5 class="dm-theme-base9 ma0 pa0 b">{{es.event.venue.name}}</h5>

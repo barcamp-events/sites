@@ -5,103 +5,123 @@
     </copy-wrap>
 
     <div class="relative clearfix z-1">
-        {% if es.sponsors.platinum %}
-            <stellar-layout align="top" size="flush" type="sidebar">
-                <div>
-                    <h6 class="white ma0 tl mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
-                        <stellar-animate-text>{{es.event.sponsors.platinum}}</stellar-animate-text>
-                    </h6>
-                </div>
-                <stellar-grid class="items-center" style="--grid-width: 300px;">
-                    {% for sponsor in es.sponsors.platinum %}
-                        {% assign level = "platinum" %}
-                        {% assign spacing = "mv2 ph2 ph4-l" %}
-                        {% include es/sponsor %}
-                    {% endfor %}
-                </stellar-grid>
-            </stellar-layout>
-            <hr class="bg-theme-base0 dm-bg-theme-base8"/>
-        {% endif %}
+        <stellar-layout align="top" size="flush" type="sidebar">
+            <div>
+                <h6 class="white ma0 mb3 ttu fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3 w-100 mw-100 db tc">
+                    <stellar-animate-text>{{es.event.sponsors.platinum}}</stellar-animate-text>
+                </h6>
+                <stellar-button href="{{es.event.sponsors.platinum_link}}" block outline size="tiny" padding="tiny"
+                    target="_blank">{{es.event.sponsor_cta}}</stellar-button>
+            </div>
+            <stellar-grid class="items-center" style="--grid-width: 300px;">
+                {% if es.sponsors.platinum %}
+                {% for sponsor in es.sponsors.platinum %}
+                {% assign level = "platinum" %}
+                {% assign spacing = "mv2 ph2 ph4-l" %}
+                {% include en/sponsor %}
+                {% endfor %}
+                {% else %}
+                <h4 class="tc">{{ es.event.sponsors.fallback_copy | replace: "{0}", es.event.sponsors.platinum}}</h4>
+                {% endif %}
+            </stellar-grid>
+        </stellar-layout>
+        <hr class="bg-theme-base0 dm-bg-theme-base8" />
 
-        {% if es.sponsors.gold %}
-            <stellar-layout align="top" size="flush" type="sidebar-right">
-                <div class="order-1 tr">
-                    <h6 class="white ma0 tr mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
-                        <stellar-animate-text>
-                            {{es.event.sponsors.gold}}
-                        </stellar-animate-text>
-                    </h6>
-                </div>
-                <stellar-grid class="items-center order-0">
-                    {% for sponsor in es.sponsors.gold %}
-                        {% assign level = "gold" %}
-                        {% assign spacing = "mv2 ph2 ph1-l" %}
-                        {% include es/sponsor %}
-                    {% endfor %}
-                </stellar-grid>
-            </stellar-layout>
+        <stellar-layout align="top" size="flush" type="sidebar-right">
+            <div class="order-1-l order-1-m tr order-0">
+                <h6 class="white ma0 mb3 ttu fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3 w-100 mw-100 db tc">
+                    <stellar-animate-text>
+                        {{es.event.sponsors.gold}}
+                    </stellar-animate-text>
+                </h6>
+                <stellar-button href="{{es.event.sponsors.gold_link}}" block outline size="tiny" padding="tiny"
+                    target="_blank">{{es.event.sponsor_cta}}</stellar-button>
+            </div>
+            <stellar-grid class="items-center order-0">
+                {% if es.sponsors.gold %}
+                {% for sponsor in es.sponsors.gold %}
+                {% assign level = "gold" %}
+                {% assign spacing = "mv2 ph2 ph1-l" %}
+                {% include en/sponsor %}
+                {% endfor %}
+                {% else %}
+                <h4 class="tc">{{ es.event.sponsors.fallback_copy | replace: "{0}", es.event.sponsors.gold}}</h4>
+                {% endif %}
+            </stellar-grid>
+        </stellar-layout>
 
-            <hr class="bg-theme-base0 dm-bg-theme-base8"/>
-        {% endif %}
+        <hr class="bg-theme-base0 dm-bg-theme-base8" />
 
-        {% if es.sponsors.silver %}
-            <stellar-layout align="top" size="flush" type="sidebar">
-                <div>
-                    <h6 class="white ma0 tl mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
-                        <stellar-animate-text>{{es.event.sponsors.silver}}</stellar-animate-text>
-                    </h6>
-                </div>
-                <stellar-grid class="items-center">
-                    {% for sponsor in es.sponsors.silver %}
-                        {% assign level = "silver" %}
-                        {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
-                        {% include es/sponsor %}
-                    {% endfor %}
-                </stellar-grid>
-            </stellar-layout>
+        <stellar-layout align="top" size="flush" type="sidebar">
+            <div>
+                <h6 class="white ma0 tl mb3 ttu fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3 w-100 mw-100 db tc">
+                    <stellar-animate-text>{{es.event.sponsors.silver}}</stellar-animate-text>
+                </h6>
+                <stellar-button href="{{es.event.sponsors.silver_link}}" block outline size="tiny" padding="tiny"
+                    target="_blank">{{es.event.sponsor_cta}}</stellar-button>
+            </div>
+            <stellar-grid class="items-center">
+                {% if es.sponsors.silver %}
+                {% for sponsor in es.sponsors.silver %}
+                {% assign level = "silver" %}
+                {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
+                {% include en/sponsor %}
+                {% endfor %}
+                {% else %}
+                <h4 class="tc">{{ es.event.sponsors.fallback_copy | replace: "{0}", es.event.sponsors.silver}}</h4>
+                {% endif %}
+            </stellar-grid>
+        </stellar-layout>
 
-            <hr class="bg-theme-base0 dm-bg-theme-base8"/>
-        {% endif %}
+        <hr class="bg-theme-base0 dm-bg-theme-base8" />
 
-        {% if es.sponsors.bronze %}
-            <stellar-layout align="top" size="flush" type="sidebar-right">
-                <div class="order-1 tr">
-                    <h6 class="white ma0 tr mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
-                        <stellar-animate-text>
-                            {{es.event.sponsors.bronze}}
-                        </stellar-animate-text>
-                    </h6>
-                </div>
+        <stellar-layout align="top" size="flush" type="sidebar-right">
+            <div class="order-1-l order-1-m tr order-0">
+                <h6 class="white ma0 tr mb3 ttu fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3 w-100 mw-100 db tc">
+                    <stellar-animate-text>
+                        {{es.event.sponsors.bronze}}
+                    </stellar-animate-text>
+                </h6>
+                <stellar-button href="{{es.event.sponsors.bronze_link}}" block outline size="tiny" padding="tiny"
+                    target="_blank">{{es.event.sponsor_cta}}</stellar-button>
+            </div>
 
-                <stellar-grid class="items-center order-0">
-                    {% for sponsor in es.sponsors.bronze %}
-                        {% assign level = "bronze" %}
-                        {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
-                        {% include es/sponsor %}
-                    {% endfor %}
-                </stellar-grid>
-            </stellar-layout>
+            <stellar-grid class="items-center order-0">
+                {% if es.sponsors.bronze %}
+                {% for sponsor in es.sponsors.bronze %}
+                {% assign level = "bronze" %}
+                {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
+                {% include en/sponsor %}
+                {% endfor %}
+                {% else %}
+                <h4 class="tc">{{ es.event.sponsors.fallback_copy | replace: "{0}", es.event.sponsors.bronze}}</h4>
+                {% endif %}
+            </stellar-grid>
+        </stellar-layout>
 
-            <hr class="bg-theme-base0 dm-bg-theme-base8"/>
-        {% endif %}
+        <hr class="bg-theme-base0 dm-bg-theme-base8" />
 
-        {% if es.sponsors.carbon %}
-            <stellar-layout align="top" size="flush" type="sidebar">
-                <div>
-                    <h6 class="white ma0 tl mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
-                        <stellar-animate-text>
-                            {{es.event.sponsors.carbon}}
-                        </stellar-animate-text>
-                    </h6>
-                </div>
-                <stellar-grid class="items-center">
-                    {% for sponsor in es.sponsors.carbon %}
-                        {% assign level = "carbon" %}
-                        {% assign spacing = "mv2 ph2" %}
-                        {% include es/sponsor %}
-                    {% endfor %}
-                </stellar-grid>
-            </stellar-layout>
-        {% endif %}
+        <stellar-layout align="top" size="flush" type="sidebar">
+            <div>
+                <h6 class="white ma0 tl mb3 ttu fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3 w-100 mw-100 db tc">
+                    <stellar-animate-text>
+                        {{es.event.sponsors.carbon}}
+                    </stellar-animate-text>
+                </h6>
+                <stellar-button href="{{es.event.sponsors.carbon_link}}" block outline size="tiny" padding="tiny"
+                    target="_blank">{{es.event.sponsor_cta}}</stellar-button>
+            </div>
+            <stellar-grid class="items-center">
+                {% if es.sponsors.carbon %}
+                {% for sponsor in es.sponsors.carbon %}
+                {% assign level = "carbon" %}
+                {% assign spacing = "mv2 ph2" %}
+                {% include en/sponsor %}
+                {% endfor %}
+                {% else %}
+                <h4 class="tc">{{ es.event.sponsors.fallback_copy | replace: "{0}", es.event.sponsors.carbon}}</h4>
+                {% endif %}
+            </stellar-grid>
+        </stellar-layout>
     </div>
 </stellar-layout>
