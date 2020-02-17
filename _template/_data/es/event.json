@@ -12,99 +12,99 @@
 	"tickets_link": "https://opencollective.com/barcamp-events/events/barcamp-lincoln-2020-ffe4c560/order/12474",
 	"sponsor_link": "https://opencollective.com/barcamp-events/events/barcamp-lincoln-2020-ffe4c560/#section-contribute",
 	"about": {
-		"title": "About"
+		"title": "Acerca de BarCamp"
 	},
 	"venue": {
 		"title": "The Venue",
-		"hosted": "Hosted at",
+		"hosted": "Tiene lugar en",
 		"address": "2005 Y St, Lincoln, NE",
 		"name": "The Bay",
-		"description": "The Bay is an international organization headquartered in Lincoln NE. The BAY is known for taking an innovative approach to creating healthy communities around the world which are focused on alternative recreation, fighting poverty and homelessness, and preventing sex-trafficking through the avenues of street outreach, skate, art, and music.",
+		"description": "The Bay es una organización internacional que tiene su sede en Lincoln NE. The BAY se conoce por adoptar una estrategia innovadora para crear comunidades prósperas alrededor del mundo que se enfocan en la recreación alternativa, luchan contra la pobreza y la falta de hogar, y previenen el tráfico sexual a través del alcance en la calle, patinar, el arte, y la música.",
 		"lat": "40.827449",
 		"lng": "-96.7051944",
 		"zoom": "13.3",
-		"directions": "Directions"
+		"directions": "Direcciones"
 	},
 	"opening_party": {
-		"title": "The Opening Party",
-		"hosted": "Hosted at",
+		"title": "La Fiesta de Apertura",
+		"hosted": "Tiene lugar en",
 		"address": "2124 Y St, Lincoln, NE",
 		"name": "Turbine Flats",
-		"description": "Turbine Flat's is an entrepreneurial cooperative that supports and promotes Lincoln's ideas community. The Turbine Flats Project's mission is to create a robust, self-sustaining, collaborative environment for small and start-up businesses to bring their products and ideas to market.",
+		"description": "Turbine Flat's es una organización empresarial que apoya y fomenta las ideas de la comunidad de Lincoln. El objetivo del Turbine Flats Project es crear un ambiente que es fuerte, que se puede sostener, y que es colaborativo para las nuevas empresas para que mejor puedan llevar al mercado sus productos y ideas.",
 		"lat": "40.824494",
 		"lng": "-96.690233",
 		"zoom": "13.3",
-		"directions": "Directions"
+		"directions": "Direcciones"
 	},
 	"intro": {
-		"title": "Come share your passion",
+		"title": "Ven a compartir tu pasión",
 		"content": [
-			"BarCamp's are user generated conferences where the speakers are everyday folks, talking about what makes them excited. Talks aren’t scheduled or planned until just before the conference starts, and anyone can give a talk. Interested, but don’t want to give a talk? That’s okay too!",
-			"At BarCamp, you won’t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and communicate what you’re most passionate about. Come one, come all."
+			"BarCamp es una conferencia generada por el usuario en la que los oradores son personas comunes y corrientes, que hablan sobre lo que los entusiasma. Las charlas no se encuentran en el horario hasta justo antes del comienzo de la conferencia. Tienes interés, pero no quieres dar una charla? no pasa nada!",
+			"En BarCamp, ni vas a encontrar una lista predeterminado ni gente de negocios repartiendo tarjetas de visita. Lo que vas a encontrar es algún tipo vestido con camisa hablando de moonshine, un desarrollador web hablando de como mejorar su SEO, o tal vez un viajero del mundo compartiendo sus experiencias. BarCamp es una oportunidad para conocer a otros, aprender algo nuevo, y comunicarse lo que mas te apasiona. Que vengan todos.",
 		]
 	},
 	"faqs": {
-		"title": "The FAQ's"
+		"title": "El FAQ"
 	},
 	"tracks": {
-		"title": "The Tracks",
-		"leadin": "Talks are organized into one of four speaking categories. Some possible talks may include:"
+		"title": "Las Categorías",
+		"leadin": "Las charlas se han organizado en cuatro categorías. Algunas charlas posibles pueden ser:"
 	},
 	"sponsors": {
-		"title": "The Sponsors",
-		"leadin": "A Huge Thanks to All Our Amazing Barcamp Sponsors!",
-		"representative_format": "Say thank you to {0} if you see them!",
-		"fallback_copy": "We don't have any {0} sponsors. <br />Can you help?",
-		"platinum": "Platinum",
+		"title": "Los Patrocinadores",
+		"leadin": "Muchísimas Gracias a Todos Nuestros Patrocinadores Maravillosos de BarCamp!",
+		"representative_format": "Agradece a {0} si le ves!",
+		"fallback_copy": "No tenemos ningunos {0} patrocinadores. <br />Puedes ayudar?",
+		"platinum": "Platino",
 		"platinum_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/platinum-sponsor-12563",
-		"gold": "Gold",
+		"gold": "Oro",
 		"gold_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/gold-sponsor-12561",
-		"silver": "Silver",
+		"silver": "Plata",
 		"silver_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/silver-sponsor-12562",
-		"bronze": "Bronze",
+		"bronze": "Bronce",
 		"bronze_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/bronze-sponsor-12560",
-		"carbon": "Recurring",
+		"carbon": "Recurrente",
 		"carbon_link": "https://opencollective.com/barcamp-events/contribute/recurring-monthly-sponsor-10617"
 	},
 	"agenda": {
-		"title": "The Agenda",
-		"leadin": "Here's what to expect",
+		"title": "El Horario",
+		"leadin": "Lo Que Esperar",
 		"day": {
 			"one": {
-				"timeframe": "Friday, March 27th",
+				"timeframe": "Viernes, el 27 de Marzo",
 				"things": [
 					{
-						"title": "7PM | Opening Party <span class='ttn'>at Turbine Flats!</span>",
-						"description": "Show up, relax, mingle with other BarCampers and have a drink on our opening party sponsor!"
+						"title": "7PM | La Fiesta de Apertura <span class='ttn'>a Turbine Flats!</span>",
+						"description": "Llega, relájate, charla con los otros participantes de BarCamp y tener una bebida proveído gratis por nuestros patrocinadores de la fiesta de apertura!"
 					},
 					{
-						"title": "12AM | Go Home!",
-						"description": "Drive safely, take a cab or call in a Lyft. Just show up tomorrow in one piece. :)"
+						"title": "12AM | Vuelve a Casa!",
+						"description": "Maneja con cuidado, toma un taxi, o pide un Lyft. Lo importante es que llegues mañana a salvo. :)"
 					}
 				]
 			},
 			"two": {
-				"timeframe": "Saturday, March 28th",
+				"timeframe": "Sábado, el 28 de Marzo",
 				"things": [
 					{
-						"title": "8AM | Breakfast / Sign Up For Talks <span class='ttn'>at The Bay!</span>",
-						"description": "Grab some breakfast and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers."
+						"title": "8AM | Desayuno / Apúntate a una Charla <span class='ttn'>a The Bay!</span>",
+						"description": "Desayunar, apuntarte a una charla, y empezar el día con conocer a los otros participantes de BarCamp."
 					},
 					{
-						"title": "9AM | Morning Talks Begin",
-						"description": "We'll start out the first round of talks promptly at 9am, so make sure you're all settled in and ready to learn!"
+						"title": "9AM | Empiezan las Charlas de la Mañana",
+						"description": "La primera serie de charlas va a empezar a las 9 de la mañana, así que asegúrate de que has llegado bien y sé listo para aprender!",
 					},
 					{
-						"title": "12PM | Lunch & Networking",
-						"description": "Hang out with your new BarCamp friends and enjoy a delicious lunch provided by a local restaurant."
+						"title": "12PM | Almuerzo y Networking",
+						"description": "Queda con tus nuevos amigos de BarCamp y aprovecha el almuerzo delicioso proveído por un restaurante local."
 					},
 					{
-						"title": "1PM | Afternoon Talks Begin",
-						"description": "At 1pm, we'll reconvene for our afternoon session of talks!"
+						"title": "1PM | Empiezan las Charlas de la Tarde",
+						"description": "A la una, nos reuniremos para empezar las charlas de la tarde!"
 					},
 					{
-						"title": "3PM | Closing",
-						"description": "Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year."
+						"title": "3PM | El Final",
+						"description": "Di adiós a la gente que has conocido, pide las dirrecciones de tus nuevos amigos de correspondencia, y ten ganas de volver el año que viene."
 					}
 				]
 			}
