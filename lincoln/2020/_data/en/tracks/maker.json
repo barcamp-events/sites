@@ -1,5 +1,6 @@
 {
 	"name": "Maker",
+	"slug": "maker",
 	"color": "theme-orange",
 	"includeName": false,
 	"order": "1",

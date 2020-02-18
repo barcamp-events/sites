@@ -1,5 +1,6 @@
 {
 	"name": "Creative",
+	"slug": "creative",
 	"color": "theme-cyan",
 	"includeName": false,
 	"order": "2",

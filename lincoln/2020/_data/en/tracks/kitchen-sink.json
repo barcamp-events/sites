@@ -1,5 +1,6 @@
 {
 	"name": "Kitchen Sink",
+	"slug": "kitchensink",
 	"color": "theme-yellow",
 	"includeName": false,
 	"order": "4",

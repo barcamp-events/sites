@@ -1,13 +1,15 @@
 {
 	"name": "Maker",
+	"slug": "maker",
 	"color": "theme-indigo",
 	"includeName": true,
 	"order": "1",
 	"content": [
-		"Marketing Your iOS App",
-		"Bird Watching for fun and profit",
+		"Cómo Comercializar tu app iOS",
+		"La Observación de Aves para divertirse y Sacar Provecho",
 		"Competitive Intelligence on a Shoestring",
-		"How to get Venture Capital",
-		"Fostering a Co-working Environment"
+		"Como Ganar Capital de Riesgo",
+		"Fostering a Co-working Environment",
+		"Cómo Fomentar un Buen Medioambiente con Colegas"
 	]
 }

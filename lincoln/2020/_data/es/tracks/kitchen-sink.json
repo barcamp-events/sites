@@ -1,13 +1,14 @@
 {
 	"name": "Kitchen Sink",
+	"slug": "kitchensink",
 	"color": "theme-magenta",
 	"includeName": true,
 	"order": "4",
 	"content": [
-		"Squirrel Trapping and More",
-		"How to Chop Wood like a Pro",
-		"Teenage Globetrotting",
-		"Making the Best Cup of Coffee",
+		"Atrapar Ardillas y Más",
+		"Cómo Cortar la Madera como Profesional",
+		"Viajar como Adoelescente",
+		"Cómo Hacer La Mejor Copa de Café",
 		"Down a Rabbit Hole of Cool Science"
 	]
 }

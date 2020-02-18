@@ -2,7 +2,9 @@
 	"meta": {
 		"url": "https://barcamplincoln.org",
 		"author": "BarCamp Events team",
-		"description": "BarCamp is a user generated conference where the speakers are everyday folks, talking about what makes them excited."
+		"description": "BarCamp is a user generated conference where the speakers are everyday folks, talking about what makes them excited.",
+		"color": "#fff",
+		"twitter": "@barcamp_lincoln"
 	},
 	"title": "BarCamp Lincoln",
 	"date": "2020-03-28T08:00:00.000Z",

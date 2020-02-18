@@ -1,5 +1,6 @@
 {
 	"name": "Technology",
+	"slug": "technology",
 	"color": "theme-indigo",
 	"includeName": false,
 	"order": "3",

@@ -11,7 +11,7 @@
                 <stellar-card class="bg-white {{ track[1].color }}" padding="none">
                     <header class="bg-theme-base7 flex items-center justify-center relative pa0 track--{{ track[0] }}">
                         <stellar-image bg="var(--theme-base7)" height="900" width="1600" alt="{{ track[1].name }}">
-                            <source srcset="/assets/images/tracks/{{track[1].name | downcase | remove: " "}}.jpg"/>
+                            <source srcset="/assets/images/tracks/{{track[1].slug}}.jpg"/>
                         </stellar-image>
                         {% if track[1].includeName %}
                             <h6 class="white absolute z-1 bottom-1 left-1 fs7 fw9 tracked ma0 pa0 ttu">{{ track[1].name }}</h6>
