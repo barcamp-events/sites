@@ -21,6 +21,6 @@
   "base_dir": ".",
   "browserslist": "last 2 versions",
   "dependencies": {
-    "@stellar-design/core": "latest"
+    "@stellar-design/core": "^1.5.15"
   }
 }
