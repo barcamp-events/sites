@@ -1,0 +1,9 @@
+<midwest-layout class="bg-theme-1 dm:bg-theme-7" id="about" size="large" type="supporting-content" align="start">
+    <copy-wrap full>
+        <h2 class="lh-title fw7 black dm:white theme-9">{{en.event.intro.title}}</h2>
+        {% for sentence in en.event.intro.content %}
+            <p class="text-theme-8 dm:text-theme-1 mt-0">{{sentence}}</p>
+        {% endfor %}
+    </copy-wrap>
+    <div class='embed-container'><iframe src='https://www.youtube.com/embed/nXY2jMPLvSA' frameborder='0' allowfullscreen></iframe></div>
+</midwest-layout>

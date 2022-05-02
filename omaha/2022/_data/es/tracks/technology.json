@@ -1,0 +1,13 @@
+{
+	"name": "Tecnología",
+	"color": "theme-orange",
+	"includeName": true,
+	"order": "3",
+	"content": [
+		"CSS4 y el Futuro del Diseño",
+		"Cómo Ser Organizado con WordPress",
+		"HTML5 y el Navegador Moderno",
+		"iPhone, Yo, y Mi Dron",
+		"El Hardware es el Nuevo Geocities"
+	]
+}
