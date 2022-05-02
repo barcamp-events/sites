@@ -9,9 +9,7 @@
    }
   }
  ],
- "alias": [
-  "omaha-2022.barcamp.events"
- ],
+ "alias": ["omaha-2022.barcamp.events", "2022.barcampomaha.org"],
  "routes": [
   {
    "src": "^/(.*)",
