@@ -4,48 +4,6 @@ html, html * {
 	font-family: "Work Sans", var(--font-system);
 }
 
-:root {
-	--ms-ratio: var(--major-second);
-	--ms-base: 14px
-}
-
-@media (min-width: 550px) {
-	:root {
-		--ms-base: 15px
-	}
-}
-
-@media (min-width: 700px) {
-	:root{
-		--ms-base: 16px
-	}
-}
-
-@media (min-width: 800px) {
-	:root{
-		--ms-base: 17px
-	}
-}
-
-@media (min-width: 900px) {
-	:root{
-		--ms-base: 18px
-	}
-	
-}
-
-@media (min-width: 1000px) {
-	:root{
-		--ms-base: 19px
-	}
-}
-
-@media (min-width: 1200px) {
-	:root{
-		--ms-base: 20px
-	}
-}
-
 footer.sticky {
 	overflow-y: hidden;
 	overflow-x: auto;
@@ -54,13 +12,13 @@ footer.sticky {
 a {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: var(--theme-base5);
+	color: var(--theme-5);
 	font-weight: 900;
 }
 
 a:hover,
 a:focus {
-	color: var(--theme-base8);
+	color: var(--theme-8);
 }
 
 .dark-mode a {
@@ -72,10 +30,10 @@ a:focus {
 
 .dark-mode a:hover,
 .dark-mode a:focus {
-	color: var(--theme-base2);
+	color: var(--theme-2);
 }
 
-stellar-layout {
+midwest-layout {
 	--large: 80rem !important;
 	--medium: 70rem !important;
 	--small: 50rem !important;
@@ -90,20 +48,20 @@ copy-wrap[full] * {
 	max-width: 100%;
 }
 
-stellar-card {
-	--background: var(--theme-base0);
-	--border: 1px solid var(--theme-base1)
+midwest-card {
+	--background: var(--theme-0);
+	--border: 0 solid var(--theme-1)
 }
 
-stellar-card[dark] {
-	--background: var(--theme-base8);
-	--border: 1px solid var(--theme-base9);
+midwest-card[dark] {
+	--background: var(--theme-8);
+	--border: 0 solid var(--theme-9);
 }
 
 html {
 	scroll-behavior: smooth;
 	scroll-snap-type: y proximity;
-	scroll-padding: 3.75rem;
+	scroll-padding: 3rem !important;
 	line-height: 1.4;
 }
 
@@ -111,7 +69,7 @@ h1, h2, h3, h4, h5, h6, p {
 	line-height: 1.4;
 }
 
-stellar-layout[id],
+midwest-layout[id],
 header {
   scroll-snap-align: start;
 }
@@ -127,14 +85,14 @@ header {
     grid-row: 1;
 }
 
-stellar-video[overlay]::after {
+midwest-video[overlay]::after {
 	mix-blend-mode: soft-light;
-	background: linear-gradient(to right, var(--theme-base7) 0%, var(--theme-base5) 100%);
+	background: linear-gradient(to right, var(--theme-7) 0%, var(--theme-5) 100%);
 }
 
-.dark-mode stellar-video[overlay]::after {
-	/* mix-blend-mode: color; */
-	background: linear-gradient(to right, var(--theme-base9) 0%, var(--theme-base7) 100%)
+.dark-mode midwest-video[overlay]::after {
+	mix-blend-mode: color;
+	background: linear-gradient(to right, var(--theme-9) 0%, var(--theme-7) 100%)
 }
 	
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

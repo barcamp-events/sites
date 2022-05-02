@@ -1,0 +1,10 @@
+{
+  "name": "Unabridged Software",
+  "link": "https://unabridgedsoftware.com",
+  "image": true,
+  "representative": {
+    "include": true,
+    "name": "Kit Ryan"
+  },
+  "contribution": "built the site this year!"
+}

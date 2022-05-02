@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx eleventy --serve --watch",
-    "build": "npx eleventy"
+    "start": "npx @11ty/eleventy --serve --watch",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "base_dir": ".",
   "browserslist": "last 2 versions",
   "dependencies": {
-    "@stellar-design/core": "latest"
+    "@midwest-design/core": "latest",
+    "luxon": "^2.3.2"
   }
 }
