@@ -1,0 +1,29 @@
+/* =========================================================================
+   Global
+   ========================================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #000;
+  background-image: url(/assets/images/placeholder-background-sparkles.gif);
+  cursor: url(/assets/images/mouse.png), auto;
+}
+
+main {
+  width: calc(100% - #{space(6)});
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #000;
+}
+
+a, button, summary {
+  cursor: url(/assets/images/hand.png), auto;
+}

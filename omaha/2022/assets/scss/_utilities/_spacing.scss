@@ -1,0 +1,51 @@
+/* =========================================================================
+   Spacing
+   ========================================================================= */
+
+$box-model: (
+  m: margin,
+  p: padding
+);
+
+$directions: (
+  x: (right, left),
+  y: (top, bottom),
+  t: (top),
+  r: (right),
+  b: (bottom),
+  l: (left)
+);
+
+
+// This generates a bunch of tachyon-like utility classes.
+//
+// USE SPARINGLY. Components are preferred so we don't get inconsistent
+// usage of which utility classes we're using where from page to page.
+@mixin spacing-classes($suffix) {
+  @each $box-model-abbr, $box-model-part in $box-model {
+    @each $size, $size-value in $spacing {
+      // All-around margin and padding
+      // .m-1, .m-2, .m-3, .p-1, .p-2, .p-3, etc.
+      .#{$box-model-abbr}-#{$size}#{$suffix} {
+        #{$box-model-part}: $size-value;
+      }
+
+      @each $direction-abbr, $direction-list in $directions {
+        // Directional margin and padding
+        // .mx-1, my-2, etc.
+        .#{$box-model-abbr}#{$direction-abbr}-#{$size}#{$suffix} {
+          @each $direction in $direction-list {
+            #{$box-model-part}-#{$direction}: $size-value;
+          }
+        }
+      }
+    }
+  }
+}
+
+// $spacing is defined in _abstractions/_variables.scss
+@each $size, $value in $sizes {
+  @include make-responsive-classes($value) {
+    @include spacing-classes($size);
+  }
+}

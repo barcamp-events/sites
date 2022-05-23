@@ -1,0 +1,30 @@
+/* =========================================================================
+   Buttons
+   ========================================================================= */
+
+%button {
+  @extend %default-border-radius;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--teal);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: $normal;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: #fff;
+    background-color: darken($teal, 10%);
+  }
+
+  @include breakpoint($size-md) {
+    padding: 1rem 3rem;
+    font-size: 2.4rem;
+  }
+}
+
+.button {
+  @extend %button;
+}

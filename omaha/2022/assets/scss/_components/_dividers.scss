@@ -1,0 +1,100 @@
+/* =========================================================================
+   Dividers
+   ========================================================================= */
+
+$stripe-width: 10px;
+
+@keyframes rainbow-slide {
+  0%, 100% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--red),
+      var(--orange) $stripe-width,
+      var(--yellow) $stripe-width * 2,
+      var(--green) $stripe-width * 3,
+      var(--blue) $stripe-width * 4,
+      var(--purple) $stripe-width * 5,
+      var(--red) $stripe-width * 6
+    );
+  }
+
+  17% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--orange),
+      var(--yellow) $stripe-width,
+      var(--green) $stripe-width * 2,
+      var(--blue) $stripe-width * 3,
+      var(--purple) $stripe-width * 4,
+      var(--red) $stripe-width * 5,
+      var(--orange) $stripe-width * 6
+    );
+  }
+
+  33% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--yellow),
+      var(--green) $stripe-width,
+      var(--blue) $stripe-width * 2,
+      var(--purple) $stripe-width * 3,
+      var(--red) $stripe-width * 4,
+      var(--orange) $stripe-width * 5,
+      var(--yellow) $stripe-width * 6
+    );
+  }
+
+  50% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--green),
+      var(--blue) $stripe-width,
+      var(--purple) $stripe-width * 2,
+      var(--red) $stripe-width * 3,
+      var(--orange) $stripe-width * 4,
+      var(--yellow) $stripe-width * 5,
+      var(--green) $stripe-width * 6
+    );
+  }
+
+  67% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--blue),
+      var(--purple) $stripe-width,
+      var(--red) $stripe-width * 2,
+      var(--orange) $stripe-width * 3,
+      var(--yellow) $stripe-width * 4,
+      var(--green) $stripe-width * 5,
+      var(--blue) $stripe-width * 6
+    );
+  }
+
+  83% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--purple),
+      var(--red) $stripe-width,
+      var(--orange) $stripe-width * 2,
+      var(--yellow) $stripe-width * 3,
+      var(--green) $stripe-width * 4,
+      var(--blue) $stripe-width * 5,
+      var(--purple) $stripe-width * 6
+    );
+  }
+}
+
+.rainbow-divider {
+  height: 8px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--red),
+    var(--orange) $stripe-width,
+    var(--yellow) $stripe-width * 2,
+    var(--green) $stripe-width * 3,
+    var(--blue) $stripe-width * 4,
+    var(--purple) $stripe-width * 5,
+    var(--red) $stripe-width
+  );
+  animation: rainbow-slide 1s linear infinite;
+}

@@ -1,0 +1,27 @@
+// =========================================================================
+// Mixins
+// =========================================================================
+
+// usage: @include breakpoint(480px) { your styles here }
+@mixin breakpoint($point) {
+  @media all and (min-width: $point) {
+    @content;
+  }
+}
+
+@mixin make-responsive-classes($point) {
+  @if $point == 0 {
+    @content;
+  } @else {
+    @include breakpoint($point) {
+      @content;
+    }
+  }
+}
+
+// Get a space step from the $spacing list
+// e.g. "padding: space(4)" compiles to "padding: 3rem"
+// $spacing list is defined in _abstractions/_variables.scss
+@function space($i) {
+  @return map-get($spacing, $i);
+}

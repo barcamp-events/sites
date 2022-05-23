@@ -1,0 +1,84 @@
+// =========================================================================
+// Variables
+// =========================================================================
+
+// Sizes
+// Based on 1rem = 16px
+$size-sm: 30rem; // 480px
+$size-md: 40rem; // 640px
+$size-lg: 54rem; // 864px
+$size-xl: 64rem; // 1024px
+
+$max-width: $size-xl;
+
+$sizes: (
+  '': 0,
+  '-sm': $size-sm,
+  '-md': $size-md,
+  '-lg': $size-lg,
+  '-xl': $size-xl
+);
+
+// Spacing units
+$space-unit: 0.75rem;
+
+$spacing: (
+  auto: auto,
+  0:    0,
+  1:    $space-unit,
+  2:    $space-unit * 2,
+  3:    $space-unit * 3,
+  4:    $space-unit * 4,
+  6:    $space-unit * 6,
+  8:    $space-unit * 8,
+  12:   $space-unit * 12,
+  16:   $space-unit * 16
+);
+
+// Font families
+$bebas: 'Bebas Neue', serif;
+$garamond: 'EB Garamond', serif;
+$work-sans: 'Work Sans', sans-serif;
+
+// Font weights so we don't have to remember stuff like "semibold" is 600, etc.
+$normal: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+// Colors~!
+
+:root {
+  --primary-color: #42ABA1;
+
+  --headline-color: #42ABA1;
+  --body-color: #FFF;
+
+  --teal: #42ABA1;
+  --light-teal: #99FFFF;
+
+  --red: #FF0000;
+  --orange: #FF9000;
+  --yellow: #FFFF00;
+  --green: #00FF00;
+  --blue: #0000FF;
+  --purple: #FF00FF;
+
+  --platinum: #8fb9f2;
+  --gold: #e2b034;
+  --silver: #9f9f9f;
+  --bronze: #d37c5d;
+  --recurring: #777;
+
+  --gray: #AAA;
+}
+
+// SCSS variables needed for doing SCSS lighten/darken functions and junk
+$teal: #42ABA1; // teal
+$light-teal: #99FFFF;
+
+// Border radius
+$border-radius: 10px;
+
+// Z indexes are in one place so we can remember where things are layered and
+// not do silly stuff like z-index: 999999 just to get above something

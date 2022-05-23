@@ -1,36 +1,13 @@
-<midwest-layout class="bg-theme-0 dm:bg-theme-9" id="tracks" size="full">
-    <midwest-layout padding="none" size="small">
-        <copy-wrap align="center">
-            <h2 class="fw7 mb-0">{{en.event.tracks.title}}</h2>
-            <p class="text-theme-5 dm:text-theme-2 mt-0">{{en.event.tracks.leadin}}</p>
-        </copy-wrap>
-    </midwest-layout>
-    <midwest-layout padding="none" size="flush">
-        <section>
-            <midwest-grid class="w-full">
-                {% for track_name, track in en.tracks %}
-                    <midwest-card class="bg-white {{ track.color }}" padding="none">
-                        <header class="bg-theme-7 flex items-center justify-center relative p-0 track--{{ track }} flush">
-                            <midwest-image bg="var(--theme-7)" height="900" nozoom style="mix-blend-mode: hard-light;" width="1600">
-                                <source srcset="/assets/images/tracks/{{track_name | replace('_', '-')}}.jpg"/>
-                            </midwest-image>
-                            {% if track.includeName %}
-                                <h6 class="text-white absolute z-10 bottom-0 left-0 p-4 text-2xl font-black tracked m- p-0 text-uppercase">{{ track.name }}</h6>
-                            {% endif %}
-                        </header>
-                        <section class="p-3 bg-white dm:bg-theme-12">
-                            <copy-wrap>
-                                <ul class="list ml-6 text-theme-8 dm:text-theme-3 ">
-                            {% for sentence in track.content %}
-                                <li class="list-disc">
-                                    <p class="text-sm max-w-full text-theme-9 dm:text-theme-1 mt-0 mb-0">{{sentence}}</p>
-                                </li>
-                            {% endfor %}
-                            </copy-wrap>
-                        </section>
-                    </midwest-card>
-                {% endfor %}
-            </midwest-grid>
-        </section>
-    </midwest-layout>
-</midwest-layout>
+<section class="section section--padded">
+  <h2 class="h1 glitter-text text-align-center">{{ en.event.tracks.title }}</h2>
+  <p class="text-align-center">{{ en.event.tracks.description }}</p>
+  {% for track_name, track in en.tracks %}
+    <div class="flex flex-wrap flex-nowrap-lg items-center {{ 'flex-row-reverse-lg' if loop.index % 2 == 0 }} mt-4">
+      <img src="https://placekitten.com/400/400">
+      <div class="{{ 'pr-2' if loop.index % 2 == 0 else 'pl-2' }} pt-2 pt-0-lg">
+        <h3>{{ track.name }}</h3>
+        <p>{{ track.description }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</section>

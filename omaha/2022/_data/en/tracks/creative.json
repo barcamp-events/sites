@@ -1,13 +1,5 @@
 {
-	"name": "Creative",
-	"color": "theme-red",
-	"includeName": true,
-	"order": "2",
-	"content": [
-		"Creative Problem Solving",
-		"How to Make the Perfect Paper Snowflake",
-		"Design for Mobile Devices",
-		"Plumbing Metaphors can Improve Your Interfaces",
-		"Photography Lighting Basics"
-	]
+  "name": "Creative",
+  "order": "2",
+  "description": "When you're in your zone, when your art seems to create itself, when you amaze yourself with what you've done - what gets you there? Tell us what you do when you're at your most creative."
 }

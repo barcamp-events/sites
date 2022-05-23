@@ -1,0 +1,19 @@
+/* =========================================================================
+   Collapsibles
+   ========================================================================= */
+
+.collapsible {
+  &__summary {
+    @extend .h4;
+    padding-left: space(2);
+    list-style-position: outside;
+
+    &:hover {
+      color: var(--light-teal);
+    }
+  }
+
+  &__content {
+    padding-left: space(2);
+  }
+}

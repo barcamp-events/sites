@@ -1,0 +1,18 @@
+/* =========================================================================
+   Agenda Table
+   ========================================================================= */
+
+.agenda-table {
+  display: grid;
+  align-items: center;
+  column-gap: space(3);
+  grid-template-columns: auto 1fr;
+
+  &__headline {
+    grid-column-start: 2;
+  }
+  
+  &__divider {
+    grid-column: 1 / span 2;
+  }
+}

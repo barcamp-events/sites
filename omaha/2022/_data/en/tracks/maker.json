@@ -1,13 +1,5 @@
 {
-	"name": "Maker",
-	"color": "theme-indigo",
-	"includeName": true,
-	"order": "1",
-	"content": [
-		"Marketing Your iOS App",
-		"Bird Watching for fun and profit",
-		"Competitive Intelligence on a Shoestring",
-		"How to get Venture Capital",
-		"Fostering a Co-working Environment"
-	]
+  "name": "Maker",
+  "order": "1",
+  "description": "Tell us about your journey to owning your own work (even if it's a side hustle) and living the dream."
 }

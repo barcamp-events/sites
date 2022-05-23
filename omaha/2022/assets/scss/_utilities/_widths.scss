@@ -1,0 +1,57 @@
+/* =========================================================================
+   Widths
+   ========================================================================= */
+
+// These width classes work pretty similarly to Tachyons
+@mixin width-classes($suffix) {
+  @for $i from 1 through 10 {
+    .w-#{$i * 10}#{$suffix} {
+      width: ($i * 10%);
+    }
+  }
+
+  .w-25#{$suffix} {
+    width: 25%;
+  }
+
+  .w-75#{$suffix} {
+    width: 75%;
+  }
+
+  .w-third#{$suffix} {
+    width: (math.div(100%, 3));
+  }
+
+  .w-two-thirds#{$suffix} {
+    width: (math.div(100%, 3) * 2);
+  }
+}
+
+// $sizes is defined in _abstractions/_variables.scss
+@each $size, $value in $sizes {
+  @include make-responsive-classes($value) {
+    @include width-classes($size);
+  }
+}
+
+.max-width {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  &--small {
+    max-width: $size-sm;
+  }
+
+  &--medium {
+    max-width: $size-md;
+  }
+
+  &--large {
+    max-width: $size-lg;
+  }
+
+  &--xl {
+    max-width: $size-xl;
+  }
+}

@@ -1,13 +1,5 @@
 {
-	"name": "Technology",
-	"color": "theme-orange",
-	"includeName": true,
-	"order": "3",
-	"content": [
-		"CSS4 and the Future of Design",
-		"How to Wrangle WordPress",
-		"HTML5 and the Modern Browser",
-		"iPhone, Me, and My Drone",
-		"Hardware is the New Geocities"
-	]
+  "name": "Technology",
+  "order": "3",
+  "description": "Are you agile, traditional, waterfall or adaptive? Are you researching, designing, programming or testing? Or you about to blow our minds with something so new, we have to see it to believe it?"
 }

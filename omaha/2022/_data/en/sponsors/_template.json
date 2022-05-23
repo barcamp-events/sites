@@ -1,10 +1,10 @@
 {
-	"name": "Notist",
-	"link": "https://getnotist.com",
-	"image": true,
-	"representative": {
-		"include": true,
-		"name": "Anthony Banks"
-	},
-	"contribution": "Notist (Anthony Banks) is doing the design this year!"
+  "name": "Notist",
+  "link": "https://getnotist.com",
+  "image": true,
+  "representative": {
+    "include": true,
+    "name": "Anthony Banks"
+  },
+  "contribution": "Notist (Anthony Banks) is doing the design this year!"
 }

@@ -1,27 +1,36 @@
 {
-  "name": "barcamp-omaha-2019",
+  "name": "barcamp-omaha-2022",
   "version": "1.0.0",
-  "description": "The marketing website for BarCamp Omaha 2019",
+  "description": "The marketing website for BarCamp Omaha 2022",
   "main": "index.js",
   "scripts": {
+    "build": "npx @11ty/eleventy && npx webpack",
+    "start": "npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx @11ty/eleventy --serve --watch",
-    "build": "npx @11ty/eleventy"
+    "watch": "npx webpack --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/barcamp-events/sites.git"
   },
-  "author": "BarCamp Events",
+  "author": "BarCamp Omaha",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/barcamp-events/sites/issues"
   },
   "homepage": "https://github.com/barcamp-events/sites#readme",
-  "base_dir": ".",
-  "browserslist": "last 2 versions",
-  "dependencies": {
-    "@midwest-design/core": "latest",
-    "luxon": "^2.3.2"
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "autoprefixer": "^10.4.7",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-sass": "^7.0.1",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   }
 }
