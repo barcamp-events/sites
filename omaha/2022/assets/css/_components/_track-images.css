@@ -1,0 +1,23 @@
+/* =========================================================================
+   Track Images
+   ========================================================================= */
+
+.track-image {
+  flex: 0 0 100px;
+  width: 100px;
+  image-rendering: pixelated;
+}
+
+@media (min-width: 40rem) {
+  .track-image {
+    flex-basis: 200px;
+    width: 200px;
+  }
+}
+
+@media (min-width: 54rem) {
+  .track-image {
+    flex-basis: 300px;
+    width: 300px;
+  }
+}
