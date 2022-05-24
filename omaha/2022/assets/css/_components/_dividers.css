@@ -1,0 +1,102 @@
+/* =========================================================================
+   Dividers
+   ========================================================================= */
+
+:root {
+  --stripe-width: 10px;
+}
+
+@keyframes rainbow-slide {
+  0%, 100% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--red),
+      var(--orange) var(--stripe-width),
+      var(--yellow) calc(var(--stripe-width) * 2),
+      var(--green) calc(var(--stripe-width) * 3),
+      var(--blue) calc(var(--stripe-width) * 4),
+      var(--purple) calc(var(--stripe-width) * 5),
+      var(--red) calc(var(--stripe-width) * 6)
+    );
+  }
+
+  17% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--orange),
+      var(--yellow) var(--stripe-width),
+      var(--green) calc(var(--stripe-width) * 2),
+      var(--blue) calc(var(--stripe-width) * 3),
+      var(--purple) calc(var(--stripe-width) * 4),
+      var(--red) calc(var(--stripe-width) * 5),
+      var(--orange) calc(var(--stripe-width) * 6)
+    );
+  }
+
+  33% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--yellow),
+      var(--green) var(--stripe-width),
+      var(--blue) calc(var(--stripe-width) * 2),
+      var(--purple) calc(var(--stripe-width) * 3),
+      var(--red) calc(var(--stripe-width) * 4),
+      var(--orange) calc(var(--stripe-width) * 5),
+      var(--yellow) calc(var(--stripe-width) * 6)
+    );
+  }
+
+  50% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--green),
+      var(--blue) var(--stripe-width),
+      var(--purple) calc(var(--stripe-width) * 2),
+      var(--red) calc(var(--stripe-width) * 3),
+      var(--orange) calc(var(--stripe-width) * 4),
+      var(--yellow) calc(var(--stripe-width) * 5),
+      var(--green) calc(var(--stripe-width) * 6)
+    );
+  }
+
+  67% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--blue),
+      var(--purple) var(--stripe-width),
+      var(--red) calc(var(--stripe-width) * 2),
+      var(--orange) calc(var(--stripe-width) * 3),
+      var(--yellow) calc(var(--stripe-width) * 4),
+      var(--green) calc(var(--stripe-width) * 5),
+      var(--blue) calc(var(--stripe-width) * 6)
+    );
+  }
+
+  83% {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--purple),
+      var(--red) var(--stripe-width),
+      var(--orange) calc(var(--stripe-width) * 2),
+      var(--yellow) calc(var(--stripe-width) * 3),
+      var(--green) calc(var(--stripe-width) * 4),
+      var(--blue) calc(var(--stripe-width) * 5),
+      var(--purple) calc(var(--stripe-width) * 6)
+    );
+  }
+}
+
+.rainbow-divider {
+  height: 8px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--red),
+    var(--orange) var(--stripe-width),
+    var(--yellow) calc(var(--stripe-width) * 2),
+    var(--green) calc(var(--stripe-width) * 3),
+    var(--blue) calc(var(--stripe-width) * 4),
+    var(--purple) calc(var(--stripe-width) * 5),
+    var(--red) calc(var(--stripe-width) * 6)
+  );
+  animation: rainbow-slide 1s linear infinite;
+}

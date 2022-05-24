@@ -1,0 +1,16 @@
+/* =========================================================================
+   Collapsibles
+   ========================================================================= */
+
+.collapsible__summary {
+  padding-left: var(--space-2);
+  list-style-position: outside;
+}
+
+.collapsible__summary:hover {
+  color: var(--light-teal);
+}
+
+.collapsible__content {
+  padding-left: var(--space-2);
+}

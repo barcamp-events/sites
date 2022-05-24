@@ -2,10 +2,10 @@
   <h2 class="h1 glitter-text text-align-center">{{ en.event.tracks.title }}</h2>
   <p class="text-align-center">{{ en.event.tracks.description }}</p>
   {% for track_name, track in en.tracks %}
-    <div class="flex flex-wrap flex-nowrap-lg items-center {{ 'flex-row-reverse-lg' if loop.index % 2 == 0 }} mt-4">
+    <div class="flex flex-wrap flex-nowrap-lg items-center justify-center {{ 'flex-row-reverse-lg' if loop.index % 2 == 0 }} mt-4">
       <img src="https://placekitten.com/400/400">
-      <div class="{{ 'pr-2' if loop.index % 2 == 0 else 'pl-2' }} pt-2 pt-0-lg">
-        <h3>{{ track.name }}</h3>
+      <div class="{{ 'pr-2-lg' if loop.index % 2 == 0 else 'pl-2-lg' }} pt-2 pt-0-lg">
+        <h3 class="text-align-center text-align-left-lg">{{ track.name }}</h3>
         <p>{{ track.description }}</p>
       </div>
     </div>

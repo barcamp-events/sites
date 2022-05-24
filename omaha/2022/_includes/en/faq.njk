@@ -1,10 +1,10 @@
 <section class="section section--padded">
-  <h2 class="h1 glitter-text text-align-center">{{ en.event.faqs.title }}</h2>
-  <p class="text-align-center">{{ en.event.faqs.description }}</p>
+  <h2 class="h1 glitter-text text-align-center mb-0">{{ en.event.faqs.title }}</h2>
+  <p class="text-align-center mt-0">{{ en.event.faqs.description }}</p>
 
   {% for faq in en.event.faqs.faqs %}
-    <details class="collapsible {% if not loop.last %}mb-3{% endif %}">
-      <summary class="collapsible__summary">{{ faq.question }}</summary>
+    <details class="collapsible {% if not loop.last %}mb-2 mb-3-lg{% endif %}">
+      <summary class="collapsible__summary h4">{{ faq.question }}</summary>
       <p class="collapsible__content">{{ faq.answer | safe }}</p>
     </details>
   {% endfor %}

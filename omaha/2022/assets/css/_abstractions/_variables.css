@@ -1,0 +1,59 @@
+/* =========================================================================
+   Variables
+   ========================================================================= */
+
+:root {
+  /*
+   * Sizes
+   * Based on 1rem = 16px
+   */
+  --size-sm: 30rem; /*  480px */
+  --size-md: 40rem; /*  640px */
+  --size-lg: 54rem; /*  864px */
+  --size-xl: 64rem; /* 1024px */
+  --max-width: var(--size-xl);
+
+  /* Spacing units */
+  --space-unit: 0.75rem;
+
+  --space-1:    var(--space-unit);
+  --space-2:    calc(var(--space-unit) * 2);
+  --space-3:    calc(var(--space-unit) * 3);
+  --space-4:    calc(var(--space-unit) * 4);
+  --space-6:    calc(var(--space-unit) * 6);
+  --space-8:    calc(var(--space-unit) * 8);
+  --space-12:   calc(var(--space-unit) * 12);
+  --space-16:   calc(var(--space-unit) * 16);
+
+  /* Font families */
+  --bebas: 'Bebas Neue', serif;
+  --garamond: 'EB Garamond', serif;
+
+  /* Colors~! */
+  --teal: #42ABA1;
+  --light-teal: #99FFFF;
+  --dark-teal: #34867E;
+
+  --primary-color: var(--teal);
+
+  --headline-color: var(--teal);
+  --body-color: #FFF;
+
+  --red: #FF0000;
+  --orange: #FF9000;
+  --yellow: #FFFF00;
+  --green: #00FF00;
+  --blue: #0000FF;
+  --purple: #FF00FF;
+
+  --platinum: #8fb9f2;
+  --gold: #e2b034;
+  --silver: #9f9f9f;
+  --bronze: #d37c5d;
+  --recurring: #777;
+
+  --gray: #AAA;
+
+  /* Border radius */
+  --border-radius: 10px;
+}
