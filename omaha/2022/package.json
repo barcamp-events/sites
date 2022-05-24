@@ -4,10 +4,9 @@
   "description": "The marketing website for BarCamp Omaha 2022",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy && npx webpack",
+    "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npx webpack --watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
