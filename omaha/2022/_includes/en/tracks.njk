@@ -1,6 +1,6 @@
 <section class="section section--padded">
-  <h2 class="h1 glitter-text text-align-center">{{ en.event.tracks.title }}</h2>
-  <p class="text-align-center">{{ en.event.tracks.description }}</p>
+  <h2 class="h1 glitter-text text-align-center mb-0">{{ en.event.tracks.title }}</h2>
+  <p class="text-align-center mt-0">{{ en.event.tracks.description }}</p>
   {% for track_name, track in en.tracks %}
     <div class="flex flex-wrap flex-nowrap-lg items-center justify-center {{ 'flex-row-reverse-lg' if loop.index % 2 == 0 }} mt-4">
       <img src="/assets/images/{{ track.name | lower }}.gif" class="track-image">
