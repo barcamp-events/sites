@@ -7,13 +7,13 @@
   "intro": {
     "title": "Come share your passion",
     "content": [
-      "At BarCamp, we've ditched the predetermined speaker list. We're a user-generated, creative unconference that provides a space for everyday humans to share their passions. Talks aren’t scheduled until just before the conference starts, and anyone can speak — though it's just as rewarding to sit back and listen. There's no bar (except for drinks at the opening party) and no camp (unless you bring your own tent). But there's a whole lot to discover."
+      "At BarCamp, we’ve ditched the predetermined speaker list. We’re a user-generated, creative unconference that provides a space for everyday humans to share their passions. Talks aren’t scheduled until just before the conference starts, and anyone can speak — though it’s just as rewarding to sit back and listen. There’s no bar (except for drinks at the opening party) and no camp (unless you bring your own tent). But there’s a whole lot to discover."
     ]
   },
   "venue": {
     "title": "The Venue",
     "host": "WP Engine",
-    "description": "WP Engine is a fully managed WordPress hosting platform with speed, security, and support. Their easy-to-use tools and award-winning support team help customers build WordPress websites or migrate existing sites with ease. They are graciously allowing us to use their space this year for BarCamp main events!"
+    "description": "<a href=\"https://wpengine.com/\" target=\"_blank\">WP Engine</a> is a fully managed WordPress hosting platform with speed, security, and support. Their easy-to-use tools and award-winning support team help customers build WordPress websites or migrate existing sites with ease. They are graciously allowing us to use their space this year for BarCamp main events!"
   },
   "tracks": {
     "title": "The Tracks",
@@ -21,7 +21,7 @@
   },
   "agenda": {
     "title": "The Agenda",
-    "description": "Here's what to expect!",
+    "description": "Here’s what to expect!",
     "days": [
       {
         "date": "Friday, August 19th",
@@ -49,7 +49,7 @@
           {
             "time": "9:00AM",
             "title": "Morning Talks Begin",
-            "description": "We'll start out the first round of talks promptly at 9am, so make sure you're all settled in and ready to learn!"
+            "description": "We’ll start out the first round of talks promptly at 9am, so make sure you’re all settled in and ready to learn!"
           },
           {
             "time": "12:00PM",
@@ -59,7 +59,7 @@
           {
             "time": "1:00PM",
             "title": "Afternoon Talks Begin",
-            "description": "At 1pm, we'll reconvene for our afternoon session of talks!"
+            "description": "At 1pm, we’ll reconvene for our afternoon session of talks!"
           },
           {
             "time": "3:00PM",
@@ -71,16 +71,16 @@
     ]
   },
   "faqs": {
-    "title": "The FAQ's",
+    "title": "The FAQ’s",
     "description": "Get your quick answers here!",
     "faqs": [
       {
         "question": "What am I paying $20 for?",
-        "answer": "Opening party / drink ticket, breakfast, coffee, soda & snacks, lunch, BarCamp t-shirt, friendship bracelet, good times / new friends (which is sorta priceless…)"
+        "answer": "Opening party / drink ticket, breakfast, coffee, soda & snacks, lunch, BarCamp t-shirt, good times / new friends (which is sorta priceless…)"
       },
       {
         "question": "How long are the talks?",
-        "answer": "Each talk runs for 23 minutes. Speakers are allowed to use that time however they wish&mdash;you can even share a time slot with multiple people or set up a panel discussion, allowing time for Q&amp;A at the end. The last 7 minutes of every half-hour slot is reserved for transition time between talks."
+        "answer": "Each talk runs for 23 minutes. Speakers are allowed to use that time however they wish&mdash;you can even share a time slot with multiple people or set up a panel discussion, allowing time for Q&A at the end. The last 7 minutes of every half-hour slot is reserved for transition time between talks."
       },
       {
         "question": "Can I give a sales presentation?",
@@ -104,7 +104,7 @@
     "title": "The Sponsors",
     "description": "A huge thanks to all our amazing BarCamp sponsors!",
     "representative_format": "Say thank you to {0} if you see them!",
-    "fallback_copy": "We don't have any {tier_level} sponsors. Can you help?",
+    "fallback_copy": "We don’t have any {tier_level} sponsors. Can you help?",
     "tiers": [
       {
         "title": "Platinum",

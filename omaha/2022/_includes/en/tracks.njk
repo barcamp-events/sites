@@ -4,9 +4,11 @@
   {% for track_name, track in en.tracks %}
     <div class="flex flex-wrap flex-nowrap-lg items-center justify-center {{ 'flex-row-reverse-lg' if loop.index % 2 == 0 }} mt-4">
       <img src="/assets/images/{{ track.name | lower }}.gif" class="track-image">
-      <div class="{{ 'pr-2-lg' if loop.index % 2 == 0 else 'pl-2-lg' }} pt-2 pt-0-lg">
-        <h3 class="text-align-center text-align-left-lg">{{ track.name }}</h3>
-        <p>{{ track.description | safe }}</p>
+      <div class="w-100 {{ 'pr-2-lg' if loop.index % 2 == 0 else 'pl-2-lg' }} pt-2 pt-0-lg">
+        <div class="max-width max-width--small">
+          <h3 class="text-align-center text-align-left-lg">{{ track.name }}</h3>
+          <p>{{ track.description | safe }}</p>
+        </div>
       </div>
     </div>
   {% endfor %}

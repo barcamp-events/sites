@@ -2,7 +2,7 @@
   <div>
     <h2 class="h3 mb-0 text-align-center text-align-left-lg">{{ en.event.venue.title }}</h2>
     <h3 class="h1 glitter-text mt-0 text-align-center text-align-left-lg">{{ en.event.venue.host }}</h3>
-    <p>{{ en.event.venue.description }}</p>
+    <p>{{ en.event.venue.description | safe }}</p>
   </div>
   <div class="flex justify-center">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4742.226711016403!2d-95.93776818864389!3d41.2697985341369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938ff03abe10fb%3A0x4248aba8494e8998!2sWP%20Engine!5e0!3m2!1sen!2sus!4v1653190269066!5m2!1sen!2sus" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

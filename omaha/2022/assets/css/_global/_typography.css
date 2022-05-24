@@ -194,7 +194,6 @@ hr.thick-hr {
 
 a {
   color: var(--teal);
-  text-decoration: none;
 }
 
 a:hover {

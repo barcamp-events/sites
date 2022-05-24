@@ -1,6 +1,8 @@
 <section class="section section--padded">
   <h2 class="h1 glitter-text text-align-center">{{ en.event.intro.title }}</h2>
-  {% for paragraph in en.event.intro.content %}
-    <p>{{ paragraph }}</p>
-  {% endfor %}
+  <div class="max-width max-width--large">
+    {% for paragraph in en.event.intro.content %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
+  </div>
 </section>

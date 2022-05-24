@@ -2,6 +2,10 @@
    Widths
    ========================================================================= */
 
+.w-100 {
+  width: 100%;
+}
+
 .max-width {
   max-width: var(--max-width);
   margin-right: auto;
