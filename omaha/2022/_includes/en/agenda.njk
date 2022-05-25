@@ -2,15 +2,13 @@
   <h2 class="h1 glitter-text text-align-center mb-0">{{ en.event.agenda.title }}</h2>
   <p class="text-align-center mt-0">{{ en.event.agenda.description }}</p>
 
-  <div class="agenda-table mt-6">
+  <div class="agenda-table mt-4">
     {% for day in en.event.agenda.days %}
-      <h3 class="agenda-table__headline three-d-text h2 mt-0">{{ day.date }}</h3>
+      <h3 class="agenda-table__headline three-d-text h2 mt-0 mb-2">{{ day.date }}</h3>
       {% for event in day.events %}
-        <h4 class="h2 text-align-right yellow-text dancy-text m-0">{{ event.time }}</h4>
-        <div>
-          <h5 class="h4">{{ event.title }}</h5>
-          <p>{{ event.description }}</p>
-        </div>
+        <h4 class="agenda-table__time yellow-text dancy-text m-0 mt-1-lg">{{ event.time }}</h4>
+        <h5 class="agenda-table__subheader h4">{{ event.title }}</h5>
+        <p class="agenda-table__description">{{ event.description }}</p>
         {% if not loop.last %}<hr class="agenda-table__divider">{% endif %}
       {% endfor %}
       {% if not loop.last %}<hr class="agenda-table__divider thick-hr">{% endif %}
