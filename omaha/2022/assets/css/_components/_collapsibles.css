@@ -2,6 +2,10 @@
    Collapsibles
    ========================================================================= */
 
+.collapsible {
+  padding: 0 var(--space-1);
+}
+
 .collapsible__summary {
   padding-left: var(--space-2);
   list-style-position: outside;

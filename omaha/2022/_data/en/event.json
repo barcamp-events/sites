@@ -17,7 +17,25 @@
   },
   "tracks": {
     "title": "The Tracks",
-    "description": "Talks are organized into one of four speaking categories."
+    "description": "Talks are organized into one of four speaking categories.",
+    "tracks": [
+      {
+        "name": "Maker",
+        "description": "Tell us about the awesome things you’ve created or built, or your journey to owning your own work (even if it’s a side hustle) and living the dream."
+      },
+      {
+        "name": "Creative",
+        "description": "When you’re in your zone, when your art seems to create itself, when you amaze yourself with what you’ve done &mdash; what gets you there? Tell us what you do when you’re at your most creative."
+      },
+      {
+        "name": "Technology",
+        "description": "Are you agile, traditional, waterfall or adaptive? Are you researching, designing, programming or testing? Or you about to blow our minds with something so new, we have to see it to believe it?"
+      },
+      {
+        "name": "Kitchen Sink",
+        "description": "Maybe you’re a plumber. Maybe you’re a chef. Maybe you have very strong opinions on whether or not a hot dog is a sandwich. We want to hear your kitchen sink story (literal or not) and the how behind your gushing achievements."
+      }
+    ]
   },
   "agenda": {
     "title": "The Agenda",
