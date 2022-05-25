@@ -145,5 +145,14 @@
         "link": "#"
       }
     ]
+  },
+  "footer": {
+    "title": "Thanks!",
+    "description": "Thanks for visiting!",
+    "counter": "You are person # {number} to visit our website!",
+    "webring_title": "This site is part of the BarCamp Omaha webring",
+    "previous": "<< Prev",
+    "next": "Next >>",
+    "webring_all_sites": "All Sites:"
   }
 }

@@ -1,5 +1,23 @@
 <footer class="section section--padded text-align-center">
-  <h2 class="h1 three-d-text dancy-text mb-0 tight-line-height">Thanks!</h2>
-  <p class="h3 mt-0 mb-4 tight-line-height"><em>Thanks for visiting!</em></p>
-  <p>You are person # <b class="js-fake-counter">1000</b> to visit our website!</p>
+  <h2 class="h1 three-d-text dancy-text mb-0 tight-line-height">{{ en.event.footer.title }}</h2>
+  <p class="h3 mt-0 mb-4 tight-line-height"><em>{{ en.event.footer.description }}</em></p>
+  <p>{{ en.event.footer.counter | replace('{number}', '<b class="js-fake-counter">1000</b>') | safe }}</p>
+
+  <div class="webring max-width max-width--medium mt-4">
+    <h3 class="h4 webring__headline">{{ en.event.footer.webring_title }}</h3>
+    <a class="webring__nav-link webring__nav-link--prev" href="https://2019.barcampomaha.org" target="_blank">
+      {{ en.event.footer.previous }}
+    </a>
+    <a class="webring__nav-link webring__nav-link--next" href="https://2014.barcampomaha.org/" target="_blank">
+      {{ en.event.footer.next }}
+    </a>
+    <h4 class="webring__list-headline">{{ en.event.footer.webring_all_sites }}</h4>
+    <ol class="webring__list">
+      <li class="webring__list-item"><a href="https://2014.barcampomaha.org" target="_blank">2014</a></li>
+      <li class="webring__list-item"><a href="https://2015.barcampomaha.org" target="_blank">2015</a></li>
+      <li class="webring__list-item"><a href="https://2016.barcampomaha.org" target="_blank">2016</a></li>
+      <li class="webring__list-item"><a href="https://2019.barcampomaha.org" target="_blank">2019</a></li>
+      <li class="webring__list-item">2022</li>
+    </ol>
+  </div>
 </footer>

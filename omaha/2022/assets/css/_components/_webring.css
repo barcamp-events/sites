@@ -1,0 +1,59 @@
+/* =========================================================================
+   Webring
+   ========================================================================= */
+
+.webring {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  border: 2px inset #fff;
+}
+
+.webring__headline {
+  grid-column-start: span 6;
+  margin: 0;
+  padding: var(--space-1);
+  border: 2px inset #fff;
+}
+
+.webring__nav-link {
+  grid-column-start: span 3;
+  padding: var(--space-1);
+  border: 2px inset #fff;
+}
+
+.webring__nav-link--prev {
+  text-align: left;
+}
+
+.webring__nav-link--next {
+  text-align: right;
+}
+
+.webring__list-headline {
+  grid-column-start: span 2;
+  margin: 0;
+  padding: var(--space-1) 0;
+  border: 2px inset #fff;
+  line-height: 2rem;
+  white-space: nowrap;
+}
+
+.webring__list {
+  display: contents;
+  list-style: none;
+}
+
+.webring__list-item {
+  grid-column-start: span 2;
+  margin: 0;
+  padding: var(--space-1) 0;
+  border: 2px inset #fff;
+  line-height: 2rem;
+}
+
+@media (min-width: 30rem) {
+  .webring__list-headline, .webring__list-item {
+    grid-column-start: span 1;
+  }
+}
