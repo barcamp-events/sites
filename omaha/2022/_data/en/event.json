@@ -42,7 +42,7 @@
     "description": "Here’s what to expect!",
     "days": [
       {
-        "date": "Friday, August 19th",
+        "date": "Friday, August&nbsp;19th",
         "events": [
           {
             "time": "7:00PM",
@@ -57,7 +57,7 @@
         ]
       },
       {
-        "date": "Saturday, August 20th",
+        "date": "Saturday, August&nbsp;20th",
         "events": [
           {
             "time": "8:00AM",

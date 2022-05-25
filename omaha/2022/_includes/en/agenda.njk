@@ -4,7 +4,7 @@
 
   <div class="agenda-table mt-4">
     {% for day in en.event.agenda.days %}
-      <h3 class="agenda-table__headline three-d-text h2 mt-0 mb-2">{{ day.date }}</h3>
+      <h3 class="agenda-table__headline three-d-text h2 mt-0 mb-2">{{ day.date | safe }}</h3>
       {% for event in day.events %}
         <h4 class="agenda-table__time yellow-text dancy-text m-0 mt-1-lg">{{ event.time }}</h4>
         <h5 class="agenda-table__subheader h4">{{ event.title }}</h5>

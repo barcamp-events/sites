@@ -2,6 +2,10 @@
    Counter
    ========================================================================= */
 
+.counter {
+  white-space: nowrap;
+}
+
 .counter__digit {
   display: inline-block;
   position: relative;
