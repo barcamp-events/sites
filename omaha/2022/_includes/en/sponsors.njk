@@ -9,10 +9,12 @@
       {{ tier.title }}
     </h3>
 
-    {% if en.sponsors[tier.slug] %}
+    {% set slug = tier.title | lower %}
+
+    {% if en.sponsors[slug] %}
       <div class="grid mb-4">
-      {% for sponsor_slug, sponsor_object in en.sponsors[tier.slug] %}
-        {% call sponsor(sponsor_slug, sponsor_object, tier.slug, "mv2 px-2 px-4-l") %}{% endcall %}
+      {% for sponsor_slug, sponsor_object in en.sponsors[slug] %}
+        {% call sponsor(sponsor_slug, sponsor_object, slug, "mv2 px-2 px-4-l") %}{% endcall %}
       {% endfor %}
       </div>
     {% else %}

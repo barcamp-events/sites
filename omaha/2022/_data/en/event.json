@@ -126,27 +126,22 @@
     "tiers": [
       {
         "title": "Platinum",
-        "slug": "platinum",
         "link": "#"
       },
       {
         "title": "Gold",
-        "slug": "gold",
         "link": "#"
       },
       {
         "title": "Silver",
-        "slug": "silver",
         "link": "#"
       },
       {
         "title": "Bronze",
-        "slug": "bronze",
         "link": "#"
       },
       {
         "title": "Recurring",
-        "slug": "recurring",
         "link": "#"
       }
     ]
