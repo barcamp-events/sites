@@ -1,3 +1,5 @@
+{%- from "../macros/sponsor.njk" import sponsor -%}
+
 <section class="section section--padded text-align-center">
   <h2 class="h1 glitter-text mb-0">{{ en.event.sponsors.title }}</h2>
   <p class="mt-0">{{ en.event.sponsors.description }}</p>
@@ -6,6 +8,15 @@
     <h3 class="h2 shiny-text shiny-text--{{ tier.title | lower }} max-width max-width--small text-align-center mb-0">
       {{ tier.title }}
     </h3>
-    <p class="mt-0">{{ en.event.sponsors.fallback_copy | replace("{tier_level}", tier.title) | safe }}</p>
+
+    {% if en.sponsors[tier.slug] %}
+      <div class="grid mb-4">
+      {% for sponsor_slug, sponsor_object in en.sponsors[tier.slug] %}
+        {% call sponsor(sponsor_slug, sponsor_object, tier.slug, "mv2 px-2 px-4-l") %}{% endcall %}
+      {% endfor %}
+      </div>
+    {% else %}
+      <p class="mt-0">{{ en.event.sponsors.fallback_copy | replace("{tier_level}", tier.title) | safe }}</p>
+    {% endif %}
   {% endfor %}
 </section>

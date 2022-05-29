@@ -1,0 +1,20 @@
+{% macro sponsor(slug = "", sponsor_object = {}, level = "", spacing = "") %}
+  <div class="sponsor" {% if sponsor.link %} tag="a" href="{{sponsor_object.link}}" target="_blank" {%endif%}>
+      {% if not sponsor_object.image and not sponsor_object.representative["include"] %}
+          <header>
+              <h5 class="tc dm:white m- p-0 mw-100 fw7">{{ sponsor_object.name }}</h5>
+          </header>
+      {% endif %}
+      <section class="flush z-0 layer-children place-center">
+          <div style="aspect-ratio: 16/9"></div>
+          {% if sponsor_object.image %}
+              <ion-icon src="/assets/images/sponsors/{{slug}}.svg" style="aspect-ratio: {{sponsor_object.image.width}}/{{sponsor_object.image.height}}; width: 100%; height: auto"></ion-icon>
+          {% else %}
+              <h5 class="absolute top-1 z-999 h-auto right-1 block fs7 fw9 lh-solid p-0 text-theme-5 dm:text-theme-0 bg-white dm:bg-theme-8 p-2">{{ sponsor_object.name }}</h5>
+          {% endif %}
+      </section>
+      <footer style="--padding: 0.5rem;">
+          <p>{{sponsor_object.name}} {{ sponsor_object.contribution }}</p>
+      </footer>
+  </div>
+{% endmacro %} 

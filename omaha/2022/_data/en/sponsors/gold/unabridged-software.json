@@ -1,7 +1,10 @@
 {
   "name": "Unabridged Software",
   "link": "https://unabridgedsoftware.com",
-  "image": true,
+  "image": {
+    "width": "960",
+    "height": "288"
+  },
   "representative": {
     "include": true,
     "name": "Kit Ryan"

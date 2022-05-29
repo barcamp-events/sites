@@ -1,0 +1,16 @@
+/* =========================================================================
+   Grid
+   ========================================================================= */
+
+.grid {
+  --grid-width: 200px;
+  --grid-gap: 2rem;
+
+  position: relative;
+  display: flex;
+  display: grid;
+  flex-wrap: wrap;
+  align-items: start;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
+}

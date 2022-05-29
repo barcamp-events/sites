@@ -1,0 +1,107 @@
+/* =========================================================================
+   Sponsor Card
+   ========================================================================= */
+
+.sponsor {
+  --border: 1px solid var(--teal);
+  --background: var(--dark-teal);
+  --background-active: var(--theme-0);
+  --border-radius: 0rem;
+  --padding: 1rem;
+  --card-width: auto;
+
+  contain: content;
+  appearance: none;
+  -webkit-appearance: none !important;
+  display: block;
+  text-decoration: none;
+  text-align: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: var(--background);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  width: var(--card-width);
+  height: auto;
+  display: grid;
+  grid-template-columns: var(--padding) 1fr var(--padding);
+  grid-template-rows: auto var(--padding) 1fr var(--padding) auto;
+  grid-template-areas:
+    "header header header"
+    ". . ."
+    ". section ."
+    ". . ."
+    "footer footer footer";
+}
+
+.sponsor[horizontal] {
+  grid-auto-flow: row;
+}
+
+.sponsor[horizontal] {
+  grid-template-columns: var(--header-width, auto) var(--padding) 1fr var(--padding);
+  grid-template-rows: auto var(--padding) 1fr var(--padding) auto;
+  grid-template-areas:
+    "header . . ."
+    "header . . ."
+    "header . section ."
+    "header . . ."
+    "footer footer footer footer";
+}
+
+.sponsor[horizontal] header {
+  width: 100%;
+}
+
+.sponsor[horizontal] section {
+  margin: auto;
+}
+
+.sponsor section {
+  grid-area: section;
+  max-width: calc(var(--card-width) - (var(--padding) * 2));
+}
+
+.sponsor section.flush {
+  grid-column: 1 / span 3;
+  width: 100% !important;
+  max-width: 100% !important;
+  grid-row: 2 / span 3;
+  padding: var(--padding);
+}
+
+.sponsor header {
+  padding: calc(var(--padding) * 2) var(--padding);
+  border-bottom: var(--border) !important;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  grid-area: header !important;
+  width: calc(var(--card-width) - 2px);
+  max-width: calc(var(--card-width) - 2px);
+}
+
+.sponsor header.flush {
+  border-bottom: 0 !important;
+  padding-bottom: 0;
+}
+
+.sponsor header.flex {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sponsor footer {
+  grid-area: footer !important;
+  padding: calc(var(--padding) * 2) var(--padding);
+  border-top: var(--border) !important;
+  width: calc(var(--card-width) - 2px);
+  max-width: calc(var(--card-width) - 2px);
+}
+
+.sponsor footer.flex {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sponsor a:active {
+  background: var(--background-active);
+}
