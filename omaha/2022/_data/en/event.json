@@ -1,114 +1,158 @@
 {
   "meta": {
-    "url": "https://barcamplincoln.org",
-    "author": "BarCamp Events team",
+    "url": "https://barcampomaha.org",
+    "author": "BarCamp Omaha",
     "description": "BarCamp is a user generated conference where the speakers are everyday folks, talking about what makes them excited."
-  },
-  "title": "BarCamp Lincoln",
-  "date": "2009-08-07T13:52:12.000Z",
-  "time": "8am to 3pm",
-  "tickets_cta": "Buy Tickets",
-  "tickets_link": "https://opencollective.com/barcamp-events/events/barcamp-lincoln-2020-ffe4c560/order/12474",
-  "sponsor_cta": "Sponsor the event",
-  "sponsor_link": "https://opencollective.com/barcamp-events/events/barcamp-lincoln-2020-ffe4c560/#section-contribute",
-  "about": {
-    "title": "About"
-  },
-  "venue": {
-    "title": "The Venue",
-    "hosted": "Hosted at",
-    "address": "2005 Y St, Lincoln, NE",
-    "name": "The Bay",
-    "description": "The Bay is an international organization headquartered in Lincoln NE. The BAY is known for taking an innovative approach to creating healthy communities around the world which are focused on alternative recreation, fighting poverty and homelessness, and preventing sex-trafficking through the avenues of street outreach, skate, art, and music.",
-    "lat": "40.827449",
-    "lng": "-96.7051944",
-    "zoom": "13.3",
-    "directions": "Directions"
-  },
-  "opening_party": {
-    "title": "The Opening Party",
-    "hosted": "Hosted at",
-    "address": "2124 Y St, Lincoln, NE",
-    "name": "Turbine Flats",
-    "description": "Turbine Flat's is an entrepreneurial cooperative that supports and promotes Lincoln's ideas community. The Turbine Flats Project's mission is to create a robust, self-sustaining, collaborative environment for small and start-up businesses to bring their products and ideas to market.",
-    "lat": "40.824494",
-    "lng": "-96.690233",
-    "zoom": "13.3",
-    "directions": "Directions"
   },
   "intro": {
     "title": "Come share your passion",
     "content": [
-      "BarCamp's are user generated conferences where the speakers are everyday folks, talking about what makes them excited. Talks aren’t scheduled or planned until just before the conference starts, and anyone can give a talk. Interested, but don’t want to give a talk? That’s okay too!",
-      "At BarCamp, you won’t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and communicate what you’re most passionate about. Come one, come all."
+      "At BarCamp, we’ve ditched the predetermined speaker list. We’re a user-generated, creative unconference that provides a space for everyday humans to share their passions. Talks aren’t scheduled until just before the conference starts, and anyone can speak — though it’s just as rewarding to sit back and listen. There’s no bar (except for drinks at the opening party) and no camp (unless you bring your own tent). But there’s a whole lot to discover."
     ]
   },
-  "faqs": {
-    "title": "The FAQ's",
-    "leadin": "Get your quick answers here!~"
+  "venue": {
+    "title": "The Venue",
+    "host": "WP Engine",
+    "description": "<a href=\"https://wpengine.com/\" target=\"_blank\">WP Engine</a> is a fully managed WordPress hosting platform with speed, security, and support. Their easy-to-use tools and award-winning support team help customers build WordPress websites or migrate existing sites with ease. They are graciously allowing us to use their space this year for BarCamp main events!"
   },
   "tracks": {
     "title": "The Tracks",
-    "leadin": "Talks are organized into one of four speaking categories. Some possible talks may include:"
-  },
-  "sponsors": {
-    "title": "The Sponsors",
-    "leadin": "A Huge Thanks to All Our Amazing Barcamp Sponsors!",
-    "representative_format": "Say thank you to {0} if you see them!",
-    "fallback_copy": "We don't have any {0} sponsors. <br />Can you help?",
-    "platinum": "Platinum",
-    "platinum_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/platinum-sponsor-12563",
-    "gold": "Gold",
-    "gold_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/gold-sponsor-12561",
-    "silver": "Silver",
-    "silver_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/silver-sponsor-12562",
-    "bronze": "Bronze",
-    "bronze_link": "https://opencollective.com/barcamp-lincoln-2020-ffe4c560/contribute/bronze-sponsor-12560",
-    "carbon": "Recurring",
-    "carbon_link": "https://opencollective.com/barcamp-events/contribute/recurring-monthly-sponsor-10617"
+    "description": "Talks are organized into one of four speaking categories.",
+    "tracks": [
+      {
+        "name": "Maker",
+        "description": "Tell us about the awesome things you’ve created or built, or your journey to owning your own work (even if it’s a side hustle) and living the dream."
+      },
+      {
+        "name": "Creative",
+        "description": "When you’re in your zone, when your art seems to create itself, when you amaze yourself with what you’ve done &mdash; what gets you there? Tell us what you do when you’re at your most creative."
+      },
+      {
+        "name": "Technology",
+        "description": "Are you agile, traditional, waterfall or adaptive? Are you researching, designing, programming or testing? Or you about to blow our minds with something so new, we have to see it to believe it?"
+      },
+      {
+        "name": "Kitchen Sink",
+        "description": "Maybe you’re a plumber. Maybe you’re a chef. Maybe you have very strong opinions on whether or not a hot dog is a sandwich. We want to hear your kitchen sink story (literal or not) and the how behind your gushing achievements."
+      }
+    ]
   },
   "agenda": {
     "title": "The Agenda",
-    "leadin": "Here's what to expect",
-    "day": {
-      "one": {
-        "timeframe": "Friday, March 27th",
-        "things": [
+    "description": "Here’s what to expect!",
+    "days": [
+      {
+        "date": "Friday, August&nbsp;19th",
+        "events": [
           {
-            "title": "7PM | Opening Party <span class='ttn'>at Turbine Flats!</span>",
+            "time": "7:00PM",
+            "title": "Opening Party at TBD!",
             "description": "Show up, relax, mingle with other BarCampers and have a drink on our opening party sponsor!"
           },
           {
-            "title": "12AM | Go Home!",
+            "time": "12:00AM",
+            "title": "Go Home!",
             "description": "Drive safely, take a cab or call in a Lyft. Just show up tomorrow in one piece. :)"
           }
         ]
       },
-      "two": {
-        "timeframe": "Saturday, March 28th",
-        "things": [
+      {
+        "date": "Saturday, August&nbsp;20th",
+        "events": [
           {
-            "title": "8AM | Breakfast / Sign Up For Talks <span class='ttn'>at The Bay!</span>",
+            "time": "8:00AM",
+            "title": "Breakfast / Sign Up For Talks at WP Engine!",
             "description": "Grab some breakfast and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers."
           },
           {
-            "title": "9AM | Morning Talks Begin",
-            "description": "We'll start out the first round of talks promptly at 9am, so make sure you're all settled in and ready to learn!"
+            "time": "9:00AM",
+            "title": "Morning Talks Begin",
+            "description": "We’ll start out the first round of talks promptly at 9am, so make sure you’re all settled in and ready to learn!"
           },
           {
-            "title": "12PM | Lunch & Networking",
+            "time": "12:00PM",
+            "title": "Lunch & Networking",
             "description": "Hang out with your new BarCamp friends and enjoy a delicious lunch provided by a local restaurant."
           },
           {
-            "title": "1PM | Afternoon Talks Begin",
-            "description": "At 1pm, we'll reconvene for our afternoon session of talks!"
+            "time": "1:00PM",
+            "title": "Afternoon Talks Begin",
+            "description": "At 1pm, we’ll reconvene for our afternoon session of talks!"
           },
           {
-            "title": "3PM | Closing",
+            "time": "3:00PM",
+            "title": "Closing",
             "description": "Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year."
           }
         ]
       }
-    }
+    ]
+  },
+  "faqs": {
+    "title": "The FAQ’s",
+    "description": "Get your quick answers here!",
+    "faqs": [
+      {
+        "question": "What am I paying $20 for?",
+        "answer": "Opening party / drink ticket, breakfast, coffee, soda & snacks, lunch, BarCamp t-shirt, good times / new friends (which is sorta priceless…)"
+      },
+      {
+        "question": "How long are the talks?",
+        "answer": "Each talk runs for 23 minutes. Speakers are allowed to use that time however they wish&mdash;you can even share a time slot with multiple people or set up a panel discussion, allowing time for Q&A at the end. The last 7 minutes of every half-hour slot is reserved for transition time between talks."
+      },
+      {
+        "question": "Can I give a sales presentation?",
+        "answer": "Nope! To be respectful of our BarCamp community, sales presentations or pitches are not allowed. Don’t even try it, folks."
+      },
+      {
+        "question": "When do I get my BarCamp t-shirt?",
+        "answer": "Tees and other goodies will be available on the day of BarCamp at the merch table. Though we try to purchase enough of each t-shirt size, we recommend picking your shirt up early in the morning just in case."
+      },
+      {
+        "question": "What should I bring?",
+        "answer": "Something to share with all of your new friends…a business card perhaps? We encourage you to bring a notebook for notes. If you’ve planned a talk with presentation slides, bring your laptop or an external drive with your files. And bring all your friends!"
+      },
+      {
+        "question": "What if I have a food allergy?",
+        "answer": "No sweat! We make sure everyone is included. If you have specific food allergies or restrictions, contact Kit at <a href=\"mailto:barcampevents@gmail.com\">barcampevents@gmail.com</a> and we&rsquo;ll take care of you. Each year we work with our caterer to provide vegetarian, vegan and gluten free options."
+      }
+    ]
+  },
+  "sponsors": {
+    "title": "The Sponsors",
+    "description": "A huge thanks to all our amazing BarCamp sponsors!",
+    "representative_format": "Say thank you to {0} if you see them!",
+    "fallback_copy": "We don’t have any {tier_level} sponsors. Can you help?",
+    "tiers": [
+      {
+        "title": "Platinum",
+        "link": "#"
+      },
+      {
+        "title": "Gold",
+        "link": "#"
+      },
+      {
+        "title": "Silver",
+        "link": "#"
+      },
+      {
+        "title": "Bronze",
+        "link": "#"
+      },
+      {
+        "title": "Recurring",
+        "link": "#"
+      }
+    ]
+  },
+  "footer": {
+    "title": "Thanks!",
+    "description": "Thanks for visiting!",
+    "counter": "You are person # {number} to visit our website!",
+    "webring_title": "This site is part of the BarCamp Omaha webring",
+    "previous": "<< Prev",
+    "next": "Next >>",
+    "webring_all_sites": "All Sites:"
   }
 }

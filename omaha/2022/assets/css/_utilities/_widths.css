@@ -1,0 +1,25 @@
+/* =========================================================================
+   Widths
+   ========================================================================= */
+
+.w-100 {
+  width: 100%;
+}
+
+.max-width {
+  max-width: var(--max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.max-width--small {
+  max-width: var(--size-sm);
+}
+
+.max-width--medium {
+  max-width: var(--size-md);
+}
+
+.max-width--large {
+  max-width: var(--size-lg);
+}

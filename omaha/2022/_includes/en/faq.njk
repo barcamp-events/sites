@@ -1,13 +1,11 @@
-<midwest-layout class="bg-theme-0 dm:bg-theme-8" id="faqs" size="small">
-    <copy-wrap>
-        <h2 class="text-black dm:text-white font-black mb-0 text-center">{{en.event.faqs.title}}</h2>
-        <p class="mt-0 mb-4 text-theme-5 dm:text-theme-2 text-center">{{en.event.faqs.leadin}}</p>
+<section class="section section--padded">
+  <h2 class="h1 glitter-text text-align-center mb-0">{{ en.event.faqs.title }}</h2>
+  <p class="text-align-center mt-0">{{ en.event.faqs.description }}</p>
 
-        {% for faq_name, faq in en.faqs %}
-            <midwest-accordion class="border-theme-2 dm:border-theme-7">
-                <h6 class="text-theme-9 dm:text-white m:p-0 font-black" slot="label">{{faq.question}}</h6>
-                <p class="text-theme-6 dm:text-theme-0 w-100 mw-100">{{faq.answer}}</p>
-            </midwest-accordion>
-        {% endfor %}
-    </copy-wrap>
-</midwest-layout>
+  {% for faq in en.event.faqs.faqs %}
+    <details class="collapsible {% if not loop.last %}mb-2 mb-3-lg{% endif %}">
+      <summary class="collapsible__summary h4">{{ faq.question }}</summary>
+      <p class="collapsible__content">{{ faq.answer | safe }}</p>
+    </details>
+  {% endfor %}
+</section>

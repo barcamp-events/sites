@@ -1,0 +1,221 @@
+/* =========================================================================
+   Typography Utilities
+   ========================================================================= */
+
+/*
+ * When I wrote these keyframes, only god and I knew how it worked.
+ * Now, only god knows.
+ */
+@keyframes glint {
+  0%, 100% {
+    background:
+      repeating-linear-gradient(-5deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(85deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(5deg, #000 0px, #000 2px, transparent 4px, transparent 6px),
+      repeating-linear-gradient(-60deg, #000 0px, transparent 2px, var(--teal) 4px, var(--teal) 8px),
+      repeating-linear-gradient(60deg, #fff 0px, var(--teal) 3px, #000 3px, #000 6px);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  25% {
+    background:
+      repeating-linear-gradient(-5deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(85deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(5deg, #000 0px, #000 2px, transparent 4px, transparent 6px),
+      repeating-linear-gradient(-60deg, #000 0px, transparent 2px, var(--teal) 4px, var(--teal) 8px),
+      repeating-linear-gradient(-60deg, #fff 0px, var(--yellow) 2px, #000 3px, #000 6px);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  50% {
+    background:
+      repeating-linear-gradient(-5deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(85deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(5deg, #000 0px, #000 2px, transparent 4px, transparent 6px),
+      repeating-linear-gradient(60deg, transparent 0px, transparent 2px, var(--teal) 4px, var(--teal) 8px),
+      repeating-linear-gradient(60deg, var(--teal) 0px, #fff 3px, #000 3px, #000 6px);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  75% {
+    background:
+      repeating-linear-gradient(-5deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(85deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(5deg, #000 0px, #000 2px, transparent 4px, transparent 6px),
+      repeating-linear-gradient(-60deg, #000 0px, transparent 2px, var(--teal) 4px, var(--teal) 8px),
+      repeating-linear-gradient(40deg, #fff 0px, var(--yellow) 2px, #000 3px, #000 6px);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+.glitter-text {
+  font-family: var(--bebas);
+  font-weight: 400;
+  -webkit-text-stroke: 2px var(--teal);
+  text-shadow: 5px 5px 10px rgba(0, 54, 54, 20%);
+  text-transform: uppercase;
+  animation: glint 1.5s ease infinite;
+}
+
+@keyframes dance {
+  0%, 100% {
+    transform: scaleY(1) skewX(0);
+  }
+
+  25% {
+    transform: scaleY(1.1) skewX(5deg);
+  }
+
+  50% {
+    transform: scaleY(1) skewX(0);
+  }
+
+  75% {
+    transform: scaleY(1.1) skewX(-5deg);
+  }
+}
+
+.dancy-text {
+  font-family: var(--bebas);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  transform-origin: bottom center;
+  animation: dance 1s steps(2, jump-none) infinite;
+}
+
+@keyframes shine {
+  from { background-position: 100%; }
+  to { background-position: 0%; }
+}
+
+.shiny-text {
+  position: relative;
+  margin: 0;
+  font-family: var(--bebas);
+  font-weight: 400;
+  text-align: center;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.35);
+  animation: shine 3s linear infinite;
+}
+
+.shiny-text--platinum {
+  background:
+    repeating-linear-gradient(
+      -60deg,
+      var(--platinum) 0%,
+      var(--platinum) calc(50% - 10px),
+      #fff 50%,
+      var(--platinum) calc(50% + 10px),
+      var(--platinum) 100%
+    );
+  background-position: 50%;
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--platinum);
+}
+
+.shiny-text--gold {
+  background:
+    repeating-linear-gradient(
+      -60deg,
+      var(--gold) 0%,
+      var(--gold) calc(50% - 10px),
+      #fff 50%,
+      var(--gold) calc(50% + 10px),
+      var(--gold) 100%
+    );
+  background-position: 50%;
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--gold);
+}
+
+.shiny-text--silver {
+  background:
+    repeating-linear-gradient(
+      -60deg,
+      var(--silver) 0%,
+      var(--silver) calc(50% - 10px),
+      #fff 50%,
+      var(--silver) calc(50% + 10px),
+      var(--silver) 100%
+    );
+  background-position: 50%;
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--silver);
+}
+
+.shiny-text--bronze {
+  background:
+    repeating-linear-gradient(
+      -60deg,
+      var(--bronze) 0%,
+      var(--bronze) calc(50% - 10px),
+      #fff 50%,
+      var(--bronze) calc(50% + 10px),
+      var(--bronze) 100%
+    );
+  background-position: 50%;
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--bronze);
+}
+
+.shiny-text--recurring {
+  background:
+    repeating-linear-gradient(
+      -60deg,
+      var(--recurring) 0%,
+      var(--recurring) calc(50% - 10px),
+      #fff 50%,
+      var(--recurring) calc(50% + 10px),
+      var(--recurring) 100%
+    );
+  background-position: 50%;
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--recurring);
+}
+
+.text-align-center { text-align: center; }
+.text-align-right  { text-align: right; }
+.text-align-left   { text-align: left; }
+
+@media (min-width: 54rem) {
+  .text-align-left-lg { text-align: left; }
+}
+
+.three-d-text {
+  color: var(--teal);
+  font-family: var(--bebas);
+  font-weight: 400;
+  text-shadow:
+    -1px -1px 1px #FFF,
+    2px 2px 5px #000,
+    0px -1px 0 hsl(174, 44%, 44%),
+    0px -2px 0 hsl(174, 44%, 42%),
+    0px -3px 0 hsl(174, 44%, 40%),
+    0px -4px 0 hsl(174, 44%, 38%),
+    0px -5px 0 hsl(174, 44%, 36%),
+    0px -6px 0 hsl(174, 44%, 34%),
+    0px -7px 0 hsl(174, 44%, 32%),
+    0px -9px 0 hsl(174, 44%, 30%),
+    0px -10px 0 hsl(174, 44%, 28%);
+  text-transform: uppercase;
+}
+
+.tight-line-height {
+  line-height: 1;
+}
+
+.yellow-text {
+  color: var(--yellow);
+}

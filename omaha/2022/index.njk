@@ -1,19 +1,18 @@
 ---
-layout: layouts/home.njk
+layout: layouts/default.njk
 title: BarCamp Omaha 2022
-name: Home
-preload_elements: [midwest-starscape, midwest-theme, midwest-tag, midwest-image, copy-wrap, midwest-card, midwest-tab, midwest-tabs, animate-presence, midwest-grid, midwest-layout, midwest-time]
-eleventyNavigation:
-  key: Home
-  order: 1
+sections:
+  - nav
+  - intro
+  - venue
+  - tracks
+  - agenda
+  - faq
+  - sponsors
+  - footer
 ---
 
-{% include "en/hero.njk" %}
-{% include "en/header.njk" %}
-{% include "en/intro.njk" %}
-{% include "en/venue.njk" %}
-{% include "en/tracks.njk" %}
-{% include "en/agenda.njk" %}
-{% include "en/faq.njk" %}
-{% include "en/sponsors.njk" %}
-{% include "en/footer.njk" %}
+{% for section in sections %}
+  {% include "en/" + section + ".njk" %}
+  {% if not loop.last %}<div class="rainbow-divider"></div>{% endif %}
+{% endfor %}

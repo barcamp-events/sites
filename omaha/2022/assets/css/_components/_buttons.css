@@ -1,0 +1,28 @@
+/* =========================================================================
+   Buttons
+   ========================================================================= */
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--teal);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: $normal;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: var(--dark-teal);
+}
+
+@media (min-width: 40rem) {
+  .button {
+    padding: 1rem 3rem;
+    font-size: 2.4rem;
+  }
+}
