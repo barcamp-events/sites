@@ -14,10 +14,6 @@
     ```bash
     npm start
     ```
-1. Watch asset changes as you work:
-    ```bash
-    npm run watch
-    ```
 
 ## Adding new content
 
