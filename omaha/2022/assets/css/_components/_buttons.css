@@ -2,27 +2,63 @@
    Buttons
    ========================================================================= */
 
+@keyframes grow {
+  from { transform: scale(1); }
+  to { transform: scale(30); }
+}
+
 .button {
+  position: relative;
   display: inline-block;
-  padding: 0.6rem 1.5rem;
+  padding: calc(var(--space-1) / 2) var(--space-2);
+  border: 2px solid var(--dark-teal);
   border-radius: var(--border-radius);
   background-color: var(--teal);
   color: #fff;
+  font-family: var(--bebas);
   font-size: 1.6rem;
-  font-weight: $normal;
   line-height: 1.5;
   text-align: center;
   text-decoration: none;
+  text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25),
+    0 1px 0 inset rgba(255, 255, 255, 0.25),
+    0 0.25rem 0 inset rgba(255, 255, 255, 0.1),
+    0 0 0 inset rgba(0, 0, 0, 0.5),
+    0 3.25rem 0 inset rgba(255, 255, 255, 0.1),
+    0 -1.25rem 1.25rem inset rgba(0, 0, 0, 0.3),
+    0 -0.5rem 0.5rem inset rgba(0, 0, 0, 0.4),
+    0 1.25rem 1.25rem inset var(--teal);
+}
+
+.button::before {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  content: "";
+  display: block;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  padding: 0 var(--space-1);
+  height: 2px;
+  width: 40%;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 1px 5px;
 }
 
 .button:hover {
   color: #fff;
   background-color: var(--dark-teal);
+  animation: grow 2400s linear;
 }
 
 @media (min-width: 40rem) {
   .button {
-    padding: 1rem 3rem;
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 }

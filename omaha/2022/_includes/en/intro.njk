@@ -1,9 +1,12 @@
-
 <section class="section section--padded">
   <h2 class="h1 glitter-text text-align-center">{{ en.event.intro.title }}</h2>
   <div class="max-width max-width--large">
     {% for paragraph in en.event.intro.content %}
       <p>{{ paragraph }}</p>
     {% endfor %}
+
+    <div class="text-align-center">
+      <a class="button" href="#">Get Your Ticket Now!</a>
+    </div>
   </div>
 </section>
