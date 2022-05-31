@@ -2,6 +2,7 @@
 layout: layouts/default.njk
 title: BarCamp Omaha 2022
 sections:
+  - hero
   - nav
   - intro
   - venue
@@ -14,5 +15,5 @@ sections:
 
 {% for section in sections %}
   {% include "en/" + section + ".njk" %}
-  {% if not loop.last %}<div class="rainbow-divider"></div>{% endif %}
+  {% if section not in ['hero', 'nav', footer'] %}<div class="rainbow-divider"></div>{% endif %}
 {% endfor %}

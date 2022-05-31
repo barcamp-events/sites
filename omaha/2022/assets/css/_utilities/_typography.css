@@ -219,3 +219,7 @@
 .yellow-text {
   color: var(--yellow);
 }
+
+.white-text {
+  color: white;
+}

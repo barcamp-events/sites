@@ -1,0 +1,64 @@
+/* =========================================================================
+   Hero
+   ========================================================================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  background-image: url(/assets/images/hero.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: var(--space-4) 0;
+}
+
+.hero__logo {
+  width: 75%;
+}
+
+.hero__content {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+}
+
+.hero__tagline {
+  flex: 1 1 100%;
+  margin:  0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (min-width: 54rem) {
+  .hero {
+    flex-wrap: nowrap;
+    aspect-ratio: 16/9;
+    padding: 0;
+  }
+
+  .hero__content {
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: var(--space-2);
+    left: var(--space-4);
+    width: calc(100% - var(--space-8));
+  }
+
+  .hero__tagline {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero__tagline {
+    font-size: 2rem;
+  }
+}
