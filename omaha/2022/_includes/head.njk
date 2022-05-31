@@ -8,12 +8,12 @@
 <meta property="og:image:height" content="630">
 
 <title>{{ title or metadata.title }}</title>
-<meta property="og:title" content="{{ title or metadata.title }}">
+<meta property="og:title" content="{{ title or en.event.meta.title }}">
 <meta property="og:url" content="https://barcampomaha.org">
 <meta property="og:type" content="website">
-<meta name="description" property="og:description" content="{{ metadata.description }}">
-<meta property="og:description" content="{{ metadata.description }}">
-<meta name="author" content="{{ metadata.author }}">
+<meta name="description" property="og:description" content="{{ en.event.meta.description }}">
+<meta property="og:description" content="{{ en.event.meta.description }}">
+<meta name="author" content="{{ en.event.meta.author }}">
 
 <link rel="stylesheet" href="/assets/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
