@@ -1,0 +1,13 @@
+{
+  "name": "Knave of Cups",
+  "link": "https://knaveofcups.com/",
+  "image": {
+    "width": "1070",
+    "height": "470"
+  },
+  "representative": {
+    "include": true,
+    "name": "A Yolland"
+  },
+  "contribution": "is an online shop dedicated to supporting inclusion and creativity in the tabletop roleplaying community."
+}

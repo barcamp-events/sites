@@ -5,6 +5,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 body {
   background-color: #000;
   background-image: url(/assets/images/stars.gif);
