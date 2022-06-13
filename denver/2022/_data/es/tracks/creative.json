@@ -1,0 +1,13 @@
+{
+	"name": "Creativo",
+	"color": "theme-red",
+	"includeName": true,
+	"order": "2",
+	"content": [
+		"Resolución Creativa de Problemas",
+		"Como Hacer el Copo de Nieve de Papel Perfecto",
+		"Diseño de Dispositivos Móviles",
+		"Metáforas de Plomería Pueden Mejorar tus Interfaces",
+		"Lo Basico de la Iluminación para la Fotografía"
+	]
+}

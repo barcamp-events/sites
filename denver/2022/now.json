@@ -1,0 +1,21 @@
+{
+ "name": "barcamp-denver-2022",
+ "version": 2,
+ "builds": [
+  {
+   "use": "@now/static",
+   "config": {
+    "distDir": "_site"
+   }
+  }
+ ],
+ "alias": [
+  "denver-2022.barcamp.events"
+ ],
+ "routes": [
+  {
+   "src": "^/(.*)",
+   "dest": "_site/$1"
+  }
+ ]
+}

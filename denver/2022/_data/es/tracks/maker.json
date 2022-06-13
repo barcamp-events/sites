@@ -1,0 +1,12 @@
+{
+	"name": "Fabricante",
+	"color": "theme-indigo",
+	"includeName": true,
+	"order": "1",
+	"content": [
+		"Cómo Comercializar tu app iOS",
+		"La Observación de Aves para Divertirse y Sacar Provecho",
+		"Cómo Ganar Capital de Riesgo",
+		"Cómo Fomentar un Buen Ambiente en la Oficina con Colegas"
+	]
+}

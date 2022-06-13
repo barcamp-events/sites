@@ -1,0 +1,53 @@
+<stellar-layout align="top" class="bg-white dm-bg-black" id="venue" size="large" type="half">
+    <stellar-grid class="self-center" style="--grid-gap: 0; --grid-width: 350px;">
+        <copy-wrap class="br border-theme-base2 dm-border-theme-base8 pa3">
+            <h6 class="theme-base5 dm-theme-base5 ttu fs7 fw7 tracked">{{es.event.venue.title}}</h6>
+            <div class="flex items-center">
+                <img class="mb0 db w2 h-auto mr2" src="/assets/images/pins/pin-event.png" width="40"/>
+                <h3 class="black dm-white fw8">{{es.event.venue.name}}</h3>
+            </div>
+            <h6 class="theme-base7 dm-theme-base2 fs7 b">
+                <address>
+                    {{es.event.venue.address}}
+                </address>
+            </h6>
+
+            <p class="theme-base5 dm-theme-base4">{{es.event.venue.description}}</p>
+        </copy-wrap>
+        <copy-wrap class="ma0 pa3">
+            <h6 class="theme-base5 dm-theme-base5 ttu fs7 fw7 tracked">{{es.event.opening_party.title}}</h6>
+            <div class="flex items-center">
+                <img class="mb0 db w2 h-auto mr2" src="/assets/images/pins/pin-party.png" width="40"/>
+                <h3 class="black dm-white fw8">{{es.event.opening_party.name}}</h3>
+            </div>
+            <h6 class="theme-base7 dm-theme-base2 fs7 b">
+                <address>
+                    {{es.event.opening_party.address}}
+                </address>
+            </h6>
+
+            <p class="theme-base5 dm-theme-base4">{{es.event.opening_party.description}}</p>
+        </copy-wrap>
+    </stellar-grid>
+
+    <div class="flex items-center justify-center bg-gold h-100">
+        <stellar-google-maps apikey="{{google.apikey}}" lat="{{es.event.venue.lat}}" lng="{{es.event.venue.lng}}" zoom="{{es.event.venue.zoom}}" block theme="dark-minimal" no-ui class="h-100">
+            <stellar-google-maps-marker lat="{{es.event.venue.lat}}" lng="{{es.event.venue.lng}}" marker-title="{{es.event.venue.name}}" icon="/assets/images/pins/pin-event.png" icon-width="37" icon-height="57.5">
+                <h6 class="theme-base5 dm-theme-base5 ttu fs8 fw7 tracked">{{es.event.venue.title}}</h6>
+                <h5 class="dm-theme-base9 ma0 pa0 b">{{es.event.venue.name}}</h5>
+                <p class="dm-theme-base7 ma0">{{es.event.venue.address}}</p>
+                <stellar-button block href="https://www.google.com/maps/dir/?api=1&destination={{es.event.venue.address}}" padding="tiny" size="tiny" tag="link" target="_blank">
+                    {{es.event.venue.directions}}
+                </stellar-button>
+            </stellar-google-maps-marker>
+            <stellar-google-maps-marker lat="{{es.event.opening_party.lat}}" lng="{{es.event.opening_party.lng}}" marker-title="{{es.event.opening_party.name}}" icon="/assets/images/pins/pin-party.png" icon-width="37" icon-height="57.5">
+                <h6 class="theme-base5 dm-theme-base5 ttu fs8 fw7 tracked">{{es.event.opening_party.title}}</h6>
+                <h5 class="dm-theme-base9 ma0 pa0 b">{{es.event.opening_party.name}}</h5>
+                <p class="dm-theme-base7 ma0">{{es.event.opening_party.address}}</p>
+                <stellar-button block href="https://www.google.com/maps/dir/?api=1&destination={{es.event.opening_party.address}}" padding="tiny" size="tiny" tag="link" target="_blank">
+                    {{es.event.opening_party.directions}}
+                </stellar-button>
+            </stellar-google-maps-marker>
+        </stellar-google-maps>
+    </div>
+</stellar-layout>

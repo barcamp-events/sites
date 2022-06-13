@@ -1,0 +1,36 @@
+{%- from "../macros/agenda.njk" import agenda -%}
+{%- from "../macros/agenda_day.njk" import agenda_day -%}
+{%- from "../macros/agenda_details.njk" import agenda_details -%}
+
+<midwest-layout class="bg-theme-1 dm:bg-theme-7" id="agenda">
+    <copy-wrap align="center">
+        <h2 class="text-bold text-black dm:text-white">{{en.event.agenda.title}}</h2>
+        <p class="text-theme-5 dm:text-theme-2 mt-0">{{en.event.agenda.leadin}}</p>
+    </copy-wrap>
+
+    {% call agenda() %}
+        {% call agenda_day(1) %}{% endcall %}
+
+        {% call agenda_details() %}
+            <h4 class="p-0 m- fs7 fw7 text-theme-6 dm:text-theme-4 text-uppercase tracked">{{en.event.agenda.day.one.timeframe}}</h4>
+
+            {% for thing in en.event.agenda.day.one.things %}
+                <h3 class="fw7">{{thing.title | safe }}</h3>
+                <p class="text-theme-9 dm:text-theme-2  f6 mt-0 w-100 mb-4 mw-100 bb border-text-theme-3 dm:border-text-theme-9 pb4">{{thing.description | safe }}</p>
+            {% endfor %}
+        {% endcall %}
+        
+    {% endcall %}
+
+    {% call agenda() %}
+        {% call agenda_day(2) %}{% endcall %}
+
+        {% call agenda_details() %}
+            <h4 class="p-0 m- fs7 fw7 text-theme-6 dm:text-theme-4 text-uppercase tracked">{{en.event.agenda.day.two.timeframe}}</h4>
+            {% for thing in en.event.agenda.day.two.things %}
+                <h3 class="fw7">{{thing.title | safe }}</h3>
+                <p class="text-theme-9 dm:text-theme-2  f6 mt-0 w-100 mb-4 mw-100 bb border-text-theme-3 dm:border-text-theme-9 pb4">{{thing.description | safe }}</p>
+            {% endfor %}
+        {% endcall %}
+    {% endcall %}
+</midwest-layout>

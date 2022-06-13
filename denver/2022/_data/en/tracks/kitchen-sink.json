@@ -1,0 +1,13 @@
+{
+	"name": "Kitchen Sink",
+	"color": "theme-magenta",
+	"includeName": true,
+	"order": "4",
+	"content": [
+		"Squirrel Trapping and More",
+		"How to Chop Wood like a Pro",
+		"Teenage Globetrotting",
+		"Making the Best Cup of Coffee",
+		"Down a Rabbit Hole of Cool Science"
+	]
+}
