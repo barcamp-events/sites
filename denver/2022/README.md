@@ -1,6 +1,6 @@
 # BarCamp Denver 2022 Marketing Site
 
-## Setup
+## Setup!
 
 1. Install packages:
     ```bash
