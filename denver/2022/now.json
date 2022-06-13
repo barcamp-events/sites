@@ -9,6 +9,6 @@
       }
     }
   ],
-  "alias": ["barcampdenver.com", "2022.barcampdenver.com", "2022-denver.barcamp.events"],
+  "alias": ["2022-denver.barcamp.events"],
   "routes": [{ "src": "^/(.*)", "dest": "_site/$1" }]
 }
