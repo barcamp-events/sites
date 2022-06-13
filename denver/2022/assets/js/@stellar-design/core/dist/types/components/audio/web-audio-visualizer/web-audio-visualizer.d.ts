@@ -1,0 +1,35 @@
+export declare class WebAudioVisualizer {
+    element: HTMLElement;
+    canvas: HTMLCanvasElement;
+    canvasCTX: any | WebGLRenderingContext | CanvasRenderingContext2D;
+    for: string;
+    type: string | "wave" | "bars" | "circle" | "bars2";
+    smoothing: number;
+    size: number;
+    color: string;
+    freqs: Uint8Array;
+    times: Uint8Array;
+    width: number;
+    height: number;
+    context: AudioContext;
+    analyser: AnalyserNode;
+    renderer: AnalyserNode;
+    vertex: string;
+    vertexShader: string;
+    fragment: string;
+    fragShader: string;
+    fragTime: WebGLUniformLocation;
+    fragSpectrumArray: Uint8Array;
+    fragSpectrum: Uint8Array;
+    _bufferLength: AnalyserNode;
+    _dataArray: AnalyserNode;
+    _color: any;
+    componentWillLoad(): void;
+    componentDidLoad(): void;
+    handleColorChange(): void;
+    connect(context: AudioContext, destination?: any): Promise<this>;
+    draw(): void;
+    clearBackground: () => void;
+    getFrequencyValue(freq: any): number;
+    render(): any;
+}

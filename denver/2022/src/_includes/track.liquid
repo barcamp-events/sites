@@ -1,0 +1,11 @@
+<stellar-card padding="none">
+  <header class="flex items-center justify-center pa0 track--{{ track.fileSlug }}">
+    <svg class="smile peace w-80 z-1 mv4 h4">
+      <title>{{ track.data.name }}</title>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#{{ track.fileSlug }}"></use>
+    </svg>
+  </header>
+  <section class="pa3">
+    <p class="f7 lh-copy mw-100">{{ track.templateContent }}</p>
+  </section>
+</stellar-card>

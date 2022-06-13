@@ -1,0 +1,69 @@
+<stellar-layout class="bg-tan pv4 pv5-l" id="agenda" size="small">
+  <copy-wrap align="center">
+    <svg class="smile w3 h3 mb3 hand">
+        <title>Hand</title>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#hand"></use>
+      </svg>
+    <h2 class="windsor mt0 mb2 f2 f1-m">The Agenda</h2>
+    <p class="brown lh-copy mt0">We may not have the skinny on the talk topics, but we are hip to the general schedule of events!</p>
+  </copy-wrap>
+
+  {% schedule %}
+    {% scheduleday 1 %}
+
+    {% scheduledetails %}
+      {% scheduledate "Friday, November 8th" %}
+
+      {% h3 "ttu" %}
+        7PM | Opening Party <span class="ttn">at TBD!</span>
+      {% endh3 %}
+
+      <p class="brown lh-copy f6 mt0">
+        We're planning a pre-conference shindig — more details to come, can you dig it?
+      </p>
+    {% endscheduledetails %}
+  {% endschedule %}
+
+  {% schedule %}
+    {% scheduleday 2 %}
+
+    {% scheduledetails %}
+      {% scheduledate "Saturday, November 9th" %}
+
+      {% h3 "ttu" %}
+        8AM | Coffee / Sign Up
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        Scarf some snacks and coffee, sign up for a talk, and start the day lip-flappin’ with your fellow BarCampers.
+      </p>
+
+      {% h3 "ttu mt4" %}
+        9AM | Morning Talks Begin
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        We’ll start out the first round of talks promptly at 9am, so make sure you’re mellowed out and ready to learn!
+      </p>
+
+      {% h3 "ttu mt4" %}
+        12PM | Lunch & Networking
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        Soak up the good vibes with your new BarCamp friends and enjoy a stellar lunch.
+      </p>
+
+      {% h3 "ttu mt4" %}
+        1PM | Afternoon Talks Begin
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        At 1 PM, we’ll reconvene and chill for our afternoon session of ace talks!
+      </p>
+
+      {% h3 "ttu mt4" %}
+        5PM | Closing
+      {% endh3 %}
+      <p class="brown lh-copy f6 mt0 mw-100">
+        It’s time to peace out! Tell your new friends to keep on keepin’ on, collect addresses for your new pen pals, and start getting psyched for next year. Don’t forget to pick up your friendship bracelet (sponsored by Bergman Incentives), and other BarCamp memorabilia from the merch table!
+      </p>
+    {% endscheduledetails %}
+  {% endschedule %}
+</stellar-layout>

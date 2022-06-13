@@ -1,0 +1,49 @@
+/*--------*/
+/* Header */
+/*--------*/
+
+.main-header {
+  // Chrome is being a stupid glitchy piece of shit and freaking out when a
+  // repeating linear gradient has more than 8 colors, so we gotta break this
+  // into two gradients and do some size/positioning bullshit.
+  background-color: var(--purple);
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--yellow),
+    var(--yellow)      (100% / 6 * 1),
+    var(--gold)        (100% / 6 * 1),
+    var(--gold)        (100% / 6 * 2),
+    var(--orange)      (100% / 6 * 2),
+    var(--orange)      (100% / 6 * 3),
+    var(--red)         (100% / 6 * 3),
+    var(--red)         (100% / 6 * 4),
+    var(--dark-red)    (100% / 6 * 4),
+    var(--dark-red)    (100% / 6 * 5),
+    var(--dark-pink)   (100% / 6 * 5),
+    var(--dark-pink)   (100% / 6 * 6)
+  ),
+  repeating-linear-gradient(
+    to right,
+    var(--purple),
+    var(--purple)      (100% / 6 * 1),
+    var(--dark-blue)   (100% / 6 * 1),
+    var(--dark-blue)   (100% / 6 * 2),
+    var(--blue)        (100% / 6 * 2),
+    var(--blue)        (100% / 6 * 3),
+    var(--dark-green)  (100% / 6 * 3),
+    var(--dark-green)  (100% / 6 * 4),
+    var(--green)       (100% / 6 * 4),
+    var(--green)       (100% / 6 * 5),
+    var(--light-green) (100% / 6 * 5),
+    var(--light-green) (100% / 6 * 6)
+  );
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+}
+
+.main-header web-audio-visualizer {
+  mix-blend-mode: multiply;
+  width: 97%;
+  clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);
+}

@@ -1,0 +1,15 @@
+<stellar-layout class="bg-light-tan" id="tracks" size="full" padding="large">
+  <stellar-layout size="small" padding="none">
+    <copy-wrap align="center">
+      <h2 class="mt0 windsor f2 f1-m">The Tracks</h2>
+      <p class="brown lh-copy mt0">Pick from the boss tracks below to give your talk. All topics and groovy folk are welcome, but please follow our <a href="https://github.com/barcamp-events/documents/blob/master/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.</p>
+    </copy-wrap>
+  </stellar-layout>
+  <stellar-layout size="full" padding="none">
+    <stellar-grid style="--grid-gap: 0.5rem;--grid-width: 300px;">
+      {% for track in collections.tracks %}
+        {% include track %}
+      {% endfor %}
+    </stellar-grid>
+  </stellar-layout>
+</stellar-layout>

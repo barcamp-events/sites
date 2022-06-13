@@ -1,0 +1,37 @@
+export declare class VideoInterview {
+    element: HTMLElement;
+    src: string;
+    color: string;
+    playing: boolean;
+    width: number;
+    height: number;
+    aspectRatio: number;
+    visualization: "circle" | "bars" | "wave" | "bars2";
+    randomId: number;
+    video: HTMLStellarVideoElement;
+    loaded: boolean;
+    loading: boolean;
+    seekable: boolean;
+    updateFunc: Function;
+    duration: number;
+    current: number;
+    interviewLines: any;
+    visible: boolean;
+    context: any;
+    visualizer: HTMLWebAudioVisualizerElement;
+    componentWillLoad(): void;
+    componentDidLoad(): Promise<void>;
+    cache: WeakMap<object, any>;
+    handleUpdate(event: any): void;
+    readonly time: number;
+    attachContext(): Promise<void>;
+    in(): Promise<void>;
+    out(): Promise<void>;
+    play(): Promise<void>;
+    skipTo(time: number): Promise<void>;
+    pause(): Promise<void>;
+    toggle(): Promise<void>;
+    handleClick(): void;
+    handleCurrentClick(): void;
+    render(): any;
+}
