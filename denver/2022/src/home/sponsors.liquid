@@ -1,0 +1,70 @@
+<stellar-layout class="bg-tan relative" id="sponsors" size="large" padding="large">
+  <copy-wrap align="center">
+    <svg class="smile w3 h3 mb3 peace">
+      <title>Peace</title>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.svg#peace"></use>
+    </svg>
+    <h2 class="windsor mt0 mb2 f2 f1-m">Our Sponsors</h2>
+    <p class="brown lh-copy">There's no way an event like BarCamp Omaha could happen every year at the quality it deserves to be for our commiunity. The following folks helped put BarCamp Omaha 2019 on. Please thank them!</p>
+  </copy-wrap>
+
+  <div class="relative clearfix z-1">
+    <h6 class="windsor ma0 pa0 tc center mb3">Platinum</h4>
+    <stellar-grid class="items-center" style="--grid-width: 300px;">
+      {% for sponsor in collections.platinum %}
+        {% assign level = "platinum" %}
+        {% assign spacing = "mv2 ph2 ph4-l" %}
+        {% include sponsor %}
+      {% endfor %}
+    </stellar-grid>
+
+    <hr />
+
+    <h6 class="windsor ma0 pa0 tc center mb3">Gold</h4>
+    <stellar-grid class="items-center">
+      {% for sponsor in collections.gold %}
+        {% assign level = "gold" %}
+        {% assign spacing = "mv2 ph2 ph1-l" %}
+        {% include sponsor %}
+      {% endfor %}
+    </stellar-grid>
+
+    <hr />
+
+    <h6 class="windsor ma0 pa0 tc center mb3">Silver</h4>
+    <stellar-grid class="items-center">
+      {% for sponsor in collections.silver %}
+        {% assign level = "silver" %}
+        {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
+        {% include sponsor %}
+      {% endfor %}
+    </stellar-grid>
+
+    <hr />
+
+    <h6 class="windsor ma0 pa0 tc center mb3">Bronze</h4>
+    <stellar-grid class="items-center">
+      {% for sponsor in collections.bronze %}
+        {% assign level = "bronze" %}
+        {% assign spacing = "mw5 mv2 ph2 ph3-l" %}
+        {% include sponsor %}
+      {% endfor %}
+    </stellar-grid>
+
+    <hr />
+
+    <h6 class="windsor ma0 pa0 tc center mb3">Carbon</h6>
+    <stellar-grid class="items-center">
+      {% for sponsor in collections.carbon %}
+        {% assign level = "carbon" %}
+        {% assign spacing = "mv2 ph2" %}
+        {% include sponsor %}
+      {% endfor %}
+    </stellar-grid>
+
+
+    <stellar-button href="https://opencollective.com/barcamp-events/contribute" target="_blank" class="s-right-arrow fr mt4" style="--padding: 1rem 2rem 1rem 1rem;">Sponsor</stellar-button>
+  </div>
+
+  <web-audio-visualizer for="numbers" type="wave" size="128" smoothing="1" class="absolute bottom-0 z-0 left-0 right-0" style="mix-blend-mode: overlay; width: 97%;clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);filter: invert(1);" ></web-audio-visualizer>
+</stellar-layout>

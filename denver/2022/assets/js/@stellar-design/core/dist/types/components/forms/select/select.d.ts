@@ -1,0 +1,77 @@
+import { EventEmitter } from '../../../stencil.core';
+export declare class Select {
+    element: HTMLElement;
+    name: string | boolean;
+    label: string;
+    placeholder: string;
+    description: string;
+    tooltip: string;
+    inline: boolean;
+    multiple: boolean;
+    other: boolean;
+    placeholderInverted: boolean;
+    size: "tiny" | "small" | "medium" | "large";
+    required: boolean;
+    processing: boolean;
+    focused: boolean;
+    open: boolean;
+    footer: boolean;
+    novalidate: boolean;
+    verbiage: string;
+    verbiageAn: boolean;
+    overlay: boolean;
+    value: Array<string> | string;
+    valueLabel: string;
+    default: any;
+    loading: boolean;
+    fit: boolean;
+    wrap: boolean;
+    resize: boolean;
+    autoSelectFirst: boolean;
+    /**
+     * Sets the button or link as an outlined button.
+     */
+    dark: boolean;
+    titleItem: HTMLStellarItemElement;
+    status: FormResult;
+    blur: number;
+    observer: MutationObserver;
+    language: string;
+    clear_confirm: boolean;
+    update: EventEmitter;
+    componentWillLoad(): Promise<void>;
+    componentDidLoad(): Promise<void>;
+    clearValue(): Promise<void>;
+    update_values(): Promise<void>;
+    handleOpenChange(): void;
+    handleMultipleChange(value: any): Promise<void>;
+    mountedHandler(event: CustomEvent): Promise<void>;
+    selectionChangedHandler(event: CustomEvent): Promise<void>;
+    selectedFocusChangedHandler(): void;
+    selectedBlurChangedHandler(): void;
+    handleTitleFocus(): void;
+    handleTitleBlur(): void;
+    handleNotClick(e: any): void;
+    handleEscapeKey(event: any): void;
+    handleArrowKeys(ev: KeyboardEvent): void;
+    updateLanguage(): void;
+    validate(): Promise<FormResult>;
+    listen_to_values(): void;
+    option_elements(): Promise<NodeListOf<HTMLStellarItemElement>>;
+    options(): Promise<Array<string>>;
+    focusPaths(): Promise<{
+        previous: any;
+        current: any;
+        next: any;
+    }>;
+    focusFirstItem(): void;
+    focusElement(element: any): void;
+    focusNextOption(): Promise<void>;
+    focusPreviousOption(): Promise<void>;
+    closeOthers(): void;
+    handleTitleClick(): void;
+    renderLabel(): any;
+    renderErrors(): any;
+    renderEmptyButton(): any;
+    render(): any;
+}

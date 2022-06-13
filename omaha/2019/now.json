@@ -1,16 +1,14 @@
 {
-    "name": "2019 BarCamp Omaha",
-    "version": 2,
-    "builds": [
-      {
-        "use": "@now/static",
-        "config": {
-          "distDir": "_site"
-        }
+  "name": "2019 BarCamp Omaha",
+  "version": 2,
+  "builds": [
+    {
+      "use": "@now/static",
+      "config": {
+        "distDir": "_site"
       }
-    ],
-    "alias": ["2019.barcampomaha.org", "barcampomaha.org"],
-    "routes": [
-      { "src": "^/(.*)", "dest": "_site/$1" }
-    ]
-  }
+    }
+  ],
+  "alias": ["2019.barcampomaha.org", "barcampomaha.org"],
+  "routes": [{ "src": "^/(.*)", "dest": "_site/$1" }]
+}

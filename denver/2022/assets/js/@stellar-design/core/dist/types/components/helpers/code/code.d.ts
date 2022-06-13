@@ -1,0 +1,35 @@
+import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
+import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-bash';
+export declare class Code {
+    element: HTMLElement;
+    language: string;
+    simple: boolean;
+    codeString: string;
+    copy: boolean;
+    copied: boolean;
+    expanded: boolean;
+    expandable: boolean;
+    randomName: number;
+    observer: MutationObserver;
+    preview: boolean;
+    feature: boolean;
+    dark: boolean;
+    code: string;
+    raw: string;
+    componentWillLoad(): void;
+    componentDidLoad(): void;
+    componentWillUpdate(): void;
+    componentDidUpdate(): void;
+    handleCodeStringUpdate(): void;
+    replaceAll(str: any, find: any, replace: any): any;
+    highlight(): Promise<void>;
+    result(): Promise<string>;
+    clipboard(): Promise<void>;
+    setCode(code: any): Promise<void>;
+    getCode(): void;
+    renderPreview(): any;
+    renderCode(): any;
+    render(): any;
+}
