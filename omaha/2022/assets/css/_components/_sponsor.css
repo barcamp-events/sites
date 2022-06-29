@@ -4,6 +4,7 @@
 
 .sponsors {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -25,7 +26,7 @@
 }
 
 .sponsor--gold {
-  flex-basis: 450px;
+  flex-basis: 500px;
 }
 
 .sponsor--silver {
@@ -33,15 +34,28 @@
 }
 
 .sponsor--bronze, .sponsor--recurring {
-  flex-basis: 300px;
+  flex-basis: 230px;
 }
 
-.sponsor--bronze p, .sponsor--recurring p {
+:is(.sponsor--bronze, .sponsor--recurring) p {
   font-size: 1.1rem;
 }
 
-.sponsor__image {
+.sponsor__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3.5;
   width: 100%;
+  padding: var(--space-1);
+}
+
+:is(.sponsor--bronze, .sponsor--recurring) .sponsor__content {
+  aspect-ratio: 2;
+}
+
+.sponsor__image {
+  height: 100%;
   filter: invert(100%);
 }
 
@@ -52,6 +66,19 @@ a.sponsor:hover .sponsor__image {
    */
   filter: brightness(0) saturate(100%) invert(98%) sepia(74%)
           saturate(2709%) hue-rotate(162deg) brightness(105%) contrast(105%);
+}
+
+.sponsor__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.sponsor__name-content {
+  color: #fff;
+  font-size: 2.4rem;;
+  line-height: 1.1;
 }
 
 a.sponsor:hover p {

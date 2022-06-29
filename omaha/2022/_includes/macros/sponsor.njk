@@ -1,14 +1,16 @@
 {% macro sponsor(slug = "", sponsor_object = {}, level = "", spacing = "") %}
   <{% if sponsor_object.link %}a href="{{sponsor_object.link}}" target="_blank"{% else %}div{% endif %} class="sponsor sponsor--{{ level }}">
-    <section class="p-1 flex place-center" style="aspect-ratio: 3.5:1">
+    <section class="sponsor__content">
       {% if sponsor_object.image %}
         <img src="/assets/images/sponsors/{{slug}}.svg" class="sponsor__image" alt="{{ sponsor_object.name }}">
       {% else %}
-        <h5 class="h3">{{ sponsor_object.name }}</h5>
+        <div class="sponsor__name">
+          <h5 class="sponsor__name-content">{{ sponsor_object.name }}</h5>
+        </div>
       {% endif %}
     </section>
     <footer class="p-1">
-      <p>{{sponsor_object.name}} {{ sponsor_object.contribution | safe }}</p>
+      <p>{{ sponsor_object.contribution | safe }}</p>
     </footer>
   </{% if sponsor_object.link %}a{% else %}div{% endif %}>
 {% endmacro %} 

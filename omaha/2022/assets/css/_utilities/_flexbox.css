@@ -24,6 +24,7 @@
 }
 
 .place-center {
+  justify-content: center;
   place-items: center;
 }
 
