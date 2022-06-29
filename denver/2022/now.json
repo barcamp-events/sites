@@ -1,0 +1,6 @@
+{
+  "name": "2022 BarCamp Denver",
+  "version": 2,
+  "alias": ["2022-denver.barcamp.events"],
+  "routes": [{ "src": "^/(.*)", "dest": "_site/$1" }]
+}

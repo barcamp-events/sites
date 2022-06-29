@@ -1,0 +1,53 @@
+/*-------*/
+/* Track */
+/*-------*/
+
+.track {
+  &--maker {
+    background-image: linear-gradient(
+      to right,
+      var(--yellow),
+      var(--yellow) (100% / 3),
+      var(--gold) (100% / 3),
+      var(--gold) (100% / 3 * 2),
+      var(--orange) (100% / 3 * 2),
+      var(--orange) (100%)
+    );
+  }
+
+  &--creative {
+    background-image: linear-gradient(
+      to right,
+      var(--red),
+      var(--red) (100% / 3),
+      var(--dark-red) (100% / 3),
+      var(--dark-red) (100% / 3 * 2),
+      var(--dark-pink) (100% / 3 * 2),
+      var(--dark-pink) (100%)
+    );
+  }
+
+  &--technology {
+    background-image: linear-gradient(
+      to right,
+      var(--purple),
+      var(--purple) (100% / 3),
+      var(--dark-blue) (100% / 3),
+      var(--dark-blue) (100% / 3 * 2),
+      var(--blue) (100% / 3 * 2),
+      var(--blue) (100%)
+    );
+  }
+
+  &--kitchen-sink {
+    background-image: linear-gradient(
+      to right,
+      var(--dark-green),
+      var(--dark-green) (100% / 3),
+      var(--green) (100% / 3),
+      var(--green) (100% / 3 * 2),
+      var(--light-green) (100% / 3 * 2),
+      var(--light-green) (100%)
+    );
+  }
+}

@@ -1,0 +1,170 @@
+/*------------*/
+/* Typography */
+/*------------*/
+
+@font-face {
+  font-display: fallback;
+  font-family: "Ano";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ano_regular.ttf") format("truetype"),
+       url("../fonts/ano_regular.woff") format("woff"),
+       url("../fonts/ano_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "Windsor";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/windsor_regular.ttf") format("truetype"),
+       url("../fonts/windsor_regular.woff") format("woff"),
+       url("../fonts/windsor_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Vacation Deep';
+  src: url('../fonts/Vacation-Deep.woff2') format('woff2'),
+      url('../fonts/Vacation-Deep.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vacation';
+  src: url('../fonts/Vacation-Heavy.woff2') format('woff2'),
+      url('../fonts/Vacation-Heavy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vacation Slanted';
+  src: url('../fonts/Vacation-Slanted.woff2') format('woff2'),
+      url('../fonts/Vacation-Slanted.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+a {
+  color: var(--b-teal);
+
+  &:hover, &:focus {
+    color: var(--orange);
+  }
+}
+
+:root {
+  --ms-ratio: var(--major-second);
+  --ms-base: 18px;
+}
+
+@media (min-width: 550px) {
+  :root {
+    --ms-base: 19px;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --ms-base: 20px;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    --ms-base: 21px;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --ms-base: 22px;
+  }
+}
+@media (min-width: 1000px) {
+  :root {
+    --ms-base: 23px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --ms-base: 24px;
+  }
+}
+
+hr {
+  height: 1px;
+  background: var(--black-10);
+}
+
+.ano {
+  font-family: "Ano", sans-serif;
+}
+
+.vacation {
+  font-family: "Vacation", sans-serif;
+}
+
+.vacation-deep {
+  font-family: "Vacation Deep", sans-serif;
+}
+
+.vacation-slanted {
+  font-family: "Vacation Slanted", sans-serif;
+}
+
+p {
+  font-family: "Ano", sans-serif;
+  line-height: 1.4;
+}
+
+.windsor {
+  font-family: "Windsor", sans-serif;
+}
+
+.lh-tight-copy {
+  line-height: 1.5;
+}
+
+.lh-copy {
+  line-height: 2;
+}
+
+@media (--breakpoint-not-small) {
+  .lh-tight-copy-ns  {
+    line-height: 1.5;
+  }
+
+  .lh-copy-ns  {
+    line-height: 2;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .lh-tight-copy-m  {
+    line-height: 1.5;
+  }
+
+  .lh-copy-m  {
+    line-height: 2;
+  }
+}
+
+@media (--breakpoint-large) {
+  .lh-tight-copy-l  {
+    line-height: 1.5;
+  }
+
+  .lh-copy-l  {
+    line-height: 2;
+  }
+}
+
+@media (min-width: 960px) {
+  .fs-massive {
+    font-size: calc(8rem + 5vw);
+  }
+}
