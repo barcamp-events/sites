@@ -1,13 +1,10 @@
 {
   "name": "Unabridged Software",
   "link": "https://unabridgedsoftware.com",
-  "image": {
-    "width": "960",
-    "height": "288"
-  },
+  "image": true,
   "representative": {
     "include": true,
     "name": "Kit Ryan"
   },
-  "contribution": "Unabridged Software is a software consulting agency. They built the site this year!"
+  "contribution": "Unabridged Software is made up of diverse, talented engineers that value steady progress over crushing it and have a thoughtful approach to software development, hiring, and culture. They built the site this year!"
 }

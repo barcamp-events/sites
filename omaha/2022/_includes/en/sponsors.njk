@@ -11,8 +11,8 @@
     </h3>
 
     {% if en.sponsors[slug] %}
-      <div class="sponsors mb-6">
-        {% for sponsor_slug, sponsor_object in en.sponsors[slug] %}
+      <div class="sponsors sponsors--{{ slug }} mb-6">
+        {% for sponsor_slug, sponsor_object in en.sponsors[slug]|sortBy('order') %}
           {% call sponsor(sponsor_slug, sponsor_object, slug, "mv2 px-2 px-4-l") %}{% endcall %}
         {% endfor %}
       </div>

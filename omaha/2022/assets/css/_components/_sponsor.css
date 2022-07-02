@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+.sponsors--platinum {
+  gap: var(--space-4);
+}
+
 .sponsor {
   display: block;
   flex: 0 1 100%;
@@ -79,6 +83,10 @@ a.sponsor:hover .sponsor__image {
   color: #fff;
   font-size: 2.4rem;;
   line-height: 1.1;
+}
+
+.sponsor p {
+  line-height: 1.3;
 }
 
 a.sponsor:hover p {

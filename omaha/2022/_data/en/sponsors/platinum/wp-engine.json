@@ -1,9 +1,7 @@
 {
   "name": "WP Engine",
+  "order": 0,
   "link": "https://wpengine.com",
-  "image": {
-    "width": "197.829",
-    "height": "37.618"
-  },
+  "image": true,
   "contribution": "Give it up for WP Engine, our hosts for BarCamp Omaha this year! 👏"
 }

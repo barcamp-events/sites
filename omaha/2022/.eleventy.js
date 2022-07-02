@@ -4,6 +4,15 @@ module.exports = eleventyConfig => {
   });
   eleventyConfig.addPassthroughCopy("assets/**/*");
 
+  const sortBy = (obj, attr) => {
+    const sortedObj = Object.fromEntries(
+      Object.entries(obj).sort(([,a], [,b]) => a[attr] - b[attr])
+    );
+
+    return sortedObj;
+  }
+  eleventyConfig.addFilter('sortBy', sortBy);
+
   return {
     passthroughFileCopy: true,
     templateFormats : ['njk'],
