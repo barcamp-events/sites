@@ -1,0 +1,10 @@
+{
+  "name": "Lyconic",
+  "link": "https://lyconic.com/",
+  "image": true,
+  "representative": {
+    "include": true,
+    "name": "Aron Filbert"
+  },
+  "contribution": "Lyconic builds applications for improved security guard management, increased oversight, and accountability,  assisting security providers in more than 110 markets in over 38 states."
+}

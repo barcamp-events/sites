@@ -1,10 +1,7 @@
 {
   "name": "Knave of Cups",
   "link": "https://knaveofcups.com/",
-  "image": {
-    "width": "1070",
-    "height": "470"
-  },
+  "image": true,
   "representative": {
     "include": true,
     "name": "A Yolland"

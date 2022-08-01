@@ -1,0 +1,10 @@
+{
+  "name": "PetFriendly",
+  "link": "https://petfriendlybox.com/",
+  "image": true,
+  "representative": {
+    "include": true,
+    "name": "Michael Struthers"
+  },
+  "contribution": "PetFriendly is a pet wellness company that delivers safe, effective, and vet-quality pet care products for dogs and cats to your door."
+}
