@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  width: calc(100% - var(--space-6));
+  width: calc(100% - var(--space-4));
   max-width: var(--max-width);
   margin-right: auto;
   margin-left: auto;

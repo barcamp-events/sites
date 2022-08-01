@@ -8,7 +8,7 @@
       {% for event in day.events %}
         <h4 class="agenda-table__time yellow-text dancy-text m-0 mt-1-lg">{{ event.time }}</h4>
         <h5 class="agenda-table__subheader h4">{{ event.title }}</h5>
-        <p class="agenda-table__description">{{ event.description }}</p>
+        <p class="agenda-table__description">{{ event.description | safe }}</p>
         {% if not loop.last %}<hr class="agenda-table__divider">{% endif %}
       {% endfor %}
       {% if not loop.last %}<hr class="agenda-table__divider thick-hr">{% endif %}

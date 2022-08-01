@@ -7,6 +7,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
+  gap: var(--space-2);
 }
 
 .sponsors--platinum {
@@ -38,7 +39,7 @@
 }
 
 .sponsor--bronze, .sponsor--recurring {
-  flex-basis: 230px;
+  flex-basis: 210px;
 }
 
 :is(.sponsor--bronze, .sponsor--recurring) p {
@@ -51,7 +52,6 @@
   justify-content: center;
   aspect-ratio: 3.5;
   width: 100%;
-  padding: var(--space-1);
 }
 
 :is(.sponsor--bronze, .sponsor--recurring) .sponsor__content {
