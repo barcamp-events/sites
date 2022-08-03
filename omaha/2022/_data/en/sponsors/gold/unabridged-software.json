@@ -1,7 +1,7 @@
 {
   "name": "Unabridged Software",
   "link": "https://unabridgedsoftware.com",
-  "image": true,
+  "image": "unabridged-software.svg",
   "representative": {
     "include": true,
     "name": "Kit Ryan"

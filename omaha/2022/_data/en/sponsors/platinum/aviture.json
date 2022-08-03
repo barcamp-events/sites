@@ -2,6 +2,6 @@
   "name": "Aviture",
   "order": 1,
   "link": "https://www.aviture.us.com/",
-  "image": true,
+  "image": "aviture.svg",
   "contribution": "Aviture is a mission-driven team of innovators mapping the journey to meaningful solutions. They believe software doesn’t mean anything unless it solves a problem, so they create technology to enable users, open possibilities, and create meaningful impact."
 }

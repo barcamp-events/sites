@@ -1,7 +1,7 @@
 {
   "name": "PetFriendly",
   "link": "https://petfriendlybox.com/",
-  "image": true,
+  "image": "petfriendly.svg",
   "representative": {
     "include": true,
     "name": "Michael Struthers"

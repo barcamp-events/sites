@@ -2,6 +2,6 @@
   "name": "WP Engine",
   "order": 0,
   "link": "https://wpengine.com",
-  "image": true,
+  "image": "wp-engine.svg",
   "contribution": "WP Engine, the WordPress technology company, provides the most relied upon and trusted brands and developer-centric WordPress products for companies and agencies of all sizes, including managed WordPress hosting, enterprise WordPress, headless WordPress, Flywheel, Local and Genesis. WP Engine’s tech innovation and award-winning WordPress experts help to power more than 1.5 million sites across 150 countries."
 }

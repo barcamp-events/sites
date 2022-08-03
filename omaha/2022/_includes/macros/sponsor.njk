@@ -2,7 +2,7 @@
   <{% if sponsor_object.link %}a href="{{sponsor_object.link}}" target="_blank"{% else %}div{% endif %} class="sponsor sponsor--{{ level }}">
     <section class="sponsor__content">
       {% if sponsor_object.image %}
-        <img src="/assets/images/sponsors/{{slug}}.svg" class="sponsor__image" alt="{{ sponsor_object.name }}">
+        <img src="/assets/images/sponsors/{{ sponsor_object.image }}" class="sponsor__image" alt="{{ sponsor_object.name }}">
       {% else %}
         <div class="sponsor__name">
           <h5 class="sponsor__name-content">{{ sponsor_object.name }}</h5>
