@@ -1,0 +1,10 @@
+{
+  "name": "NMotion",
+  "link": "https://nmotion.co/",
+  "image": "nmotion.svg",
+  "representative": {
+    "include": true,
+    "name": "Scott Henderson"
+  },
+  "contribution": "NMotion helps founders launch new companies and accelerate the growth of existing companies through connections to mentors, customers, and investors in a compressed time schedule."
+}
