@@ -1,0 +1,10 @@
+{
+  "name": "Workshop",
+  "link": "https://useworkshop.com/",
+  "image": "workshop.svg",
+  "representative": {
+    "include": true,
+    "name": "Derek Homann"
+  },
+  "contribution": "Workshop is a email management tool for creating exceptional internal communication and marketing campaigns that are always relevant, engaging, useful, and on-brand. They're sponsoring lunch this year!"
+}
