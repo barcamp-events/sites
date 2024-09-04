@@ -1,7 +1,7 @@
 {
-  "name": "barcamp-omaha-2022",
+  "name": "barcamp-spsw-2024",
   "version": "1.0.0",
-  "description": "The marketing website for BarCamp Omaha 2022",
+  "description": "The marketing website for BarCamp Silicon Prairie Startup Week 2024",
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all -p dev:*",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/barcamp-events/sites.git"
   },
-  "author": "BarCamp Omaha",
+  "author": "BarCamp Events",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/barcamp-events/sites/issues"
