@@ -1,0 +1,14 @@
+<section class="bg-[#FBFAF9] py-12 px-4">
+  <h2 class="text-2xl text-[#3C5FB0] text-center">{{ en.event.tracks.title }}</h2>
+  <h3 class="text-[clamp(2rem,_7vw,_4rem)] mt-4 text-[#1F1611] uppercase font-black leading-tight text-center max-w-[900px] m-auto">{{ en.event.tracks.description }}</h3>
+  <p class="text-base md:text-2xl mt-4 text-center">Possible talks may include:</p>
+
+  <div class="grid gap-12 mt-12 grid-cols-1 grid-rows-2 items-top max-w-5xl m-auto">
+    {% for track in en.event.tracks.tracks %}
+      <div class="bg-white p-8">
+        <h3 class="text-4xl text-[#1F1611] font-black uppercase">{{ track.name | safe }}</h3>
+        <p class="text-base md:text-2xl mt-4">{{ track.description | safe }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{
+  "name": "barcamp-spsw-2024",
+  "version": 2,
+  "alias": [
+    "spsw.barcamp.events"
+  ],
+  "routes": [
+    {
+      "src": "^/(.*)",
+      "dest": "_site/$1"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<section class="bg-[#FBFAF9] py-12 px-4">
+  <div class="max-w-[700px] m-auto">
+    <h2 class="text-[clamp(1rem,_10vw,_5rem)] text-center">{{ en.event.faqs.title }}</h2>
+    <p class="text-base md:text-2xl text-center mb-4">{{ en.event.faqs.description }}</p>
+
+    {% for faq in en.event.faqs.faqs %}
+      <details>
+        <summary class="text-[1rem] md:text-[1.75rem] font-dreamboat mt-8 h4">{{ faq.question }}</summary>
+        <p class="text-base md:text-2xl mt-4">{{ faq.answer | safe }}</p>
+      </details>
+    {% endfor %}
+  </div>
+</section>

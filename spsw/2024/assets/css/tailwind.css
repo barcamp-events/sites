@@ -1,0 +1,94 @@
+/* src/assets/css/tailwind.css*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: 'Space Grotesk';
+  color: #7d7d7d;
+
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem; /* 133.333% */
+}
+
+.hero-bg {
+  background: var(--BarCamp-Silicon-Prairie, linear-gradient(316deg, #000 1.44%, #3b5eb0 98.56%));
+}
+
+h1,
+.h1 {
+  color: #f59222;
+
+  leading-trim: both;
+
+  text-edge: cap;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 3rem */
+  text-transform: uppercase;
+}
+
+h2,
+.h2 {
+  color: #1f1611;
+
+  leading-trim: both;
+
+  font-family: 'Space Grotesk';
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 4.2rem */
+  text-transform: uppercase;
+}
+
+h3,
+.h3 {
+  color: #1f1611;
+
+  leading-trim: both;
+
+  font-family: 'Space Grotesk';
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 4.2rem */
+  text-transform: uppercase;
+}
+
+h4,
+.h4 {
+  color: #1f1611;
+
+  leading-trim: both;
+
+  font-family: 'Space Grotesk';
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 4.2rem */
+  text-transform: uppercase;
+}
+
+h5,
+.h5 {
+  color: #1f1611;
+
+  leading-trim: both;
+
+  font-family: 'Space Grotesk';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 4.2rem */
+  text-transform: uppercase;
+}

@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:image" content="/assets/images/social.png">
+<meta property="og:image:type" content="image/jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<title>{{ title or metadata.title }}</title>
+<meta property="og:title" content="{{ title or en.event.meta.title }}">
+<meta property="og:url" content="https://barcampomaha.org">
+<meta property="og:type" content="website">
+<meta name="description" property="og:description" content="{{ en.event.meta.description }}">
+<meta property="og:description" content="{{ en.event.meta.description }}">
+<meta name="author" content="{{ en.event.meta.author }}">
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+
+{% include "favicons.njk" %}

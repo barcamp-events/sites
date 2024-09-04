@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "url": "https://spsw.barcamp.events",
+    "author": "BarCamp Silicon Prairie Startup Week",
+    "description": "BarCamp is a community conference where the speakers are everyday folks, talking about what makes them excited."
+  },
+  "intro": {
+    "title": "BarCamp is a COMMUNITY CONFERENCE",
+    "content": [
+      "BarCamp Omaha is a user generated conference where the speakers are everyday folks talking about what interests them. Talks aren’t scheduled or planned until just before the conference starts, and anyone can give a talk. Curious, but don’t want to take the stage? That’s okay too.",
+      "At BarCamp, you won’t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and share what awakens your curiosity. Come one, come all."
+    ],
+    "button": "Get Your Ticket Now!"
+  },
+  "venue": {
+    "title": "The Venue",
+    "host": "The Edge",
+    "description": "{Need Copy describing the new venue}"
+  },
+  "tracks": {
+    "title": "The Tracks",
+    "description": "Talks are organized into two speaking categories",
+    "tracks": [
+      {
+        "name": "Makers",
+        "description": "Marketing Your iOS App, Bird Watching for fun and profit, Competitive Intelligence on a Shoestring, How to get Venture Capital, Fostering a Co-working Environment"
+      },
+      {
+        "name": "Technology",
+        "description": "CSS3 and the Future of Design, How to Wrangle WordPress, HTML5 and the Modern Browser, iPhone, Me, and My Drone, Hardware is the New Geocities"
+      }
+    ]
+  },
+  "agenda": {
+    "title": "The Agenda",
+    "description": "Here’s what to expect!",
+    "days": [
+      {
+        "date": "Thursday, November 14th",
+        "events": [
+          {
+            "time": "12pm",
+            "title": "Talk signup begins",
+            "description": "We're doing something slightly unique—we're opening the schedule a whole 24 hours early! Talks are 20 minutes long, within a 3 hour block, AND there are only 2 tracks, both of which will be recorded!"
+          }
+        ]
+      },
+      {
+        "date": "Friday, November 15th",
+        "events": [
+          {
+            "time": "12pm",
+            "title": "Doors open",
+            "description": "Grab some lunch and coffee, sign up for a talk, and start the day getting to know your fellow BarCampers."
+          },
+          {
+            "time": "1pm",
+            "title": "Talks Begin",
+            "description": "We’ll start out the first round of talks promptly at 1pm, so make sure you’re all settled in and ready to learn!"
+          },
+          {
+            "time": "4pm",
+            "title": "Closing",
+            "description": "Say your goodbyes, collect addresses for your new pen pals, and start looking forward to next year."
+          }
+        ]
+      }
+    ]
+  },
+  "faqs": {
+    "title": "The FAQ’s",
+    "description": "Get your quick answers here!",
+    "faqs": [
+      {
+        "question": "Is this event free?",
+        "answer": "Yes! This event is free to attend, for all folks in the community&mdash;not just silicon prairie startup week attendees. Come one, come all! "
+      },
+      {
+        "question": "How long are the talks?",
+        "answer": "This format si different - each talk runs for 15 minutes. Speakers are allowed to use that time however they wish&mdash;you can even share a time slot with multiple people or set up a panel discussion, allowing time for Q&A at the end. The last 5 minutes of every 20 minute slot is reserved as transition time between talks."
+      },
+      {
+        "question": "Can I give a sales presentation?",
+        "answer": "Nope! To be respectful of our BarCamp community, sales presentations or pitches are not allowed. Don’t even try it, folks."
+      },
+      {
+        "question": "What should I bring?",
+        "answer": "Something to share with all of your new friends…a business card perhaps? We encourage you to bring a notebook for notes. If you’ve planned a talk with presentation slides, bring your laptop or an external drive with your files. And bring all your friends!"
+      },
+      {
+        "question": "What if I have a food allergy?",
+        "answer": "No sweat! We make sure everyone is included. If you have specific food allergies or restrictions, contact Will at <a href=\"mailto:barcampevents@gmail.com\">barcampevents@gmail.com</a> and we&rsquo;ll take care of you."
+      }
+    ]
+  },
+  "sponsors": {
+    "title": "The Sponsors",
+    "description": "A huge thanks to all our amazing BarCamp sponsors!",
+    "representative_format": "Say thank you to {0} if you see them!",
+    "fallback_copy": "We don’t have any {tier_level} sponsors. Can you help?",
+    "tiers": [
+      {
+        "title": "Platinum",
+        "link": "#"
+      },
+      {
+        "title": "Gold",
+        "link": "#"
+      },
+      {
+        "title": "Silver",
+        "link": "#"
+      },
+      {
+        "title": "Bronze",
+        "link": "#"
+      },
+      {
+        "title": "Recurring",
+        "link": "#"
+      }
+    ]
+  },
+  "footer": {
+    "title": "Share your passion!",
+    "description": "Thanks for visiting!",
+    "counter": "You are person # {number} to visit our website!",
+    "webring_title": "designed and coded by<br /><a href='https://splitinfinities.com'>William A. Nova</a>",
+    "webring_team": "The organizing team is ",
+    "previous": "<< Prev",
+    "next": "Next >>",
+    "webring_all_sites": "All Sites:"
+  }
+}

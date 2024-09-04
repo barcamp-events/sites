@@ -1,0 +1,8 @@
+<section class="py-12 px-4">
+  <div class="max-w-[1000px] m-auto">
+    <h2 class="text-[clamp(1rem,_10vw,_5rem)]">{{ en.event.intro.title }}</h2>
+    {% for paragraph in en.event.intro.content %}
+      <p class="text-base md:text-2xl mt-8">{{ paragraph }}</p>
+    {% endfor %}
+  </div>
+</section>

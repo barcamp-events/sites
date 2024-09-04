@@ -1,0 +1,19 @@
+<section class="bg-dark-paper py-12 px-4">
+  <div class="max-w-[900px] m-auto">
+    <h2>{{ en.event.agenda.title }}</h2>
+    <p class="text-base md:text-2xl mt-4 mb-12">{{ en.event.agenda.description }}</p>
+
+    <div class="mt-4">
+      {% for day in en.event.agenda.days %}
+        <h2 class="text-2xl text-[#3C5FB0]">{{ day.date | safe }}</h2>
+        {% for event in day.events %}
+          <h4 class="text-[1.5rem] md:text-[2.5rem] inline">{{ event.time }}</h4>
+          <h5 class="text-[1.5rem] md:text-[2.5rem] inline">&nbsp;•&nbsp;{{ event.title }}</h5>
+          <p class="text-base md:text-2xl mt-4 ">{{ event.description }}</p>
+          {% if not loop.last %}<hr class="my-8 border-[#FBFAF9] border-solid">{% endif %}
+        {% endfor %}
+        {% if not loop.last %}<hr class="m-20 mx-4 border-[#FBFAF9]">{% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
