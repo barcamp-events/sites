@@ -24,11 +24,11 @@
     "description": "Talks are organized into two speaking categories",
     "tracks": [
       {
-        "name": "Makers",
+        "name": "Entrepreneurs",
         "description": "Marketing Your iOS App, Bird Watching for fun and profit, Competitive Intelligence on a Shoestring, How to get Venture Capital, Fostering a Co-working Environment"
       },
       {
-        "name": "Technology",
+        "name": "Makers",
         "description": "CSS3 and the Future of Design, How to Wrangle WordPress, HTML5 and the Modern Browser, iPhone, Me, and My Drone, Hardware is the New Geocities"
       }
     ]
