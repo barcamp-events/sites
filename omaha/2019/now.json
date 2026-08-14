@@ -10,5 +10,5 @@
     }
   ],
   "alias": ["2019.barcampomaha.org", "barcampomaha.org"],
-  "routes": [{ "src": "^/(.*)", "dest": "_site/$1" }]
+  "routes": [{ "src": "^/(.*)", "dest": "_site/$1", "headers": { "X-Robots-Tag": "noai, noimageai" } }]
 }

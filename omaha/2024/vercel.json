@@ -5,7 +5,8 @@
  "routes": [
   {
    "src": "^/(.*)",
-   "dest": "_site/$1"
+   "dest": "_site/$1",
+   "headers": { "X-Robots-Tag": "noai, noimageai" }
   }
  ]
 }

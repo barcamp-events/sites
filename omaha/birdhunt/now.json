@@ -1,3 +1,12 @@
 {
-    "alias": "birdhunt.barcampomaha.org"
+    "version": 2,
+    "alias": "birdhunt.barcampomaha.org",
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                { "key": "X-Robots-Tag", "value": "noai, noimageai" }
+            ]
+        }
+    ]
 }

@@ -1,6 +1,5 @@
 {
  "version": 2,
- "alias": ["omaha-2018.barcamp.events", "2018.barcampomaha.org"],
  "headers": [
   {
    "source": "/(.*)",

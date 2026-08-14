@@ -40,6 +40,6 @@ User-agent: Kangaroo Bot
 User-agent: Scrapy
 Disallow: /
 
-# Everyone else: normal crawling allowed, except the pre-launch landing page.
+# Everyone else: normal crawling allowed.
 User-agent: *
-Disallow: /landing
+Disallow:

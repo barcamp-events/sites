@@ -113,6 +113,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets/images/favicons/*");
   eleventyConfig.addPassthroughCopy("assets/images/**/*.{png,jpg}");
   eleventyConfig.addPassthroughCopy("assets/js");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("_headers");
 
   return {
     passthroughFileCopy: true,
