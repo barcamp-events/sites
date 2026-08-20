@@ -22,6 +22,6 @@
   "browserslist": "last 2 versions",
   "dependencies": {
     "@midwest-design/core": "latest",
-    "luxon": "^2.3.2"
+    "luxon": "^2.5.2"
   }
 }
